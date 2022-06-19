@@ -1,0 +1,10 @@
+execute if entity @s[tag=-buln.add.cupboard] run function bubblellaneous:block/cupboard/place
+execute if entity @s[tag=-buln.add.shelf] run function bubblellaneous:block/shelf/place
+execute if entity @s[tag=-buln.add.armchair] run function bubblellaneous:block/armchair/place
+execute if entity @s[tag=-buln.add.bar_stool] run function bubblellaneous:block/bar_stool/place
+execute if entity @s[tag=-buln.add.chair] run function bubblellaneous:block/armchair/place
+execute if entity @s[tag=-buln.add.dining_chair] run function bubblellaneous:block/office_chair/place
+execute if entity @s[tag=-buln.add.office_chair] run function bubblellaneous:block/office_chair/place
+execute if entity @s[tag=-buln.add.bench] run function bubblellaneous:block/bench/place
+execute if entity @s[tag=-buln.add.cctv_camera] run function bubblellaneous:block/cctv_camera/place
+execute if entity @s[tag=-buln.add.toilet] run function bubblellaneous:block/bench/place

@@ -1,0 +1,6 @@
+{
+    "parent": "bubblellaneous:gui/abstract/slot",
+    "textures": {
+        "layer0": "bubblellaneous:gui/slot"
+    }
+}

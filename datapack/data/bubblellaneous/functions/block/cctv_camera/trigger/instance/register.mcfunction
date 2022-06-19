@@ -1,0 +1,2 @@
+execute unless entity @e[type=armor_stand, tag=-buln.update.cctv_camera, distance=..4] run tellraw @p {"translate":"gui.bubblellaneous.camera_terminal.no_camera", "color":"red"}
+execute if entity @e[type=armor_stand, tag=-buln.update.cctv_camera, distance=..4] as @e[type=armor_stand, tag=-buln.update.cctv_camera, distance=..4, limit=1, sort=nearest] run function bubblellaneous:block/cctv_camera/terminal/register

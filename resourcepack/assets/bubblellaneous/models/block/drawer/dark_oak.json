@@ -1,0 +1,6 @@
+{
+    "parent": "bubblellaneous:block/drawer/template",
+	"textures": {
+		"material": "block/dark_oak_planks"
+	}
+}

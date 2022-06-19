@@ -1,0 +1,2 @@
+execute if score $Value bubblellaneous matches 11..15 run function bubblellaneous:event_listener/consume_food/high/low
+execute if score $Value bubblellaneous matches 16..20 run function bubblellaneous:event_listener/consume_food/high/high

@@ -1,0 +1,6 @@
+{
+	"parent": "bubblellaneous:block/blinds/template",
+	"textures": {
+		"material": "block/jungle_planks"
+	}
+}

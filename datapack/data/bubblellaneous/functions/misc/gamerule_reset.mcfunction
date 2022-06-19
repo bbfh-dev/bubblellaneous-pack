@@ -1,0 +1,1 @@
+execute if score $Gamerule bubblellaneous matches 1 run gamerule sendCommandFeedback true

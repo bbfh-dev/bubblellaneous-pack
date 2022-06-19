@@ -1,0 +1,38 @@
+{
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:tick",
+            "conditions": {
+                "player": [
+                    {
+                        "condition": "minecraft:entity_scores",
+                        "entity": "this",
+                        "scores": {
+                            "buln.using_item": {
+                                "min": 1,
+                                "max": 2147483647
+                            }
+                        }
+                    },
+                    {
+                        "condition": "minecraft:entity_properties",
+                        "entity": "this",
+                        "predicate": {
+                            "equipment": {
+                                "mainhand": {
+                                    "items": [
+                                        "minecraft:warped_fungus_on_a_stick"
+                                    ],
+                                    "nbt": "{CustomModelData:85169}"
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "bubblellaneous:event_listener/using/nanoglasses"
+    }
+}

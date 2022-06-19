@@ -1,0 +1,6 @@
+{
+    "parent": "bubblellaneous:block/chair/template",
+	"textures": {
+		"material": "block/crimson_planks"
+	}
+}

@@ -1,0 +1,31 @@
+{
+    "pack": {
+        "pack_format": 9,
+        "description": [
+            {
+                "text": "Bubblellaneous v1.2a [Assets]",
+                "color": "#f4b64b"
+            },
+            {
+                "text": "\nby BubbleFish",
+                "color": "#b64bf4"
+            },
+            {
+                "text": " ",
+                "bold": true
+            },
+            {
+                "text": "| 1.19.x",
+                "color": "#9aa3a5"
+            }
+        ],
+        "_metadata": {
+            "authors": {
+                "BubbleF1sh": "24c8f8f8-9db3-4878-b8ea-530dbe583196"
+            },
+            "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "page": "https://www.planetminecraft.com/data-pack/bubblellaneous/",
+            "source": "https://github.com/bubblefish-dev/bubblellaneous-pack/"
+        }
+    }
+}

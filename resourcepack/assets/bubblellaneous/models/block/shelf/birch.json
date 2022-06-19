@@ -1,0 +1,6 @@
+{
+    "parent": "bubblellaneous:block/shelf/template",
+	"textures": {
+		"material": "block/birch_planks"
+	}
+}

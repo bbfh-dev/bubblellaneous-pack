@@ -1,0 +1,10 @@
+{
+    "parent": "bubblellaneous:block/abstract/cube",
+    "display": {
+        "gui": {
+            "translation": [0, -2.5, 0],
+			"rotation": [30, -135, 0],
+			"scale": [0.42, 0.42, 0.42]
+		}
+    }
+}

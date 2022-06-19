@@ -1,0 +1,6 @@
+{
+	"parent": "bubblellaneous:block/retinal_scanner/idle",
+	"textures": {
+        "front": "bubblellaneous:block/retinal_scanner/unlocked"
+	}
+}

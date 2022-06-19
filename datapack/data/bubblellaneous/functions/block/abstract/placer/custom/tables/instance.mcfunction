@@ -1,0 +1,6 @@
+scoreboard players set $Updated bubblellaneous 0
+execute unless block ~-1 ~0 ~0 #bubblellaneous:air unless block ~01 ~0 ~0 #bubblellaneous:air unless block ~0 ~0 ~-1 #bubblellaneous:air unless block ~0 ~0 ~01 #bubblellaneous:air at @s run function bubblellaneous:block/abstract/placer/custom/tables/delete
+execute unless score $Updated bubblellaneous matches 1 unless block ~-1 ~0 ~0 #bubblellaneous:air unless block ~01 ~0 ~0 #bubblellaneous:air at @s run function bubblellaneous:block/abstract/placer/custom/tables/delete
+execute unless score $Updated bubblellaneous matches 1 unless block ~-1 ~0 ~0 #bubblellaneous:air unless block ~01 ~0 ~0 #bubblellaneous:air at @s run function bubblellaneous:block/abstract/placer/custom/tables/delete
+execute unless score $Updated bubblellaneous matches 1 unless block ~0 ~0 ~-1 #bubblellaneous:air unless block ~0 ~0 ~01 #bubblellaneous:air at @s run function bubblellaneous:block/abstract/placer/custom/tables/delete
+execute unless score $Updated bubblellaneous matches 1 run function bubblellaneous:block/abstract/placer/custom/tables/summon

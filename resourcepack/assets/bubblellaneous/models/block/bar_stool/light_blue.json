@@ -1,0 +1,6 @@
+{
+	"parent": "bubblellaneous:block/bar_stool/template",
+	"textures": {
+		"material": "block/light_blue_wool"
+	}
+}

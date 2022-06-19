@@ -1,0 +1,2 @@
+execute if score $Temp bubblellaneous matches 85063..85093 run function bubblellaneous:loot/summon/low/low/low/high/low
+execute if score $Temp bubblellaneous matches 85094..85125 run function bubblellaneous:loot/summon/low/low/low/high/high

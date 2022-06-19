@@ -1,0 +1,30 @@
+{
+	"credit": "Bubblellaneous Datapack model © BubbleFish",
+	"parent": "bubblellaneous:block/abstract/cube",
+	"elements": [
+        {
+			"from": [0, 12, 0],
+			"to": [16, 16, 16],
+			"faces": {
+				"north": {"uv": [0, 0, 16, 4], "texture": "#material"},
+				"east": {"uv": [16, 0, 0, 4], "texture": "#material"},
+				"south": {"uv": [16, 0, 0, 4], "texture": "#material"},
+				"west": {"uv": [0, 0, 16, 4], "texture": "#material"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#material"},
+				"down": {"uv": [0, 16, 16, 0], "texture": "#material"}
+			}
+		},
+		{
+			"from": [7, 0, 7],
+			"to": [9, 12, 9],
+			"faces": {
+				"north": {"uv": [7, 4, 9, 16], "texture": "#material"},
+				"east": {"uv": [12, 4, 14, 16], "texture": "#material"},
+				"south": {"uv": [2, 4, 4, 16], "texture": "#material"},
+				"west": {"uv": [9, 4, 11, 16], "texture": "#material"},
+				"up": {"uv": [8, 0, 10, 2], "texture": "#material"},
+				"down": {"uv": [7, 14, 9, 16], "texture": "#material"}
+			}
+		}
+	]
+}

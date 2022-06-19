@@ -1,0 +1,6 @@
+{
+    "parent": "bubblellaneous:block/tables/classic/template",
+	"textures": {
+		"material": "block/spruce_planks"
+	}
+}

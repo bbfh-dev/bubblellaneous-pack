@@ -1,0 +1,6 @@
+{
+	"parent": "bubblellaneous:block/item_reader/idle",
+	"textures": {
+        "front": "bubblellaneous:block/item_reader/unlocked"
+	}
+}

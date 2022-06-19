@@ -1,0 +1,6 @@
+{
+    "parent": "bubblellaneous:block/cabinet/template",
+	"textures": {
+		"material": "block/stone"
+	}
+}

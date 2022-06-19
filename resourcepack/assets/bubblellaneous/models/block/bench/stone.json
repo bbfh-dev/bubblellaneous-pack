@@ -1,0 +1,7 @@
+{
+	"parent": "bubblellaneous:block/bench/template",
+	"textures": {
+		"material": "block/stone",
+		"beam": "block/smooth_stone"
+	}
+}

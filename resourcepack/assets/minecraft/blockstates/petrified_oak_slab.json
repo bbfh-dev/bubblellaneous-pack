@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+        "model": "bubblellaneous:block/abstract/air"
+    },
+    "type=double": {
+      "model": "bubblellaneous:block/abstract/air"
+    },
+    "type=top": {
+      "model": "bubblellaneous:block/abstract/air"
+    }
+  }
+}

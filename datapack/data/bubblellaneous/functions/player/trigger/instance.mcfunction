@@ -1,0 +1,1 @@
+execute as @s[tag=-buln.input.pincode_lock] if score @s buln.trigger matches 1..10 as @e[type=armor_stand, tag=-buln.update.pincode_lock, distance=..6] if score @s buln.registry = @p buln.registry run function bubblellaneous:block/pincode_lock/user_input/instance

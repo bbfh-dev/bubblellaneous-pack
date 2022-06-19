@@ -1,0 +1,15 @@
+{
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:tick",
+            "conditions": {
+                "player": {
+                    "nbt": "{Tags:[\"-buln.linked\"]}"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "bubblellaneous:event_listener/beartrap"
+    }
+}

@@ -1,0 +1,1 @@
+summon item ~ ~ ~ {Item:{id:"minecraft:cooked_rabbit", Count:1b, tag:{CustomModelData:85223, Tags:["buln.food"], Bubblellaneous:{FoodValue:0b}, display:{Name:'{"translate":"item.bubblellaneous.cheese", "italic":false, "color":"white"}'}}}}

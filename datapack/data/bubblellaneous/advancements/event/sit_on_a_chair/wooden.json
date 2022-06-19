@@ -1,0 +1,17 @@
+{
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:started_riding",
+            "conditions": {
+                "player": {
+                    "vehicle": {
+                        "nbt": "{Tags:[\"buln.child\", \"-buln.sound.wood\"]}"
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "bubblellaneous:event_listener/sit_on_a_chair/wooden"
+    }
+}

@@ -1,0 +1,1 @@
+execute unless data entity @s ArmorItems[3].tag.Bubblellaneous.Owner run function bubblellaneous:block/cctv_camera/terminal/register/player

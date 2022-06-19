@@ -1,0 +1,11 @@
+{
+    "condition": "minecraft:location_check",
+    "predicate": {
+        "block": {
+            "blocks": [
+                "minecraft:hopper"
+            ],
+            "nbt": "{Items:[{id:\"minecraft:water_bucket\"}]}"
+        }
+    }
+}

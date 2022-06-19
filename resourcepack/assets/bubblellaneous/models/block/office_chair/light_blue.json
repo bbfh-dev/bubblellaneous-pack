@@ -1,0 +1,6 @@
+{
+	"parent": "bubblellaneous:block/office_chair/template",
+	"textures": {
+		"material": "block/light_blue_wool"
+	}
+}

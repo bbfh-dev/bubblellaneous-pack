@@ -1,0 +1,2 @@
+execute unless data entity @p SelectedItem.id run tellraw @p {"translate":"msg.bubblellaneous.no_item_in_hand", "color":"red"}
+execute if data entity @p SelectedItem.id run function bubblellaneous:block/item_reader/action/register

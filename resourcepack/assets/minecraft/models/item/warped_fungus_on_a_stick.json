@@ -1,0 +1,17 @@
+{
+    "parent": "minecraft:item/handheld_rod",
+    "textures": {
+        "layer0": "minecraft:item/warped_fungus_on_a_stick"
+    },
+    "overrides": [
+        {"predicate":{"custom_model_data":85169}, "model":"bubblellaneous:armor/nanoglasses"},
+        {"predicate":{"custom_model_data":85194}, "model":"bubblellaneous:item/padlock"},
+        {"predicate":{"custom_model_data":85195}, "model":"bubblellaneous:item/key/blue"},
+        {"predicate":{"custom_model_data":85196}, "model":"bubblellaneous:item/key/green"},
+        {"predicate":{"custom_model_data":85197}, "model":"bubblellaneous:item/key/red"},
+        {"predicate":{"custom_model_data":85198}, "model":"bubblellaneous:item/key/yellow"},
+        {"predicate":{"custom_model_data":85204}, "model":"bubblellaneous:item/camera_terminal"},
+        {"predicate":{"custom_model_data":85208}, "model":"bubblellaneous:item/crowbar"},
+        {"predicate":{"custom_model_data":85222}, "model":"bubblellaneous:item/umbrella"}
+    ]
+  }

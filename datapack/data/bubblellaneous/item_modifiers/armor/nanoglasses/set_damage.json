@@ -1,0 +1,16 @@
+[
+    {
+        "function": "minecraft:copy_nbt",
+        "source": {
+            "type": "minecraft:storage",
+            "source": "minecraft:temp"
+        },
+        "ops": [
+            {
+                "source": "value",
+                "target": "Damage",
+                "op": "replace"
+            }
+        ]
+    }
+]

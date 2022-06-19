@@ -1,0 +1,1 @@
+summon item ~ ~ ~ {Item:{id:"minecraft:warped_fungus_on_a_stick", Count:1b, tag:{CustomModelData:85169, display:{Name:'{"translate":"item.bubblellaneous.nanoglasses", "italic":false, "color":"white"}'}}}}

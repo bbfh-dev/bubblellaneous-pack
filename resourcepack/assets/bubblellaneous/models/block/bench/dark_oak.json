@@ -1,0 +1,7 @@
+{
+	"parent": "bubblellaneous:block/bench/template",
+	"textures": {
+		"material": "block/dark_oak_planks",
+		"beam": "block/stone"
+	}
+}

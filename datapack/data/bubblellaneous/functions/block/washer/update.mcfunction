@@ -1,0 +1,2 @@
+execute if predicate bubblellaneous:block/washer/has_water_bucket run function bubblellaneous:block/washer/fill_up
+execute if score @s buln.data0 matches 1.. if data block ~ ~ ~ Items[].tag.display.color run function bubblellaneous:block/washer/wash

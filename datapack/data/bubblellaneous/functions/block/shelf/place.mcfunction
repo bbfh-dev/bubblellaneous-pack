@@ -1,0 +1,6 @@
+execute if score $Towards bubblellaneous matches 1 run summon armor_stand ~.25 ~ ~ {Rotation:[90f],Tags:["bubblellaneous","buln.child","buln.notset"], NoGravity:1b, Small:1b, ShowArms:1b, Pose:{RightArm:[-80f,-32.5f,10f]}, NoBasePlate:1b, Invisible:1b, DisabledSlots:4079166}
+execute if score $Towards bubblellaneous matches 2 run summon armor_stand ~ ~ ~.25 {Rotation:[180f],Tags:["bubblellaneous","buln.child","buln.notset"], NoGravity:1b, Small:1b, ShowArms:1b, Pose:{RightArm:[-80f,-32.5f,10f]}, NoBasePlate:1b, Invisible:1b, DisabledSlots:4079166}
+execute if score $Towards bubblellaneous matches 3 run summon armor_stand ~-.25 ~ ~ {Rotation:[-90f],Tags:["bubblellaneous","buln.child","buln.notset"], NoGravity:1b, Small:1b, ShowArms:1b, Pose:{RightArm:[-80f,-32.5f,10f]}, NoBasePlate:1b, Invisible:1b, DisabledSlots:4079166}
+execute if score $Towards bubblellaneous matches 4 run summon armor_stand ~ ~ ~-.25 {Rotation:[0f],Tags:["bubblellaneous","buln.child","buln.notset"], NoGravity:1b, Small:1b, ShowArms:1b, Pose:{RightArm:[-80f,-32.5f,10f]}, NoBasePlate:1b, Invisible:1b, DisabledSlots:4079166}
+scoreboard players operation @e[type=armor_stand, tag=buln.child, tag=buln.notset, limit=1] buln.registry = $Score buln.registry
+tag @e[type=armor_stand, tag=buln.child, tag=buln.notset] remove buln.notset

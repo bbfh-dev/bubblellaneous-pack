@@ -1,0 +1,12 @@
+[
+    {
+        "function": "minecraft:set_enchantments",
+        "enchantments": {
+            "minecraft:mending": 0
+        }
+    },
+    {
+        "function": "minecraft:set_nbt",
+        "tag": "{HideFlags:127}"
+    }
+]

@@ -1,0 +1,16 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "minecraft:item/cooked_rabbit"
+    },
+    "overrides": [
+        {"predicate":{"custom_model_data":85179}, "model":"bubblellaneous:item/burger"},
+        {"predicate":{"custom_model_data":85180}, "model":"bubblellaneous:item/burrito"},
+        {"predicate":{"custom_model_data":85181}, "model":"bubblellaneous:item/chocolate"},
+        {"predicate":{"custom_model_data":85182}, "model":"bubblellaneous:item/cup_of_coffee"},
+        {"predicate":{"custom_model_data":85183}, "model":"bubblellaneous:item/donut"},
+        {"predicate":{"custom_model_data":85184}, "model":"bubblellaneous:item/pizza_slice"},
+        {"predicate":{"custom_model_data":85220}, "model":"bubblellaneous:item/garlic_bread"},
+        {"predicate":{"custom_model_data":85223}, "model":"bubblellaneous:item/cheese"}
+    ]
+}

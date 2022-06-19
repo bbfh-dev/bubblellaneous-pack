@@ -1,0 +1,180 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:item_frame",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{CustomModelData:85002, EntityTag:{Tags:[\"bubblellaneous\", \"buln.placer\", \"-buln.sound.wood\"], Invisible:1b, Silent:1b, Fixed:1b}, display:{Name:'{\"translate\":\"block.bubblellaneous.acacia_table\", \"italic\":false, \"color\":\"white\"}'}}"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "condition": "minecraft:entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "nbt": "{Tags:[\"-buln.acacia_table\"]}"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:item_frame",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{CustomModelData:85003, EntityTag:{Tags:[\"bubblellaneous\", \"buln.placer\", \"-buln.sound.wood\"], Invisible:1b, Silent:1b, Fixed:1b}, display:{Name:'{\"translate\":\"block.bubblellaneous.birch_table\", \"italic\":false, \"color\":\"white\"}'}}"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "condition": "minecraft:entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "nbt": "{Tags:[\"-buln.birch_table\"]}"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:item_frame",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{CustomModelData:85004, EntityTag:{Tags:[\"bubblellaneous\", \"buln.placer\", \"-buln.sound.wood\"], Invisible:1b, Silent:1b, Fixed:1b}, display:{Name:'{\"translate\":\"block.bubblellaneous.crimson_table\", \"italic\":false, \"color\":\"white\"}'}}"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "condition": "minecraft:entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "nbt": "{Tags:[\"-buln.crimson_table\"]}"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:item_frame",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{CustomModelData:85005, EntityTag:{Tags:[\"bubblellaneous\", \"buln.placer\", \"-buln.sound.wood\"], Invisible:1b, Silent:1b, Fixed:1b}, display:{Name:'{\"translate\":\"block.bubblellaneous.dark_oak_table\", \"italic\":false, \"color\":\"white\"}'}}"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "condition": "minecraft:entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "nbt": "{Tags:[\"-buln.dark_oak_table\"]}"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:item_frame",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{CustomModelData:85006, EntityTag:{Tags:[\"bubblellaneous\", \"buln.placer\", \"-buln.sound.wood\"], Invisible:1b, Silent:1b, Fixed:1b}, display:{Name:'{\"translate\":\"block.bubblellaneous.jungle_table\", \"italic\":false, \"color\":\"white\"}'}}"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "condition": "minecraft:entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "nbt": "{Tags:[\"-buln.jungle_table\"]}"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:item_frame",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{CustomModelData:85007, EntityTag:{Tags:[\"bubblellaneous\", \"buln.placer\", \"-buln.sound.wood\"], Invisible:1b, Silent:1b, Fixed:1b}, display:{Name:'{\"translate\":\"block.bubblellaneous.oak_table\", \"italic\":false, \"color\":\"white\"}'}}"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "condition": "minecraft:entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "nbt": "{Tags:[\"-buln.oak_table\"]}"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:item_frame",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{CustomModelData:85008, EntityTag:{Tags:[\"bubblellaneous\", \"buln.placer\", \"-buln.sound.wood\"], Invisible:1b, Silent:1b, Fixed:1b}, display:{Name:'{\"translate\":\"block.bubblellaneous.spruce_table\", \"italic\":false, \"color\":\"white\"}'}}"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "condition": "minecraft:entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "nbt": "{Tags:[\"-buln.spruce_table\"]}"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:item_frame",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{CustomModelData:85009, EntityTag:{Tags:[\"bubblellaneous\", \"buln.placer\", \"-buln.sound.wood\"], Invisible:1b, Silent:1b, Fixed:1b}, display:{Name:'{\"translate\":\"block.bubblellaneous.stone_table\", \"italic\":false, \"color\":\"white\"}'}}"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "condition": "minecraft:entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "nbt": "{Tags:[\"-buln.stone_table\"]}"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:item_frame",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{CustomModelData:85010, EntityTag:{Tags:[\"bubblellaneous\", \"buln.placer\", \"-buln.sound.wood\"], Invisible:1b, Silent:1b, Fixed:1b}, display:{Name:'{\"translate\":\"block.bubblellaneous.warped_table\", \"italic\":false, \"color\":\"white\"}'}}"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "condition": "minecraft:entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "nbt": "{Tags:[\"-buln.warped_table\"]}"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

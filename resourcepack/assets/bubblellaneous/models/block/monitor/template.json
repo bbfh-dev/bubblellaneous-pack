@@ -1,0 +1,48 @@
+{
+	"credit": "Bubblellaneous Datapack model © BubbleFish",
+	"parent": "bubblellaneous:block/abstract/cube",
+	"textures": {
+		"0": "block/anvil",
+		"1": "bubblellaneous:block/monitor/0"
+	},
+	"elements": [
+		{
+			"from": [2, 0, 4],
+			"to": [14, 1, 12],
+			"faces": {
+				"north": {"uv": [2, 15, 14, 16], "texture": "#0"},
+				"east": {"uv": [4, 15, 12, 16], "texture": "#0"},
+				"south": {"uv": [2, 15, 14, 16], "texture": "#0"},
+				"west": {"uv": [4, 15, 12, 16], "texture": "#0"},
+				"up": {"uv": [2, 4, 14, 12], "texture": "#0"},
+				"down": {"uv": [2, 4, 14, 12], "texture": "#0"}
+			}
+		},
+		{
+			"from": [1, 2, 4.25],
+			"to": [15, 16, 6.25],
+			"rotation": {"angle": 0, "axis": "x", "origin": [8, 8, 5.25]},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#1"},
+				"east": {"uv": [9.75, 0, 11.75, 14], "texture": "#0"},
+				"south": {"uv": [1, 0, 15, 14], "texture": "#0"},
+				"west": {"uv": [4.25, 0, 6.25, 14], "texture": "#0"},
+				"up": {"uv": [1, 4.25, 15, 6.25], "texture": "#0"},
+				"down": {"uv": [1, 9.75, 15, 11.75], "texture": "#0"}
+			}
+		},
+		{
+			"from": [6, 0.11732, 7.92388],
+			"to": [10, 10.11732, 9.92388],
+			"rotation": {"angle": -22.5, "axis": "x", "origin": [8, 0.5, 8]},
+			"faces": {
+				"north": {"uv": [6, 5.88268, 10, 15.88268], "texture": "#0"},
+				"east": {"uv": [6.07612, 5.88268, 8.07612, 15.88268], "texture": "#0"},
+				"south": {"uv": [6, 5.88268, 10, 15.88268], "texture": "#0"},
+				"west": {"uv": [7.92388, 5.88268, 9.92388, 15.88268], "texture": "#0"},
+				"up": {"uv": [6, 7.92388, 10, 9.92388], "texture": "#0"},
+				"down": {"uv": [6, 6.07612, 10, 8.07612], "texture": "#0"}
+			}
+		}
+	]
+}

@@ -1,0 +1,6 @@
+{
+	"parent": "bubblellaneous:block/pincode_lock/idle",
+	"textures": {
+        "front": "bubblellaneous:block/pincode_lock/unlocked"
+	}
+}

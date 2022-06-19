@@ -1,0 +1,23 @@
+{
+	"credit": "Bubblellaneous Datapack model © BubbleFish",
+	"parent": "bubblellaneous:block/abstract/cube",
+	"textures": {
+		"0": "bubblellaneous:block/cctv_camera",
+		"particle": "bubblellaneous:block/cctv_camera"
+	},
+	"elements": [
+		{
+			"from": [5, 9, 2],
+			"to": [11, 13, 12],
+			"rotation": {"angle": -22.5, "axis": "x", "origin": [8, 12, 8]},
+			"faces": {
+				"north": {"uv": [10, 0, 16, 4], "texture": "#0"},
+				"east": {"uv": [0, 0, 10, 4], "texture": "#0"},
+				"south": {"uv": [10, 4, 16, 8], "texture": "#0"},
+				"west": {"uv": [10, 4, 0, 8], "texture": "#0"},
+				"up": {"uv": [0, 10, 10, 16], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [6, 10, 16, 16], "rotation": 90, "texture": "#0"}
+			}
+		}
+	]
+}

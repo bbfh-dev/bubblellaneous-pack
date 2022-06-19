@@ -1,0 +1,7 @@
+{
+    "parent": "bubblellaneous:block/padlock_door/template",
+	"textures": {
+		"bottom": "block/acacia_door_bottom",
+        "top": "block/acacia_door_top"
+	}
+}

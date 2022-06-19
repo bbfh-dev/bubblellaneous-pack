@@ -1,0 +1,6 @@
+{
+	"parent": "bubblellaneous:block/blinds/template",
+	"textures": {
+		"material": "block/spruce_planks"
+	}
+}

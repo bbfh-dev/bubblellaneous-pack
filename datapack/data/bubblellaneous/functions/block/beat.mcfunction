@@ -1,0 +1,2 @@
+execute if entity @s[tag=-buln.update.washer] if entity @p[distance=..6] run function bubblellaneous:block/washer/update
+execute if entity @s[tag=-buln.update.beartrap] run function bubblellaneous:block/beartrap/beat

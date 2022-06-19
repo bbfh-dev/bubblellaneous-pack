@@ -1,0 +1,63 @@
+{
+    "block.industrial.place": {
+        "sounds": [
+          "bubblellaneous:block/industrial/place"
+        ],
+        "subtitle": "subtitles.block.generic.place"
+    },
+    "block.industrial.hit": {
+        "sounds": [
+          "bubblellaneous:block/industrial/hit"
+        ],
+        "subtitle": "subtitles.block.button.click"
+    },
+    "block.chair.soft": {
+        "sounds": [
+          "bubblellaneous:block/chair/soft"
+        ],
+        "subtitle": "subtitles.block.chair.sit"
+    },
+    "block.chair.wooden": {
+        "sounds": [
+          "bubblellaneous:block/chair/wooden"
+        ],
+        "subtitle": "subtitles.block.chair.sit"
+    },
+    "block.security_alarm.alarm": {
+        "sounds": [
+            {
+                "name": "bubblellaneous:block/security_alarm/alarm",
+                "stream": true,
+                "volume": 1
+            }
+        ],
+        "subtitle": "block.bubblellaneous.security_alarm"
+    },
+    "block.lock.unlock": {
+        "sounds": [
+            {
+                "name": "bubblellaneous:block/lock/unlock",
+                "volume": 1
+            }
+        ],
+        "subtitle": "subtitles.block.lock.unlocked"
+    },
+    "block.lock.register": {
+        "sounds": [
+            {
+                "name": "bubblellaneous:block/lock/register",
+                "volume": 1
+            }
+        ],
+        "subtitle": "subtitles.block.lock.register"
+    },
+    "block.lock.click": {
+        "sounds": [
+            {
+                "name": "bubblellaneous:block/lock/click",
+                "volume": 1
+            }
+        ],
+        "subtitle": "subtitles.block.button.click"
+    }
+}

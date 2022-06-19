@@ -1,0 +1,6 @@
+{
+    "parent": "bubblellaneous:block/tables/tabletop/template",
+	"textures": {
+		"material": "block/stone"
+	}
+}

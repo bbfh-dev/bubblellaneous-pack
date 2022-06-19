@@ -1,0 +1,2 @@
+execute unless entity @s[tag=-buln.custom] run function bubblellaneous:block/abstract/placer/wide/instance_default
+execute if entity @s[tag=-buln.custom] run function bubblellaneous:block/abstract/placer/custom/instance

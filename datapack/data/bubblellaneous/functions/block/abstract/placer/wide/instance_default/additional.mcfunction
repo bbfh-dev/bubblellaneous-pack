@@ -1,0 +1,1 @@
+execute if entity @s[tag=-buln.add.couch] run function bubblellaneous:block/couch/place
