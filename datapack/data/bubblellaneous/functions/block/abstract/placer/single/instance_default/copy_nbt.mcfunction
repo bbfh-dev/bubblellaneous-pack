@@ -1,1 +1,0 @@
-execute if entity @s[tag=-buln.update.cctv_camera] run data modify entity @e[type=armor_stand, tag=buln.block, tag=buln.notset, limit=1] ArmorItems[3].tag.CustomModelData set value 85202

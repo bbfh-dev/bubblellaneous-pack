@@ -1,6 +1,0 @@
-{
-	"parent": "bubblellaneous:block/couch/template",
-	"textures": {
-		"texture": "bubblellaneous:block/couch/blue"
-	}
-}

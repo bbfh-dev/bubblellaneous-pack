@@ -1,6 +1,0 @@
-{
-    "parent": "bubblellaneous:block/chair/template",
-	"textures": {
-		"material": "block/jungle_planks"
-	}
-}

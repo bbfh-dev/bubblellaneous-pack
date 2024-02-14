@@ -1,6 +1,0 @@
-{
-    "parent": "bubblellaneous:block/tables/leg/template",
-	"textures": {
-		"material": "block/oak_planks"
-	}
-}

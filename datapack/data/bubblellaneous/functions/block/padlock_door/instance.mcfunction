@@ -1,1 +1,0 @@
-execute unless score @s buln.data0 matches -2147483648..2147483647 run function bubblellaneous:block/padlock_door/register

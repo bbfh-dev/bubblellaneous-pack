@@ -1,6 +1,0 @@
-{
-    "parent": "bubblellaneous:block/monitor/template",
-    "textures": {
-        "1": "bubblellaneous:block/monitor/2"
-    }
-}

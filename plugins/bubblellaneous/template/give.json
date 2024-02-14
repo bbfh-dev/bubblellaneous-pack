@@ -1,0 +1,20 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:item_frame",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "<nbt>"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "random_sequence": "[namespace]:blocks/[name]"
+}

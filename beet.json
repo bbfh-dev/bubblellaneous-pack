@@ -1,0 +1,52 @@
+{
+    "name": "bubblellaneous",
+    "description": [
+        {
+            "text": "\u2b50 Adds new Blocks & Items",
+            "color": "#329fff"
+        },
+        "\n",
+        {
+            "text": "by bbfh",
+            "color": "#c8c8dc"
+        }
+    ],
+    "output": "dist",
+    "pipeline": [
+        "plugins.bubblellaneous",
+        "plugins.lang",
+        "plugins.preprocessor",
+        "plugins.constants",
+        {
+            "data_pack": {
+                "load": [
+                    "src/lib/delay_loading"
+                ]
+            }
+        },
+        {
+            "data_pack": {
+                "load": [
+                    "src/lib/garbage_collector"
+                ]
+            }
+        },
+        "plugins.prefix"
+    ],
+    "data_pack": {
+        "load": [
+            "src"
+        ],
+        "zipped": false
+    },
+    "resource_pack": {
+        "load": [
+            "src"
+        ],
+        "zipped": false
+    },
+    "meta": {
+        "version": "2.0.0",
+        "prefix": "bbln"
+    }
+}

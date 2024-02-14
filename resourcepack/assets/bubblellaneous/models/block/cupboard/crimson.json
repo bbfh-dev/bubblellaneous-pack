@@ -1,6 +1,0 @@
-{
-    "parent": "bubblellaneous:block/cupboard/template",
-	"textures": {
-		"material": "block/crimson_planks"
-	}
-}

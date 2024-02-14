@@ -1,0 +1,10 @@
+# Uses VSCopium as the data pack editor
+**/.vscode/
+
+# MCBeet
+dist/
+.beet_cache/
+.venv/
+
+# Python
+**/__pycache__/

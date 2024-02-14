@@ -1,6 +1,0 @@
-{
-	"parent": "bubblellaneous:block/dining_chair/template",
-	"textures": {
-		"material": "block/orange_wool"
-	}
-}

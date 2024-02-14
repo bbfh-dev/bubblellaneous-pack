@@ -1,2 +1,0 @@
-execute if block ~ ~ ~ barrel[open=true] run function bubblellaneous:block/bubble_bench/while_opened
-execute if block ~ ~ ~ barrel[open=false] if entity @s[tag=-buln.opened] run function bubblellaneous:block/bubble_bench/while_closed

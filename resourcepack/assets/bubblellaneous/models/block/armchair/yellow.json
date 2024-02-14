@@ -1,6 +1,0 @@
-{
-	"parent": "bubblellaneous:block/armchair/template",
-	"textures": {
-		"material": "block/yellow_wool"
-	}
-}

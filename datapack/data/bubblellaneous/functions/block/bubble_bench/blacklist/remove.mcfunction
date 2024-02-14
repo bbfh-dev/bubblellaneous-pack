@@ -1,1 +1,0 @@
-tellraw @s {"translate":"settings.bubblellaneous.blacklist_confirm", "color":"red", "bold":true, "clickEvent": {"action":"run_command", "value":"/function bubblellaneous:block/bubble_bench/setup"}}

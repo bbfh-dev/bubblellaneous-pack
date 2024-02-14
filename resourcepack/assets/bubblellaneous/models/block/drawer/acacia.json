@@ -1,6 +1,0 @@
-{
-    "parent": "bubblellaneous:block/drawer/template",
-	"textures": {
-		"material": "block/acacia_planks"
-	}
-}

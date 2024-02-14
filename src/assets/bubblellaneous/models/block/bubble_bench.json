@@ -1,0 +1,10 @@
+{
+    "credit": "Bubblellaneous - by bbfh",
+    "parent": "minecraft:block/cube_bottom_top",
+    "textures": {
+        "particle": "bubblellaneous:block/bubble_bench/top",
+        "top": "bubblellaneous:block/bubble_bench/top",
+        "bottom": "bubblellaneous:block/bubble_bench/bottom",
+        "side": "bubblellaneous:block/bubble_bench/side"
+    }
+}
