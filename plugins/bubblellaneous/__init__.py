@@ -1,4 +1,3 @@
-from os import system
 from beet import Context
 from colorama import Fore, init
 
