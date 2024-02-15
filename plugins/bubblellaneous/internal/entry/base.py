@@ -20,6 +20,11 @@ class BaseEntry:
     def prop(self, key: str):
         return self._props.get(key, "<none>")
 
+    def get_id(self, id: int):
+        if id < 1000:
+            return int(f"371{id:0>3}")
+        return int(f"37{id+1000:0>4}")
+
     def format(self, key: str) -> str:
         return re.sub(
             r"^\:",
@@ -78,7 +83,7 @@ class BaseEntry:
                     "nbt": NBT.Quote(
                         NBT(
                             {
-                                "CustomModelData": int(f"371{id:0>3}"),
+                                "CustomModelData": self.get_id(id),
                                 "display": {
                                     "Name": NBT.Quote(self.prop("display_name"))
                                 },
@@ -119,9 +124,6 @@ class BaseEntry:
                                                 "facing": NBT.Quote(
                                                     self.prop("facing").value,
                                                     double=True,
-                                                ),
-                                                "custom_model_data": int(
-                                                    f"371{id:0>3}"
                                                 ),
                                                 "custom_model_data": self.get_id(id),
                                             }

@@ -71,11 +71,12 @@ class BlockGroup(BaseEntry):
         block_name = snakecase(self.__class__.__name__)
         name = "_".join([material, block_name])
         path = [block_name, *[i for i in [state] if i], material]
-        tree.add_model_id(f"[namespace]:block/{'/'.join(path)}", int(f"371{id:0>3}"))
+        tree.add_model_id(f"[namespace]:block/{'/'.join(path)}", self.get_id(id))
         block.set_properties(
             {
                 "id": block_name,
                 "name": name,
+                "is_single": False,
                 "display_name": NBT(
                     {
                         "translate": f"block.[namespace].{material.split('_')[-1]}_{block_name}",

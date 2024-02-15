@@ -66,6 +66,7 @@ class Block(BaseEntry):
             {
                 "id": snakecase(self.__class__.__name__),
                 "name": name,
+                "is_single": True,
                 "display_name": NBT(
                     {"translate": "block.[namespace].[name]", "italic": False},
                     is_json=True,
