@@ -3,8 +3,10 @@ import json
 from beet import Context, Function, LootTable, Model
 from colorama import Fore
 
-from plugins.bubblellaneous.internal.templates import use_template
 from plugins.utils.nbt import NBT
+
+from .bench_registry import BenchRegistry
+from .templates import use_template
 
 
 class Tree:
@@ -13,6 +15,7 @@ class Tree:
         self.loot_tables: dict[str, LootTable] = {}
         self.models: dict[str, Model] = {}
         self.model_ids: list[tuple[str, int]] = []
+        self.bench_registry: list[BenchRegistry] = []
 
     def __repr__(self) -> str:
         return self.__str__()
@@ -135,3 +138,6 @@ class Tree:
         if id in [i[1] for i in self.model_ids]:
             return
         self.model_ids.append((key, id))
+
+    def add_registry_item(self, item: BenchRegistry):
+        self.bench_registry.append(item.update())

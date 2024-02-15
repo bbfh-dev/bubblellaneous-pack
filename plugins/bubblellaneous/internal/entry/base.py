@@ -123,6 +123,7 @@ class BaseEntry:
                                                 "custom_model_data": int(
                                                     f"371{id:0>3}"
                                                 ),
+                                                "custom_model_data": self.get_id(id),
                                             }
                                         },
                                     },

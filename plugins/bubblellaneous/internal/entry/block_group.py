@@ -5,11 +5,12 @@ from typing import Optional
 from beet import Model
 from caseconverter import snakecase
 
-from plugins.bubblellaneous.internal.entry.block import Block
-from plugins.bubblellaneous.internal.tree import Tree
 from plugins.utils.nbt import NBT
 
+from ..bench_registry import BenchRegistry
+from ..tree import Tree
 from .base import BaseEntry
+from .block import Block
 
 WOOL_COLORS = [
     "white",
@@ -96,6 +97,10 @@ class BlockGroup(BaseEntry):
         blockstates = self.__class__.__dict__.get("blockstates")
         materials = self.__class__.__dict__["materials"]
         name = snakecase(self.__class__.__name__)
+
+        tree.add_registry_item(BenchRegistry(f"block/{materials[0][0]}_{name}", [
+            f"block/{material[0]}_{name}" for material in materials
+            ]))
 
         if not blockstates:
             for material, primary, secondary in materials:

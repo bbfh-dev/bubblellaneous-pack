@@ -6,6 +6,12 @@
     "overrides": [
         {
             "predicate": {
+                "custom_model_data": 370000
+            },
+            "model": "bubblellaneous:gui/air"
+        },
+        {
+            "predicate": {
                 "custom_model_data": 370001
             },
             "model": "bubblellaneous:gui/slot"

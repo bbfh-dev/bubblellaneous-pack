@@ -4,9 +4,10 @@ from typing import Literal, Optional, Self
 from beet import Context
 from caseconverter import snakecase
 
-from plugins.bubblellaneous.internal.tree import Tree
 from plugins.utils.nbt import NBT
 
+from ..bench_registry import BenchRegistry
+from ..tree import Tree
 from .base import BaseEntry
 
 
@@ -80,11 +81,13 @@ class Block(BaseEntry):
 
     def compile(self, tree: Tree, id: int) -> tuple[Tree, int]:
         tree, id = super().compile(tree, id)
-        tree.add_model_id(f"[namespace]:block/{self.prop('name')}", int(f"371{id:0>3}"))
+        tree.add_model_id(f"[namespace]:block/{self.prop('name')}", self.get_id(id))
         self.make_function(
             tree,
             "place:[namespace]/[name]",
-            "function spawn:[namespace]/bubble_bench",
+            "function spawn:[namespace]/[name]",
             ":as @e[type=item,nbt={Age: 0s},:first] align xyz -> [namespace]:utils/block/place",
         )
+        if self.prop("is_single"):
+            tree.add_registry_item(BenchRegistry(f"block/{self.prop('name')}", []))
         return tree, id + 1

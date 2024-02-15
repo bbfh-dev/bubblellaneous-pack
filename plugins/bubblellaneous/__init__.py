@@ -1,5 +1,7 @@
-from beet import Context
+from beet import Context, Function
 from colorama import Fore, init
+
+from plugins.utils.nbt import NBT
 
 from .blocks import *
 from .internal.entry import BaseEntry
@@ -34,3 +36,24 @@ def beet_default(ctx: Context):
         )
         print(f"→ Registered {Fore.BLUE}{item.__name__: <16}{Fore.RESET} {display_id}")
     tree.format_code(ctx).dump(ctx)
+
+    ctx.data.functions[f"{ctx.project_id}:load_registry"] = Function(
+        "\n".join(
+            [
+                "data modify storage {} bench_registry set value {}".format(
+                    ctx.project_id,
+                    NBT(
+                        [
+                            {
+                                "entry": item.entry,
+                                "items": item.items,
+                                "count": item.count,
+                            }
+                            for item in tree.bench_registry
+                        ]
+                    ).get_list(),
+                ),
+            ]
+        ),
+        tags=[f"{ctx.project_id}:load"],
+    )
