@@ -19,8 +19,8 @@ def beet_default(ctx: Context):
     languages = []
     lang = {}
 
-    with open(path.join(__DIR__, "data", "lang.csv"), "r") as fp:
-        reader = csv.reader(fp)
+    with open(path.join(__DIR__, "data", "lang.tsv"), "r") as fp:
+        reader = csv.reader(fp, delimiter="\t")
         is_first = True
         for row in reader:
             if not is_first:
