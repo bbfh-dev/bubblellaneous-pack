@@ -41,18 +41,47 @@ def beet_default(ctx: Context):
         "\n".join(
             [
                 "data modify storage {} bench_registry set value {}".format(
-                    ctx.project_id,
-                    NBT(
-                        [
-                            {
-                                "entry": item.entry,
-                                "items": item.items,
-                                "count": item.count,
-                            }
-                            for item in tree.bench_registry
-                        ]
-                    ).get_list(),
+                    ctx.project_id, "{}"
                 ),
+                *[
+                    "data modify storage {} bench_registry.{} set value {}".format(
+                        ctx.project_id,
+                        category.value,
+                        NBT(
+                            [
+                                {
+                                    "name": entry.entry,
+                                    "items": entry.items,
+                                    "count": entry.count,
+                                    "index": i,
+                                }
+                                for i, entry in enumerate(tree.bench_registry.get(category.value, []))
+                            ]
+                        ).get_list(),
+                    )
+                    for category in (
+                        Category.FURNITURE,
+                        Category.TECHNOLOGY,
+                        Category.FOOD,
+                        Category.MISCELLANEOUS,
+                    )
+                ],
+                *[
+                    "\nexecute store result score registry.{}.pages local.var store result score registry.{}.size local.var run data get storage {} bench_registry.{}\n{}\n{}".format(
+                        category.value,
+                        category.value,
+                        ctx.project_id,
+                        category.value,
+                        f"scoreboard players operation registry.{category.value}.pages local.var /= 18 local.int",
+                        f"scoreboard players add registry.{category.value}.pages local.var 1",
+                    )
+                    for category in (
+                        Category.FURNITURE,
+                        Category.TECHNOLOGY,
+                        Category.FOOD,
+                        Category.MISCELLANEOUS,
+                    )
+                ],
             ]
         ),
         tags=[f"{ctx.project_id}:load"],

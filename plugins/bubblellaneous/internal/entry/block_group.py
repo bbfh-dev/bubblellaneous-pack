@@ -99,9 +99,13 @@ class BlockGroup(BaseEntry):
         materials = self.__class__.__dict__["materials"]
         name = snakecase(self.__class__.__name__)
 
-        tree.add_registry_item(BenchRegistry(f"block/{materials[0][0]}_{name}", [
-            f"block/{material[0]}_{name}" for material in materials
-            ]))
+        tree.add_registry_item(
+            self.__class__.__dict__["category"],
+            BenchRegistry(
+                f"block/{materials[0][0]}_{name}",
+                [f"block/{material[0]}_{name}" for material in materials],
+            ),
+        )
 
         if not blockstates:
             for material, primary, secondary in materials:

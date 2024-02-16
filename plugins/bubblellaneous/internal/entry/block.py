@@ -90,5 +90,5 @@ class Block(BaseEntry):
             ":as @e[type=item,nbt={Age: 0s},:first] align xyz -> [namespace]:utils/block/place",
         )
         if self.prop("is_single"):
-            tree.add_registry_item(BenchRegistry(f"block/{self.prop('name')}", []))
+            tree.add_registry_item(self.prop("category"), BenchRegistry(f"block/{self.prop('name')}", []))
         return tree, id + 1

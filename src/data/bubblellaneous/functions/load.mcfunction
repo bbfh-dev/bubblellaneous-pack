@@ -1,4 +1,5 @@
 scoreboard objectives add local.tmp dummy
+scoreboard objectives add local.var dummy
 scoreboard objectives add local.int dummy
 
 scoreboard objectives add local.on_drop custom:drop
@@ -8,7 +9,8 @@ function bubblellaneous:utils/set_default {name: "bubble_bench.allow_obtaining",
 function bubblellaneous:settings/load
 
 scoreboard objectives add local.block.state dummy
-scoreboard objectives add local.block.page dummy
+scoreboard objectives add local.block.gui_page dummy
+scoreboard objectives add local.block.predicate dummy
 scoreboard objectives add local.block.id dummy
 
 say LOADED

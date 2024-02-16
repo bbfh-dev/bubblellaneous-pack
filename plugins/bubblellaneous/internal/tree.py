@@ -6,6 +6,7 @@ from colorama import Fore
 from plugins.utils.nbt import NBT
 
 from .bench_registry import BenchRegistry
+from .category import Category
 from .templates import use_template
 
 
@@ -15,7 +16,7 @@ class Tree:
         self.loot_tables: dict[str, LootTable] = {}
         self.models: dict[str, Model] = {}
         self.model_ids: list[tuple[str, int]] = []
-        self.bench_registry: list[BenchRegistry] = []
+        self.bench_registry: dict[str, list[BenchRegistry]] = {}
 
     def __repr__(self) -> str:
         return self.__str__()
@@ -139,5 +140,7 @@ class Tree:
             return
         self.model_ids.append((key, id))
 
-    def add_registry_item(self, item: BenchRegistry):
-        self.bench_registry.append(item.update())
+    def add_registry_item(self, category: Category, item: BenchRegistry):
+        if not self.bench_registry.get(category.value):
+            self.bench_registry[category.value] = []
+        self.bench_registry[category.value].append(item.update())
