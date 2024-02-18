@@ -11,7 +11,7 @@ __DIR__ = Path(__file__).parent.resolve()
 def read_row(ctx: Context, row: list[str], languages: list[str]):
     return {
         lang: {f"{row[0]}.{ctx.project_id}.{row[1]}": row[i]}
-        for i, lang in enumerate(languages, start=2)
+        for i, lang in enumerate(languages, start=2) if row[i]
     }
 
 
@@ -19,8 +19,8 @@ def beet_default(ctx: Context):
     languages = []
     lang = {}
 
-    with open(path.join(__DIR__, "data", "lang.csv"), "r") as fp:
-        reader = csv.reader(fp)
+    with open(path.join(__DIR__, "data", "lang.tsv"), "r") as fp:
+        reader = csv.reader(fp, delimiter="\t")
         is_first = True
         for row in reader:
             if not is_first:

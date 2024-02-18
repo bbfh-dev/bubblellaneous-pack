@@ -18,7 +18,9 @@ class Preprocessor:
                     {"score": {"name": selector, "objective": scoreboard}},
                 ],
                 is_json=True,
-            ).get_list().replace('\\"', '"')
+            )
+            .get_list()
+            .replace('\\"', '"')
         )
 
     @staticmethod
@@ -37,6 +39,17 @@ class Preprocessor:
                 is_json=True,
             )
         )
+
+    @staticmethod
+    def repeat(line: str):
+        lines = []
+        iterator, command = line.split(" | ")
+        iter_var, iter_range = iterator.split("=")
+        iter_from, iter_to = iter_range.split("..")
+        for i in range(int(iter_from), int(iter_to) + 1):
+            lines.append(command.replace(f"<{iter_var}>", str(i)))
+
+        return "\n".join(lines)
 
 
 def beet_default(ctx: Context):
