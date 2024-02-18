@@ -1,3 +1,8 @@
+#region Blacklist mode
+execute if score bubble_bench.blacklist_mode local.settings matches 1 run function bubblellaneous:blocks/bubble_bench/item/blacklist with storage bubblellaneous tmp.input
+execute if score bubble_bench.blacklist_mode local.settings matches 1 run return 0
+#endregion
+
 execute if data storage bubblellaneous tmp.entry.tag.bubblellaneous.is_variant run function bubblellaneous:blocks/bubble_bench/gui/on/click/variant
 execute if data storage bubblellaneous tmp.entry.tag.bubblellaneous.is_variant run return 0
 

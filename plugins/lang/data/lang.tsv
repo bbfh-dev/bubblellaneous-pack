@@ -133,3 +133,4 @@ ui	craft_documentation	%s Press %s to View Documentation		%s Нажмите %s �
 ui	crafting_materials	%s Crafting materials		%s Материалы для крафта			
 ui	crafting_not_enough_items	Not enough items to craft %s		Недостаточно предметов чтобы скрафтить %s			
 ui	navigation	Navigation		Навигация			
+ui	blacklist_mode	%s Currently in %s Blacklisting mode!		%s В настоящее время находится в режиме черного списка %s!			
