@@ -2,7 +2,7 @@ import json
 from itertools import product
 from typing import Optional
 
-from beet import Model
+from beet import Function, Model
 from caseconverter import snakecase
 
 from plugins.utils.nbt import NBT
@@ -77,6 +77,7 @@ class BlockGroup(BaseEntry):
                 "id": block_name,
                 "name": name,
                 "is_single": False,
+                "docs": self.get_docs(),
                 "display_name": NBT(
                     {
                         "translate": f"block.[namespace].{material.split('_')[-1]}_{block_name}",
@@ -90,6 +91,9 @@ class BlockGroup(BaseEntry):
                     for name in ["category", "sound", "base", "facing", "tags"]
                 },
             }
+        )
+        tree.functions[f"help:[namespace]/{block_name}"] = Function(
+            "\n".join([f"tellraw @s {block.prop('docs')}"])
         )
         tree, _ = block.compile(tree, id)
         id += 1

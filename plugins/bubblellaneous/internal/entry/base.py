@@ -9,6 +9,18 @@ from ..templates import use_template
 from ..tree import Tree
 
 
+def format_docs_line(lines: list) -> str:
+    for i, line in enumerate(lines):
+        line = line[4:]
+        if line.startswith(":"):
+            color = line.split(" ")[0][1:]
+            text = " ".join(line.split(" ")[1:])[1:-1]
+            lines[i] = NBT({"text": f"[{text}]\\n", "color": color}, is_json=True)
+        else:
+            lines[i] = f"{line}\\n"
+    return NBT(["\\n", *lines]).get_list()
+
+
 class BaseEntry:
     def __init__(self, ctx: Context) -> None:
         self.ctx = ctx
@@ -24,6 +36,11 @@ class BaseEntry:
         if id < 1000:
             return int(f"371{id:0>3}")
         return int(f"37{id+1000:0>4}")
+
+    def get_docs(self) -> str:
+        if self.__class__.__doc__ is None:
+            return "[]"
+        return format_docs_line(self.__class__.__doc__.split("\n")[1:-1])
 
     def format(self, key: str) -> str:
         return re.sub(

@@ -23,25 +23,6 @@
                 ],
                 "color": "dark_gray",
                 "italic": false
-            },
-            {
-                "translate": "ui.bubblellaneous.craft_maximum",
-                "with": [
-                    "≔"
-                ],
-                "color": "dark_gray",
-                "italic": false
-            },
-            {
-                "translate": "ui.bubblellaneous.craft_documentation",
-                "with": [
-                    "≔",
-                    {
-                        "keybind": "key.drop"
-                    }
-                ],
-                "color": "dark_gray",
-                "italic": false
             }
         ],
         "replace": true

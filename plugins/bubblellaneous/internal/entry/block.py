@@ -25,6 +25,7 @@ class Block(BaseEntry):
 
     class Base(Enum):
         CONTAINER = "barrel[facing=up]"
+        SOLID = "petrified_oak_slab[type=double]"
         TOP_SLAB = "petrified_oak_slab[type=top]"
         BOTTOM_SLAB = "petrified_oak_slab[type=bottom]"
         FENCE = "dark_oak_fence"
@@ -67,6 +68,7 @@ class Block(BaseEntry):
                 "id": snakecase(self.__class__.__name__),
                 "name": name,
                 "is_single": True,
+                "docs": self.get_docs(),
                 "display_name": NBT(
                     {"translate": "block.[namespace].[name]", "italic": False},
                     is_json=True,
@@ -90,5 +92,10 @@ class Block(BaseEntry):
             ":as @e[type=item,nbt={Age: 0s},:first] align xyz -> [namespace]:utils/block/place",
         )
         if self.prop("is_single"):
-            tree.add_registry_item(self.prop("category"), BenchRegistry(f"block/{self.prop('name')}", []))
+            self.make_function(
+                tree, "help:[namespace]/[name]", f"tellraw @s {self.prop('docs')}"
+            )
+            tree.add_registry_item(
+                self.prop("category"), BenchRegistry(f"block/{self.prop('name')}", [])
+            )
         return tree, id + 1

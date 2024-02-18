@@ -3,6 +3,14 @@ from .internal.entry import Block, BlockGroup
 
 
 class BubbleBench(Block):
+    """
+    :yellow [☶ Description]
+    Used for obtaining all of the custom blocks & items.
+
+    :green [☄ Instructions]
+    Right click on the block and use the UI to navigate around and craft items.
+    """
+
     category = Category.FURNITURE
     sound = Block.Sound.INDUSTRIAL
     base = Block.Base.CONTAINER
@@ -15,6 +23,11 @@ class BubbleBench(Block):
 
 
 class Table(BlockGroup):
+    """
+    :yellow [☶ Description]
+    A decoration item. Can connect to other tables.
+    """
+
     category = Category.FURNITURE
     materials = BlockGroup.FURNITURE_TYPE
     sound = Block.Sound.WOOD
@@ -119,6 +132,11 @@ class Table(BlockGroup):
 
 
 class Shelf(BlockGroup):
+    """
+    :yellow [☶ Description]
+    A decoration item. You can place/take an item by right clicking on the shelf.
+    """
+
     category = Category.FURNITURE
     materials = BlockGroup.FURNITURE_TYPE
     sound = Block.Sound.WOOD
@@ -131,6 +149,11 @@ class Shelf(BlockGroup):
 
 
 class Cabinet(BlockGroup):
+    """
+    :yellow [☶ Description]
+    A decoration item. Simply a container.
+    """
+
     category = Category.FURNITURE
     materials = BlockGroup.FURNITURE_TYPE
     sound = Block.Sound.WOOD
@@ -143,6 +166,11 @@ class Cabinet(BlockGroup):
 
 
 class Drawer(BlockGroup):
+    """
+    :yellow [☶ Description]
+    A decoration item.
+    """
+
     category = Category.FURNITURE
     materials = BlockGroup.FURNITURE_TYPE
     sound = Block.Sound.WOOD
@@ -154,10 +182,15 @@ class Drawer(BlockGroup):
 
 
 class Cupboard(BlockGroup):
+    """
+    :yellow [☶ Description]
+    A decoration item. Right click on a shelf to place/remove an item from it.
+    """
+
     category = Category.FURNITURE
     materials = BlockGroup.FURNITURE_TYPE
     sound = Block.Sound.WOOD
-    base = Block.Base.BOTTOM_SLAB
+    base = Block.Base.SOLID
     facing = Block.Facing.PLAYER
     tags = [
         Block.Size.SINGLE,
@@ -166,6 +199,11 @@ class Cupboard(BlockGroup):
 
 
 class Bench(BlockGroup):
+    """
+    :yellow [☶ Description]
+    A decoration item. Right click to sit.
+    """
+
     category = Category.FURNITURE
     materials = BlockGroup.FURNITURE_TYPE
     sound = Block.Sound.WOOD
@@ -178,6 +216,11 @@ class Bench(BlockGroup):
 
 
 class Couch(BlockGroup):
+    """
+    :yellow [☶ Description]
+    A decoration item. Right click to sit. Connects to other couches.
+    """
+
     category = Category.FURNITURE
     materials = BlockGroup.WOOL_TYPE
     sound = Block.Sound.WOOL
@@ -264,6 +307,11 @@ class Couch(BlockGroup):
 
 
 class Stool(BlockGroup):
+    """
+    :yellow [☶ Description]
+    A decoration item. Right click to sit.
+    """
+
     category = Category.FURNITURE
     materials = BlockGroup.WOOD_TYPE
     sound = Block.Sound.WOOD
@@ -276,6 +324,11 @@ class Stool(BlockGroup):
 
 
 class Barstool(BlockGroup):
+    """
+    :yellow [☶ Description]
+    A decoration item. Right click to sit.
+    """
+
     category = Category.FURNITURE
     materials = BlockGroup.WOOD_TYPE
     sound = Block.Sound.WOOD
@@ -288,6 +341,11 @@ class Barstool(BlockGroup):
 
 
 class DinningChair(BlockGroup):
+    """
+    :yellow [☶ Description]
+    A decoration item. Right click to sit.
+    """
+
     category = Category.FURNITURE
     materials = BlockGroup.WOOD_WITH_WOOL_TYPE
     sound = Block.Sound.WOOD

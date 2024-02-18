@@ -1,7 +1,6 @@
 function bubblellaneous:blocks/bubble_bench/gui/load
 
-execute store result storage bubblellaneous tmp.input.at int 1 run scoreboard players get slot local.tmp
-function bubblellaneous:blocks/bubble_bench/gui/entry/get_by_index with storage bubblellaneous tmp.input
+function bubblellaneous:blocks/bubble_bench/gui/on/click/get_entry
 
 # Ignore empty slots
 execute if data storage bubblellaneous tmp.entry.tag{CustomModelData: 370000} run return 0
