@@ -1,5 +1,7 @@
 tag @e[type=item_display,tag=local.block,distance=..16] add --local.is_queued
 
+execute if score @s local.on_leave_game matches 1.. run function bubblellaneous:player/on/leave
+
 #region GUI
 execute if score @s local.on_drop matches 1.. run function bubblellaneous:player/on/drop_item
 

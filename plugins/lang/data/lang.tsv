@@ -1,5 +1,6 @@
 CATEGORY	NAME	EN_US	EN_GB	RU_RU	IT_IT	PT_BR	JA_JP
 root	translation_author	BubbleFish	BubbleFish	BubbleFish	TheBlueKnight_	the brickster	dorlonkho
+root	validate_pack_v1	%s Resource pack is successfully detected		%s Пакет ресурсов обнаружен успешно			
 block	bubble_bench	Bubble Bench		Бабл Верстак	Banco di lavoro	Bancada Bubble	バブルベンチ
 block	oak_table	Oak Table		Дубовый Стол			
 block	spruce_table	Spruce Table		Еловый Стол			
