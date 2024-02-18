@@ -127,7 +127,8 @@ block	red_couch	Red Couch	Red Sofa	Красный Диван
 block	black_couch	Black Couch	Black Sofa	Чёрный Диван			
 ui	expand_variants	%s Click to Expand Variants		%s Нажмите чтобы показать варианты			
 ui	craft	%s Click to Craft		%s Нажмите чтобы скрафтить			
-ui	craft_maximum	%s Hold Shift to Craft Maximum		%s Удерживайте Shift чтобы скрафтить максимум			
+ui	craft_maximum	%s Hold Shift to Craft Maximum		%s Удерживайте Shift, чтобы скрафтить максимум			
+ui	jump_to_list_end_or_begin	%s Shift+Click an arrow to jump to the end		%s Shift+Нажмите на стрелку, чтобы перейти к концу			
 ui	craft_documentation	%s Press %s to View Documentation		%s Нажмите %s чтобы просмотреть документацию			
 ui	crafting_materials	%s Crafting materials		%s Материалы для крафта			
 ui	crafting_not_enough_items	Not enough items to craft %s		Недостаточно предметов чтобы скрафтить %s			
