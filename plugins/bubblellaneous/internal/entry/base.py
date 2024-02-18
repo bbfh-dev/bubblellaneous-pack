@@ -1,5 +1,5 @@
 import re
-from typing import Self
+from typing import Self, cast
 
 from beet import Context, Function, LootTable
 

@@ -15,6 +15,10 @@ class BubbleBench(Block):
     sound = Block.Sound.INDUSTRIAL
     base = Block.Base.CONTAINER
     facing = Block.Facing.PLAYER
+    recipe = [
+        Block.RecipeItem("crafting_table", "block"),
+        Block.RecipeItem("glass_bottle", "item"),
+    ]
     tags = [
         Block.Size.SINGLE,
         Block.Uses.TICK,
@@ -33,6 +37,7 @@ class Table(BlockGroup):
     sound = Block.Sound.WOOD
     base = Block.Base.TOP_SLAB
     facing = Block.Facing.NONE
+    recipe = [Block.RecipeItem("[base]", "block", 7)]
     tags = [
         Block.Size.SINGLE,
         Block.Uses.CUSTOM_PLACE,
@@ -142,6 +147,7 @@ class Shelf(BlockGroup):
     sound = Block.Sound.WOOD
     base = Block.Base.VOID
     facing = Block.Facing.WALL
+    recipe = []
     tags = [
         Block.Size.SINGLE,
         Block.Uses.CUSTOM_PLACE,
@@ -159,6 +165,7 @@ class Cabinet(BlockGroup):
     sound = Block.Sound.WOOD
     base = Block.Base.CONTAINER
     facing = Block.Facing.PLAYER
+    recipe = []
     tags = [
         Block.Size.SINGLE,
         Block.Uses.CUSTOM_PLACE,
@@ -176,6 +183,7 @@ class Drawer(BlockGroup):
     sound = Block.Sound.WOOD
     base = Block.Base.TOP_SLAB
     facing = Block.Facing.PLAYER
+    recipe = []
     tags = [
         Block.Size.SINGLE,
     ]
@@ -192,6 +200,7 @@ class Cupboard(BlockGroup):
     sound = Block.Sound.WOOD
     base = Block.Base.SOLID
     facing = Block.Facing.PLAYER
+    recipe = []
     tags = [
         Block.Size.SINGLE,
         Block.Uses.CUSTOM_PLACE,
@@ -209,6 +218,7 @@ class Bench(BlockGroup):
     sound = Block.Sound.WOOD
     base = Block.Base.TRIPWIRE
     facing = Block.Facing.PLAYER
+    recipe = []
     tags = [
         Block.Size.SINGLE,
         Block.Uses.CUSTOM_PLACE,
@@ -226,6 +236,7 @@ class Couch(BlockGroup):
     sound = Block.Sound.WOOL
     base = Block.Base.TRIPWIRE
     facing = Block.Facing.PLAYER
+    recipe = []
     tags = [
         Block.Size.SINGLE,
         Block.Uses.CUSTOM_PLACE,
@@ -317,6 +328,7 @@ class Stool(BlockGroup):
     sound = Block.Sound.WOOD
     base = Block.Base.VOID
     facing = Block.Facing.PLAYER
+    recipe = []
     tags = [
         Block.Size.SINGLE,
         Block.Uses.CUSTOM_PLACE,
@@ -334,6 +346,7 @@ class Barstool(BlockGroup):
     sound = Block.Sound.WOOD
     base = Block.Base.VOID
     facing = Block.Facing.PLAYER
+    recipe = []
     tags = [
         Block.Size.SINGLE,
         Block.Uses.CUSTOM_PLACE,
@@ -351,6 +364,7 @@ class DinningChair(BlockGroup):
     sound = Block.Sound.WOOD
     base = Block.Base.VOID
     facing = Block.Facing.PLAYER
+    recipe = []
     tags = [
         Block.Size.SINGLE,
         Block.Uses.CUSTOM_PLACE,

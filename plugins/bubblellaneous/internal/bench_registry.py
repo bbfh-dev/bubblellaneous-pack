@@ -4,7 +4,7 @@ from dataclasses import dataclass
 @dataclass
 class BenchRegistry:
     entry: str
-    items: list[str]
+    items: list
     count: int = 0
 
     def update(self):

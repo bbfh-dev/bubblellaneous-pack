@@ -55,7 +55,9 @@ def beet_default(ctx: Context):
                                     "count": entry.count,
                                     "index": i,
                                 }
-                                for i, entry in enumerate(tree.bench_registry.get(category.value, []))
+                                for i, entry in enumerate(
+                                    tree.bench_registry.get(category.value, [])
+                                )
                             ]
                         ).get_list(),
                     )

@@ -1,3 +1,4 @@
+from dataclasses import dataclass
 from enum import Enum
 from typing import Literal, Optional, Self
 
@@ -58,6 +59,49 @@ class Block(BaseEntry):
             self.name = name
             self.predicates = predicates
 
+    @dataclass
+    class RecipeItem:
+        name: str
+        group: Literal["block"] | Literal["item"] | Literal["tag"]
+        count: int = 1
+
+        def get_entry(self, materials: list[tuple[str, str]]):
+            return {
+                "id": self.get_name(materials),
+                "group": self.group,
+                "count": self.count,
+                "lore": self.get_lore(materials),
+            }
+
+        def get_name(self, materials: list[tuple[str, str]]):
+            name = self.name
+            for material, block in materials:
+                name = name.replace(f"[{material}]", block)
+            return name
+
+        def get_lore(self, materials: list[tuple[str, str]]):
+            return NBT.Quote(
+                NBT(
+                    [
+                        {
+                            "text": "› ",
+                            "color": "gray",
+                            "italic": False,
+                        },
+                        {
+                            "translate": f"{self.group}.minecraft.{self.get_name(materials)}",
+                        },
+                        " ",
+                        {
+                            "text": f"× {self.count}",
+                            "color": "gold",
+                            "italic": False,
+                        },
+                    ],
+                    is_json=True,
+                ).get_list()
+            )
+
     def __init__(self, ctx: Context) -> None:
         super().__init__(ctx)
 
@@ -76,7 +120,14 @@ class Block(BaseEntry):
                 "path": [name],
                 **{
                     name: self.__class__.__dict__[name]
-                    for name in ["category", "sound", "base", "facing", "tags"]
+                    for name in [
+                        "category",
+                        "sound",
+                        "base",
+                        "facing",
+                        "recipe",
+                        "tags",
+                    ]
                 },
             }
         )
@@ -95,7 +146,17 @@ class Block(BaseEntry):
             self.make_function(
                 tree, "help:[namespace]/[name]", f"tellraw @s {self.prop('docs')}"
             )
+            self.make_function(
+                tree,
+                "[namespace]:recipe/block/[name]",
+                "data modify storage bubblellaneous tmp.recipe set value {}".format(
+                    NBT(
+                        [recipe.get_entry([]) for recipe in self.prop("recipe")]
+                    ).get_list()
+                ),
+            )
             tree.add_registry_item(
-                self.prop("category"), BenchRegistry(f"block/{self.prop('name')}", [])
+                self.prop("category"),
+                BenchRegistry(f"block/{self.prop('name')}", []),
             )
         return tree, id + 1
