@@ -21,7 +21,6 @@ class BubbleBench(Block):
     ]
     tags = [
         Block.Size.SINGLE,
-        Block.Uses.TICK,
         Block.Uses.GUI,
     ]
 
