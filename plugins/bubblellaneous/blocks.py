@@ -41,97 +41,148 @@ class Table(BlockGroup):
     tags = [
         Block.Size.SINGLE,
         Block.Uses.CUSTOM_PLACE,
+        Block.Uses.BLOCKSTATES,
     ]
     blockstates = [
-        Block.State(
-            "single",
-            [
-                Block.Predicate("FRONT", None),
-                Block.Predicate("BACK", None),
-                Block.Predicate("LEFT", None),
-                Block.Predicate("RIGHT", None),
-            ],
-        ),
+        Block.State("single", None),
         Block.State(
             "north",
-            [
-                Block.Predicate("FRONT", None),
-                Block.Predicate("BACK", None),
-                Block.Predicate("LEFT", None),
-                Block.Predicate("RIGHT", "#solid", "self"),
-            ],
+            Block.Predicate(
+                ["!#no_solid_collision"],
+                front=False,
+                back=True,
+                left=False,
+                right=False,
+                use_self=False,
+            ),
         ),
         Block.State(
             "west",
-            [
-                Block.Predicate("FRONT", None),
-                Block.Predicate("BACK", "#solid", "self"),
-                Block.Predicate("LEFT", None),
-                Block.Predicate("RIGHT", None),
-            ],
+            Block.Predicate(
+                ["!#no_solid_collision"],
+                front=False,
+                back=False,
+                left=True,
+                right=False,
+                use_self=False,
+            ),
         ),
         Block.State(
             "south",
-            [
-                Block.Predicate("FRONT", None),
-                Block.Predicate("BACK", None),
-                Block.Predicate("LEFT", "#solid", "self"),
-                Block.Predicate("RIGHT", None),
-            ],
+            Block.Predicate(
+                ["!#no_solid_collision"],
+                front=True,
+                back=False,
+                left=False,
+                right=False,
+                use_self=False,
+            ),
         ),
         Block.State(
             "east",
-            [
-                Block.Predicate("FRONT", "#solid", "self"),
-                Block.Predicate("BACK", None),
-                Block.Predicate("LEFT", None),
-                Block.Predicate("RIGHT", None),
-            ],
+            Block.Predicate(
+                ["!#no_solid_collision"],
+                front=False,
+                back=False,
+                left=False,
+                right=True,
+                use_self=False,
+            ),
         ),
         Block.State(
             "nw_corner",
-            [
-                Block.Predicate("FRONT", None),
-                Block.Predicate("BACK", "#solid", "self"),
-                Block.Predicate("LEFT", None),
-                Block.Predicate("RIGHT", "#solid", "self"),
-            ],
+            Block.Predicate(
+                ["!#no_solid_collision"],
+                front=False,
+                back=True,
+                left=True,
+                right=False,
+                use_self=False,
+            ),
         ),
         Block.State(
             "ne_corner",
-            [
-                Block.Predicate("FRONT", "#solid", "self"),
-                Block.Predicate("BACK", None),
-                Block.Predicate("LEFT", None),
-                Block.Predicate("RIGHT", "#solid", "self"),
-            ],
+            Block.Predicate(
+                ["!#no_solid_collision"],
+                front=False,
+                back=True,
+                left=False,
+                right=True,
+                use_self=False,
+            ),
         ),
         Block.State(
             "sw_corner",
-            [
-                Block.Predicate("FRONT", None),
-                Block.Predicate("BACK", "#solid", "self"),
-                Block.Predicate("LEFT", "#solid", "self"),
-                Block.Predicate("RIGHT", None),
-            ],
+            Block.Predicate(
+                ["!#no_solid_collision"],
+                front=True,
+                back=False,
+                left=True,
+                right=False,
+                use_self=False,
+            ),
         ),
         Block.State(
             "se_corner",
-            [
-                Block.Predicate("FRONT", "#solid", "self"),
-                Block.Predicate("BACK", None),
-                Block.Predicate("LEFT", "#solid", "self"),
-                Block.Predicate("RIGHT", None),
-            ],
+            Block.Predicate(
+                ["!#no_solid_collision"],
+                front=True,
+                back=False,
+                left=False,
+                right=True,
+                use_self=False,
+            ),
         ),
         Block.State(
             "surrounded",
-            [
-                Block.Predicate("FRONT", "#solid", "self"),
-                Block.Predicate("BACK", "#solid", "self"),
-                Block.Predicate("LEFT", "#solid", "self"),
-                Block.Predicate("RIGHT", "#solid", "self"),
-            ],
+            Block.Predicate(
+                ["!#no_solid_collision"],
+                front=True,
+                back=True,
+                left=False,
+                right=False,
+                use_self=False,
+            ),
+            Block.Predicate(
+                ["!#no_solid_collision"],
+                front=False,
+                back=False,
+                left=True,
+                right=True,
+                use_self=False,
+            ),
+            Block.Predicate(
+                ["!#no_solid_collision"],
+                front=None,
+                back=True,
+                left=True,
+                right=True,
+                use_self=False,
+            ),
+            Block.Predicate(
+                ["!#no_solid_collision"],
+                front=True,
+                back=None,
+                left=True,
+                right=True,
+                use_self=False,
+            ),
+            Block.Predicate(
+                ["!#no_solid_collision"],
+                front=True,
+                back=True,
+                left=None,
+                right=True,
+                use_self=False,
+            ),
+            Block.Predicate(
+                ["!#no_solid_collision"],
+                front=True,
+                back=True,
+                left=True,
+                right=None,
+                use_self=False,
+            ),
         ),
     ]
 
@@ -240,79 +291,75 @@ class Couch(BlockGroup):
     tags = [
         Block.Size.SINGLE,
         Block.Uses.CUSTOM_PLACE,
+        Block.Uses.BLOCKSTATES,
     ]
     blockstates = [
-        Block.State(
-            "single",
-            [
-                Block.Predicate("FRONT", None),
-                Block.Predicate("BACK", None),
-                Block.Predicate("LEFT", None),
-                Block.Predicate("RIGHT", None),
-            ],
-        ),
+        Block.State("single", None),
         Block.State(
             "left",
-            [
-                Block.Predicate("FRONT", None),
-                Block.Predicate("BACK", None),
-                Block.Predicate("LEFT", None),
-                Block.Predicate("RIGHT", "#solid", "self"),
-            ],
+            Block.Predicate(
+                [],
+                front=False,
+                back=False,
+                left=True,
+                right=False,
+                use_self=True,
+            ),
         ),
         Block.State(
             "right",
-            [
-                Block.Predicate("FRONT", None),
-                Block.Predicate("BACK", None),
-                Block.Predicate("LEFT", "#solid", "self"),
-                Block.Predicate("RIGHT", None),
-            ],
+            Block.Predicate(
+                [],
+                front=False,
+                back=False,
+                left=False,
+                right=True,
+                use_self=True,
+            ),
         ),
         Block.State(
             "center",
-            [
-                Block.Predicate("FRONT", None),
-                Block.Predicate("BACK", None),
-                Block.Predicate("LEFT", "#solid", "self"),
-                Block.Predicate("RIGHT", "#solid", "self"),
-            ],
+            Block.Predicate(
+                [],
+                front=False,
+                back=False,
+                left=True,
+                right=True,
+                use_self=True,
+            ),
         ),
         Block.State(
             "left_front_corner",
-            [
-                Block.Predicate("FRONT", "#solid", "self"),
-                Block.Predicate("BACK", None),
-                Block.Predicate("LEFT", None),
-                Block.Predicate("RIGHT", "#solid", "self"),
-            ],
+            Block.Predicate(
+                [],
+                front=True,
+                back=False,
+                left=True,
+                right=False,
+                use_self=True,
+            ),
         ),
         Block.State(
             "right_front_corner",
-            [
-                Block.Predicate("FRONT", "#solid", "self"),
-                Block.Predicate("BACK", None),
-                Block.Predicate("LEFT", "#solid", "self"),
-                Block.Predicate("RIGHT", None),
-            ],
+            Block.Predicate(
+                [],
+                front=True,
+                back=False,
+                left=False,
+                right=True,
+                use_self=True,
+            ),
         ),
         Block.State(
             "corner",
-            [
-                Block.Predicate("FRONT", None),
-                Block.Predicate("BACK", "#solid", "self"),
-                Block.Predicate("LEFT", None),
-                Block.Predicate("RIGHT", "#solid", "self"),
-            ],
-        ),
-        Block.State(
-            "corner",
-            [
-                Block.Predicate("FRONT", None),
-                Block.Predicate("BACK", "#solid", "self"),
-                Block.Predicate("LEFT", "#solid", "self"),
-                Block.Predicate("RIGHT", None),
-            ],
+            Block.Predicate(
+                [],
+                front=None,
+                back=True,
+                left=None,
+                right=None,
+                use_self=True,
+            ),
         ),
     ]
 

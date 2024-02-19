@@ -1,6 +1,6 @@
 import json
 from itertools import product
-from typing import Optional
+from typing import Optional, cast
 
 from beet import Function, Model
 from caseconverter import snakecase
@@ -30,6 +30,21 @@ WOOL_COLORS = [
     "red",
     "black",
 ]
+
+
+def get_blockstate_code(predicates: str, name: str, state: Block.State):
+    if predicates:
+        line = f"execute {predicates} run function [namespace]:blocks/{name}/blockstate/set_{state.name}"
+    else:
+        line = f"function [namespace]:blocks/{name}/blockstate/set_{state.name}"
+
+    return "\n".join(
+        [
+            line,
+            "execute if score quit local.tmp matches 1 run return 0",
+            "",
+        ]
+    )
 
 
 class BlockGroup(BaseEntry):
@@ -84,6 +99,7 @@ class BlockGroup(BaseEntry):
             {
                 "id": block_name,
                 "name": name,
+                "size": len(self.__class__.__dict__["materials"]),
                 "is_single": False,
                 "docs": self.get_docs(),
                 "display_name": NBT(
@@ -95,7 +111,7 @@ class BlockGroup(BaseEntry):
                 ),
                 "path": path,
                 **{
-                    name: self.__class__.__dict__[name]
+                    name: self.__class__.__dict__.get(name)
                     for name in [
                         "category",
                         "sound",
@@ -103,6 +119,7 @@ class BlockGroup(BaseEntry):
                         "facing",
                         "recipe",
                         "tags",
+                        "blockstates",
                     ]
                 },
             }
@@ -129,7 +146,10 @@ class BlockGroup(BaseEntry):
         id += 1
 
     def compile(self, tree: Tree, id: int) -> tuple[Tree, int]:
-        blockstates = self.__class__.__dict__.get("blockstates")
+        first_id = id
+        blockstates: list[Block.State] = cast(
+            list[Block.State], self.__class__.__dict__.get("blockstates")
+        )
         materials = self.__class__.__dict__["materials"]
         name = snakecase(self.__class__.__name__)
 
@@ -176,6 +196,35 @@ class BlockGroup(BaseEntry):
                 )
                 if state.name == first:
                     self.compile_single(tree, id, material, state.name, block_materials)
+                else:
+                    tree.add_model_id(
+                        f"[namespace]:block/{'/'.join([name, state.name, material])}",
+                        self.get_id(id),
+                    )
                 id += 1
+
+        code: list[str] = ["scoreboard players set quit local.tmp 0", ""]
+        for i, state in enumerate(blockstates):
+            for predicate in state.predicates:
+                if predicate is None:
+                    code.append(get_blockstate_code("", name, state))
+                    continue
+                names = predicate.names
+                if predicate.use_self:
+                    names.append(f"@--local.name.{name}")
+                for block_name in names:
+                    code.insert(
+                        2,
+                        get_blockstate_code(predicate.format(block_name), name, state),
+                    )
+            self.make_function(
+                tree,
+                f"[namespace]:blocks/{name}/blockstate/set_{state.name}",
+                "scoreboard players set quit local.tmp 1",
+                "execute store result score model local.tmp run data get entity @s item.tag.block_data.custom_model_data",
+                f"scoreboard players add model local.tmp {i * len(materials)}",
+                "execute store result entity @s item.tag.CustomModelData int 1 run scoreboard players get model local.tmp",
+            )
+        self.make_function(tree, f"[namespace]:blocks/{name}/blockstate/update", *code)
 
         return tree, id + 1

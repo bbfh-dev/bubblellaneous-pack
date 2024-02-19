@@ -1,3 +1,4 @@
+import math
 from dataclasses import dataclass
 from enum import Enum
 from typing import Literal, Optional, Self
@@ -42,20 +43,50 @@ class Block(BaseEntry):
         TICK = "--local.uses.tick"
         GUI = "--local.uses.gui"
         CUSTOM_PLACE = "--local.uses.custom_place"
+        BLOCKSTATES = "--local.uses.blockstates"
 
+    @dataclass
     class Predicate:
-        def __init__(
-            self,
-            offset: (
-                Literal["FRONT"] | Literal["BACK"] | Literal["LEFT"] | Literal["RIGHT"]
-            ),
-            *blocks: Optional["Block"] | Literal["self"] | Literal["#solid"],
-        ) -> None:
-            self.blocks = blocks
-            self.offset = offset
+        names: list[str | Literal["self"]]
+        front: Optional[bool]
+        back: Optional[bool]
+        left: Optional[bool]
+        right: Optional[bool]
+        use_self: bool
+
+        def format(self, block: str) -> str:
+            statement = "unless" if block.startswith("!") else "if"
+            not_statement = "if" if block.startswith("!") else "unless"
+            block = block.replace("!", "")
+            if block.startswith("@"):
+                argument = (
+                    f"entity @e[type=item_display,tag={block[1:]},distance=..0.5]"
+                )
+            elif block.startswith("#"):
+                argument = f"block ~ ~ ~ #bubblellaneous:{block[1:]}"
+            else:
+                argument = f"block ~ ~ ~ {block}"
+
+            args = []
+
+            def add_arg(var: bool | None, offset: tuple[int, int, int]):
+                args.append(
+                    f"positioned ^{offset[0] or ''} ^{offset[1] or ''} ^{offset[2] or ''} {statement if var else not_statement} {argument} positioned ^{-offset[0]} ^{-offset[1]} ^{-offset[2]}"
+                )
+
+            if self.front is not None:
+                add_arg(self.front, (0, 0, 1))
+            if self.back is not None:
+                add_arg(self.back, (0, 0, -1))
+            if self.left is not None:
+                add_arg(self.left, (-1, 0, 0))
+            if self.right is not None:
+                add_arg(self.right, (1, 0, 0))
+
+            return " ".join(args)
 
     class State:
-        def __init__(self, name: str, predicates: list["Block.Predicate"]) -> None:
+        def __init__(self, name: str, *predicates: Optional["Block.Predicate"]) -> None:
             self.name = name
             self.predicates = predicates
 
@@ -111,6 +142,7 @@ class Block(BaseEntry):
             {
                 "id": snakecase(self.__class__.__name__),
                 "name": name,
+                "size": 1,
                 "is_single": True,
                 "docs": self.get_docs(),
                 "display_name": NBT(
@@ -119,7 +151,7 @@ class Block(BaseEntry):
                 ),
                 "path": [name],
                 **{
-                    name: self.__class__.__dict__[name]
+                    name: self.__class__.__dict__.get(name)
                     for name in [
                         "category",
                         "sound",
@@ -127,6 +159,7 @@ class Block(BaseEntry):
                         "facing",
                         "recipe",
                         "tags",
+                        "blockstates",
                     ]
                 },
             }
