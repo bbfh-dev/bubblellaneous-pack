@@ -19,6 +19,11 @@ REGISTRY: list[type[BaseEntry]] = [
     Stool,
     Barstool,
     DinningChair,
+    Blinds,
+    KitchenCabinet,
+    Fridge,
+    Washer,
+    Trashcan,
 ]
 
 

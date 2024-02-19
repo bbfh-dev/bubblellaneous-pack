@@ -207,7 +207,7 @@ class Shelf(BlockGroup):
 class Cabinet(BlockGroup):
     """
     :yellow [☶ Description]
-    A decoration item. Simply a container.
+    A container block.
     """
 
     category = Category.FURNITURE
@@ -409,6 +409,118 @@ class DinningChair(BlockGroup):
     sound = Block.Sound.WOOD
     base = Block.Base.VOID
     facing = Block.Facing.PLAYER
+    recipe = []
+    tags = [
+        Block.Size.SINGLE,
+        Block.Uses.CUSTOM_PLACE,
+    ]
+
+
+class Blinds(BlockGroup):
+    """
+    :yellow [☶ Description]
+    A decoration item.
+    """
+
+    category = Category.FURNITURE
+    materials = BlockGroup.FURNITURE_TYPE
+    sound = Block.Sound.WOOD
+    base = Block.Base.VOID
+    facing = Block.Facing.WALL
+    recipe = []
+    tags = [
+        Block.Size.SINGLE,
+    ]
+
+
+class KitchenCabinet(BlockGroup):
+    """
+    :yellow [☶ Description]
+    A container block.
+    """
+
+    category = Category.FURNITURE
+    materials = BlockGroup.FURNITURE_TYPE
+    sound = Block.Sound.WOOD
+    base = Block.Base.CONTAINER
+    facing = Block.Facing.PLAYER
+    recipe = []
+    tags = [
+        Block.Size.SINGLE,
+    ]
+
+
+class Fridge(Block):
+    """
+    :yellow [☶ Description]
+    A container block.
+    """
+
+    category = Category.FURNITURE
+    sound = Block.Sound.INDUSTRIAL
+    base = Block.Base.CONTAINER
+    facing = Block.Facing.PLAYER
+    recipe = []
+    tags = [
+        Block.Size.SINGLE,
+        Block.Uses.BLOCKSTATES,
+    ]
+    blockstates = [
+        Block.State("upper", None),
+        Block.State(
+            "lower",
+            Block.Predicate(
+                [],
+                front=None,
+                back=None,
+                left=None,
+                right=None,
+                up=True,
+                use_self=True,
+            ),
+        ),
+    ]
+
+
+class Washer(Block):
+    """
+    :yellow [☶ Description]
+    Washes clothes.
+
+    :green [☄ Instructions]
+    Place water above to refill.
+    A single bucket of water can wash up to 16 items.
+    Put cloths inside to wash their color away.
+    """
+
+    category = Category.FURNITURE
+    sound = Block.Sound.INDUSTRIAL
+    base = Block.Base.HOPPER
+    facing = Block.Facing.PLAYER
+    recipe = []
+    tags = [
+        Block.Size.SINGLE,
+        Block.Uses.TICK,
+    ]
+    blockstates = [
+        Block.State("empty", None),
+        Block.State("full", None),
+    ]
+
+
+class Trashcan(Block):
+    """
+    :yellow [☶ Description]
+    Erases items from existance.
+
+    :green [☄ Instructions]
+    Right-click it while shifting to erase the item from your mainhand.
+    """
+
+    category = Category.FURNITURE
+    sound = Block.Sound.WOOD
+    base = Block.Base.CHAIN
+    facing = Block.Facing.NONE
     recipe = []
     tags = [
         Block.Size.SINGLE,

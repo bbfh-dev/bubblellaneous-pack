@@ -10,7 +10,7 @@ from plugins.utils.nbt import NBT
 from ..bench_registry import BenchRegistry
 from ..tree import Tree
 from .base import BaseEntry
-from .block import Block
+from .block import Block, get_blockstate_code
 
 WOOL_COLORS = [
     "white",
@@ -32,33 +32,19 @@ WOOL_COLORS = [
 ]
 
 
-def get_blockstate_code(predicates: str, name: str, state: Block.State):
-    if predicates:
-        line = f"execute {predicates} run function [namespace]:blocks/{name}/blockstate/set_{state.name}"
-    else:
-        line = f"function [namespace]:blocks/{name}/blockstate/set_{state.name}"
-
-    return "\n".join(
-        [
-            line,
-            "execute if score quit local.tmp matches 1 run return 0",
-            "",
-        ]
-    )
-
-
 class BlockGroup(BaseEntry):
     WOOD_TYPE = [
-        ("oak", "oak_planks", "oak_log", {"base": "oak_planks"}),
+        ("oak", "oak_planks", "dark_oak_log", {"base": "oak_planks"}),
         ("spruce", "spruce_planks", "spruce_log", {"base": "spruce_planks"}),
         ("birch", "birch_planks", "birch_log", {"base": "birch_planks"}),
-        ("jungle", "jungle_planks", "jungle_log", {"base": "jungle_planks"}),
+        ("jungle", "jungle_planks", "mangrove_log", {"base": "jungle_planks"}),
         ("acacia", "acacia_planks", "acacia_log", {"base": "acacia_planks"}),
-        ("dark_oak", "dark_oak_planks", "dark_oak_log", {"base": "dark_oak_planks"}),
-        ("mangrove", "mangrove_planks", "mangrove_log", {"base": "mangrove_planks"}),
+        ("dark_oak", "dark_oak_planks", "oak_log", {"base": "dark_oak_planks"}),
+        ("mangrove", "mangrove_planks", "cherry_log", {"base": "mangrove_planks"}),
         ("cherry", "cherry_planks", "cherry_log", {"base": "cherry_planks"}),
-        ("crimson", "crimson_planks", "crimson_stem", {"base": "crimson_planks"}),
+        ("crimson", "crimson_planks", "warped_stem", {"base": "crimson_planks"}),
         ("warped", "warped_planks", "crimson_stem", {"base": "warped_planks"}),
+        ("bamboo", "bamboo_planks", "bamboo_fence_particle", {"base": "bamboo_planks"}),
     ]
 
     WOOL_TYPE = [
@@ -75,6 +61,13 @@ class BlockGroup(BaseEntry):
         *WOOD_TYPE,
         ("stone", "stone", "smooth_stone", {"base": "stone"}),
         ("quartz", "quartz_block_side", "quartz_pillar", {"base": "quartz_block"}),
+        ("deepslate", "deepslate", "deepslate_tiles", {"base": "deepslate"}),
+        ("iron", "iron_block", "smithing_table_top", {"base": "iron_block"}),
+        ("copper", "copper_block", "cut_copper", {"base": "copper_block"}),
+        ("gold", "gold_block", "raw_gold_block", {"base": "gold_block"}),
+        ("diamond", "diamond_block", "smithing_table_top", {"base": "diamond_block"}),
+        ("emerald", "emerald_block", "smithing_table_top", {"base": "emerald_block"}),
+        ("netherite", "netherite_block", "smithing_table_top", {"base": "netherite_block"}),
     ]
 
     WOOD_WITH_WOOL_TYPE = [

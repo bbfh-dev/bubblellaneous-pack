@@ -1,9 +1,10 @@
+import json
 import math
 from dataclasses import dataclass
 from enum import Enum
 from typing import Literal, Optional, Self
 
-from beet import Context
+from beet import Context, Model
 from caseconverter import snakecase
 
 from plugins.utils.nbt import NBT
@@ -11,6 +12,21 @@ from plugins.utils.nbt import NBT
 from ..bench_registry import BenchRegistry
 from ..tree import Tree
 from .base import BaseEntry
+
+
+def get_blockstate_code(predicates: str, name: str, state: "Block.State"):
+    if predicates:
+        line = f"execute {predicates} run function [namespace]:blocks/{name}/blockstate/set_{state.name}"
+    else:
+        line = f"function [namespace]:blocks/{name}/blockstate/set_{state.name}"
+
+    return "\n".join(
+        [
+            line,
+            "execute if score quit local.tmp matches 1 run return 0",
+            "",
+        ]
+    )
 
 
 class Block(BaseEntry):
@@ -27,10 +43,11 @@ class Block(BaseEntry):
 
     class Base(Enum):
         CONTAINER = "barrel[facing=up]"
+        HOPPER = "hopper"
         SOLID = "petrified_oak_slab[type=double]"
         TOP_SLAB = "petrified_oak_slab[type=top]"
         BOTTOM_SLAB = "petrified_oak_slab[type=bottom]"
-        FENCE = "dark_oak_fence"
+        CHAIN = "chain"
         TRIPWIRE = "tripwire"
         VOID = "structure_void"
 
@@ -174,7 +191,8 @@ class Block(BaseEntry):
 
     def compile(self, tree: Tree, id: int) -> tuple[Tree, int]:
         tree, id = super().compile(tree, id)
-        tree.add_model_id(f"[namespace]:block/{self.prop('name')}", self.get_id(id))
+        if not (self.prop("is_single") and type(self.prop("blockstates")) is list):
+            tree.add_model_id(f"[namespace]:block/{self.prop('name')}", self.get_id(id))
         self.make_function(
             tree,
             "place:[namespace]/[name]",
@@ -198,4 +216,46 @@ class Block(BaseEntry):
                 self.prop("category"),
                 BenchRegistry(f"block/{self.prop('name')}", []),
             )
+            if type(self.prop("blockstates")) is list:
+                blockstates = self.prop("blockstates")
+                dir = f"{self.ctx.project_id}:block/{self.prop('name')}"
+                for state in blockstates:
+                    template = self.ctx.assets.models[f"{dir}/template/{state.name}"]
+                    tree.model(
+                        f"{dir}/{state.name}",
+                        Model(json.loads(json.dumps(template.data))),
+                    )
+                    tree.add_model_id(
+                        f"[namespace]:block/{'/'.join([self.prop('name'), state.name])}",
+                        self.get_id(id),
+                    )
+                    id += 1
+
+                code: list[str] = ["scoreboard players set quit local.tmp 0", ""]
+                for i, state in enumerate(blockstates):
+                    for predicate in state.predicates:
+                        if predicate is None:
+                            code.append(get_blockstate_code("", self.prop("name"), state))
+                            continue
+                        names = predicate.names
+                        if predicate.use_self:
+                            names.append(f"@--local.name.{self.prop('name')}")
+                        for block_name in names:
+                            code.insert(
+                                2,
+                                get_blockstate_code(
+                                    predicate.format(block_name), self.prop("name"), state
+                                ),
+                            )
+                    self.make_function(
+                        tree,
+                        f"[namespace]:blocks/{self.prop('name')}/blockstate/set_{state.name}",
+                        "scoreboard players set quit local.tmp 1",
+                        "execute store result score model local.tmp run data get entity @s item.tag.block_data.custom_model_data",
+                        f"scoreboard players add model local.tmp {i}",
+                        "execute store result entity @s item.tag.CustomModelData int 1 run scoreboard players get model local.tmp",
+                    )
+                self.make_function(
+                    tree, f"[namespace]:blocks/{self.prop('name')}/blockstate/update", *code
+                )
         return tree, id + 1
