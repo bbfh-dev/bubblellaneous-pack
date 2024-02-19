@@ -13,5 +13,14 @@
             "minecraft:dig/wood4"
         ],
         "subtitle": "subtitles.block.generic.place"
+    },
+    "block.wool.place": {
+        "sounds": [
+            "dig/cloth1",
+            "dig/cloth2",
+            "dig/cloth3",
+            "dig/cloth4"
+        ],
+        "subtitle": "subtitles.block.generic.place"
     }
 }
