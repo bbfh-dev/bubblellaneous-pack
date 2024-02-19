@@ -1,7 +1,7 @@
 CATEGORY	NAME	EN_US	EN_GB	RU_RU	IT_IT	PT_BR	JA_JP
 root	translation_author	Translated by BubbleFish	Translated by BubbleFish	Перевод: BubbleFish	Tradotto da FBreakDance30	the brickster	dorlonkho
 root	validate_pack_v1	%s Resource pack is successfully detected		%s Пакет ресурсов обнаружен успешно	%s Il pacchetto è stato rilevato con successo		
-block	bubble_bench	Bubble Bench		Бабл Верстак	Banco da lavoro bolla	Bancada Bubble	バブルベンチ
+block	bubble_bench	Bubble Bench		Бабл Верстак	Banco bolla	Bancada Bubble	バブルベンチ
 block	oak_table	Oak Table		Дубовый Стол	Tavolo di quercia		
 block	spruce_table	Spruce Table		Еловый Стол	Tavolo di abete		
 block	birch_table	Birch Table		Берëзовый Стол	Tavolo di betulla		
@@ -14,6 +14,14 @@ block	crimson_table	Crimson Table		Багровый Стол	Tavolo cremisi
 block	warped_table	Warped Table		Искажëнный Стол	Tavolo distorto		
 block	stone_table	Stone Table		Каменный Стол	Tavolo di pietra		
 block	quartz_table	Quartz Table		Кварцевый Стол	Tavolo di quarzo		
+block	bamboo_table	Bamboo Table					
+block	deepslate_table	Deepslate Table					
+block	iron_table	Iron Table					
+block	copper_table	Copper Table					
+block	golden_table	Golden Table					
+block	diamond_table	Diamond Table					
+block	emerald_table	Emerald Table					
+block	netherite_table	Netherite Table					
 block	oak_shelf	Oak Shelf		Дубовая Полка	Mensola di quercia		
 block	spruce_shelf	Spruce Shelf		Еловая Полка	Mensola di abete		
 block	birch_shelf	Birch Shelf		Берëзовая Полка	Mensola di betulla		
@@ -26,6 +34,14 @@ block	crimson_shelf	Crimson Shelf		Багровая Полка	Mensola cremisi
 block	warped_shelf	Warped Shelf		Искажëнная Полка	Mensola distorta		
 block	stone_shelf	Stone Shelf		Каменная Полка	Mensola di pietra		
 block	quartz_shelf	Quartz Shelf		Кварцевая Полка	Mensola di quarzo		
+block	bamboo_shelf	Bamboo Shelf					
+block	deepslate_shelf	Deepslate Shelf					
+block	iron_shelf	Iron Shelf					
+block	copper_shelf	Copper Shelf					
+block	golden_shelf	Golden Shelf					
+block	diamond_shelf	Diamond Shelf					
+block	emerald_shelf	Emerald Shelf					
+block	netherite_shelf	Netherite Shelf					
 block	oak_cabinet	Oak Cabinet		Дубовый Ящик	Comodino di quercia		
 block	spruce_cabinet	Spruce Cabinet		Еловый Ящик	Comodino di abete		
 block	birch_cabinet	Birch Cabinet		Берëзовый Ящик	Comodino di betulla		
@@ -38,6 +54,14 @@ block	crimson_cabinet	Crimson Cabinet		Багровый Ящик	Comodino cremis
 block	warped_cabinet	Warped Cabinet		Искажëнный Ящик	Comodino distorto		
 block	stone_cabinet	Stone Cabinet		Каменный Ящик	Comodino di pietra		
 block	quartz_cabinet	Quartz Cabinet		Кварцевый Ящик	Comodino di quarzo		
+block	bamboo_cabinet	Bamboo Cabinet					
+block	deepslate_cabinet	Deepslate Cabinet					
+block	iron_cabinet	Iron Cabinet					
+block	copper_cabinet	Copper Cabinet					
+block	golden_cabinet	Golden Cabinet					
+block	diamond_cabinet	Diamond Cabinet					
+block	emerald_cabinet	Emerald Cabinet					
+block	netherite_cabinet	Netherite Cabinet					
 block	oak_drawer	Oak Drawer		Дубовый Тумба	Cassetto di quercia		
 block	spruce_drawer	Spruce Drawer		Еловый Тумба	Cassetto di abete		
 block	birch_drawer	Birch Drawer		Берëзовый Тумба	Cassetto di betulla		
@@ -50,6 +74,14 @@ block	crimson_drawer	Crimson Drawer		Багровый Тумба	Cassetto cremis
 block	warped_drawer	Warped Drawer		Искажëнный Тумба	Cassetto distorto		
 block	stone_drawer	Stone Drawer		Каменный Тумба	Cassetto di pietra		
 block	quartz_drawer	Quartz Drawer		Кварцевый Тумба	Cassetto di quarzo		
+block	bamboo_drawer	Bamboo Drawer					
+block	deepslate_drawer	Deepslate Drawer					
+block	iron_drawer	Iron Drawer					
+block	copper_drawer	Copper Drawer					
+block	golden_drawer	Golden Drawer					
+block	diamond_drawer	Diamond Drawer					
+block	emerald_drawer	Emerald Drawer					
+block	netherite_drawer	Netherite Drawer					
 block	oak_cupboard	Oak Cupboard		Дубовый Буфет	Credenza di quercia		
 block	spruce_cupboard	Spruce Cupboard		Еловый Буфет	Credenza di abete		
 block	birch_cupboard	Birch Cupboard		Берëзовый Буфет	Credenza di betulla		
@@ -62,6 +94,14 @@ block	crimson_cupboard	Crimson Cupboard		Багровый Буфет	Credenza cr
 block	warped_cupboard	Warped Cupboard		Искажëнный Буфет	Credenza distorta		
 block	stone_cupboard	Stone Cupboard		Каменный Буфет	Credenza di pietra		
 block	quartz_cupboard	Quartz Cupboard		Кварцевый Буфет	Credenza di quarzo		
+block	bamboo_cupboard	Bamboo Cupboard					
+block	deepslate_cupboard	Deepslate Cupboard					
+block	iron_cupboard	Iron Cupboard					
+block	copper_cupboard	Copper Cupboard					
+block	golden_cupboard	Golden Cupboard					
+block	diamond_cupboard	Diamond Cupboard					
+block	emerald_cupboard	Emerald Cupboard					
+block	netherite_cupboard	Netherite Cupboard					
 block	oak_bench	Oak Bench		Дубовая Скамья	Panchina di quercia		
 block	spruce_bench	Spruce Bench		Еловая Скамья	Panchina di abete		
 block	birch_bench	Birch Bench		Берëзовая Скамья	Panchina di betulla		
@@ -126,6 +166,49 @@ block	brown_couch	Brown Couch	Brown Sofa	Коричневый Диван	Divano 
 block	green_couch	Green Couch	Green Sofa	Зелёный Диван	Divano verde		
 block	red_couch	Red Couch	Red Sofa	Красный Диван	Divano rosso		
 block	black_couch	Black Couch	Black Sofa	Чёрный Диван	Divano nero		
+block	oak_blinds	Oak Blinds		Дубовые Жалюзи			
+block	spruce_blinds	Spruce Blinds		Еловые Жалюзи			
+block	birch_blinds	Birch Blinds		Берëзовые Жалюзи			
+block	jungle_blinds	Jungle Blinds		Жалюзи из тропического дерева			
+block	acacia_blinds	Acacia Blinds		Акациевые Жалюзи			
+block	dark_oak_blinds	Dark Oak Blinds		Жалюзи из тëмного дуба			
+block	mangrove_blinds	Mangrove Blinds		Мангровые Жалюзи			
+block	cherry_blinds	Cherry Blinds		Вишнёвые Жалюзи			
+block	crimson_blinds	Crimson Blinds		Багровые Жалюзи			
+block	warped_blinds	Warped Blinds		Искажëнные Жалюзи			
+block	stone_blinds	Stone Blinds		Каменные Жалюзи			
+block	quartz_blinds	Quartz Blinds		Кварцевые Жалюзи			
+block	bamboo_blinds	Bamboo Blinds					
+block	deepslate_blinds	Deepslate Blinds					
+block	iron_blinds	Iron Blinds					
+block	copper_blinds	Copper Blinds					
+block	golden_blinds	Golden Blinds					
+block	diamond_blinds	Diamond Blinds					
+block	emerald_blinds	Emerald Blinds					
+block	netherite_blinds	Netherite Blinds					
+block	oak_kitchen_cabinet	Oak Kitchen Cabinet		Дубовый Кухонный Ящик			
+block	spruce_kitchen_cabinet	Spruce Kitchen Cabinet		Еловый Кухонный Ящик			
+block	birch_kitchen_cabinet	Birch Kitchen Cabinet		Берëзовый Кухонный Ящик			
+block	jungle_kitchen_cabinet	Jungle Kitchen Cabinet		Кухонный Ящик из тропического дерева			
+block	acacia_kitchen_cabinet	Acacia Kitchen Cabinet		Акациевый Кухонный Ящик			
+block	dark_oak_kitchen_cabinet	Dark Oak Kitchen Cabinet		Кухонный Ящик из тëмного дуба			
+block	mangrove_kitchen_cabinet	Mangrove Kitchen Cabinet		Мангровый Кухонный Ящик			
+block	cherry_kitchen_cabinet	Cherry Kitchen Cabinet		Вишнёвый Кухонный Ящик			
+block	crimson_kitchen_cabinet	Crimson Kitchen Cabinet		Багровый Кухонный Ящик			
+block	warped_kitchen_cabinet	Warped Kitchen Cabinet		Искажëнный Кухонный Ящик			
+block	stone_kitchen_cabinet	Stone Kitchen Cabinet		Каменный Кухонный Ящик			
+block	quartz_kitchen_cabinet	Quartz Kitchen Cabinet		Кварцевый Кухонный Ящик			
+block	bamboo_kitchen_cabinet	Bamboo Kitchen Cabinet					
+block	deepslate_kitchen_cabinet	Deepslate Kitchen Cabinet					
+block	iron_kitchen_cabinet	Iron Kitchen Cabinet					
+block	copper_kitchen_cabinet	Copper Kitchen Cabinet					
+block	golden_kitchen_cabinet	Golden Kitchen Cabinet					
+block	diamond_kitchen_cabinet	Diamond Kitchen Cabinet					
+block	emerald_kitchen_cabinet	Emerald Kitchen Cabinet					
+block	netherite_kitchen_cabinet	Netherite Kitchen Cabinet					
+block	fridge	Fridge		Холодильник			
+block	washer	Washer	Washing Machine	Стиральная Машина			
+block	trashcan	Tashcan		Мусорник			
 ui	expand_variants	%s Click to Expand Variants		%s Нажмите чтобы показать варианты	%s Premi per espandere le varianti		
 ui	craft	%s Click to Craft		%s Нажмите чтобы скрафтить	%s Premi per fabbricare		
 ui	craft_maximum	%s Hold Shift to Craft Maximum		%s Удерживайте Shift, чтобы скрафтить максимум	%s Mantieni Shift per fabbricare il massimo		
