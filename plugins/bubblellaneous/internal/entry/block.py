@@ -53,6 +53,8 @@ class Block(BaseEntry):
         left: Optional[bool]
         right: Optional[bool]
         use_self: bool
+        up: Optional[bool] = None
+        down: Optional[bool] = None
 
         def format(self, block: str) -> str:
             statement = "unless" if block.startswith("!") else "if"
@@ -69,7 +71,7 @@ class Block(BaseEntry):
 
             args = []
 
-            def add_arg(var: bool | None, offset: tuple[int, int, int]):
+            def add_arg(var: bool | None, offset: tuple[float, float, float]):
                 args.append(
                     f"positioned ^{offset[0] or ''} ^{offset[1] or ''} ^{offset[2] or ''} {statement if var else not_statement} {argument} positioned ^{-offset[0]} ^{-offset[1]} ^{-offset[2]}"
                 )
@@ -82,6 +84,10 @@ class Block(BaseEntry):
                 add_arg(self.left, (-1, 0, 0))
             if self.right is not None:
                 add_arg(self.right, (1, 0, 0))
+            if self.up is not None:
+                add_arg(self.up, (0, 1, 0))
+            if self.down is not None:
+                add_arg(self.down, (0, -1, 0))
 
             return " ".join(args)
 
