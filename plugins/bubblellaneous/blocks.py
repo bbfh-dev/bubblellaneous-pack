@@ -218,7 +218,6 @@ class Cabinet(BlockGroup):
     recipe = []
     tags = [
         Block.Size.SINGLE,
-        Block.Uses.CUSTOM_PLACE,
     ]
 
 
