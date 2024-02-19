@@ -1,137 +1,137 @@
 CATEGORY	NAME	EN_US	EN_GB	RU_RU	IT_IT	PT_BR	JA_JP
-root	translation_author	Translated by BubbleFish	Translated by BubbleFish	Перевод: BubbleFish	TheBlueKnight_	the brickster	dorlonkho
-root	validate_pack_v1	%s Resource pack is successfully detected		%s Пакет ресурсов обнаружен успешно			
-block	bubble_bench	Bubble Bench		Бабл Верстак	Banco di lavoro	Bancada Bubble	バブルベンチ
-block	oak_table	Oak Table		Дубовый Стол			
-block	spruce_table	Spruce Table		Еловый Стол			
-block	birch_table	Birch Table		Берëзовый Стол			
-block	jungle_table	Jungle Table		Стол из тропического дерева			
-block	acacia_table	Acacia Table		Акациевый Стол			
-block	Dark Oak_table	Dark Oak Table		Стол из тëмного дуба			
-block	mangrove_table	Mangrove Table		Мангровый Стол			
-block	cherry_table	Cherry Table		Вишнёвый Стол			
-block	crimson_table	Crimson Table		Багровый Стол			
-block	warped_table	Warped Table		Искажëнный Стол			
-block	stone_table	Stone Table		Каменный Стол			
-block	quartz_table	Quartz Table		Кварцевый Стол			
-block	oak_shelf	Oak Shelf		Дубовая Полка			
-block	spruce_shelf	Spruce Shelf		Еловая Полка			
-block	birch_shelf	Birch Shelf		Берëзовая Полка			
-block	jungle_shelf	Jungle Shelf		Полка из тропического дерева			
-block	acacia_shelf	Acacia Shelf		Акациевая Полка			
-block	Dark Oak_shelf	Dark Oak Shelf		Полка из тëмного дуба			
-block	mangrove_shelf	Mangrove Shelf		Мангровая Полка			
-block	cherry_shelf	Cherry Shelf		Вишнёвая Полка			
-block	crimson_shelf	Crimson Shelf		Багровая Полка			
-block	warped_shelf	Warped Shelf		Искажëнная Полка			
-block	stone_shelf	Stone Shelf		Каменная Полка			
-block	quartz_shelf	Quartz Shelf		Кварцевая Полка			
-block	oak_cabinet	Oak Cabinet		Дубовый Ящик			
-block	spruce_cabinet	Spruce Cabinet		Еловый Ящик			
-block	birch_cabinet	Birch Cabinet		Берëзовый Ящик			
-block	jungle_cabinet	Jungle Cabinet		Ящик из тропического дерева			
-block	acacia_cabinet	Acacia Cabinet		Акациевый Ящик			
-block	Dark Oak_cabinet	Dark Oak Cabinet		Ящик из тëмного дуба			
-block	mangrove_cabinet	Mangrove Cabinet		Мангровый Ящик			
-block	cherry_cabinet	Cherry Cabinet		Вишнёвый Ящик			
-block	crimson_cabinet	Crimson Cabinet		Багровый Ящик			
-block	warped_cabinet	Warped Cabinet		Искажëнный Ящик			
-block	stone_cabinet	Stone Cabinet		Каменный Ящик			
-block	quartz_cabinet	Quartz Cabinet		Кварцевый Ящик			
-block	oak_drawer	Oak Drawer		Дубовый Тумба			
-block	spruce_drawer	Spruce Drawer		Еловый Тумба			
-block	birch_drawer	Birch Drawer		Берëзовый Тумба			
-block	jungle_drawer	Jungle Drawer		Тумба из тропического дерева			
-block	acacia_drawer	Acacia Drawer		Акациевый Тумба			
-block	Dark Oak_drawer	Dark Oak Drawer		Тумба из тëмного дуба			
-block	mangrove_drawer	Mangrove Drawer		Мангровый Тумба			
-block	cherry_drawer	Cherry Drawer		Вишнёвый Тумба			
-block	crimson_drawer	Crimson Drawer		Багровый Тумба			
-block	warped_drawer	Warped Drawer		Искажëнный Тумба			
-block	stone_drawer	Stone Drawer		Каменный Тумба			
-block	quartz_drawer	Quartz Drawer		Кварцевый Тумба			
-block	oak_cupboard	Oak Cupboard		Дубовый Буфет			
-block	spruce_cupboard	Spruce Cupboard		Еловый Буфет			
-block	birch_cupboard	Birch Cupboard		Берëзовый Буфет			
-block	jungle_cupboard	Jungle Cupboard		Буфет из тропического дерева			
-block	acacia_cupboard	Acacia Cupboard		Акациевый Буфет			
-block	Dark Oak_cupboard	Dark Oak Cupboard		Буфет из тëмного дуба			
-block	mangrove_cupboard	Mangrove Cupboard		Мангровый Буфет			
-block	cherry_cupboard	Cherry Cupboard		Вишнёвый Буфет			
-block	crimson_cupboard	Crimson Cupboard		Багровый Буфет			
-block	warped_cupboard	Warped Cupboard		Искажëнный Буфет			
-block	stone_cupboard	Stone Cupboard		Каменный Буфет			
-block	quartz_cupboard	Quartz Cupboard		Кварцевый Буфет			
-block	oak_bench	Oak Bench		Дубовая Скамья			
-block	spruce_bench	Spruce Bench		Еловая Скамья			
-block	birch_bench	Birch Bench		Берëзовая Скамья			
-block	jungle_bench	Jungle Bench		Скамья из тропического дерева			
-block	acacia_bench	Acacia Bench		Акациевая Скамья			
-block	Dark Oak_bench	Dark Oak Bench		Скамья из тëмного дуба			
-block	mangrove_bench	Mangrove Bench		Мангровая Скамья			
-block	cherry_bench	Cherry Bench		Вишнёвая Скамья			
-block	crimson_bench	Crimson Bench		Багровая Скамья			
-block	warped_bench	Warped Bench		Искажëнная Скамья			
-block	stone_bench	Stone Bench		Каменная Скамья			
-block	quartz_bench	Quartz Bench		Кварцевая Скамья			
-block	oak_stool	Oak Stool		Дубовый Табурет			
-block	spruce_stool	Spruce Stool		Еловый Табурет			
-block	birch_stool	Birch Stool		Берëзовый Табурет			
-block	jungle_stool	Jungle Stool		Табурет из тропического дерева			
-block	acacia_stool	Acacia Stool		Акациевый Табурет			
-block	Dark Oak_stool	Dark Oak Stool		Табурет из тëмного дуба			
-block	mangrove_stool	Mangrove Stool		Мангровый Табурет			
-block	cherry_stool	Cherry Stool		Вишнёвый Табурет			
-block	crimson_stool	Crimson Stool		Багровый Табурет			
-block	warped_stool	Warped Stool		Искажëнный Табурет			
-block	stone_stool	Stone Stool		Каменный Табурет			
-block	quartz_stool	Quartz Stool		Кварцевый Табурет			
-block	oak_barstool	Oak Bar stool		Дубовый Барный стул			
-block	spruce_barstool	Spruce Bar stool		Еловый Барный стул			
-block	birch_barstool	Birch Bar stool		Берëзовый Барный стул			
-block	jungle_barstool	Jungle Bar stool		Барный стул из тропического дерева			
-block	acacia_barstool	Acacia Bar stool		Акациевый Барный стул			
-block	Dark Oak_barstool	Dark Oak Bar stool		Барный стул из тëмного дуба			
-block	mangrove_barstool	Mangrove Bar stool		Мангровый Барный стул			
-block	cherry_barstool	Cherry Bar stool		Вишнёвый Барный стул			
-block	crimson_barstool	Crimson Bar stool		Багровый Барный стул			
-block	warped_barstool	Warped Bar stool		Искажëнный Барный стул			
-block	stone_barstool	Stone Bar stool		Каменный Барный стул			
-block	quartz_barstool	Quartz Bar stool		Кварцевый Барный стул			
-block	oak_dinning_chair	Oak Dinning chair		Дубовый Обеденный стул			
-block	spruce_dinning_chair	Spruce Dinning chair		Еловый Обеденный стул			
-block	birch_dinning_chair	Birch Dinning chair		Берëзовый Обеденный стул			
-block	jungle_dinning_chair	Jungle Dinning chair		Обеденный стул из тропического дерева			
-block	acacia_dinning_chair	Acacia Dinning chair		Акациевый Обеденный стул			
-block	Dark Oak_dinning_chair	Dark Oak Dinning chair		Обеденный стул из тëмного дуба			
-block	mangrove_dinning_chair	Mangrove Dinning chair		Мангровый Обеденный стул			
-block	cherry_dinning_chair	Cherry Dinning chair		Вишнёвый Обеденный стул			
-block	crimson_dinning_chair	Crimson Dinning chair		Багровый Обеденный стул			
-block	warped_dinning_chair	Warped Dinning chair		Искажëнный Обеденный стул			
-block	stone_dinning_chair	Stone Dinning chair		Каменный Обеденный стул			
-block	quartz_dinning_chair	Quartz Dinning chair		Кварцевый Обеденный стул			
-block	white_couch	White Couch	White Sofa	Белый Диван			
-block	orange_couch	Orange Couch	Orange Sofa	Оранжевый Диван			
-block	magenta_couch	Magenta Couch	Magenta Sofa	Пурпурный Диван			
-block	light_blue_couch	Light Blue Couch	Light Blue Sofa	Голубой Диван			
-block	yellow_couch	Yellow Couch	Yellow Sofa	Жёлтый Диван			
-block	lime_couch	Lime Couch	Lime Sofa	Лаймовый Диван			
-block	pink_couch	Pink Couch	Pink Sofa	Розовый Диван			
-block	gray_couch	Gray Couch	Gray Sofa	Серый Диван			
-block	light_gray_couch	Light Gray Couch	Light Gray Sofa	Светло-серый Диван			
-block	cyan_couch	Cyan Couch	Cyan Sofa	Бирюзовый Диван			
-block	purple_couch	Purple Couch	Purple Sofa	Фиолетовый Диван			
-block	blue_couch	Blue Couch	Blue Sofa	Синий Диван			
-block	brown_couch	Brown Couch	Brown Sofa	Коричневый Диван			
-block	green_couch	Green Couch	Green Sofa	Зелёный Диван			
-block	red_couch	Red Couch	Red Sofa	Красный Диван			
-block	black_couch	Black Couch	Black Sofa	Чёрный Диван			
-ui	expand_variants	%s Click to Expand Variants		%s Нажмите чтобы показать варианты			
-ui	craft	%s Click to Craft		%s Нажмите чтобы скрафтить			
-ui	craft_maximum	%s Hold Shift to Craft Maximum		%s Удерживайте Shift, чтобы скрафтить максимум			
-ui	jump_to_list_end_or_begin	%s Shift+Click an arrow to jump to the end		%s Shift+Нажмите на стрелку, чтобы перейти к концу			
-ui	craft_documentation	%s Press %s to View Documentation		%s Нажмите %s чтобы просмотреть документацию			
-ui	crafting_materials	%s Crafting materials		%s Материалы для крафта			
-ui	crafting_not_enough_items	Not enough items to craft %s		Недостаточно предметов чтобы скрафтить %s			
-ui	navigation	Navigation		Навигация			
-ui	blacklist_mode	%s Currently in %s Blacklisting mode!		%s В настоящее время находится в режиме черного списка %s!			
+root	translation_author	Translated by BubbleFish	Translated by BubbleFish	Перевод: BubbleFish	Tradotto da FBreakDance30	the brickster	dorlonkho
+root	validate_pack_v1	%s Resource pack is successfully detected		%s Пакет ресурсов обнаружен успешно	%s Il pacchetto è stato rilevato con successo		
+block	bubble_bench	Bubble Bench		Бабл Верстак	Banco da lavoro bolla	Bancada Bubble	バブルベンチ
+block	oak_table	Oak Table		Дубовый Стол	Tavolo di quercia		
+block	spruce_table	Spruce Table		Еловый Стол	Tavolo di abete		
+block	birch_table	Birch Table		Берëзовый Стол	Tavolo di betulla		
+block	jungle_table	Jungle Table		Стол из тропического дерева	Tavolo della giungla		
+block	acacia_table	Acacia Table		Акациевый Стол	Tavolo di acacia		
+block	dark_oak_table	Dark Oak Table		Стол из тëмного дуба	Tavolo di quercia scura		
+block	mangrove_table	Mangrove Table		Мангровый Стол	Tavolo di mangrovia		
+block	cherry_table	Cherry Table		Вишнёвый Стол	Tavolo di ciliegio		
+block	crimson_table	Crimson Table		Багровый Стол	Tavolo cremisi		
+block	warped_table	Warped Table		Искажëнный Стол	Tavolo distorto		
+block	stone_table	Stone Table		Каменный Стол	Tavolo di pietra		
+block	quartz_table	Quartz Table		Кварцевый Стол	Tavolo di quarzo		
+block	oak_shelf	Oak Shelf		Дубовая Полка	Mensola di quercia		
+block	spruce_shelf	Spruce Shelf		Еловая Полка	Mensola di abete		
+block	birch_shelf	Birch Shelf		Берëзовая Полка	Mensola di betulla		
+block	jungle_shelf	Jungle Shelf		Полка из тропического дерева	Mensola della giungla		
+block	acacia_shelf	Acacia Shelf		Акациевая Полка	Mensola di acacia		
+block	dark_oak_shelf	Dark Oak Shelf		Полка из тëмного дуба	Mensola di quercia scura		
+block	mangrove_shelf	Mangrove Shelf		Мангровая Полка	Mensola di mangrovia		
+block	cherry_shelf	Cherry Shelf		Вишнёвая Полка	Mensola di ciliegio		
+block	crimson_shelf	Crimson Shelf		Багровая Полка	Mensola cremisi		
+block	warped_shelf	Warped Shelf		Искажëнная Полка	Mensola distorta		
+block	stone_shelf	Stone Shelf		Каменная Полка	Mensola di pietra		
+block	quartz_shelf	Quartz Shelf		Кварцевая Полка	Mensola di quarzo		
+block	oak_cabinet	Oak Cabinet		Дубовый Ящик	Comodino di quercia		
+block	spruce_cabinet	Spruce Cabinet		Еловый Ящик	Comodino di abete		
+block	birch_cabinet	Birch Cabinet		Берëзовый Ящик	Comodino di betulla		
+block	jungle_cabinet	Jungle Cabinet		Ящик из тропического дерева	Comodino della giungla		
+block	acacia_cabinet	Acacia Cabinet		Акациевый Ящик	Comodino di acacia		
+block	dark_oak_cabinet	Dark Oak Cabinet		Ящик из тëмного дуба	Comodino di quercia scura		
+block	mangrove_cabinet	Mangrove Cabinet		Мангровый Ящик	Comodino di mangrovia		
+block	cherry_cabinet	Cherry Cabinet		Вишнёвый Ящик	Comodino di ciliegio		
+block	crimson_cabinet	Crimson Cabinet		Багровый Ящик	Comodino cremisi		
+block	warped_cabinet	Warped Cabinet		Искажëнный Ящик	Comodino distorto		
+block	stone_cabinet	Stone Cabinet		Каменный Ящик	Comodino di pietra		
+block	quartz_cabinet	Quartz Cabinet		Кварцевый Ящик	Comodino di quarzo		
+block	oak_drawer	Oak Drawer		Дубовый Тумба	Cassetto di quercia		
+block	spruce_drawer	Spruce Drawer		Еловый Тумба	Cassetto di abete		
+block	birch_drawer	Birch Drawer		Берëзовый Тумба	Cassetto di betulla		
+block	jungle_drawer	Jungle Drawer		Тумба из тропического дерева	Cassetto della giungla		
+block	acacia_drawer	Acacia Drawer		Акациевый Тумба	Cassetto di acacia		
+block	dark_oak_drawer	Dark Oak Drawer		Тумба из тëмного дуба	Cassetto di quercia scura		
+block	mangrove_drawer	Mangrove Drawer		Мангровый Тумба	Cassetto di mangrovia		
+block	cherry_drawer	Cherry Drawer		Вишнёвый Тумба	Cassetto di ciliegio		
+block	crimson_drawer	Crimson Drawer		Багровый Тумба	Cassetto cremisi		
+block	warped_drawer	Warped Drawer		Искажëнный Тумба	Cassetto distorto		
+block	stone_drawer	Stone Drawer		Каменный Тумба	Cassetto di pietra		
+block	quartz_drawer	Quartz Drawer		Кварцевый Тумба	Cassetto di quarzo		
+block	oak_cupboard	Oak Cupboard		Дубовый Буфет	Credenza di quercia		
+block	spruce_cupboard	Spruce Cupboard		Еловый Буфет	Credenza di abete		
+block	birch_cupboard	Birch Cupboard		Берëзовый Буфет	Credenza di betulla		
+block	jungle_cupboard	Jungle Cupboard		Буфет из тропического дерева	Credenza della giungla		
+block	acacia_cupboard	Acacia Cupboard		Акациевый Буфет	Credenza di acacia		
+block	dark_oak_cupboard	Dark Oak Cupboard		Буфет из тëмного дуба	Credenza di quercia scura		
+block	mangrove_cupboard	Mangrove Cupboard		Мангровый Буфет	Credenza di mangrovia		
+block	cherry_cupboard	Cherry Cupboard		Вишнёвый Буфет	Credenza di ciliegio		
+block	crimson_cupboard	Crimson Cupboard		Багровый Буфет	Credenza cremisi		
+block	warped_cupboard	Warped Cupboard		Искажëнный Буфет	Credenza distorta		
+block	stone_cupboard	Stone Cupboard		Каменный Буфет	Credenza di pietra		
+block	quartz_cupboard	Quartz Cupboard		Кварцевый Буфет	Credenza di quarzo		
+block	oak_bench	Oak Bench		Дубовая Скамья	Panchina di quercia		
+block	spruce_bench	Spruce Bench		Еловая Скамья	Panchina di abete		
+block	birch_bench	Birch Bench		Берëзовая Скамья	Panchina di betulla		
+block	jungle_bench	Jungle Bench		Скамья из тропического дерева	Panchina della giungla		
+block	acacia_bench	Acacia Bench		Акациевая Скамья	Panchina di acacia		
+block	dark_oak_bench	Dark Oak Bench		Скамья из тëмного дуба	Panchina di quercia scura		
+block	mangrove_bench	Mangrove Bench		Мангровая Скамья	Panchina di mangrovia		
+block	cherry_bench	Cherry Bench		Вишнёвая Скамья	Panchina di ciliegio		
+block	crimson_bench	Crimson Bench		Багровая Скамья	Panchina cremisi		
+block	warped_bench	Warped Bench		Искажëнная Скамья	Panchina distorta		
+block	stone_bench	Stone Bench		Каменная Скамья	Panchina di pietra		
+block	quartz_bench	Quartz Bench		Кварцевая Скамья	Panchina di quarzo		
+block	oak_stool	Oak Stool		Дубовый Табурет	Sgabello di quercia		
+block	spruce_stool	Spruce Stool		Еловый Табурет	Sgabello di abete		
+block	birch_stool	Birch Stool		Берëзовый Табурет	Sgabello di betulla		
+block	jungle_stool	Jungle Stool		Табурет из тропического дерева	Sgabello della giungla		
+block	acacia_stool	Acacia Stool		Акациевый Табурет	Sgabello di acacia		
+block	dark_oak_stool	Dark Oak Stool		Табурет из тëмного дуба	Sgabello di quercia scura		
+block	mangrove_stool	Mangrove Stool		Мангровый Табурет	Sgabello di mangrovia		
+block	cherry_stool	Cherry Stool		Вишнёвый Табурет	Sgabello di ciliegio		
+block	crimson_stool	Crimson Stool		Багровый Табурет	Sgabello cremisi		
+block	warped_stool	Warped Stool		Искажëнный Табурет	Sgabello distorto		
+block	stone_stool	Stone Stool		Каменный Табурет	Sgabello di pietra		
+block	quartz_stool	Quartz Stool		Кварцевый Табурет	Sgabello di quarzo		
+block	oak_barstool	Oak Bar stool		Дубовый Барный стул	Sgabello da bar di quercia		
+block	spruce_barstool	Spruce Bar stool		Еловый Барный стул	Sgabello da bar di abete		
+block	birch_barstool	Birch Bar stool		Берëзовый Барный стул	Sgabello da bar di betulla		
+block	jungle_barstool	Jungle Bar stool		Барный стул из тропического дерева	Sgabello da bar della giungla		
+block	acacia_barstool	Acacia Bar stool		Акациевый Барный стул	Sgabello da bar di acacia		
+block	dark_oak_barstool	Dark Oak Bar stool		Барный стул из тëмного дуба	Sgabello da bar di quercia scura		
+block	mangrove_barstool	Mangrove Bar stool		Мангровый Барный стул	Sgabello da bar di mangrovia		
+block	cherry_barstool	Cherry Bar stool		Вишнёвый Барный стул	Sgabello da bar di ciliegio		
+block	crimson_barstool	Crimson Bar stool		Багровый Барный стул	Sgabello da bar cremisi		
+block	warped_barstool	Warped Bar stool		Искажëнный Барный стул	Sgabello da bar distorto		
+block	stone_barstool	Stone Bar stool		Каменный Барный стул	Sgabello da bar di pietra		
+block	quartz_barstool	Quartz Bar stool		Кварцевый Барный стул	Sgabello da bar di quarzo		
+block	oak_dinning_chair	Oak Dinning chair		Дубовый Обеденный стул	Sedia di quercia		
+block	spruce_dinning_chair	Spruce Dinning chair		Еловый Обеденный стул	Sedia di abete		
+block	birch_dinning_chair	Birch Dinning chair		Берëзовый Обеденный стул	Sedia di betulla		
+block	jungle_dinning_chair	Jungle Dinning chair		Обеденный стул из тропического дерева	Sedia della giungla		
+block	acacia_dinning_chair	Acacia Dinning chair		Акациевый Обеденный стул	Sedia di acacia		
+block	dark_oak_dinning_chair	Dark Oak Dinning chair		Обеденный стул из тëмного дуба	Sedia di quercia scura		
+block	mangrove_dinning_chair	Mangrove Dinning chair		Мангровый Обеденный стул	Sedia di mangrovia		
+block	cherry_dinning_chair	Cherry Dinning chair		Вишнёвый Обеденный стул	Sedia di ciliegio		
+block	crimson_dinning_chair	Crimson Dinning chair		Багровый Обеденный стул	Sedia cremisi		
+block	warped_dinning_chair	Warped Dinning chair		Искажëнный Обеденный стул	Sedia distorta		
+block	stone_dinning_chair	Stone Dinning chair		Каменный Обеденный стул	Sedia di pietra		
+block	quartz_dinning_chair	Quartz Dinning chair		Кварцевый Обеденный стул	Sedia di quarzo		
+block	white_couch	White Couch	White Sofa	Белый Диван	Divano bianco		
+block	orange_couch	Orange Couch	Orange Sofa	Оранжевый Диван	Divano arancione		
+block	magenta_couch	Magenta Couch	Magenta Sofa	Пурпурный Диван	Divano magenta		
+block	light_blue_couch	Light Blue Couch	Light Blue Sofa	Голубой Диван	Divano azzurro		
+block	yellow_couch	Yellow Couch	Yellow Sofa	Жёлтый Диван	Divano giallo		
+block	lime_couch	Lime Couch	Lime Sofa	Лаймовый Диван	Divano lime		
+block	pink_couch	Pink Couch	Pink Sofa	Розовый Диван	Divano rosa		
+block	gray_couch	Gray Couch	Gray Sofa	Серый Диван	Divano grigio		
+block	light_gray_couch	Light Gray Couch	Light Gray Sofa	Светло-серый Диван	Divano grigio chiaro		
+block	cyan_couch	Cyan Couch	Cyan Sofa	Бирюзовый Диван	Divano ciano		
+block	purple_couch	Purple Couch	Purple Sofa	Фиолетовый Диван	Divano viola		
+block	blue_couch	Blue Couch	Blue Sofa	Синий Диван	Divano blu		
+block	brown_couch	Brown Couch	Brown Sofa	Коричневый Диван	Divano marrone		
+block	green_couch	Green Couch	Green Sofa	Зелёный Диван	Divano verde		
+block	red_couch	Red Couch	Red Sofa	Красный Диван	Divano rosso		
+block	black_couch	Black Couch	Black Sofa	Чёрный Диван	Divano nero		
+ui	expand_variants	%s Click to Expand Variants		%s Нажмите чтобы показать варианты	%s Premi per espandere le varianti		
+ui	craft	%s Click to Craft		%s Нажмите чтобы скрафтить	%s Premi per fabbricare		
+ui	craft_maximum	%s Hold Shift to Craft Maximum		%s Удерживайте Shift, чтобы скрафтить максимум	%s Mantieni Shift per fabbricare il massimo		
+ui	jump_to_list_end_or_begin	%s Shift+Click an arrow to jump to the end		%s Shift+Нажмите на стрелку, чтобы перейти к концу	%s Fai Shift+Clic su una freccia per saltare alla fine		
+ui	craft_documentation	%s Press %s to View Documentation		%s Нажмите %s чтобы просмотреть документацию	%s Premi %s per vedere la documentazione		
+ui	crafting_materials	%s Crafting materials		%s Материалы для крафта	%s Materiali per fabbricare		
+ui	crafting_not_enough_items	Not enough items to craft %s		Недостаточно предметов чтобы скрафтить %s	Non hai abbastanza oggetti per fabbricare %s		
+ui	navigation	Navigation		Навигация	Navigazione		
+ui	blacklist_mode	%s Currently in %s blacklisting mode!		%s В настоящее время находится в режиме черного списка %s!	%s Attualmente nella %s modalità lista nera!		
