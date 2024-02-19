@@ -5,11 +5,8 @@ This Minecraft pack adds Furniture, Technology, Food & Miscellaneous blocks and 
 <!-- vim-markdown-toc GFM -->
 
 * [❤️ Contributors](#-contributors)
-* [🤝 Contributing / Help](#-contributing--help)
-    * [Translators](#translators)
-    * [Developers](#developers)
-    * [Financial support](#financial-support)
 * [🛠️ Building from source](#-building-from-source)
+* [🧑‍⚖️ Licensing](#-licensing)
 
 <!-- vim-markdown-toc -->
 
@@ -31,3 +28,8 @@ This pack uses [Beet](https://github.com/mcbeet/beet) Python module, and [rye](h
 **Step 2. Build the project:**
 
 - Run `beet build` or `beet watch` to build the project into `dist/` directory.
+
+# 🧑‍⚖️ Licensing
+
+- The project with its python code uses [MIT](./LICENSE) license.
+- All minecraft assets/code use [CC BY-NC-SA 4.0](./src/LICENSE) license.
