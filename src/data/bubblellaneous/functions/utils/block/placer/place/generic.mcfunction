@@ -17,3 +17,4 @@ execute store result score @s local.block.id run scoreboard players add id local
 
 $execute as @s[tag=--local.uses.custom_place] at @s run function bubblellaneous:blocks/$(id)/place
 execute as @s[tag=--local.uses.blockstates] at @s positioned ~ ~.1 ~ run function bubblellaneous:utils/block/placer/blockstates/update with entity @s item.tag.block_data
+execute as @s[tag=--local.uses.no_base] at @s run setblock ~ ~ ~ air

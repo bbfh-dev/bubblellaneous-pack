@@ -61,6 +61,7 @@ class Block(BaseEntry):
         GUI = "--local.uses.gui"
         CUSTOM_PLACE = "--local.uses.custom_place"
         BLOCKSTATES = "--local.uses.blockstates"
+        NO_BASE = "--local.uses.no_base"
 
     @dataclass
     class Predicate:
