@@ -9,3 +9,4 @@ execute as @e[type=#bubblellaneous:entity,distance=..4] if score @s local.block.
 kill @s
 
 execute if score update_neighbors local.tmp matches 1 positioned ~ ~.1 ~ run function bubblellaneous:utils/block/placer/blockstates/update_neighbors with entity @s item.tag.block_data
+$particle item item_frame{CustomModelData: $(custom_model_data)} ~ ~.75 ~ 0.25 0.25 0.25 0.1 20
