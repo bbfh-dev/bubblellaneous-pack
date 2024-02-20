@@ -1,1 +1,2 @@
 execute if score global.validate_resourcepack local.settings matches 1 run tellraw @s ["", {"translate": "root.bubblellaneous.validate_pack_v1", "fallback":"§c[Bubblellaneous ❌] Resource pack is not installed / wrong version is found§r", "color":"green", "with":["[Bubblellaneous ✔]"]}, "\n› ", {"translate":"root.bubblellaneous.translation_author", "fallback":"", "color":"gray"}]
+execute unless score @s local.player.id matches -2147483648..2147483647 store result score @s local.player.id run scoreboard players add i local.player.id 1
