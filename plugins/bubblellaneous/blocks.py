@@ -526,3 +526,42 @@ class Trashcan(Block):
         Block.Size.SINGLE,
         Block.Uses.CUSTOM_PLACE,
     ]
+
+
+class Ladder(BlockGroup):
+    """
+    :yellow [☶ Description]
+    A fire escape ladder.
+
+    :green [☄ Instructions]
+    Right-click to start climbing, hold W/S to go up/down.
+    Press sneak to jump off.
+    """
+
+    category = Category.TECHNOLOGY
+    materials = BlockGroup.FURNITURE_TYPE
+    sound = Block.Sound.INDUSTRIAL
+    base = Block.Base.VOID
+    facing = Block.Facing.WALL
+    recipe = []
+    tags = [
+        Block.Size.SINGLE,
+        Block.Uses.BLOCKSTATES,
+        Block.Uses.CUSTOM_PLACE,
+        Block.Uses.NO_BASE,
+    ]
+    blockstates = [
+        Block.State("single", None),
+        Block.State(
+            "top",
+            Block.Predicate(
+                [],
+                front=None,
+                back=None,
+                left=None,
+                right=None,
+                up=False,
+                use_self=True,
+            ),
+        ),
+    ]

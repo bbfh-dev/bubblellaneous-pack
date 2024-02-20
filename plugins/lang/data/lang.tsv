@@ -1,6 +1,10 @@
 CATEGORY	NAME	EN_US	EN_GB	RU_RU	IT_IT	PT_BR	JA_JP
 root	translation_author	Translated by BubbleFish	Translated by BubbleFish	Перевод: BubbleFish	Tradotto da FBreakDance30	the brickster	dorlonkho
 root	validate_pack_v1	%s Resource pack is successfully detected		%s Пакет ресурсов обнаружен успешно	%s Il pacchetto è stato rilevato con successo		
+group	furniture	%s Furniture		%s Мебель			
+group	technology	%s Technology		%s Технологии			
+group	food	%s Food		%s Еда			
+group	miscellaneous	%s Miscellaneous		%s Прочее			
 block	bubble_bench	Bubble Bench		Бабл Верстак	Banco bolla	Bancada Bubble	バブルベンチ
 block	oak_table	Oak Table		Дубовый Стол	Tavolo di quercia		
 block	spruce_table	Spruce Table		Еловый Стол	Tavolo di abete		
@@ -18,7 +22,7 @@ block	bamboo_table	Bamboo Table
 block	deepslate_table	Deepslate Table					
 block	iron_table	Iron Table					
 block	copper_table	Copper Table					
-block	golden_table	Golden Table					
+block	gold_table	Golden Table					
 block	diamond_table	Diamond Table					
 block	emerald_table	Emerald Table					
 block	netherite_table	Netherite Table					
@@ -38,7 +42,7 @@ block	bamboo_shelf	Bamboo Shelf
 block	deepslate_shelf	Deepslate Shelf					
 block	iron_shelf	Iron Shelf					
 block	copper_shelf	Copper Shelf					
-block	golden_shelf	Golden Shelf					
+block	gold_shelf	Golden Shelf					
 block	diamond_shelf	Diamond Shelf					
 block	emerald_shelf	Emerald Shelf					
 block	netherite_shelf	Netherite Shelf					
@@ -58,7 +62,7 @@ block	bamboo_cabinet	Bamboo Cabinet
 block	deepslate_cabinet	Deepslate Cabinet					
 block	iron_cabinet	Iron Cabinet					
 block	copper_cabinet	Copper Cabinet					
-block	golden_cabinet	Golden Cabinet					
+block	gold_cabinet	Golden Cabinet					
 block	diamond_cabinet	Diamond Cabinet					
 block	emerald_cabinet	Emerald Cabinet					
 block	netherite_cabinet	Netherite Cabinet					
@@ -78,7 +82,7 @@ block	bamboo_drawer	Bamboo Drawer
 block	deepslate_drawer	Deepslate Drawer					
 block	iron_drawer	Iron Drawer					
 block	copper_drawer	Copper Drawer					
-block	golden_drawer	Golden Drawer					
+block	gold_drawer	Golden Drawer					
 block	diamond_drawer	Diamond Drawer					
 block	emerald_drawer	Emerald Drawer					
 block	netherite_drawer	Netherite Drawer					
@@ -98,7 +102,7 @@ block	bamboo_cupboard	Bamboo Cupboard
 block	deepslate_cupboard	Deepslate Cupboard					
 block	iron_cupboard	Iron Cupboard					
 block	copper_cupboard	Copper Cupboard					
-block	golden_cupboard	Golden Cupboard					
+block	gold_cupboard	Golden Cupboard					
 block	diamond_cupboard	Diamond Cupboard					
 block	emerald_cupboard	Emerald Cupboard					
 block	netherite_cupboard	Netherite Cupboard					
@@ -182,7 +186,7 @@ block	bamboo_blinds	Bamboo Blinds
 block	deepslate_blinds	Deepslate Blinds					
 block	iron_blinds	Iron Blinds					
 block	copper_blinds	Copper Blinds					
-block	golden_blinds	Golden Blinds					
+block	gold_blinds	Golden Blinds					
 block	diamond_blinds	Diamond Blinds					
 block	emerald_blinds	Emerald Blinds					
 block	netherite_blinds	Netherite Blinds					
@@ -202,10 +206,30 @@ block	bamboo_kitchen_cabinet	Bamboo Kitchen Cabinet
 block	deepslate_kitchen_cabinet	Deepslate Kitchen Cabinet					
 block	iron_kitchen_cabinet	Iron Kitchen Cabinet					
 block	copper_kitchen_cabinet	Copper Kitchen Cabinet					
-block	golden_kitchen_cabinet	Golden Kitchen Cabinet					
+block	gold_kitchen_cabinet	Golden Kitchen Cabinet					
 block	diamond_kitchen_cabinet	Diamond Kitchen Cabinet					
 block	emerald_kitchen_cabinet	Emerald Kitchen Cabinet					
 block	netherite_kitchen_cabinet	Netherite Kitchen Cabinet					
+block	oak_ladder	Oak Ladder					
+block	spruce_ladder	Spruce Ladder					
+block	birch_ladder	Birch Ladder					
+block	jungle_ladder	Jungle Ladder					
+block	acacia_ladder	Acacia Ladder					
+block	dark_oak_ladder	Dark Oak Ladder					
+block	mangrove_ladder	Mangrove Ladder					
+block	cherry_ladder	Cherry Ladder					
+block	crimson_ladder	Crimson Ladder					
+block	warped_ladder	Warped Ladder					
+block	stone_ladder	Stone Ladder					
+block	quartz_ladder	Quartz Ladder					
+block	bamboo_ladder	Bamboo Ladder					
+block	deepslate_ladder	Deepslate Ladder					
+block	iron_ladder	Iron Ladder					
+block	copper_ladder	Copper Ladder					
+block	gold_ladder	Golden Ladder					
+block	diamond_ladder	Diamond Ladder					
+block	emerald_ladder	Emerald Ladder					
+block	netherite_ladder	Netherite Ladder					
 block	fridge	Fridge		Холодильник			
 block	washer	Washer	Washing Machine	Стиральная Машина			
 block	trashcan	Tashcan		Мусорник			

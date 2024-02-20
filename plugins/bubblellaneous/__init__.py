@@ -24,6 +24,7 @@ REGISTRY: list[type[BaseEntry]] = [
     Fridge,
     Washer,
     Trashcan,
+    Ladder,
 ]
 
 
