@@ -15,7 +15,7 @@ class Tree:
         self.functions: dict[str, Function] = {}
         self.loot_tables: dict[str, LootTable] = {}
         self.models: dict[str, Model] = {}
-        self.model_ids: list[tuple[str, int]] = []
+        self.model_ids: list[tuple[str, int, str]] = []
         self.bench_registry: dict[str, list[BenchRegistry]] = {}
 
     def __repr__(self) -> str:
@@ -59,8 +59,8 @@ class Tree:
             item.data = json.loads(self.format(ctx, json.dumps(item.data)))
             ctx.data.advancements[self.format(ctx, key)] = item
 
-        for index, (path, id) in enumerate(self.model_ids):
-            self.model_ids[index] = (self.format(ctx, path), id)
+        for index, (path, id, item) in enumerate(self.model_ids):
+            self.model_ids[index] = (self.format(ctx, path), id, item)
         self.model_ids.sort(key=lambda a: a[1], reverse=False)
 
         return self
@@ -82,27 +82,29 @@ class Tree:
         for key, item in self.models.items():
             ctx.assets.models[key] = item
 
-        ctx.assets.models["minecraft:item/item_frame"] = Model(
-            json.loads(
-                use_template(
-                    "block_overrides.json",
-                    {
-                        "overrides": NBT(
-                            [
-                                {
-                                    "predicate": {"custom_model_data": id},
-                                    "model": model,
-                                }
-                                for model, id in self.model_ids
-                            ],
-                            is_json=True,
-                        )
-                    },
+        for item_name in set([i[2] for i in self.model_ids]):
+            ctx.assets.models[f"minecraft:item/{item_name}"] = Model(
+                json.loads(
+                    use_template(
+                        f"{item_name}_overrides.json",
+                        {
+                            "overrides": NBT(
+                                [
+                                    {
+                                        "predicate": {"custom_model_data": id},
+                                        "model": model,
+                                    }
+                                    for model, id, item in self.model_ids
+                                    if item == item_name
+                                ],
+                                is_json=True,
+                            )
+                        },
+                    )
+                    .get_dict()
+                    .replace('\\"', '"')
                 )
-                .get_dict()
-                .replace('\\"', '"')
             )
-        )
 
         return self
 
@@ -135,10 +137,10 @@ class Tree:
         else:
             self.models[key] = model
 
-    def add_model_id(self, key: str, id: int):
+    def add_model_id(self, key: str, id: int, item: str = "item_frame"):
         if id in [i[1] for i in self.model_ids]:
             return
-        self.model_ids.append((key, id))
+        self.model_ids.append((key, id, item))
 
     def add_registry_item(self, category: Category, item: BenchRegistry):
         if not self.bench_registry.get(category.value):

@@ -6,6 +6,7 @@ from plugins.utils.nbt import NBT
 from .blocks import *
 from .internal.entry import BaseEntry
 from .internal.tree import Tree
+from .items import *
 
 REGISTRY: list[type[BaseEntry]] = [
     BubbleBench,
@@ -25,6 +26,11 @@ REGISTRY: list[type[BaseEntry]] = [
     Washer,
     Trashcan,
     Ladder,
+    PadlockBlock,
+    Padlock,
+    Key,
+    RisingDoor,
+    Pipe,
 ]
 
 
@@ -32,15 +38,10 @@ def beet_default(ctx: Context):
     init()
     tree = Tree()
     id = 1
+    registry = []
     for item in REGISTRY:
-        id_before = id
         tree, id = item(ctx).setup().compile(tree, id)
-        display_id = (
-            f"#{id-1}"
-            if id - id_before == 1
-            else f"#{id_before}..{id-1} ({id - id_before-1})"
-        )
-        print(f"→ Registered {Fore.BLUE}{item.__name__: <16}{Fore.RESET} {display_id}")
+        registry.append(item.__name__)
     tree.format_code(ctx).dump(ctx)
 
     ctx.data.functions[f"{ctx.project_id}:load_registry"] = Function(
@@ -57,6 +58,7 @@ def beet_default(ctx: Context):
                             [
                                 {
                                     "name": entry.entry,
+                                    "type": entry.item,
                                     "items": entry.items,
                                     "count": entry.count,
                                     "index": i,
@@ -94,3 +96,4 @@ def beet_default(ctx: Context):
         ),
         tags=[f"{ctx.project_id}:load"],
     )
+    print(f"→ Registered {Fore.BLUE}{len(registry)}{Fore.RESET} Entries")

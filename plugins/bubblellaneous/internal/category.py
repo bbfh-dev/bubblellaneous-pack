@@ -6,3 +6,4 @@ class Category(Enum):
     FOOD = "food"
     TECHNOLOGY = "technology"
     MISCELLANEOUS = "miscellaneous"
+    NONE = "none"

@@ -4,6 +4,7 @@ from dataclasses import dataclass
 @dataclass
 class BenchRegistry:
     entry: str
+    item: str
     items: list
     count: int = 0
 

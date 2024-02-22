@@ -2,9 +2,9 @@
     "credit": "Bubblellaneous - by bbfh",
     "parent": "minecraft:block/cube",
     "textures": {
-        "particle": "template/primary",
-        "material": "template/primary",
-        "walls": "template/secondary"
+        "particle": "block/primary",
+        "material": "block/primary",
+        "walls": "block/secondary"
     },
     "elements": [
         {

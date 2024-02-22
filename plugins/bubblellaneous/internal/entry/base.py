@@ -97,6 +97,7 @@ class BaseEntry:
             use_template(
                 "give.json",
                 {
+                    "name": self.prop("base_item"),
                     "nbt": NBT.Quote(
                         NBT(
                             {
@@ -104,49 +105,7 @@ class BaseEntry:
                                 "display": {
                                     "Name": NBT.Quote(self.prop("display_name"))
                                 },
-                                "EntityTag": {
-                                    "Tags": [
-                                        f"+[namespace]",
-                                        "local.place",
-                                        *[i.value for i in self.prop("tags")],
-                                    ],
-                                    "Invisible": True,
-                                    "Fixed": True,
-                                    "Invulnerable": True,
-                                    "Silent": True,
-                                    "Item": {
-                                        "id": "stone_button",
-                                        "Count": True,
-                                        "tag": {
-                                            "block_data": {
-                                                "id": NBT.Quote(
-                                                    self.prop("id"),
-                                                    double=True,
-                                                ),
-                                                "name": NBT.Quote(
-                                                    self.prop("name"),
-                                                    double=True,
-                                                ),
-                                                "sound": NBT.Quote(
-                                                    self.prop("sound").value,
-                                                    double=True,
-                                                ),
-                                                "base": NBT.Quote(
-                                                    self.prop("base").value,
-                                                    double=True,
-                                                ),
-                                                "display_name": NBT.Quote(
-                                                    self.prop("display_name"),
-                                                ),
-                                                "facing": NBT.Quote(
-                                                    self.prop("facing").value,
-                                                    double=True,
-                                                ),
-                                                "custom_model_data": self.get_id(id),
-                                            }
-                                        },
-                                    },
-                                },
+                                **self.prop("data")(id),
                             }
                         ).get_dict(),
                         double=True,

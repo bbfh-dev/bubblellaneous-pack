@@ -230,9 +230,64 @@ block	gold_ladder	Golden Ladder
 block	diamond_ladder	Diamond Ladder					
 block	emerald_ladder	Emerald Ladder					
 block	netherite_ladder	Netherite Ladder					
+block	white_padlock	White Padlock					
+block	orange_padlock	Orange Padlock					
+block	magenta_padlock	Magenta Padlock					
+block	light_blue_padlock	Light Blue Padlock					
+block	yellow_padlock	Yellow Padlock					
+block	lime_padlock	Lime Padlock					
+block	pink_padlock	Pink Padlock					
+block	gray_padlock	Gray Padlock					
+block	light_gray_padlock	Light Gray Padlock					
+block	cyan_padlock	Cyan Padlock					
+block	purple_padlock	Purple Padlock					
+block	blue_padlock	Blue Padlock					
+block	brown_padlock	Brown Padlock					
+block	green_padlock	Green Padlock					
+block	red_padlock	Red Padlock					
+block	black_padlock	Black Padlock					
+item	white_key	White Key					
+item	orange_key	Orange Key					
+item	magenta_key	Magenta Key					
+item	light_blue_key	Light Blue Key					
+item	yellow_key	Yellow Key					
+item	lime_key	Lime Key					
+item	pink_key	Pink Key					
+item	gray_key	Gray Key					
+item	light_gray_key	Light Gray Key					
+item	cyan_key	Cyan Key					
+item	purple_key	Purple Key					
+item	blue_key	Blue Key					
+item	brown_key	Brown Key					
+item	green_key	Green Key					
+item	red_key	Red Key					
+item	black_key	Black Key					
+block	oak_rising_door	Oak Rising Door					
+block	spruce_rising_door	Spruce Rising Door					
+block	birch_rising_door	Birch Rising Door					
+block	jungle_rising_door	Jungle Rising Door					
+block	acacia_rising_door	Acacia Rising Door					
+block	dark_oak_rising_door	Dark Oak Rising Door					
+block	mangrove_rising_door	Mangrove Rising Door					
+block	cherry_rising_door	Cherry Rising Door					
+block	crimson_rising_door	Crimson Rising Door					
+block	warped_rising_door	Warped Rising Door					
+block	stone_rising_door	Stone Rising Door					
+block	quartz_rising_door	Quartz Rising Door					
+block	bamboo_rising_door	Bamboo Rising Door					
+block	deepslate_rising_door	Deepslate Rising Door					
+block	iron_rising_door	Iron Rising Door					
+block	copper_rising_door	Copper Rising Door					
+block	gold_rising_door	Golden Rising Door					
+block	diamond_rising_door	Diamond Rising Door					
+block	emerald_rising_door	Emerald Rising Door					
+block	netherite_rising_door	Netherite Rising Door					
+item	padlock	Padlock					
 block	fridge	Fridge		Холодильник			
 block	washer	Washer	Washing Machine	Стиральная Машина			
 block	trashcan	Tashcan		Мусорник			
+block	pipe	Pipe					
+block	radiator	Radiator					
 ui	expand_variants	%s Click to Expand Variants		%s Нажмите чтобы показать варианты	%s Premi per espandere le varianti		
 ui	craft	%s Click to Craft		%s Нажмите чтобы скрафтить	%s Premi per fabbricare		
 ui	craft_maximum	%s Hold Shift to Craft Maximum		%s Удерживайте Shift, чтобы скрафтить максимум	%s Mantieni Shift per fabbricare il massimo		
@@ -242,3 +297,4 @@ ui	crafting_materials	%s Crafting materials		%s Материалы для кра
 ui	crafting_not_enough_items	Not enough items to craft %s		Недостаточно предметов чтобы скрафтить %s	Non hai abbastanza oggetti per fabbricare %s		
 ui	navigation	Navigation		Навигация	Navigazione		
 ui	blacklist_mode	%s Currently in %s blacklisting mode!		%s В настоящее время находится в режиме черного списка %s!	%s Attualmente nella %s modalità lista nera!		
+ui	item_required	You need %s to unlock this block					

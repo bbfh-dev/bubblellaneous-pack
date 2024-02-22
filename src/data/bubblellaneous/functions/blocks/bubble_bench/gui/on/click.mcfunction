@@ -7,4 +7,4 @@ execute if data storage bubblellaneous tmp.entry.tag{CustomModelData: 370000} ru
 execute if data storage bubblellaneous tmp.entry.tag{CustomModelData: 370001} run return 0
 
 execute if data storage bubblellaneous tmp.entry{id: "minecraft:structure_void"} run function bubblellaneous:blocks/bubble_bench/gui/on/click/ui
-execute if data storage bubblellaneous tmp.entry{id: "minecraft:item_frame"} run function bubblellaneous:blocks/bubble_bench/gui/on/click/item
+execute unless data storage bubblellaneous tmp.entry{id: "minecraft:structure_void"} run function bubblellaneous:blocks/bubble_bench/gui/on/click/item

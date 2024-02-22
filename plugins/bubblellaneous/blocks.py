@@ -1,5 +1,6 @@
 from .internal.category import Category
 from .internal.entry import Block, BlockGroup
+from .large_blockstates.pipe import PIPE_BLOCKSTATES
 
 
 class BubbleBench(Block):
@@ -22,6 +23,7 @@ class BubbleBench(Block):
     tags = [
         Block.Size.SINGLE,
         Block.Uses.GUI,
+        Block.Uses.BRIGHTNESS_FIX,
     ]
 
 
@@ -218,6 +220,7 @@ class Cabinet(BlockGroup):
     recipe = []
     tags = [
         Block.Size.SINGLE,
+        Block.Uses.BRIGHTNESS_FIX,
     ]
 
 
@@ -253,6 +256,7 @@ class Cupboard(BlockGroup):
     tags = [
         Block.Size.SINGLE,
         Block.Uses.CUSTOM_PLACE,
+        Block.Uses.BRIGHTNESS_FIX,
     ]
 
 
@@ -447,6 +451,7 @@ class KitchenCabinet(BlockGroup):
     recipe = []
     tags = [
         Block.Size.SINGLE,
+        Block.Uses.BRIGHTNESS_FIX,
     ]
 
 
@@ -464,6 +469,7 @@ class Fridge(Block):
     tags = [
         Block.Size.SINGLE,
         Block.Uses.BLOCKSTATES,
+        Block.Uses.BRIGHTNESS_FIX,
     ]
     blockstates = [
         Block.State("upper", None),
@@ -525,6 +531,7 @@ class Trashcan(Block):
     tags = [
         Block.Size.SINGLE,
         Block.Uses.CUSTOM_PLACE,
+        Block.Uses.BRIGHTNESS_FIX,
     ]
 
 
@@ -565,3 +572,91 @@ class Ladder(BlockGroup):
             ),
         ),
     ]
+
+
+class PadlockBlock(BlockGroup):
+    """
+    :yellow [☶ Description]
+    A fire escape ladder.
+
+    :green [☄ Instructions]
+    Right-click to start climbing, hold W/S to go up/down.
+    Press sneak to jump off.
+    """
+
+    category = Category.NONE
+    materials = BlockGroup.WOOL_TYPE
+    sound = Block.Sound.INDUSTRIAL
+    base = Block.Base.VOID
+    facing = Block.Facing.DOOR
+    recipe = []
+    tags = [
+        Block.Size.SINGLE,
+        Block.Uses.CUSTOM_PLACE,
+        Block.Uses.NO_BASE,
+    ]
+    blockstates = [
+        Block.State("left", None),
+        Block.State("right", None),
+    ]
+
+
+class RisingDoor(BlockGroup):
+    """
+    :yellow [☶ Description]
+    A vertically sliding door.
+
+    :green [☄ Instructions]
+    Right click to open/close.
+    """
+
+    category = Category.TECHNOLOGY
+    materials = BlockGroup.FURNITURE_TYPE
+    sound = Block.Sound.WOOD
+    base = Block.Base.VOID
+    facing = Block.Facing.PLAYER
+    recipe = []
+    tags = [
+        Block.Size.SINGLE,
+        Block.Uses.BLOCKSTATES,
+        Block.Uses.CUSTOM_PLACE,
+        Block.Uses.NO_BASE,
+        Block.Uses.CUSTOM_BASE,
+    ]
+    blockstates = [
+        Block.State("upper", None),
+        Block.State(
+            "lower",
+            Block.Predicate(
+                [],
+                front=None,
+                back=None,
+                left=None,
+                right=None,
+                up=True,
+                use_self=True,
+            ),
+        ),
+    ]
+
+
+class Pipe(Block):
+    """
+    :yellow [☶ Description]
+    Can be used as both decoration and in combination with other blocks
+
+    :green [☄ Instructions]
+    Simply put pipes next to each other, they will automatically connect.
+    """
+
+    category = Category.TECHNOLOGY
+    sound = Block.Sound.WOOD
+    base = Block.Base.VOID
+    facing = Block.Facing.SURFACE
+    recipe = []
+    tags = [
+        Block.Size.SINGLE,
+        Block.Uses.BLOCKSTATES,
+        Block.Uses.ALL_DIMENSIONS,
+    ]
+    blockstates = PIPE_BLOCKSTATES

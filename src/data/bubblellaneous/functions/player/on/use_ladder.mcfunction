@@ -2,7 +2,7 @@ advancement revoke @s only bubblellaneous:event/player/use_ladder
 
 tag @s add --local.player
 
-execute anchored eyes positioned ^ ^ ^2 run tag @e[type=interaction,tag=local.ladder,distance=..3] add --local.query_entity
+execute rotated ~ 0 positioned ^ ^ ^1 run tag @e[type=interaction,tag=local.ladder,distance=..2] add --local.query_entity
 function bubblellaneous:utils/event/get_entity_player_looking_at
 execute as @e[type=interaction,tag=--local.target_entity] at @s run function bubblellaneous:blocks/ladder/use
 

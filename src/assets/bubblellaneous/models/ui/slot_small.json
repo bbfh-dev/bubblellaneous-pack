@@ -1,0 +1,70 @@
+{
+    "credit": "Bubblellaneous - by bbfh",
+    "textures": {
+        "inventory": "bubblellaneous:ui/slot",
+        "overlay": "bubblellaneous:ui/air"
+    },
+    "elements": [
+        {
+            "from": [
+                3,
+                3,
+                8
+            ],
+            "to": [
+                13,
+                13,
+                8
+            ],
+            "faces": {
+                "north": {
+                    "uv": [
+                        0,
+                        0,
+                        16,
+                        16
+                    ],
+                    "texture": "#overlay"
+                }
+            }
+        },
+        {
+            "from": [
+                0,
+                0,
+                9
+            ],
+            "to": [
+                16,
+                16,
+                9
+            ],
+            "faces": {
+                "north": {
+                    "uv": [
+                        4.75,
+                        2.6875,
+                        5.875,
+                        3.8125
+                    ],
+                    "texture": "#inventory"
+                }
+            }
+        }
+    ],
+    "gui_light": "front",
+    "display": {
+        "gui": {
+            "rotation": [
+                0,
+                180,
+                0
+            ],
+            "scale": [
+                1.125,
+                1.125,
+                1.125
+            ]
+        }
+    }
+}

@@ -14,6 +14,11 @@
         ],
         "subtitle": "subtitles.block.generic.place"
     },
+    "block.wood.sit": {
+        "sounds": [
+            "bubblellaneous:block/seat/wood"
+        ]
+    },
     "block.wool.place": {
         "sounds": [
             "dig/cloth1",
@@ -22,5 +27,30 @@
             "dig/cloth4"
         ],
         "subtitle": "subtitles.block.generic.place"
+    },
+    "block.wool.sit": {
+        "sounds": [
+            "bubblellaneous:block/seat/soft"
+        ]
+    },
+    "block.lock.click": {
+        "sounds": [
+            "bubblellaneous:block/lock/click"
+        ]
+    },
+    "block.lock.register": {
+        "sounds": [
+            "bubblellaneous:block/lock/register"
+        ]
+    },
+    "block.lock.unlock": {
+        "sounds": [
+            "bubblellaneous:block/lock/unlock"
+        ]
+    },
+    "block.security_alarm.alarm": {
+        "sounds": [
+            "bubblellaneous:block/security_alarm/alarm"
+        ]
     }
 }

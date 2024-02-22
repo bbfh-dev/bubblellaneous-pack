@@ -5,6 +5,7 @@ scoreboard objectives add local.status dummy
 
 scoreboard objectives add local.on_drop custom:drop
 scoreboard objectives add local.on_leave_game custom:leave_game
+scoreboard objectives add local.on_right_click used:carrot_on_a_stick
 
 scoreboard objectives add local.player.id dummy
 scoreboard objectives add local.player.sound dummy
@@ -19,5 +20,15 @@ scoreboard objectives add local.block.state dummy
 scoreboard objectives add local.block.gui_page dummy
 scoreboard objectives add local.block.predicate dummy
 scoreboard objectives add local.block.id dummy
+scoreboard objectives add local.block.model dummy
+scoreboard objectives add local.block.facing dummy
+scoreboard objectives add local.block.group dummy
+scoreboard objectives add local.connection.type dummy
+scoreboard objectives add local.connection.+x dummy
+scoreboard objectives add local.connection.-x dummy
+scoreboard objectives add local.connection.+z dummy
+scoreboard objectives add local.connection.-z dummy
+scoreboard objectives add local.connection.+y dummy
+scoreboard objectives add local.connection.-y dummy
 
 say LOADED

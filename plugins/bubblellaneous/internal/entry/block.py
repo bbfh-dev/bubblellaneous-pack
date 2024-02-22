@@ -1,5 +1,4 @@
 import json
-import math
 from dataclasses import dataclass
 from enum import Enum
 from typing import Literal, Optional, Self
@@ -14,11 +13,21 @@ from ..tree import Tree
 from .base import BaseEntry
 
 
-def get_blockstate_code(predicates: str, name: str, state: "Block.State"):
+def get_blockstate_code(
+    predicates: str,
+    name: str,
+    state: "Block.State",
+    predicate: Optional["Block.Predicate"],
+):
+    macro = "{rotate: $VAL}".replace(
+        "$VAL", str(0 if not predicate else (predicate.rotation or 0))
+    )
     if predicates:
-        line = f"execute {predicates} run function [namespace]:blocks/{name}/blockstate/set_{state.name}"
+        if "@" in predicates:
+            macro = macro.replace("connection: 1", "connection: 2")
+        line = f"execute {predicates} run function [namespace]:blocks/{name}/blockstate/set_{state.name} {macro}"
     else:
-        line = f"function [namespace]:blocks/{name}/blockstate/set_{state.name}"
+        line = f"function [namespace]:blocks/{name}/blockstate/set_{state.name} {macro}"
 
     return "\n".join(
         [
@@ -54,6 +63,8 @@ class Block(BaseEntry):
     class Facing(Enum):
         PLAYER = "player"
         WALL = "wall"
+        SURFACE = "surface"
+        DOOR = "door"
         NONE = "none"
 
     class Uses(Enum):
@@ -62,6 +73,9 @@ class Block(BaseEntry):
         CUSTOM_PLACE = "--local.uses.custom_place"
         BLOCKSTATES = "--local.uses.blockstates"
         NO_BASE = "--local.uses.no_base"
+        CUSTOM_BASE = "--local.uses.custom_base"
+        BRIGHTNESS_FIX = "--local.uses.brightness_fix"
+        ALL_DIMENSIONS = "--local.uses.all_dimensions"
 
     @dataclass
     class Predicate:
@@ -73,6 +87,7 @@ class Block(BaseEntry):
         use_self: bool
         up: Optional[bool] = None
         down: Optional[bool] = None
+        rotation: Optional[int] = None
 
         def format(self, block: str) -> str:
             statement = "unless" if block.startswith("!") else "if"
@@ -166,8 +181,9 @@ class Block(BaseEntry):
             {
                 "id": snakecase(self.__class__.__name__),
                 "name": name,
-                "size": 1,
                 "is_single": True,
+                "base_item": "minecraft:item_frame",
+                "material_count": 1,
                 "docs": self.get_docs(),
                 "display_name": NBT(
                     {"translate": "block.[namespace].[name]", "italic": False},
@@ -191,6 +207,52 @@ class Block(BaseEntry):
         return self
 
     def compile(self, tree: Tree, id: int) -> tuple[Tree, int]:
+        self._props["data"] = lambda id: {
+            "EntityTag": {
+                "Tags": [
+                    f"+[namespace]",
+                    "local.place",
+                    *[i.value for i in self.prop("tags")],
+                ],
+                "Invisible": True,
+                "Fixed": True,
+                "Invulnerable": True,
+                "Silent": True,
+                "Item": {
+                    "id": "stone_button",
+                    "Count": True,
+                    "tag": {
+                        "block_data": {
+                            "id": NBT.Quote(
+                                self.prop("id"),
+                                double=True,
+                            ),
+                            "name": NBT.Quote(
+                                self.prop("name"),
+                                double=True,
+                            ),
+                            "sound": NBT.Quote(
+                                self.prop("sound").value,
+                                double=True,
+                            ),
+                            "base": NBT.Quote(
+                                self.prop("base").value,
+                                double=True,
+                            ),
+                            "display_name": NBT.Quote(
+                                self.prop("display_name"),
+                            ),
+                            "facing": NBT.Quote(
+                                self.prop("facing").value,
+                                double=True,
+                            ),
+                            "material_count": self.prop("material_count"),
+                            "custom_model_data": self.get_id(id),
+                        }
+                    },
+                },
+            },
+        }
         tree, id = super().compile(tree, id)
         if not (self.prop("is_single") and type(self.prop("blockstates")) is list):
             tree.add_model_id(f"[namespace]:block/{self.prop('name')}", self.get_id(id))
@@ -215,10 +277,10 @@ class Block(BaseEntry):
             )
             tree.add_registry_item(
                 self.prop("category"),
-                BenchRegistry(f"block/{self.prop('name')}", []),
+                BenchRegistry(f"block/{self.prop('name')}", "item_frame", []),
             )
             if type(self.prop("blockstates")) is list:
-                blockstates = self.prop("blockstates")
+                blockstates: list[Block.State] = self.prop("blockstates")
                 dir = f"{self.ctx.project_id}:block/{self.prop('name')}"
                 for state in blockstates:
                     template = self.ctx.assets.models[f"{dir}/template/{state.name}"]
@@ -236,7 +298,9 @@ class Block(BaseEntry):
                 for i, state in enumerate(blockstates):
                     for predicate in state.predicates:
                         if predicate is None:
-                            code.append(get_blockstate_code("", self.prop("name"), state))
+                            code.append(
+                                get_blockstate_code("", self.prop("name"), state, None)
+                            )
                             continue
                         names = predicate.names
                         if predicate.use_self:
@@ -245,7 +309,10 @@ class Block(BaseEntry):
                             code.insert(
                                 2,
                                 get_blockstate_code(
-                                    predicate.format(block_name), self.prop("name"), state
+                                    predicate.format(block_name),
+                                    self.prop("name"),
+                                    state,
+                                    predicate,
                                 ),
                             )
                     self.make_function(
@@ -254,9 +321,25 @@ class Block(BaseEntry):
                         "scoreboard players set quit local.tmp 1",
                         "execute store result score model local.tmp run data get entity @s item.tag.block_data.custom_model_data",
                         f"scoreboard players add model local.tmp {i}",
+                        f"scoreboard players set @s local.block.model {i}",
                         "execute store result entity @s item.tag.CustomModelData int 1 run scoreboard players get model local.tmp",
+                        "$execute as @s[tag=--local.uses.all_dimensions] at @s run tp @s ~ ~ ~ $(rotate) 0",
+                        "$scoreboard players set rotation local.tmp $(rotate)",
+                        f"function [namespace]:blocks/{self.prop('name')}/blockstate/post_update",
+                    )
+                if Block.Uses.ALL_DIMENSIONS in self.prop("tags"):
+                    code.insert(
+                        2,
+                        "\n".join(
+                            [
+                                "tp @s ~ ~ ~ ~ ~",
+                                "",
+                            ]
+                        ),
                     )
                 self.make_function(
-                    tree, f"[namespace]:blocks/{self.prop('name')}/blockstate/update", *code
+                    tree,
+                    f"[namespace]:blocks/{self.prop('name')}/blockstate/update",
+                    *code,
                 )
         return tree, id + 1
