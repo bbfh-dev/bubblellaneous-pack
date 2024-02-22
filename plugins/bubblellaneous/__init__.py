@@ -1,41 +1,49 @@
+from os import system
+
 from beet import Context, Function
 from colorama import Fore, init
 
 from plugins.utils.nbt import NBT
 
-from .blocks import *
+from .blocks import furniture, technology
 from .internal.entry import BaseEntry
 from .internal.tree import Tree
 from .items import *
 
 REGISTRY: list[type[BaseEntry]] = [
-    BubbleBench,
-    Table,
-    Shelf,
-    Cabinet,
-    Drawer,
-    Cupboard,
-    Bench,
-    Couch,
-    Stool,
-    Barstool,
-    DinningChair,
-    Blinds,
-    KitchenCabinet,
-    Fridge,
-    Washer,
-    Trashcan,
-    Ladder,
-    PadlockBlock,
+    furniture.BubbleBench,
+    furniture.Table,
+    furniture.Shelf,
+    furniture.Cabinet,
+    furniture.Drawer,
+    furniture.Cupboard,
+    furniture.Bench,
+    furniture.Couch,
+    furniture.Stool,
+    furniture.Barstool,
+    furniture.DinningChair,
+    furniture.Blinds,
+    furniture.KitchenCabinet,
+    furniture.Fridge,
+    furniture.Washer,
+    furniture.Trashcan,
+    technology.Ladder,
+    technology.PadlockBlock,
     Padlock,
     Key,
-    RisingDoor,
-    Pipe,
+    technology.RisingDoor,
+    technology.Pipe,
+    technology.Radiator,
+    furniture.TableLamp,
+    furniture.StreetLight,
+    furniture.DeskLamp,
 ]
 
 
 def beet_default(ctx: Context):
+    system("clear")
     init()
+
     tree = Tree()
     id = 1
     registry = []

@@ -108,6 +108,7 @@ class BlockGroup(BaseEntry):
                     },
                     is_json=True,
                 ),
+                "class": "block",
                 "path": path,
                 **{
                     name: self.__class__.__dict__.get(name)

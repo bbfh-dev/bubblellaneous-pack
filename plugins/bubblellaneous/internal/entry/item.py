@@ -80,6 +80,7 @@ class Item(BaseEntry):
                     {"translate": "item.[namespace].[name]", "italic": False},
                     is_json=True,
                 ),
+                "class": "item",
                 "path": [name],
                 **{
                     name: self.__class__.__dict__.get(name)

@@ -189,6 +189,7 @@ class Block(BaseEntry):
                     {"translate": "block.[namespace].[name]", "italic": False},
                     is_json=True,
                 ),
+                "class": "block",
                 "path": [name],
                 **{
                     name: self.__class__.__dict__.get(name)

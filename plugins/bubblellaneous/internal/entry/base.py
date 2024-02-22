@@ -47,10 +47,7 @@ class BaseEntry:
             r"^\:",
             "execute ",
             key.replace("[name]", self.prop("name"))
-            .replace(
-                "[class]",
-                re.sub(r"s$", "", self.__class__.__dict__["__module__"].split(".")[-1]),
-            )
+            .replace("[class]", re.sub(r"s$", "", self.prop("class")))
             .replace(":first", "limit=1,sort=nearest")
             .replace("->", "run function"),
         )
@@ -109,7 +106,7 @@ class BaseEntry:
                             }
                         ).get_dict(),
                         double=True,
-                    )
+                    ),
                 },
             ),
         )

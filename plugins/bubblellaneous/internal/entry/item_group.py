@@ -52,6 +52,7 @@ class ItemGroup(BaseEntry):
                     },
                     is_json=True,
                 ),
+                "class": "item",
                 "path": path,
                 **{
                     name: self.__class__.__dict__.get(name)
