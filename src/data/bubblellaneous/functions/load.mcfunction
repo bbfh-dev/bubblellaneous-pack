@@ -23,12 +23,6 @@ scoreboard objectives add local.block.id dummy
 scoreboard objectives add local.block.model dummy
 scoreboard objectives add local.block.facing dummy
 scoreboard objectives add local.block.group dummy
-scoreboard objectives add local.connection.type dummy
-scoreboard objectives add local.connection.+x dummy
-scoreboard objectives add local.connection.-x dummy
-scoreboard objectives add local.connection.+z dummy
-scoreboard objectives add local.connection.-z dummy
-scoreboard objectives add local.connection.+y dummy
-scoreboard objectives add local.connection.-y dummy
+scoreboard objectives add local.block.timer dummy
 
 say LOADED
