@@ -3,5 +3,5 @@ summon interaction ~ ~-0.01 ~ {Tags: ["+bubblellaneous", "local.padlock", "--loc
 scoreboard players operation @e[type=interaction,tag=--local.new,limit=1] local.block.id = @s local.block.id
 tag @e[type=interaction,tag=--local.new,limit=1] remove --local.new
 
-execute if block ~ ~ ~ #doors[hinge=right] run function bubblellaneous:blocks/padlock_block/blockstate/set_left
-execute if block ~ ~ ~ #doors[hinge=left] run function bubblellaneous:blocks/padlock_block/blockstate/set_right
+execute if block ~ ~ ~ #doors[hinge=right] run function bubblellaneous:blocks/padlock_block/blockstate/set_left {rotate: 0}
+execute if block ~ ~ ~ #doors[hinge=left] run function bubblellaneous:blocks/padlock_block/blockstate/set_right {rotate: 0}
