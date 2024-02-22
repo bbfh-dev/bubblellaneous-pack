@@ -282,12 +282,64 @@ block	gold_rising_door	Golden Rising Door
 block	diamond_rising_door	Diamond Rising Door					
 block	emerald_rising_door	Emerald Rising Door					
 block	netherite_rising_door	Netherite Rising Door					
-item	padlock	Padlock					
+block	white_table_lamp	White Table Lamp					
+block	orange_table_lamp	Orange Table Lamp					
+block	magenta_table_lamp	Magenta Table Lamp					
+block	light_blue_table_lamp	Light Blue Table Lamp					
+block	yellow_table_lamp	Yellow Table Lamp					
+block	lime_table_lamp	Lime Table Lamp					
+block	pink_table_lamp	Pink Table Lamp					
+block	gray_table_lamp	Gray Table Lamp					
+block	light_gray_table_lamp	Light Gray Table Lamp					
+block	cyan_table_lamp	Cyan Table Lamp					
+block	purple_table_lamp	Purple Table Lamp					
+block	blue_table_lamp	Blue Table Lamp					
+block	brown_table_lamp	Brown Table Lamp					
+block	green_table_lamp	Green Table Lamp					
+block	red_table_lamp	Red Table Lamp					
+block	black_table_lamp	Black Table Lamp					
+block	oak_street_light	Oak Street Light					
+block	spruce_street_light	Spruce Street Light					
+block	birch_street_light	Birch Street Light					
+block	jungle_street_light	Jungle Street Light					
+block	acacia_street_light	Acacia Street Light					
+block	dark_oak_street_light	Dark Oak Street Light					
+block	mangrove_street_light	Mangrove Street Light					
+block	cherry_street_light	Cherry Street Light					
+block	crimson_street_light	Crimson Street Light					
+block	warped_street_light	Warped Street Light					
+block	stone_street_light	Stone Street Light					
+block	quartz_street_light	Quartz Street Light					
+block	bamboo_street_light	Bamboo Street Light					
+block	deepslate_street_light	Deepslate Street Light					
+block	iron_street_light	Iron Street Light					
+block	copper_street_light	Copper Street Light					
+block	gold_street_light	Golden Street Light					
+block	diamond_street_light	Diamond Street Light					
+block	emerald_street_light	Emerald Street Light					
+block	netherite_street_light	Netherite Street Light					
 block	fridge	Fridge		Холодильник			
 block	washer	Washer	Washing Machine	Стиральная Машина			
-block	trashcan	Tashcan		Мусорник			
+block	trashcan	Trashcan		Мусорник			
 block	pipe	Pipe					
 block	radiator	Radiator					
+block	white_desk_lamp	White Desk Lamp					
+block	orange_desk_lamp	Orange Desk Lamp					
+block	magenta_desk_lamp	Magenta Desk Lamp					
+block	light_blue_desk_lamp	Light Blue Desk Lamp					
+block	yellow_desk_lamp	Yellow Desk Lamp					
+block	lime_desk_lamp	Lime Desk Lamp					
+block	pink_desk_lamp	Pink Desk Lamp					
+block	gray_desk_lamp	Gray Desk Lamp					
+block	light_gray_desk_lamp	Light Gray Desk Lamp					
+block	cyan_desk_lamp	Cyan Desk Lamp					
+block	purple_desk_lamp	Purple Desk Lamp					
+block	blue_desk_lamp	Blue Desk Lamp					
+block	brown_desk_lamp	Brown Desk Lamp					
+block	green_desk_lamp	Green Desk Lamp					
+block	red_desk_lamp	Red Desk Lamp					
+block	black_desk_lamp	Black Desk Lamp					
+item	padlock	Padlock					
 ui	expand_variants	%s Click to Expand Variants		%s Нажмите чтобы показать варианты	%s Premi per espandere le varianti		
 ui	craft	%s Click to Craft		%s Нажмите чтобы скрафтить	%s Premi per fabbricare		
 ui	craft_maximum	%s Hold Shift to Craft Maximum		%s Удерживайте Shift, чтобы скрафтить максимум	%s Mantieni Shift per fabbricare il massimo		
