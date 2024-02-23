@@ -37,13 +37,15 @@ REGISTRY: list[type[BaseEntry]] = [
     furniture.TableLamp,
     furniture.StreetLight,
     furniture.DeskLamp,
+    furniture.FloorLamp,
+    furniture.UpholsteryCouch,
+    furniture.Curtains,
+    technology.SecurityCamera,
+    technology.SecurityMonitor,
 ]
 
 
 def beet_default(ctx: Context):
-    system("clear")
-    init()
-
     tree = Tree()
     id = 1
     registry = []

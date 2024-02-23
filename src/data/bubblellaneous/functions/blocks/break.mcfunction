@@ -1,11 +1,13 @@
+tag @s add --local.this
 kill @e[type=item,nbt={Age: 0s},distance=..2]
+
 $execute unless score fn.no_drop local.tmp matches 1 as @p[gamemode=!spectator] if entity @s[gamemode=!creative] run function spawn:bubblellaneous/$(name)
+execute unless score fn.no_drop local.tmp matches 1 as @p[gamemode=!spectator] if entity @s[gamemode=!creative] as @e[type=item,nbt={Age: 0s},distance=..5,limit=1,sort=nearest] run data modify entity @s Item.tag.EntityTag.Item.tag.block_properties set from entity @e[type=item_display,tag=--local.this,limit=1] item.tag.block_properties
 execute as @s[tag=--local.uses.custom_base] run setblock ~ ~ ~ air
 
 scoreboard players set update_neighbors local.tmp 0
 execute as @s[tag=--local.uses.blockstates] run scoreboard players set update_neighbors local.tmp 1
 
-tag @s add --local.this
 execute as @e[type=#bubblellaneous:entity,distance=..4] if score @s local.block.id = @e[type=item_display,tag=--local.this,limit=1] local.block.id run function bubblellaneous:utils/kill
 kill @s
 

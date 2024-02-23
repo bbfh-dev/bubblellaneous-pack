@@ -1,0 +1,44 @@
+{
+	"credit": "Bubblellaneous - by bbfh",
+	"parent": "minecraft:block/cube",
+	"textures": {
+		"1": "block/smithing_table_top",
+		"particle": "bubblellaneous:block/curtains"
+	},
+	"elements": [
+		{
+			"from": [0, 14, 15],
+			"to": [16, 16, 17],
+			"faces": {
+				"north": {"uv": [0, 14, 16, 16], "texture": "#1"},
+				"east": {"uv": [0, 14, 1, 16], "texture": "#1"},
+				"south": {"uv": [0, 14, 16, 16], "texture": "#1", "cullface": "south"},
+				"west": {"uv": [15, 14, 16, 16], "texture": "#1"},
+				"up": {"uv": [0, 15, 16, 16], "texture": "#1"},
+				"down": {"uv": [0, 0, 16, 1], "texture": "#1"}
+			}
+		},
+		{
+			"from": [15, 16, 16],
+			"to": [16, 18, 17],
+			"faces": {
+				"north": {"uv": [0, 14, 1, 16], "texture": "#1"},
+				"east": {"uv": [0, 14, 0, 16], "texture": "#1"},
+				"south": {"uv": [15, 14, 16, 16], "texture": "#1"},
+				"west": {"uv": [16, 14, 16, 16], "texture": "#1"},
+				"up": {"uv": [15, 16, 16, 16], "texture": "#1"}
+			}
+		},
+		{
+			"from": [0, 16, 16],
+			"to": [1, 18, 17],
+			"faces": {
+				"north": {"uv": [15, 14, 16, 16], "texture": "#1"},
+				"east": {"uv": [0, 14, 0, 16], "texture": "#1"},
+				"south": {"uv": [0, 14, 1, 16], "texture": "#1"},
+				"west": {"uv": [16, 14, 16, 16], "texture": "#1"},
+				"up": {"uv": [0, 16, 1, 16], "texture": "#1"}
+			}
+		}
+	]
+}

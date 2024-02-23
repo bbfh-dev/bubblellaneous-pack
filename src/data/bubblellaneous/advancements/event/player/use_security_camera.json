@@ -1,0 +1,22 @@
+{
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:player_interacted_with_entity",
+            "conditions": {
+                "item": {
+                    "items": [
+                        "item_frame"
+                    ],
+                    "nbt": "{EntityTag:{Item:{tag:{block_data:{name: \"security_monitor\"}}}}}"
+                },
+                "entity": {
+                    "type": "minecraft:interaction",
+                    "nbt": "{Tags:[\"local.security_camera\"]}"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "bubblellaneous:player/on/use_security_camera"
+    }
+}

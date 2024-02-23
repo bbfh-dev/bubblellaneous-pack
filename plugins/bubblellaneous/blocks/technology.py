@@ -155,3 +155,58 @@ class Radiator(Block):
         Block.State("off", None),
         Block.State("on", None),
     ]
+
+
+class SecurityCamera(Block):
+    """
+    :yellow [☶ Description]
+    Camera that can be viewed from elsewhere to protect a certain area.
+
+    :green [☄ Instructions]
+    TODO
+    """
+
+    category = Category.TECHNOLOGY
+    sound = Block.Sound.INDUSTRIAL
+    base = Block.Base.VOID
+    facing = Block.Facing.WALL
+    recipe = []
+    tags = [
+        Block.Size.SINGLE,
+        Block.Uses.CUSTOM_PLACE,
+        Block.Uses.TICK,
+        Block.Uses.NO_BASE,
+        Block.Uses.CUSTOM_BASE,
+    ]
+    blockstates = [
+        Block.State("single", None),
+        Block.State("stand", None),
+        Block.State("camera", None),
+    ]
+
+
+class SecurityMonitor(Block):
+    """
+    :yellow [☶ Description]
+    Used for viewing security cameras.
+
+    :green [☄ Instructions]
+    TODO
+    """
+
+    category = Category.TECHNOLOGY
+    sound = Block.Sound.INDUSTRIAL
+    base = Block.Base.VOID
+    facing = Block.Facing.WALL
+    recipe = []
+    tags = [
+        Block.Size.SINGLE,
+        Block.Uses.CUSTOM_PLACE,
+        Block.Uses.NO_BASE,
+        Block.Uses.CUSTOM_BASE,
+    ]
+    blockstates = [
+        Block.State("on", None),
+        Block.State("off", None),
+        Block.State("disabled", None),
+    ]

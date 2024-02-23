@@ -610,3 +610,105 @@ class DeskLamp(BlockGroup):
         Block.Uses.NO_BASE,
         Block.Uses.CUSTOM_BASE,
     ]
+
+
+class UpholsteryCouch(BlockGroup):
+    """
+    :yellow [☶ Description]
+    Decoration block that you can sit on.
+    """
+
+    category = Category.FURNITURE
+    materials = BlockGroup.WOOD_WITH_WOOL_TYPE
+    sound = Block.Sound.WOOD
+    base = Block.Base.TRIPWIRE
+    facing = Block.Facing.PLAYER
+    recipe = []
+    tags = [
+        Block.Size.SINGLE,
+        Block.Uses.BLOCKSTATES,
+        Block.Uses.CUSTOM_PLACE,
+    ]
+    blockstates = [
+        Block.State("single", None),
+        Block.State(
+            "left",
+            Block.Predicate(
+                [],
+                front=None,
+                back=None,
+                left=False,
+                right=True,
+                use_self=True,
+            ),
+        ),
+        Block.State(
+            "right",
+            Block.Predicate(
+                [],
+                front=None,
+                back=None,
+                left=True,
+                right=False,
+                use_self=True,
+            ),
+        ),
+        Block.State(
+            "middle",
+            Block.Predicate(
+                [],
+                front=None,
+                back=None,
+                left=True,
+                right=True,
+                use_self=True,
+            ),
+        ),
+    ]
+
+
+class FloorLamp(BlockGroup):
+    """
+    :yellow [☶ Description]
+    Decoration block that emits light.
+    """
+
+    category = Category.FURNITURE
+    materials = BlockGroup.WOOL_TYPE
+    sound = Block.Sound.WOOL
+    base = Block.Base.VOID
+    facing = Block.Facing.NONE
+    recipe = []
+    tags = [
+        Block.Size.SINGLE,
+        Block.Uses.CUSTOM_PLACE,
+        Block.Uses.NO_BASE,
+        Block.Uses.CUSTOM_BASE,
+    ]
+
+
+class Curtains(Block):
+    """
+    :yellow [☶ Description]
+    Decoration block that can cover windows.
+    """
+
+    category = Category.FURNITURE
+    sound = Block.Sound.WOOL
+    base = Block.Base.VOID
+    facing = Block.Facing.WALL
+    recipe = []
+    tags = [
+        Block.Size.SINGLE,
+        Block.Uses.CUSTOM_PLACE,
+    ]
+    blockstates = [
+        Block.State("top", None),
+        Block.State("top_left", None),
+        Block.State("top_right", None),
+        Block.State("middle", None),
+        Block.State("bottom", None),
+        Block.State("bottom_left", None),
+        Block.State("bottom_right", None),
+        Block.State("empty", None),
+    ]

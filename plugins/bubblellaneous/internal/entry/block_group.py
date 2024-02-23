@@ -103,7 +103,7 @@ class BlockGroup(BaseEntry):
                 "material_count": len(self.__class__.__dict__["materials"]),
                 "display_name": NBT(
                     {
-                        "translate": f"block.[namespace].{material.split('_')[-1]}_{block_name}",
+                        "translate": f"block.[namespace].{material.replace('dark_', 'DARK').split('_')[-1].replace('DARK', 'dark_')}_{block_name}",
                         "italic": False,
                     },
                     is_json=True,

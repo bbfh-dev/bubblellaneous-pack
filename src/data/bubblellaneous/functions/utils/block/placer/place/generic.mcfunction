@@ -1,4 +1,5 @@
 $data merge entity @s {Tags: ["+bubblellaneous", "local.block"], CustomName:'$(display_name)', item: {id: "item_frame", Count: 1b, tag:{CustomModelData: $(custom_model_data), block_data:{id: "$(id)", sound: "$(sound)", base: "$(base)", name: "$(name)", facing: "$(facing)", custom_model_data: $(custom_model_data), material_count: $(material_count)}}}, transformation: {translation: [0f, 0.5f, 0f], scale: [1.01f, 1.01f, 1.01f]}}
+data modify entity @s item.tag.block_properties set from entity @e[type=item_frame,limit=1,sort=nearest] Item.tag.block_properties
 scoreboard players operation @s local.block.facing = facing local.tmp
 $tag @s add --local.name.$(id)
 
