@@ -13,8 +13,8 @@
     ],
     "output": "dist",
     "pipeline": [
-        "plugins.bubblellaneous",
         "plugins.lang",
+        "plugins.bubblellaneous.compile",
         "plugins.preprocessor",
         "plugins.constants",
         {

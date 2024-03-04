@@ -1,148 +1,108 @@
 import json
+from dataclasses import dataclass
+from typing import Callable
 
-from beet import Context, Function, LootTable, Model
-from colorama import Fore
+from beet import Advancement, Context, Function, ItemModifier, LootTable, Model
 
-from plugins.utils.nbt import NBT
-
-from .bench_registry import BenchRegistry
-from .category import Category
-from .templates import use_template
+from plugins.bubblellaneous.internal.template.items import ITEMS_TEMPLATE
 
 
+@dataclass
+class BenchRegistry:
+    entry: str
+    item: str
+    items: list
+    count: int = 0
+
+    def update(self):
+        self.count = max(min(len(self.items), 64), 1)
+        return self
+
+
+@dataclass(init=False)
 class Tree:
+    @dataclass
+    class Model:
+        custom_model_data: int
+        base_item: str
+
+        @property
+        def item_name(self) -> str:
+            return self.base_item.split(":")[-1]
+
+    @dataclass
+    class MergedModel:
+        model: "Tree.Model"
+        path: str
+
+    functions: dict[str, Function]
+    loot_tables: dict[str, LootTable]
+    advancements: dict[str, Advancement]
+    item_modifiers: dict[str, ItemModifier]
+    bench_registry: dict[str, BenchRegistry]
+    models: dict[str, Model]
+
     def __init__(self) -> None:
-        self.functions: dict[str, Function] = {}
-        self.loot_tables: dict[str, LootTable] = {}
-        self.models: dict[str, Model] = {}
-        self.model_ids: list[tuple[str, int, str]] = []
-        self.bench_registry: dict[str, list[BenchRegistry]] = {}
+        self.functions = {}
+        self.loot_tables = {}
+        self.advancements = {}
+        self.item_modifiers = {}
+        self.bench_registry = {}
+        self.models = {}
 
-    def __repr__(self) -> str:
-        return self.__str__()
+    def default_format(self, ctx: Context, fn: Callable) -> Callable:
+        def format(string: str):
+            return fn(string).replace("[namespace]", ctx.project_id)
 
-    def __str__(self) -> str:
-        return "\n".join(
-            [
-                f"[{Fore.RED}󰡱 Functions{Fore.RESET}]:",
-                *[
-                    f"→ {Fore.BLUE}{k}{Fore.RESET}: {v}"
-                    for k, v in self.functions.items()
-                ],
-                "",
-                f"[{Fore.RED}󰓫 Loot Tables{Fore.RESET}]:",
-                *[
-                    f"→ {Fore.BLUE}{k}{Fore.RESET}: {v}"
-                    for k, v in self.loot_tables.items()
-                ],
-            ]
-        )
+        return format
 
-    def format(self, ctx: Context, key: str):
-        return key.replace("[namespace]", ctx.project_id).replace(
-            "local.", f'{ctx.meta["prefix"]}.'
-        )
+    def make_function(
+        self, format: Callable, key: str, lines: list[str], tags: list[str] = []
+    ):
+        key = format(key)
+        lines = [format(line) for line in lines]
 
-    def format_code(self, ctx: Context):
-        functions, self.functions = self.functions, {}
-        for key, item in functions.items():
-            item.lines = [self.format(ctx, i) for i in item.lines]
-            self.functions[self.format(ctx, key)] = item
-
-        loot_tables, self.loot_tables = self.loot_tables, {}
-        for key, item in loot_tables.items():
-            item.data = json.loads(self.format(ctx, json.dumps(item.data)))
-            self.loot_tables[self.format(ctx, key)] = item
-
-        advancements = ctx.data.advancements
-        for key, item in advancements.items():
-            item.data = json.loads(self.format(ctx, json.dumps(item.data)))
-            ctx.data.advancements[self.format(ctx, key)] = item
-
-        for index, (path, id, item) in enumerate(self.model_ids):
-            self.model_ids[index] = (self.format(ctx, path), id, item)
-        self.model_ids.sort(key=lambda a: a[1], reverse=False)
-
-        return self
-
-    def dump(self, ctx: Context):
-        for key, item in self.functions.items():
-            ctx.data.functions[key] = item
-
-        for key, item in self.loot_tables.items():
-            ctx.data.loot_tables[key] = item
-
-        to_be_deleted = []
-        for key in ctx.assets.models.keys():
-            if "template" in key:
-                to_be_deleted.append(key)
-        for key in to_be_deleted:
-            ctx.assets.models.pop(key)
-
-        for key, item in self.models.items():
-            ctx.assets.models[key] = item
-
-        for item_name in set([i[2] for i in self.model_ids]):
-            ctx.assets.models[f"minecraft:item/{item_name}"] = Model(
-                json.loads(
-                    use_template(
-                        f"{item_name}_overrides.json",
-                        {
-                            "overrides": NBT(
-                                [
-                                    {
-                                        "predicate": {"custom_model_data": id},
-                                        "model": model,
-                                    }
-                                    for model, id, item in self.model_ids
-                                    if item == item_name
-                                ],
-                                is_json=True,
-                            )
-                        },
-                    )
-                    .get_dict()
-                    .replace('\\"', '"')
-                )
-            )
-
-        return self
-
-    def function(self, key: str, fn: Function):
         original = self.functions.get(key)
-        if original is not None:
-            self.functions[key] = Function(
-                "\n".join(
-                    [
-                        *original.lines,
-                        *fn.lines,
-                    ]
-                ),
-                tags=[*(original.tags or []), *(fn.tags or [])],
-            )
-        else:
-            self.functions[key] = fn
-
-    def loot_table(self, key: str, lt: LootTable):
-        original = self.loot_tables.get(key)
-        if original is not None:
-            self.loot_tables[key] = LootTable(original.data | lt.data)
-        else:
-            self.loot_tables[key] = lt
-
-    def model(self, key: str, model: Model):
-        original = self.models.get(key)
-        if original is not None:
-            self.models[key] = Model(original.data | model.data)
-        else:
-            self.models[key] = model
-
-    def add_model_id(self, key: str, id: int, item: str = "item_frame"):
-        if id in [i[1] for i in self.model_ids]:
+        if original is None:
+            self.functions[key] = Function("\n".join(lines), tags=tags)
             return
-        self.model_ids.append((key, id, item))
+        self.functions[key] = Function(
+            "\n".join([*original.lines, *lines]), tags=[*(original.tags or []), *tags]
+        )
 
-    def add_registry_item(self, category: Category, item: BenchRegistry):
-        if not self.bench_registry.get(category.value):
-            self.bench_registry[category.value] = []
-        self.bench_registry[category.value].append(item.update())
+    def make_loot_table(self, format: Callable, key: str, data: str):
+        self.loot_tables[format(key)] = LootTable(json.loads(format(json.dumps(data))))
+
+    def _compile(self, ctx: Context, name: str):
+        assert type(getattr(self, name)) is dict
+        for key, value in getattr(self, name).items():
+            getattr(getattr(ctx, "data"), name)[key] = value
+
+    def compile(self, ctx: Context):
+        self._compile(ctx, "functions")
+        self._compile(ctx, "loot_tables")
+        self._compile(ctx, "advancements")
+        self._compile(ctx, "item_modifiers")
+
+        merged_models: dict[str, list[Tree.MergedModel]] = {}
+        for path, model in self.models.items():
+            merged_models[model.item_name] = [
+                *merged_models.get(model.item_name, []),
+                Tree.MergedModel(model, path),
+            ]
+
+        for name, models in merged_models.items():
+            ctx.assets.models[f"minecraft:item/{name}"] = Model(
+                {
+                    **ITEMS_TEMPLATE.get(f"minecraft:{name}", {}),
+                    "overrides": [
+                        {
+                            "predicate": {
+                                "custom_model_data": model.model.custom_model_data
+                            },
+                            "model": model.path,
+                        }
+                        for model in models
+                    ],
+                }
+            )

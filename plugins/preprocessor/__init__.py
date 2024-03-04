@@ -59,9 +59,14 @@ class Preprocessor:
         min_version = PACK_FORMATS.get(version_from)
         max_version = PACK_FORMATS.get(version_to)
         if min_version is None or max_version is None:
-            raise Exception(f"Preprocessor caught unknown version: {min_version=}-{max_version=}")
+            raise Exception(
+                f"Preprocessor caught unknown version: {min_version=}-{max_version=}"
+            )
 
-        if self._ctx.data.pack_format >= min_version[0] and self._ctx.data.pack_format <= max_version[-1]:
+        if (
+            self._ctx.data.pack_format >= min_version[0]
+            and self._ctx.data.pack_format <= max_version[-1]
+        ):
             return command
 
         return ""

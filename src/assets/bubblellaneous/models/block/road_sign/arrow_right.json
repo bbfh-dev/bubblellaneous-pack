@@ -1,0 +1,37 @@
+{
+	"credit": "Bubblellaneous - by bbfh",
+	"parent": "minecraft:block/cube",
+	"textures": {
+		"2": "bubblellaneous:block/road_sign/back",
+		"particle": "bubblellaneous:block/pole",
+		"pole": "bubblellaneous:block/pole",
+		"sign": "bubblellaneous:block/road_sign/arrow_right"
+	},
+	"elements": [
+		{
+			"from": [6, 0, 6],
+			"to": [10, 16, 10],
+			"faces": {
+				"north": {"uv": [0, 0, 4, 16], "texture": "#pole"},
+				"east": {"uv": [0, 0, 4, 16], "texture": "#pole"},
+				"south": {"uv": [0, 0, 4, 16], "texture": "#pole"},
+				"west": {"uv": [0, 0, 4, 16], "texture": "#pole"},
+				"up": {"uv": [4, 0, 8, 4], "texture": "#pole", "cullface": "up"},
+				"down": {"uv": [4, 0, 8, 4], "texture": "#pole", "cullface": "down"}
+			}
+		},
+		{
+			"from": [5, 0, 0],
+			"to": [6, 16, 16],
+			"rotation": {"angle": 45, "axis": "x", "origin": [5.5, 8, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 1, 16], "texture": "#2"},
+				"east": {"uv": [0, 0, 16, 16], "rotation": 90, "texture": "#2"},
+				"south": {"uv": [0, 0, 16, 1], "rotation": 90, "texture": "#2"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#sign"},
+				"up": {"uv": [15, 0, 16, 16], "texture": "#2"},
+				"down": {"uv": [0, 15, 16, 16], "rotation": 90, "texture": "#2"}
+			}
+		}
+	]
+}

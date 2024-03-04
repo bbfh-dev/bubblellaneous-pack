@@ -1,0 +1,44 @@
+{
+	"credit": "Bubblellaneous - by bbfh",
+	"parent": "minecraft:block/cube",
+	"textures": {
+		"particle": "bubblellaneous:block/bell",
+		"bell": "bubblellaneous:block/bell"
+	},
+	"elements": [
+		{
+			"from": [5, 0, 5],
+			"to": [11, 4, 11],
+			"faces": {
+				"north": {"uv": [0, 0, 6, 4], "texture": "#bell"},
+				"east": {"uv": [0, 0, 6, 4], "texture": "#bell"},
+				"south": {"uv": [0, 0, 6, 4], "texture": "#bell"},
+				"west": {"uv": [0, 0, 6, 4], "texture": "#bell"},
+				"up": {"uv": [0, 4, 6, 10], "texture": "#bell"},
+				"down": {"uv": [0, 10, 6, 16], "texture": "#bell", "cullface": "down"}
+			}
+		},
+		{
+			"from": [7, 4.5, 7],
+			"to": [9, 5.5, 9],
+			"faces": {
+				"north": {"uv": [2, 7, 4, 8], "texture": "#bell"},
+				"east": {"uv": [2, 7, 4, 8], "texture": "#bell"},
+				"south": {"uv": [2, 7, 4, 8], "texture": "#bell"},
+				"west": {"uv": [2, 7, 4, 8], "texture": "#bell"},
+				"up": {"uv": [2, 6, 4, 8], "texture": "#bell"},
+				"down": {"uv": [2, 6, 4, 8], "texture": "#bell"}
+			}
+		},
+		{
+			"from": [7.5, 4, 7.5],
+			"to": [8.5, 4.5, 8.5],
+			"faces": {
+				"north": {"uv": [2.5, 6.5, 3.5, 7], "texture": "#bell"},
+				"east": {"uv": [2.5, 6.5, 3.5, 7], "texture": "#bell"},
+				"south": {"uv": [2.5, 6.5, 3.5, 7], "texture": "#bell"},
+				"west": {"uv": [2.5, 6.5, 3.5, 7], "texture": "#bell"}
+			}
+		}
+	]
+}

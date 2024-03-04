@@ -9,7 +9,16 @@ class NBTVar:
         return self._value
 
 
-NBTType = str | float | int | bool | dict[str, "NBTType"] | list["NBTType"] | list[str] | NBTVar
+NBTType = (
+    str
+    | float
+    | int
+    | bool
+    | dict[str, "NBTType"]
+    | list["NBTType"]
+    | list[str]
+    | NBTVar
+)
 
 
 class NBT:

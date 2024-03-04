@@ -1,6 +1,0 @@
-execute if score @s local.block.model matches 0 run setblock ~ ~ ~ lightning_rod[facing=up]
-execute if score @s local.block.model matches 1 if score rotation local.tmp matches 0 run setblock ~ ~ ~ lightning_rod[facing=north]
-execute if score @s local.block.model matches 1 if score rotation local.tmp matches 180 run setblock ~ ~ ~ lightning_rod[facing=north]
-execute if score @s local.block.model matches 1 if score rotation local.tmp matches 90 run setblock ~ ~ ~ lightning_rod[facing=east]
-execute if score @s local.block.model matches 1 if score rotation local.tmp matches -90 run setblock ~ ~ ~ lightning_rod[facing=east]
-execute unless score @s local.block.model matches 0..1 run setblock ~ ~ ~ conduit[waterlogged=false]
