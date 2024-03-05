@@ -5,6 +5,7 @@ from plugins.bubblellaneous.internal import (
     BlockType,
     Variant,
 )
+from plugins.bubblellaneous.internal.unit.variant import BlockVariant
 
 
 class BubbleBench(Block):
@@ -29,7 +30,7 @@ class BubbleBench(Block):
     ]
 
 
-class Table(Variant[Block]):
+class Table(BlockVariant):
     """
     :yellow [☶ Description]
     TODO
@@ -56,7 +57,7 @@ class Table(Variant[Block]):
     )
 
 
-class Shelf(Variant[Block]):
+class Shelf(BlockVariant):
     """
     :yellow [☶ Description]
     TODO
@@ -76,7 +77,7 @@ class Shelf(Variant[Block]):
     ]
 
 
-class Cabinet(Variant[Block]):
+class Cabinet(BlockVariant):
     """
     :yellow [☶ Description]
     TODO
@@ -95,7 +96,7 @@ class Cabinet(Variant[Block]):
     ]
 
 
-class Drawer(Variant[Block]):
+class Drawer(BlockVariant):
     """
     :yellow [☶ Description]
     TODO
@@ -112,7 +113,7 @@ class Drawer(Variant[Block]):
     tags = []
 
 
-class Cupboard(Variant[Block]):
+class Cupboard(BlockVariant):
     """
     :yellow [☶ Description]
     TODO
@@ -132,7 +133,7 @@ class Cupboard(Variant[Block]):
     ]
 
 
-class Bench(Variant[Block]):
+class Bench(BlockVariant):
     """
     :yellow [☶ Description]
     TODO
@@ -152,13 +153,13 @@ class Bench(Variant[Block]):
     ]
 
 
-class Couch(Variant[Block]):
+class Couch(BlockVariant):
     """
     :yellow [☶ Description]
     TODO
     """
 
-    material = BlockMaterials.SOLID
+    material = BlockMaterials.WOOL
     block_type = BlockType.seat(width=0.8, height=0.45)
 
     base = BlockData.Base.TRIPWIRE
@@ -181,7 +182,7 @@ class Couch(Variant[Block]):
     )
 
 
-class Stool(Variant[Block]):
+class Stool(BlockVariant):
     """
     :yellow [☶ Description]
     TODO
@@ -201,7 +202,7 @@ class Stool(Variant[Block]):
     ]
 
 
-class Barstool(Variant[Block]):
+class Barstool(BlockVariant):
     """
     :yellow [☶ Description]
     TODO
@@ -221,7 +222,7 @@ class Barstool(Variant[Block]):
     ]
 
 
-class DinningChair(Variant[Block]):
+class DinningChair(BlockVariant):
     """
     :yellow [☶ Description]
     TODO
@@ -242,7 +243,7 @@ class DinningChair(Variant[Block]):
     ]
 
 
-class Blinds(Variant[Block]):
+class Blinds(BlockVariant):
     """
     :yellow [☶ Description]
     TODO
@@ -259,7 +260,7 @@ class Blinds(Variant[Block]):
     tags = []
 
 
-class KitchenCabinet(Variant[Block]):
+class KitchenCabinet(BlockVariant):
     """
     :yellow [☶ Description]
     TODO
@@ -342,7 +343,7 @@ class Trashcan(Block):
     ]
 
 
-class TableLamp(Variant[Block]):
+class TableLamp(BlockVariant):
     """
     :yellow [☶ Description]
     TODO
@@ -363,7 +364,7 @@ class TableLamp(Variant[Block]):
     ]
 
 
-class StreetLight(Variant[Block]):
+class StreetLight(BlockVariant):
     """
     :yellow [☶ Description]
     TODO
@@ -390,7 +391,7 @@ class StreetLight(Variant[Block]):
     )
 
 
-class DeskLamp(Variant[Block]):
+class DeskLamp(BlockVariant):
     """
     :yellow [☶ Description]
     TODO
@@ -411,7 +412,7 @@ class DeskLamp(Variant[Block]):
     ]
 
 
-class UpholsteryCouch(Variant[Block]):
+class UpholsteryCouch(BlockVariant):
     """
     :yellow [☶ Description]
     TODO
@@ -439,7 +440,7 @@ class UpholsteryCouch(Variant[Block]):
     )
 
 
-class FloorLamp(Variant[Block]):
+class FloorLamp(BlockVariant):
     """
     :yellow [☶ Description]
     TODO

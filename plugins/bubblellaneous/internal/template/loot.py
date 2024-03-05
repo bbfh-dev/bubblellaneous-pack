@@ -16,7 +16,7 @@ LOOT_TEMPLATE = NBT(
                 ],
             }
         ],
-        "random_sequence": "[namespace]:[unit]/[name]",
+        "random_sequence": "[namespace]:[unit]/[unit_name]",
     },
     is_json=True,
 )

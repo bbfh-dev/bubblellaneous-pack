@@ -11,10 +11,6 @@ class ItemData:
 
 
 class Item(Base):
-    def __init__(self, category: Category) -> None:
-        self.category = category
-        super().__init__()
-
     @property
     @override
     def unit_tag(self) -> dict:
@@ -29,6 +25,7 @@ class Item(Base):
             ),
             unit="item",
             path=[self.name],
+            is_single=True,
             **{
                 key: self.read_property(key, None)
                 for key in ["base", "sound", "facing", "recipe", "tags", "blockstates"]

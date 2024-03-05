@@ -6,10 +6,11 @@ from plugins.bubblellaneous.internal import (
     ItemData,
     Variant,
 )
+from plugins.bubblellaneous.internal.unit.variant import BlockVariant, ItemVariant
 from plugins.utils import NBT
 
 
-class Ladder(Variant[Block]):
+class Ladder(BlockVariant):
     """
     :yellow [☶ Description]
     TODO
@@ -35,7 +36,7 @@ class Ladder(Variant[Block]):
     )
 
 
-class PadlockBlock(Variant[Block]):
+class PadlockBlock(BlockVariant):
     """
     :yellow [☶ Description]
     TODO
@@ -59,7 +60,7 @@ class PadlockBlock(Variant[Block]):
     )
 
 
-class RisingDoor(Variant[Block]):
+class RisingDoor(BlockVariant):
     """
     :yellow [☶ Description]
     TODO
@@ -224,7 +225,7 @@ class Padlock(Item):
     params = lambda *_: NBT({})
 
 
-class Key(Variant[Item]):
+class Key(ItemVariant):
     """
     :yellow [☶ Description]
     TODO

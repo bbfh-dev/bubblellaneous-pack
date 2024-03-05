@@ -5,6 +5,7 @@ from pathlib import Path
 from beet import Context, Language
 from mergedeep import merge
 
+
 __DIR__ = Path(__file__).parent.resolve()
 
 

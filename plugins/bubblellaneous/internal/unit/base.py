@@ -1,16 +1,16 @@
-import json
 from typing import Any, Optional, Self
 
-from beet import Context, Function, LootTable
+from beet import Context
 from beet.core.utils import snake_case
 from colorama import Fore
 
+from plugins.bubblellaneous.internal.category import Category
 from plugins.bubblellaneous.internal.template.loot import LOOT_TEMPLATE
 from plugins.bubblellaneous.internal.template.mcfunction import (
     GIVE_TEMPLATE,
     SPAWN_TEMPLATE,
 )
-from plugins.bubblellaneous.internal.tree import Tree
+from plugins.bubblellaneous.internal.tree import BenchRegistry, Tree
 from plugins.utils.nbt import NBT
 
 
@@ -29,23 +29,28 @@ def format_docs_line(lines: list) -> str:
 class Base:
     def __repr__(self) -> str:
         return "<{} #{}-{} ({})>".format(
-            Fore.MAGENTA + self.name + Fore.RESET,
+            Fore.MAGENTA + self.complete_name + Fore.RESET,
             self.unit_id,
             self.unit_id + self.allocate_ids() - 1,
             Fore.CYAN + str(self.allocate_ids()) + Fore.RESET,
         )
 
-    def __init__(self) -> None:
+    def __init__(self, category: Category | str) -> None:
         self.unit_id = 0
         self.properties: dict[str, Any] = {}
-        self.category = "unknown"
+        self.category = category.value if type(category) is Category else category
+
+    def enum_prop(self, key: str, default: Any = None) -> Any:
+        if self.properties.get(key) is None:
+            return default
+        return self.properties.get(key, None).value
 
     def prop(self, key: str, default: Any = None) -> Any:
         return self.properties.get(key, default)
 
     @property
     def name(self) -> str:
-        return snake_case(self.__class__.__name__)
+        return self.prop("name") or snake_case(self.__class__.__name__)
 
     @property
     def custom_model_data(self) -> int:
@@ -55,7 +60,7 @@ class Base:
     def display_name(self) -> NBT.Quote:
         return NBT.Quote(
             NBT(
-                {"translate": "[unit].[namespace].[name]", "italic": False},
+                {"translate": "[unit].[namespace].[unit_name]", "italic": False},
                 is_json=True,
             ).get_dict()
         )
@@ -77,6 +82,16 @@ class Base:
     @property
     def path(self) -> str:
         return f"[namespace]:[unit]/{'/'.join(self.prop('path'))}"
+
+    @property
+    def complete_name(self) -> str:
+        return "_".join([i for i in [self.prop("material", ""), self.name] if i])
+
+    @property
+    def category_value(self) -> str:
+        if type(self.category) is Category:
+            return self.category.value
+        return self.category
 
     def set_properties(self, **kwargs: Any) -> Self:
         self.properties = kwargs
@@ -115,7 +130,8 @@ class Base:
     def format(self, string: str) -> str:
         return (
             string.replace("[tag]", self.tag.replace('"', '\\\\"'))
-            .replace("[name]", self.name)
+            .replace("[name]", self.complete_name)
+            .replace("[unit_name]", self.name)
             .replace("[unit]", self.prop("unit", default="unknown"))
             .replace("[base_item]", self.prop("base_item", "minecraft:structure_void"))
         )
@@ -133,7 +149,8 @@ class Base:
 
     def compile(self, ctx: Context, unit_id: int, tree: Tree) -> Self:
         self.unit_id = unit_id
-        self.prepare()
+        if not self.properties:
+            self.prepare()
 
         tree.make_function(
             tree.default_format(ctx, self.format),
@@ -147,8 +164,31 @@ class Base:
         )
         tree.make_function(
             tree.default_format(ctx, self.format),
-            "help:[namespace]/[name]",
+            "[namespace]:generated/help/[name]",
             ["tellraw @s {}".format(self.get_documentation())],
+        )
+        tree.make_function(
+            tree.default_format(ctx, self.format),
+            "[namespace]:generated/recipe/[name]",
+            [
+                "data modify storage [namespace] tmp.out.recipe set value {}".format(
+                    NBT(
+                        [
+                            recipe.get_entry(
+                                [
+                                    (key, value)
+                                    for key, value in (
+                                        {}
+                                        if not self.prop("material")
+                                        else self.prop("raw_material").textures.items()
+                                    )
+                                ]
+                            )
+                            for recipe in self.prop("recipe")
+                        ]
+                    ).get_list()
+                )
+            ],
         )
         tree.make_loot_table(
             tree.default_format(ctx, self.format),
@@ -156,7 +196,15 @@ class Base:
             LOOT_TEMPLATE.get_dict(),
         )
 
-        if not self.prop("blockstates"):
+        if self.prop("is_single"):
+            tree.make_bench_registry(
+                tree.default_format(ctx, self.format), self.category_value, self.name
+            )
+
+        if self.prop("blockstates"):
+            return self
+
+        if self.prop("is_single"):
             self.add_model(tree, ctx, self.custom_model_data, None)
 
         return self

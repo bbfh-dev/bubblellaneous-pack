@@ -1,9 +1,10 @@
 import json
 from dataclasses import dataclass
-from typing import Callable
+from typing import Callable, Self
 
 from beet import Advancement, Context, Function, ItemModifier, LootTable, Model
 
+from plugins.bubblellaneous.internal.category import Category
 from plugins.bubblellaneous.internal.template.items import ITEMS_TEMPLATE
 
 
@@ -16,6 +17,11 @@ class BenchRegistry:
 
     def update(self):
         self.count = max(min(len(self.items), 64), 1)
+        return self
+
+    def add_item(self, item: str) -> Self:
+        self.items.append(item)
+        self.update()
         return self
 
 
@@ -39,7 +45,7 @@ class Tree:
     loot_tables: dict[str, LootTable]
     advancements: dict[str, Advancement]
     item_modifiers: dict[str, ItemModifier]
-    bench_registry: dict[str, BenchRegistry]
+    bench_registry: dict[str, list[BenchRegistry]]
     models: dict[str, Model]
 
     def __init__(self) -> None:
@@ -73,9 +79,32 @@ class Tree:
     def make_loot_table(self, format: Callable, key: str, data: str):
         self.loot_tables[format(key)] = LootTable(json.loads(format(json.dumps(data))))
 
+    def make_bench_registry(self, format: Callable, category: str, name: str):
+        self.bench_registry[category] = [
+            *self.bench_registry.get(category, []),
+            BenchRegistry(name, format("[unit]/[name]"), []),
+        ]
+
+    def extend_bench_registry(
+        self, format: Callable, category: str, name: str, item: str
+    ):
+        indexes = [
+            i
+            for i, entry in enumerate(self.bench_registry.get(category, []))
+            if entry.entry == name
+        ]
+        if not indexes:
+            self.make_bench_registry(format, category, name)
+            return self.extend_bench_registry(format, category, name, item)
+
+        self.bench_registry[category][indexes[0]] = self.bench_registry[category][
+            indexes[0]
+        ].add_item(format(item))
+
     def _compile(self, ctx: Context, name: str):
         assert type(getattr(self, name)) is dict
-        for key, value in getattr(self, name).items():
+        data = getattr(self, name)
+        for key, value in data.items():
             getattr(getattr(ctx, "data"), name)[key] = value
 
     def compile(self, ctx: Context):
@@ -102,7 +131,11 @@ class Tree:
                             },
                             "model": model.path,
                         }
-                        for model in models
+                        for model in sorted(
+                            models,
+                            key=lambda i: i.model.custom_model_data,
+                            reverse=True,
+                        )
                     ],
                 }
             )

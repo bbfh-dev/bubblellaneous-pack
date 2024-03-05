@@ -1,7 +1,11 @@
+import json
 from itertools import product
-from typing import override
+from typing import Any, Self, cast, override
+
+from beet import Context, Model
 
 from plugins.bubblellaneous.internal.category import Category
+from plugins.bubblellaneous.internal.tree import Tree
 
 from .base import Base
 from .block import Block, BlockData
@@ -62,7 +66,7 @@ class BlockMaterials:
 
     WOOL: list[BlockData.Material] = [
         BlockData.Material(
-            color, f"{color}_wool", f"{color}_terracotta", base=f"{color}_wool"
+            color, f"{color}_wool", f"{color}_terracotta", color=f"{color}_wool"
         )
         for color in COLORS
     ]
@@ -103,13 +107,139 @@ class BlockMaterials:
     ]
 
 
-class Variant[T: Block | Item](Base):
+class Variant(Base):
     @override
     def allocate_ids(self) -> int:
         return len(self.read_property("material", None)) * max(
             len(self.read_property("blockstates.block_states", [])), 1
         )
 
-    def __init__(self, category: Category) -> None:
-        self.category = category
-        super().__init__()
+    @property
+    def unit(self) -> Any:
+        pass
+
+    def prepare_variant(
+        self,
+        material: BlockData.Material,
+        material_size: int,
+        material_index: int,
+        materials: list,
+    ) -> Self:
+        return self
+
+    @override
+    def compile(self, ctx: Context, unit_id: int, tree: Tree) -> Self:
+        unit: Block | Item = self.unit(self.category)
+        unit.__class__.__doc__ = self.__class__.__doc__
+        materials = cast(list[BlockData.Material], self.read_property("material", []))
+        material_len = len(materials)
+        default_model = set()
+
+        for i, material in enumerate(materials):
+            unit.properties = self.prepare_variant(
+                material, material_len, i, materials
+            ).properties
+            unit.compile(ctx, unit_id + i, tree)
+            tree.extend_bench_registry(
+                tree.default_format(ctx, self.format),
+                self.category_value,
+                unit.name,
+                "[unit]/[name]",
+            )
+
+            if unit.prop("blockstates"):
+                continue
+
+            template_model = tree.default_format(ctx, unit.format)(
+                "[namespace]:[unit]/[unit_name]"
+            )
+            default_model.add(template_model)
+            ctx.assets.models[f"{template_model}/{material.name}"] = Model(
+                {
+                    "parent": tree.default_format(ctx, unit.format)(
+                        "[namespace]:[unit]/[unit_name]/default"
+                    ),
+                    "textures": json.loads(
+                        json.dumps(ctx.assets.models[template_model].data)
+                        .replace("/primary", f"/{material.primary_texture}")
+                        .replace("/secondary", f"/{material.secondary_texture}")
+                        .replace("/material", f"/{material.name}")
+                    ).get("textures"),
+                }
+            )
+            self.add_model(tree, ctx, unit.custom_model_data, None)
+
+        for name in default_model:
+            ctx.assets.models[
+                tree.default_format(ctx, unit.format)(
+                    "[namespace]:[unit]/[unit_name]/default"
+                )
+            ] = ctx.assets.models[name]
+            ctx.assets.models.pop(name)
+        return self
+
+
+class BlockVariant(Variant):
+    @property
+    @override
+    def unit(self):
+        return Block
+
+    @override
+    def prepare_variant(
+        self,
+        material: BlockData.Material,
+        material_size: int,
+        material_index: int,
+        materials: list,
+    ) -> Self:
+        return self.set_properties(
+            material=material.name,
+            raw_material=material,
+            material_len=material_size,
+            material_index=material_index,
+            materials=materials,
+            name=self.name,
+            base_item="minecraft:item_frame",
+            unit="block",
+            path=[self.name, material.name],
+            is_single=False,
+            **{
+                key: self.read_property(key, None)
+                for key in ["base", "sound", "facing", "recipe", "tags", "blockstates"]
+            },
+        )
+
+
+class ItemVariant(Variant):
+    @property
+    @override
+    def unit(self):
+        return Item
+
+    @override
+    def prepare_variant(
+        self,
+        material: BlockData.Material,
+        material_size: int,
+        material_index: int,
+        materials: list,
+    ) -> Self:
+        return self.set_properties(
+            material=material.name,
+            raw_material=material,
+            material_len=material_size,
+            material_index=material_index,
+            materials=materials,
+            name=self.name,
+            base_item=self.read_property(
+                "base.value", default="minecraft:structure_void"
+            ),
+            unit="item",
+            path=[self.name, material.name],
+            is_single=False,
+            **{
+                key: self.read_property(key, None)
+                for key in ["base", "sound", "facing", "recipe", "tags", "blockstates"]
+            },
+        )

@@ -1,3 +1,4 @@
+import json
 from dataclasses import dataclass
 from enum import Enum
 from typing import Literal, Optional, Self, cast, override
@@ -7,9 +8,7 @@ from colorama import Fore
 
 from plugins.bubblellaneous.internal.category import Category
 from plugins.bubblellaneous.internal.template.mcfunction import (
-    PLACE_TEMPLATE,
-    RECIPE_TEMPLATE,
-)
+    PLACE_TEMPLATE, RECIPE_TEMPLATE)
 from plugins.bubblellaneous.internal.tree import BenchRegistry, Tree
 from plugins.utils.nbt import NBT
 
@@ -134,7 +133,7 @@ class BlockData:
 
         @property
         def path(self) -> str:
-            return f"[namespace]:block/[name]/blockstates/apply/{self.name}"
+            return f"[namespace]:block/[unit_name]/blockstates/apply/{self.name}"
 
         def get_line(self, line: str, path: str) -> str:
             return "\n".join(
@@ -208,10 +207,6 @@ class Block(Base):
     def allocate_ids(self) -> int:
         return max(len(self.read_property("blockstates.block_states", [])), 1)
 
-    def __init__(self, category: Category) -> None:
-        super().__init__()
-        self.category = category.value
-
     @property
     @override
     def unit_tag(self) -> dict:
@@ -238,7 +233,7 @@ class Block(Base):
                                     for key in ["id", "name", "base_item", "unit"]
                                 },
                                 **{
-                                    enum: self.prop(enum).value
+                                    enum: self.enum_prop(enum)
                                     for enum in ["base", "sound", "facing"]
                                 },
                                 "custom_model_data": self.custom_model_data,
@@ -253,10 +248,12 @@ class Block(Base):
     @override
     def prepare(self) -> Self:
         return self.set_properties(
+            material="",
             name=self.name,
             base_item="minecraft:item_frame",
             unit="block",
             path=[self.name],
+            is_single=True,
             **{
                 key: self.read_property(key, None)
                 for key in ["base", "sound", "facing", "recipe", "tags", "blockstates"]
@@ -280,7 +277,7 @@ class Block(Base):
         if blockstates.match != "<manual>":
             tree.make_function(
                 tree.default_format(ctx, self.format),
-                "[namespace]:block/[name]/blockstates/update",
+                "[namespace]:block/[unit_name]/blockstates/update",
                 [
                     "scoreboard players set quit local.tmp 0",
                     "",
@@ -295,19 +292,51 @@ class Block(Base):
                     f"function {blockstates.block_states[0].path}",
                 ],
             )
-        print(blockstates)
 
         for index, state in enumerate(blockstates.block_states):
-            self.add_model(tree, ctx, self.custom_model_data + index, state.name)
+            self.add_model(tree, ctx, self.custom_model_data + (index * self.prop("material_len", 1)), state.name)
+
+            if self.prop("material_index", 0) != 0:
+                continue
+
             tree.make_function(
                 tree.default_format(ctx, self.format),
                 state.path,
                 [
                     "scoreboard players set quit local.tmp 1",
                     "",
-                    f"scoreboard players set @s local.block_state {index}",
-                    f"data modify entity @s item.tag.CustomModelData set value {self.custom_model_data + index}",
+                    f"scoreboard players set @s local.block_state {(index * self.prop("material_len", 1))}",
+                    "execute store result score model_id local.tmp run data get entity @s item.tag.[namespace].block_data.custom_model_data",
+                    f"scoreboard players add model_id local.tmp {(index * self.prop("material_len", 1))}",
+                    "execute store result entity @s item.tag.CustomModelData int 1 run scoreboard players get model_id local.tmp",
                 ],
             )
+
+            model_name = tree.default_format(ctx, self.format)(f"[namespace]:block/[unit_name]/template/{state.name}")
+            default_name = tree.default_format(ctx, self.format)(f"[namespace]:block/[unit_name]/{state.name}")
+            default_model_name = tree.default_format(ctx, self.format)(
+                                f"[namespace]:[unit]/[unit_name]/{state.name}/default"
+                            )
+            
+            if self.prop("material_len", 0) > 0:
+                for material in cast(list[BlockData.Material], self.prop("materials", [])):
+                    ctx.assets.models[f"{default_name}/{material.name}"] = ctx.assets.models[model_name]
+                    ctx.assets.models[f"{default_name}/{material.name}"] = Model(
+                        {
+                            "parent": default_model_name,
+                            "textures": json.loads(
+                                json.dumps(ctx.assets.models[model_name].data)
+                                .replace("/primary", f"/{material.primary_texture}")
+                                .replace("/secondary", f"/{material.secondary_texture}")
+                                .replace("/material", f"/{material.name}")
+                            ).get("textures"),
+                        }
+                    )
+                ctx.assets.models[default_model_name] = ctx.assets.models[model_name]
+                ctx.assets.models.pop(model_name)
+                continue
+
+            ctx.assets.models[default_name] = ctx.assets.models[model_name]
+            ctx.assets.models.pop(model_name)
 
         return self
