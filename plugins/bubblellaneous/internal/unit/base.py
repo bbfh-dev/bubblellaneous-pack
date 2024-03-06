@@ -1,4 +1,4 @@
-from typing import Any, Optional, Self
+from typing import Any, Optional, Self, cast
 
 from beet import Context
 from beet.core.utils import snake_case
@@ -7,10 +7,8 @@ from colorama import Fore
 from plugins.bubblellaneous.internal.category import Category
 from plugins.bubblellaneous.internal.template.loot import LOOT_TEMPLATE
 from plugins.bubblellaneous.internal.template.mcfunction import (
-    GIVE_TEMPLATE,
-    SPAWN_TEMPLATE,
-)
-from plugins.bubblellaneous.internal.tree import BenchRegistry, Tree
+    GIVE_TEMPLATE, SPAWN_TEMPLATE)
+from plugins.bubblellaneous.internal.tree import Tree
 from plugins.utils.nbt import NBT
 
 
@@ -60,7 +58,7 @@ class Base:
     def display_name(self) -> NBT.Quote:
         return NBT.Quote(
             NBT(
-                {"translate": "[unit].[namespace].[unit_name]", "italic": False},
+                {"translate": "[unit].[namespace].[display_name]", "italic": False},
                 is_json=True,
             ).get_dict()
         )
@@ -91,7 +89,7 @@ class Base:
     def category_value(self) -> str:
         if type(self.category) is Category:
             return self.category.value
-        return self.category
+        return cast(str, self.category)
 
     def set_properties(self, **kwargs: Any) -> Self:
         self.properties = kwargs
@@ -132,6 +130,7 @@ class Base:
             string.replace("[tag]", self.tag.replace('"', '\\\\"'))
             .replace("[name]", self.complete_name)
             .replace("[unit_name]", self.name)
+            .replace("[display_name]", self.prop("translation_name", self.name))
             .replace("[unit]", self.prop("unit", default="unknown"))
             .replace("[base_item]", self.prop("base_item", "minecraft:structure_void"))
         )

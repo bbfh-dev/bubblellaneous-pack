@@ -1,8 +1,6 @@
 {
     "values": [
-        "air",
-        "cave_air",
-        "void_air",
+        "#bubblellaneous:breaks_block",
         "light"
     ]
 }

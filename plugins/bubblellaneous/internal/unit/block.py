@@ -188,18 +188,20 @@ class BlockData:
 class BlockType:
     @classmethod
     def shelf(cls, *, amount: int):
-        return BlockType()
+        return BlockType("shelf", [], amount=amount)
 
     @classmethod
     def seat(cls, *, width: float, height: float):
-        return BlockType()
+        return BlockType("seat", [], width=width, height=height)
 
     @classmethod
     def light(cls, *, light_level: int):
-        return BlockType()
+        return BlockType("light", [], light_level=light_level)
 
-    def __init__(self) -> None:
-        pass
+    def __init__(self, name:str, template: list[str], **kwargs) -> None:
+        self.function_template = template
+        self.name = name
+        self.params = kwargs
 
 
 class Block(Base):
@@ -238,6 +240,10 @@ class Block(Base):
                                 },
                                 "custom_model_data": self.custom_model_data,
                                 "display_name": self.display_name,
+                                "block_type": {
+                                    "name": self.prop("block_type").name,
+                                    "parameters": self.prop("block_type").params
+                                }
                             },
                         }
                     },
@@ -254,6 +260,7 @@ class Block(Base):
             unit="block",
             path=[self.name],
             is_single=True,
+            block_type=self.read_property("block_type", BlockType("default", [])),
             **{
                 key: self.read_property(key, None)
                 for key in ["base", "sound", "facing", "recipe", "tags", "blockstates"]

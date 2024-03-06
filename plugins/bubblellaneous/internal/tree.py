@@ -134,7 +134,7 @@ class Tree:
                         for model in sorted(
                             models,
                             key=lambda i: i.model.custom_model_data,
-                            reverse=True,
+                            reverse=False,
                         )
                     ],
                 }
