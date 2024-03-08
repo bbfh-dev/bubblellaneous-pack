@@ -6,6 +6,8 @@ from beet import Advancement, Context, Function, ItemModifier, LootTable, Model
 
 from plugins.bubblellaneous.internal.category import Category
 from plugins.bubblellaneous.internal.template.items import ITEMS_TEMPLATE
+from plugins.bubblellaneous.internal.template.mcfunction import BENCH_TEMPLATE
+from plugins.utils import NBT
 
 
 @dataclass
@@ -23,6 +25,15 @@ class BenchRegistry:
         self.items.append(item)
         self.update()
         return self
+
+    def get_dict(self, index: int) -> dict:
+        return {
+            "entry": self.entry,
+            "item": self.item,
+            "count": self.count,
+            "items": sorted(self.items, key=lambda x: x),
+            "index": index,
+        }
 
 
 @dataclass(init=False)
@@ -101,6 +112,30 @@ class Tree:
             indexes[0]
         ].add_item(format(item))
 
+    def bench_registry_format(self, string: str):
+        for category in self.bench_registry.keys():
+            string = string.replace(
+                f"[{category}]",
+                NBT(
+                    [
+                        entry.get_dict(i)
+                        for i, entry in enumerate(sorted(
+                            self.bench_registry[category],
+                            key=lambda x: x.item,
+                        )
+)                    ]
+                ).get_list(),
+            )
+        return string
+
+    def add_bench_registry_function(self, ctx: Context):
+        self.make_function(
+            self.default_format(ctx, self.bench_registry_format),
+            "[namespace]:generated/load_registry",
+            BENCH_TEMPLATE,
+            tags=[f"{ctx.project_id}:load"],
+        )
+
     def _compile(self, ctx: Context, name: str):
         assert type(getattr(self, name)) is dict
         data = getattr(self, name)
@@ -108,6 +143,7 @@ class Tree:
             getattr(getattr(ctx, "data"), name)[key] = value
 
     def compile(self, ctx: Context):
+        self.add_bench_registry_function(ctx)
         self._compile(ctx, "functions")
         self._compile(ctx, "loot_tables")
         self._compile(ctx, "advancements")

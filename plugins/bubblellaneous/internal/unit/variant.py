@@ -147,12 +147,13 @@ class Variant(Base):
                 material, material_len, i, materials
             ).properties
             unit.compile(ctx, unit_id + i, tree)
-            tree.extend_bench_registry(
-                tree.default_format(ctx, self.format),
-                self.category_value,
-                unit.name,
-                "[unit]/[name]",
-            )
+            if not unit.prop("is_unlisted"):
+                tree.extend_bench_registry(
+                    tree.default_format(ctx, self.format),
+                    self.category_value,
+                    unit.name,
+                    "[unit]/[name]",
+                )
 
             if unit.prop("blockstates"):
                 continue
@@ -219,7 +220,7 @@ class BlockVariant(Variant):
             block_type=self.read_property("block_type", BlockType("default", [])),
             **{
                 key: self.read_property(key, None)
-                for key in ["base", "sound", "facing", "recipe", "tags", "blockstates"]
+                for key in ["base", "sound", "facing", "recipe", "tags", "blockstates", "is_unlisted"]
             },
         )
 
@@ -258,6 +259,6 @@ class ItemVariant(Variant):
             is_single=False,
             **{
                 key: self.read_property(key, None)
-                for key in ["base", "sound", "facing", "recipe", "tags", "blockstates"]
+                for key in ["base", "sound", "facing", "recipe", "tags", "blockstates", "is_unlisted"]
             },
         )

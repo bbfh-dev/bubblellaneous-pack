@@ -1,3 +1,3 @@
 tag @s remove --local.loaded
 
-execute if block ~ ~ ~ #bubblellaneous:breaks_block run function bubblellaneous:block/break
+execute if block ~ ~ ~ #bubblellaneous:breaks_block as @s[tag=!--local.uses.no_base] run function bubblellaneous:block/break

@@ -14,3 +14,6 @@ with open(os.path.join(__dir__, "code", "give.mcfunction"), "r") as fp:
 
 with open(os.path.join(__dir__, "code", "spawn.mcfunction"), "r") as fp:
     SPAWN_TEMPLATE = fp.readlines()
+
+with open(os.path.join(__dir__, "code", "bench_registry.mcfunction"), "r") as fp:
+    BENCH_TEMPLATE = fp.readlines()

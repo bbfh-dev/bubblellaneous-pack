@@ -14,7 +14,9 @@ class Item(Base):
     @property
     @override
     def unit_tag(self) -> dict:
-        return {"[namespace]": {"item_properties": {}}}
+        return {"[namespace]": {"item_properties": {}, "item_data": {
+            "id": self.complete_name,
+        }}}
 
     @override
     def prepare(self) -> Self:
@@ -28,6 +30,6 @@ class Item(Base):
             is_single=True,
             **{
                 key: self.read_property(key, None)
-                for key in ["base", "sound", "facing", "recipe", "tags", "blockstates"]
+                for key in ["base", "sound", "facing", "recipe", "tags", "blockstates", "is_unlisted"]
             },
         )

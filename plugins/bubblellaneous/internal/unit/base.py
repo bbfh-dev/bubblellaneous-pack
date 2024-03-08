@@ -121,8 +121,12 @@ class Base:
                 custom_model_data, self.prop("base_item")
             )
             return
+        if len(self.path.split("/")) > 2:
+            path = "/".join([*self.path.split("/")[:-1], block_state, self.path.split("/")[-1]])
+        else:
+            path = "/".join([*self.path.split("/"), block_state])
         tree.models[
-            tree.default_format(ctx, self.format)(self.path + "/" + block_state)
+        tree.default_format(ctx, self.format)(path)
         ] = Tree.Model(custom_model_data, self.prop("base_item"))
 
     def format(self, string: str) -> str:
@@ -163,12 +167,12 @@ class Base:
         )
         tree.make_function(
             tree.default_format(ctx, self.format),
-            "[namespace]:generated/help/[name]",
+            "[namespace]:generated/help/[unit]/[name]",
             ["tellraw @s {}".format(self.get_documentation())],
         )
         tree.make_function(
             tree.default_format(ctx, self.format),
-            "[namespace]:generated/recipe/[name]",
+            "[namespace]:generated/recipe/[unit]/[name]",
             [
                 "data modify storage [namespace] tmp.out.recipe set value {}".format(
                     NBT(
@@ -195,7 +199,7 @@ class Base:
             LOOT_TEMPLATE.get_dict(),
         )
 
-        if self.prop("is_single"):
+        if self.prop("is_single") and not self.prop("is_unlisted"):
             tree.make_bench_registry(
                 tree.default_format(ctx, self.format), self.category_value, self.name
             )

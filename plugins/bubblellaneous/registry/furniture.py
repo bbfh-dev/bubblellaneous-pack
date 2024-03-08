@@ -1,10 +1,5 @@
-from plugins.bubblellaneous.internal import (
-    Block,
-    BlockData,
-    BlockMaterials,
-    BlockType,
-    Variant,
-)
+from plugins.bubblellaneous.internal import (Block, BlockData, BlockMaterials,
+                                             BlockType, Variant)
 from plugins.bubblellaneous.internal.unit.variant import BlockVariant
 
 
@@ -66,7 +61,7 @@ class Shelf(BlockVariant):
     material = BlockMaterials.SOLID
     block_type = BlockType.shelf(amount=1)
 
-    base = BlockData.Base.TRIPWIRE
+    base = BlockData.Base.VOID
     sound = BlockData.Sound.WOOD
     facing = BlockData.Facing.WALL_NORMAL
     recipe = [
@@ -130,6 +125,7 @@ class Cupboard(BlockVariant):
     ]
     tags = [
         BlockData.Uses.PLACE,
+        BlockData.Uses.BRIGHTNESS_FIX,
     ]
 
 
@@ -163,7 +159,7 @@ class Couch(BlockVariant):
     block_type = BlockType.seat(width=0.8, height=0.45)
 
     base = BlockData.Base.TRIPWIRE
-    sound = BlockData.Sound.SOFT
+    sound = BlockData.Sound.WOOL
     facing = BlockData.Facing.PLAYER
     recipe = [
         BlockData.RecipeEntry("block", "[color]", 6),
@@ -189,7 +185,7 @@ class Stool(BlockVariant):
     """
 
     material = BlockMaterials.WOOD
-    block_type = BlockType.seat(width=0.8, height=0.5)
+    block_type = BlockType.seat(width=0.8, height=0.6)
 
     base = BlockData.Base.VOID
     sound = BlockData.Sound.WOOD
@@ -450,7 +446,7 @@ class FloorLamp(BlockVariant):
     block_type = BlockType.light(light_level=15)
 
     base = BlockData.Base.VOID
-    sound = BlockData.Sound.SOFT
+    sound = BlockData.Sound.WOOL
     facing = BlockData.Facing.NONE
     recipe = [
         BlockData.RecipeEntry("block", "[color]", 6),
@@ -468,7 +464,7 @@ class Curtains(Block):
     """
 
     base = BlockData.Base.VOID
-    sound = BlockData.Sound.SOFT
+    sound = BlockData.Sound.WOOL
     facing = BlockData.Facing.WALL_NORMAL
     recipe = [
         BlockData.RecipeEntry("block", "red_wool", 6),

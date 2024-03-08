@@ -47,7 +47,7 @@ class BlockData:
     class Sound(Enum):
         INDUSTRIAL = "industrial"
         WOOD = "wood"
-        SOFT = "soft"
+        WOOL = "wool"
 
     class Facing(Enum):
         NONE = "none"
@@ -232,7 +232,7 @@ class Block(Base):
                             "block_data": {
                                 **{
                                     key: self.prop(key)
-                                    for key in ["id", "name", "base_item", "unit"]
+                                    for key in ["name", "base_item", "unit"]
                                 },
                                 **{
                                     enum: self.enum_prop(enum)
@@ -243,7 +243,8 @@ class Block(Base):
                                 "block_type": {
                                     "name": self.prop("block_type").name,
                                     "parameters": self.prop("block_type").params
-                                }
+                                },
+                                "id": self.complete_name,
                             },
                         }
                     },
@@ -263,7 +264,7 @@ class Block(Base):
             block_type=self.read_property("block_type", BlockType("default", [])),
             **{
                 key: self.read_property(key, None)
-                for key in ["base", "sound", "facing", "recipe", "tags", "blockstates"]
+                for key in ["base", "sound", "facing", "recipe", "tags", "blockstates", "is_unlisted"]
             },
         )
 
