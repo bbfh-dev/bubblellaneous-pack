@@ -1,5 +1,5 @@
 $loot replace block ~ ~ ~ container.$(at) loot bubblellaneous:$(item)
-$item modify block ~ ~ ~ container.$(at) bubblellaneous:block/mark_as_gui
+$item modify block ~ ~ ~ container.$(at) bubblellaneous:blocks/mark_as_gui
 
 $execute if score count local.tmp matches 1.. run item modify block ~ ~ ~ container.$(at) bubblellaneous:bubble_bench/set_lore/variant
 

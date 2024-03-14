@@ -2,7 +2,7 @@ data merge entity @s {Tags: ["+bubblellaneous", "local.display_item"], item: {id
 scoreboard players operation @s local.block.id = @e[type=interaction,tag=--local.this,limit=1] local.block.id
 
 execute store result score count local.tmp run data get entity @p[tag=--local.event_player] SelectedItem.Count
-execute if score count local.tmp matches 8.. run function bubblellaneous:block/type_specific/shelf/internal/place_a_pile_of_items
+execute if score count local.tmp matches 8.. run function bubblellaneous:blocks/type_specific/shelf/internal/place_a_pile_of_items
 
 item replace entity @s container.0 from entity @p[tag=--local.event_player] weapon.mainhand
 item replace entity @p[tag=--local.event_player] weapon.mainhand with air

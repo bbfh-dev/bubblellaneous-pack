@@ -57,6 +57,7 @@ class Tree:
     advancements: dict[str, Advancement]
     item_modifiers: dict[str, ItemModifier]
     bench_registry: dict[str, list[BenchRegistry]]
+    state_registry: dict
     models: dict[str, Model]
 
     def __init__(self) -> None:
@@ -65,6 +66,7 @@ class Tree:
         self.advancements = {}
         self.item_modifiers = {}
         self.bench_registry = {}
+        self.state_registry = {}
         self.models = {}
 
     def default_format(self, ctx: Context, fn: Callable) -> Callable:
@@ -74,7 +76,11 @@ class Tree:
         return format
 
     def make_function(
-        self, format: Callable, key: str, lines: list[str], tags: list[str] = []
+        self,
+        format: Callable,
+        key: str,
+        lines: list[str],
+        tags: list[str] = [],
     ):
         key = format(key)
         lines = [format(line) for line in lines]
@@ -95,6 +101,13 @@ class Tree:
             *self.bench_registry.get(category, []),
             BenchRegistry(name, format("[unit]/[name]"), []),
         ]
+
+    def make_state_registry(self, block: str, data: list):
+        final = {}
+        for subdata in data:
+            for key, value in subdata.items():
+                final[key] = value
+        self.state_registry[block] = final
 
     def extend_bench_registry(
         self, format: Callable, category: str, name: str, item: str
@@ -119,11 +132,13 @@ class Tree:
                 NBT(
                     [
                         entry.get_dict(i)
-                        for i, entry in enumerate(sorted(
-                            self.bench_registry[category],
-                            key=lambda x: x.item,
+                        for i, entry in enumerate(
+                            sorted(
+                                self.bench_registry[category],
+                                key=lambda x: x.item,
+                            )
                         )
-)                    ]
+                    ]
                 ).get_list(),
             )
         return string
@@ -143,6 +158,14 @@ class Tree:
             getattr(getattr(ctx, "data"), name)[key] = value
 
     def compile(self, ctx: Context):
+        self.make_function(
+            self.default_format(ctx, self.bench_registry_format),
+            "[namespace]:generated/load_blockstates",
+            [
+                f"data modify storage {ctx.project_id} state_registry set value {NBT(self.state_registry).get_dict().replace('\\', '')}"
+            ],
+            tags=[f"{ctx.project_id}:load"],
+        )
         self.add_bench_registry_function(ctx)
         self._compile(ctx, "functions")
         self._compile(ctx, "loot_tables")

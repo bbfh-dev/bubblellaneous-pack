@@ -7,7 +7,9 @@ from colorama import Fore
 from plugins.bubblellaneous.internal.category import Category
 from plugins.bubblellaneous.internal.template.loot import LOOT_TEMPLATE
 from plugins.bubblellaneous.internal.template.mcfunction import (
-    GIVE_TEMPLATE, SPAWN_TEMPLATE)
+    GIVE_TEMPLATE,
+    SPAWN_TEMPLATE,
+)
 from plugins.bubblellaneous.internal.tree import Tree
 from plugins.utils.nbt import NBT
 
@@ -122,12 +124,14 @@ class Base:
             )
             return
         if len(self.path.split("/")) > 2:
-            path = "/".join([*self.path.split("/")[:-1], block_state, self.path.split("/")[-1]])
+            path = "/".join(
+                [*self.path.split("/")[:-1], block_state, self.path.split("/")[-1]]
+            )
         else:
             path = "/".join([*self.path.split("/"), block_state])
-        tree.models[
-        tree.default_format(ctx, self.format)(path)
-        ] = Tree.Model(custom_model_data, self.prop("base_item"))
+        tree.models[tree.default_format(ctx, self.format)(path)] = Tree.Model(
+            custom_model_data, self.prop("base_item")
+        )
 
     def format(self, string: str) -> str:
         return (

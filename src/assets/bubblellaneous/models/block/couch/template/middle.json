@@ -398,6 +398,66 @@
                     "texture": "#material"
                 }
             }
+        },
+        {
+            "from": [
+                0,
+                8,
+                14
+            ],
+            "to": [
+                16,
+                22,
+                16
+            ],
+            "faces": {
+                "north": {
+                    "uv": [
+                        0,
+                        2,
+                        16,
+                        16
+                    ],
+                    "texture": "#material"
+                },
+                "east": {
+                    "uv": [
+                        0,
+                        2,
+                        2,
+                        16
+                    ],
+                    "texture": "#material"
+                },
+                "south": {
+                    "uv": [
+                        0,
+                        2,
+                        16,
+                        16
+                    ],
+                    "texture": "#material",
+                    "cullface": "south"
+                },
+                "west": {
+                    "uv": [
+                        14,
+                        2,
+                        16,
+                        16
+                    ],
+                    "texture": "#material"
+                },
+                "up": {
+                    "uv": [
+                        0,
+                        14,
+                        16,
+                        16
+                    ],
+                    "texture": "#material"
+                }
+            }
         }
     ]
 }

@@ -1,5 +1,10 @@
-from plugins.bubblellaneous.internal import (Block, BlockData, BlockMaterials,
-                                             BlockType, Variant)
+from plugins.bubblellaneous.internal import (
+    Block,
+    BlockData,
+    BlockMaterials,
+    BlockType,
+    Variant,
+)
 from plugins.bubblellaneous.internal.unit.variant import BlockVariant
 
 
@@ -46,7 +51,7 @@ class Table(BlockVariant):
     blockstates = BlockData.BlockStates(
         "@self",
         BlockData.State("default"),
-        BlockData.State("side", "0100~~:0", "1000~~:180", "0010~~:90", "0001~~:-90"),
+        BlockData.State("side", "0100~~:0", "1000~~:180", "0010~~:-90", "0001~~:90"),
         BlockData.State("corner", "1010~~:0", "1001~~:-90", "0110~~:90", "0101~~:180"),
         BlockData.State("middle", "11~~~~", "~~11~~"),
     )
@@ -156,7 +161,7 @@ class Couch(BlockVariant):
     """
 
     material = BlockMaterials.WOOL
-    block_type = BlockType.seat(width=0.8, height=0.45)
+    block_type = BlockType.seat(width=0.8, height=0.5)
 
     base = BlockData.Base.TRIPWIRE
     sound = BlockData.Sound.WOOL
@@ -166,6 +171,7 @@ class Couch(BlockVariant):
     ]
     tags = [
         BlockData.Uses.PLACE,
+        BlockData.Uses.BLOCKSTATES,
     ]
     blockstates = BlockData.BlockStates(
         "@self",
@@ -173,7 +179,7 @@ class Couch(BlockVariant):
         BlockData.State("left", "0010~~"),
         BlockData.State("right", "0001~~"),
         BlockData.State("middle", "0011~~"),
-        BlockData.State("corner", "1010~~:0", "1001~~:-90"),
+        BlockData.State("corner", "1010~~:90", "1001~~:0"),
         BlockData.State("slab", "~1~~~~"),
     )
 
@@ -225,7 +231,7 @@ class DinningChair(BlockVariant):
     """
 
     material = BlockMaterials.WOOD_WITH_WOOL
-    block_type = BlockType.seat(width=0.8, height=0.5)
+    block_type = BlockType.seat(width=0.8, height=0.4)
 
     base = BlockData.Base.VOID
     sound = BlockData.Sound.WOOD
@@ -371,7 +377,7 @@ class StreetLight(BlockVariant):
 
     base = BlockData.Base.NONE
     sound = BlockData.Sound.WOOD
-    facing = BlockData.Facing.PLAYER
+    facing = BlockData.Facing.WALL_NORMAL
     recipe = [
         BlockData.RecipeEntry("block", "[base]", 4),
     ]
@@ -415,6 +421,7 @@ class UpholsteryCouch(BlockVariant):
     """
 
     material = BlockMaterials.WOOD_WITH_WOOL
+    block_type = BlockType.seat(width=0.9, height=0.5)
 
     base = BlockData.Base.TRIPWIRE
     sound = BlockData.Sound.WOOD

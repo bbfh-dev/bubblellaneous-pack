@@ -6,3 +6,5 @@ function bubblellaneous:block_placer/return_block with entity @s item.tag.bubble
 
 scoreboard players operation this local.tmp = @s local.block.id
 execute as @e[type=#bubblellaneous:entity,distance=..3] if score @s local.block.id = this local.tmp run kill @s
+
+function bubblellaneous:block_placer/internal/update_blockstates with entity @s item.tag.bubblellaneous.block_data

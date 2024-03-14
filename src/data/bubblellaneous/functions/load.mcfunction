@@ -5,6 +5,7 @@ scoreboard objectives add local.var dummy
 scoreboard objectives add local.block.id dummy
 scoreboard objectives add local.block_state dummy
 
+scoreboard objectives add local.gui.previous_page dummy
 scoreboard objectives add local.gui.page dummy
 
 #region Settings

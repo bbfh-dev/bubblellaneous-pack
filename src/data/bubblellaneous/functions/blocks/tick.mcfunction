@@ -1,1 +1,1 @@
-execute as @s[tag=--local.loaded] run function bubblellaneous:block/while_loaded
+execute as @s[tag=--local.loaded] run function bubblellaneous:blocks/while_loaded

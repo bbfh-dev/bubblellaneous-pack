@@ -22,6 +22,8 @@ execute if data storage bubblellaneous tmp.in{facing: "door"} store result stora
 
 execute as @e[type=item_display,tag=--local.new,limit=1,sort=nearest] run function bubblellaneous:utils/block/set_rotation with storage bubblellaneous tmp.in
 execute if score did_cancel local.tmp matches 1 run return run kill @e[type=item_display,tag=--local.new,limit=1,sort=nearest]
+
+execute store result entity @e[type=item_display,tag=--local.new,limit=1,sort=nearest] item.tag.bubblellaneous.block_properties.rotation int 1 run data get storage bubblellaneous tmp.in.rotation_x
 #endregion
 
 #region Place base block
@@ -32,8 +34,9 @@ $playsound bubblellaneous:block.$(sound).place block @a ~ ~ ~ 1 1 0
 
 #region Tags
 execute as @s[tag=--local.uses.brightness_fix] run data modify entity @e[type=item_display,tag=--local.new,limit=1,sort=nearest] brightness set value {block: 15, sky: 15}
-execute as @s[tag=--local.uses.no_base] as @e[type=item_display,tag=--local.new,limit=1,sort=nearest] at @s run function bubblellaneous:block/type_specific/no_base/place
+execute as @s[tag=--local.uses.no_base] as @e[type=item_display,tag=--local.new,limit=1,sort=nearest] at @s run function bubblellaneous:blocks/type_specific/no_base/place
 execute as @s[tag=--local.uses.place] as @e[type=item_display,tag=--local.new,limit=1,sort=nearest] at @s run function bubblellaneous:block_placer/internal/custom_place/run with entity @s item.tag.bubblellaneous.block_data
+execute as @s[tag=--local.uses.blockstates] as @e[type=item_display,tag=--local.new,limit=1,sort=nearest] at @s run function bubblellaneous:block_placer/internal/initial_update_blockstates with entity @s item.tag.bubblellaneous.block_data
 function bubblellaneous:utils/block/placer/copy_uses_tag {name: "gui"}
 function bubblellaneous:utils/block/placer/copy_uses_tag {name: "tick"}
 function bubblellaneous:utils/block/placer/copy_uses_tag {name: "no_base"}

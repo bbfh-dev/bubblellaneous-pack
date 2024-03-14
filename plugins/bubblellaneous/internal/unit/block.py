@@ -8,7 +8,9 @@ from colorama import Fore
 
 from plugins.bubblellaneous.internal.category import Category
 from plugins.bubblellaneous.internal.template.mcfunction import (
-    PLACE_TEMPLATE, RECIPE_TEMPLATE)
+    PLACE_TEMPLATE,
+    RECIPE_TEMPLATE,
+)
 from plugins.bubblellaneous.internal.tree import BenchRegistry, Tree
 from plugins.utils.nbt import NBT
 
@@ -30,6 +32,31 @@ DIRECTIONS = [
     Direction("up", "^ ^1 ^", "^ ^-1 ^"),
     Direction("down", "^ ^-1 ^", "^ ^1 ^"),
 ]
+
+
+def generate_permutations(string) -> list:
+    def generate_helper(substring, index, current_permutation, permutations):
+        if index == len(substring):
+            permutations.append(current_permutation)
+            return
+        if substring[index] == "~":
+            generate_helper(
+                substring, index + 1, current_permutation + "0", permutations
+            )
+            generate_helper(
+                substring, index + 1, current_permutation + "1", permutations
+            )
+        else:
+            generate_helper(
+                substring,
+                index + 1,
+                current_permutation + substring[index],
+                permutations,
+            )
+
+    permutations = []
+    generate_helper(string, 0, "", permutations)
+    return permutations
 
 
 class BlockData:
@@ -135,24 +162,15 @@ class BlockData:
         def path(self) -> str:
             return f"[namespace]:block/[unit_name]/blockstates/apply/{self.name}"
 
-        def get_line(self, line: str, path: str) -> str:
-            return "\n".join(
-                [
-                    "execute "
-                    + " ".join(
-                        [
-                            line.replace("[coords]", direction.coords).replace(
-                                "[-coords]", direction.negative_coords
-                            )
-                            for i, direction in enumerate(DIRECTIONS)
-                            if predicate[i] != "~"
-                        ]
-                    )
-                    + f" run function {path}"
-                    for predicate in self.predicates
-                ]
-                + ["execute if score quit local.tmp matches 1 run return 0"]
-            )
+        @property
+        def predicate_variations(self):
+            result = []
+            for predicate in self.predicates:
+                if "~" not in predicate:
+                    result.append(predicate)
+                    continue
+                result.extend(generate_permutations(predicate))
+            return result
 
     @dataclass(init=False)
     class BlockStates:
@@ -170,19 +188,21 @@ class BlockData:
         @property
         def entity(self) -> str:
             if self.absolute_match == "@self":
-                return "@e[type=item_frame,tag=local.named.[name],distance=..0.5]"
+                return "@e[type=item_display,tag=local.name.[unit_name],distance=..0.5]"
             return self.absolute_match
 
         @property
         def block_tag(self) -> str:
-            return self.absolute_match
+            return self.absolute_match.replace("#", "#[namespace]:")
 
-        @property
         def predicate(self) -> str:
-            condition = "if" if not self.match.startswith("!") else "unless"
+            def get_condition(value: bool):
+                return "if" if not value else "unless"
+
+            condition = get_condition(self.match.startswith("!"))
             if self.absolute_match.startswith("@"):
-                return f"positioned [coords] {condition} entity {self.entity} positioned [-coords]"
-            return f"{condition} block [coords] {self.block_tag}"
+                return f"execute at @s positioned [coords] {condition} entity {self.entity}"
+            return f"execute at @s {condition} block [coords] {self.block_tag}"
 
 
 class BlockType:
@@ -198,7 +218,7 @@ class BlockType:
     def light(cls, *, light_level: int):
         return BlockType("light", [], light_level=light_level)
 
-    def __init__(self, name:str, template: list[str], **kwargs) -> None:
+    def __init__(self, name: str, template: list[str], **kwargs) -> None:
         self.function_template = template
         self.name = name
         self.params = kwargs
@@ -242,7 +262,7 @@ class Block(Base):
                                 "display_name": self.display_name,
                                 "block_type": {
                                     "name": self.prop("block_type").name,
-                                    "parameters": self.prop("block_type").params
+                                    "parameters": self.prop("block_type").params,
                                 },
                                 "id": self.complete_name,
                             },
@@ -264,7 +284,15 @@ class Block(Base):
             block_type=self.read_property("block_type", BlockType("default", [])),
             **{
                 key: self.read_property(key, None)
-                for key in ["base", "sound", "facing", "recipe", "tags", "blockstates", "is_unlisted"]
+                for key in [
+                    "base",
+                    "sound",
+                    "facing",
+                    "recipe",
+                    "tags",
+                    "blockstates",
+                    "is_unlisted",
+                ]
             },
         )
 
@@ -282,27 +310,54 @@ class Block(Base):
         if not blockstates:
             return self
 
-        if blockstates.match != "<manual>":
+        if blockstates.match != "<manual>" and self.prop("material_index", 0) == 0:
+            tree.make_state_registry(
+                self.name,
+                [
+                    {
+                        predicate.split(":")[0]
+                        .replace("0", "o")
+                        .replace("1", "i")
+                        .replace("~", "x"): {
+                            "name": state.name,
+                            "rotation": (
+                                predicate.split(":")[-1] if ":" in predicate else 0
+                            ),
+                        }
+                        for predicate in state.predicate_variations
+                    }
+                    for state in blockstates.block_states
+                ],
+            )
             tree.make_function(
                 tree.default_format(ctx, self.format),
                 "[namespace]:block/[unit_name]/blockstates/update",
                 [
-                    "scoreboard players set quit local.tmp 0",
+                    "function bubblellaneous:block_placer/internal/reset_blockstate",
                     "",
-                    "\n\n".join(
+                    "\n".join(
                         [
-                            state.get_line(blockstates.predicate, state.path)
-                            for state in blockstates.block_states
-                            if state.name != "default"
+                            blockstates.predicate()
+                            .replace("[coords]", direction.coords)
+                            .replace("[-coords]", direction.negative_coords)
+                            + f' run data modify storage bubblellaneous tmp.in.bit{i} set value "i"'
+                            for i, direction in enumerate(DIRECTIONS)
                         ]
                     ),
                     "",
-                    f"function {blockstates.block_states[0].path}",
+                    f"data modify storage bubblellaneous tmp.states set from storage bubblellaneous state_registry.{self.name}",
+                    f'data modify storage bubblellaneous tmp.block set value "{self.name}"',
+                    "function bubblellaneous:block_placer/internal/set_blockstate with storage bubblellaneous tmp.in",
                 ],
             )
 
         for index, state in enumerate(blockstates.block_states):
-            self.add_model(tree, ctx, self.custom_model_data + (index * self.prop("material_len", 1)), state.name)
+            self.add_model(
+                tree,
+                ctx,
+                self.custom_model_data + (index * self.prop("material_len", 1)),
+                state.name,
+            )
 
             if self.prop("material_index", 0) != 0:
                 continue
@@ -312,23 +367,31 @@ class Block(Base):
                 state.path,
                 [
                     "scoreboard players set quit local.tmp 1",
-                    "",
-                    f"scoreboard players set @s local.block_state {(index * self.prop("material_len", 1))}",
+                    f"scoreboard players set @s local.block_state {(index * self.prop('material_len', 1))}",
                     "execute store result score model_id local.tmp run data get entity @s item.tag.[namespace].block_data.custom_model_data",
-                    f"scoreboard players add model_id local.tmp {(index * self.prop("material_len", 1))}",
+                    f"scoreboard players add model_id local.tmp {(index * self.prop('material_len', 1))}",
                     "execute store result entity @s item.tag.CustomModelData int 1 run scoreboard players get model_id local.tmp",
+                    "$execute at @s run tp @s ~ ~ ~ ~$(rotation) ~",
                 ],
             )
 
-            model_name = tree.default_format(ctx, self.format)(f"[namespace]:block/[unit_name]/template/{state.name}")
-            default_name = tree.default_format(ctx, self.format)(f"[namespace]:block/[unit_name]/{state.name}")
+            model_name = tree.default_format(ctx, self.format)(
+                f"[namespace]:block/[unit_name]/template/{state.name}"
+            )
+            default_name = tree.default_format(ctx, self.format)(
+                f"[namespace]:block/[unit_name]/{state.name}"
+            )
             default_model_name = tree.default_format(ctx, self.format)(
-                                f"[namespace]:[unit]/[unit_name]/{state.name}/default"
-                            )
-            
+                f"[namespace]:[unit]/[unit_name]/{state.name}/default"
+            )
+
             if self.prop("material_len", 0) > 0:
-                for material in cast(list[BlockData.Material], self.prop("materials", [])):
-                    ctx.assets.models[f"{default_name}/{material.name}"] = ctx.assets.models[model_name]
+                for material in cast(
+                    list[BlockData.Material], self.prop("materials", [])
+                ):
+                    ctx.assets.models[f"{default_name}/{material.name}"] = (
+                        ctx.assets.models[model_name]
+                    )
                     ctx.assets.models[f"{default_name}/{material.name}"] = Model(
                         {
                             "parent": default_model_name,

@@ -30,6 +30,7 @@ COLORS = [
     "black",
 ]
 
+
 def get_translation_name(prefix: str) -> str:
     for material in BlockMaterials.WOOL:
         if prefix == material.name:
@@ -37,6 +38,7 @@ def get_translation_name(prefix: str) -> str:
         if material.name in prefix:
             return prefix.replace(f"{material.name}_", "")
     return prefix
+
 
 class BlockMaterials:
     WOOD: list[BlockData.Material] = [
@@ -208,11 +210,9 @@ class BlockVariant(Variant):
             material_index=material_index,
             materials=materials,
             name=self.name,
-            translation_name="_".join([
-                i for i in [
-                    get_translation_name(material.name), self.name
-                ] if i
-            ]),
+            translation_name="_".join(
+                [i for i in [get_translation_name(material.name), self.name] if i]
+            ),
             base_item="minecraft:item_frame",
             unit="block",
             path=[self.name, material.name],
@@ -220,7 +220,15 @@ class BlockVariant(Variant):
             block_type=self.read_property("block_type", BlockType("default", [])),
             **{
                 key: self.read_property(key, None)
-                for key in ["base", "sound", "facing", "recipe", "tags", "blockstates", "is_unlisted"]
+                for key in [
+                    "base",
+                    "sound",
+                    "facing",
+                    "recipe",
+                    "tags",
+                    "blockstates",
+                    "is_unlisted",
+                ]
             },
         )
 
@@ -246,11 +254,9 @@ class ItemVariant(Variant):
             material_index=material_index,
             materials=materials,
             name=self.name,
-            translation_name="_".join([
-                i for i in [
-                    get_translation_name(material.name), self.name
-                ] if i
-            ]),
+            translation_name="_".join(
+                [i for i in [get_translation_name(material.name), self.name] if i]
+            ),
             base_item=self.read_property(
                 "base.value", default="minecraft:structure_void"
             ),
@@ -259,6 +265,14 @@ class ItemVariant(Variant):
             is_single=False,
             **{
                 key: self.read_property(key, None)
-                for key in ["base", "sound", "facing", "recipe", "tags", "blockstates", "is_unlisted"]
+                for key in [
+                    "base",
+                    "sound",
+                    "facing",
+                    "recipe",
+                    "tags",
+                    "blockstates",
+                    "is_unlisted",
+                ]
             },
         )
