@@ -37,13 +37,13 @@
         "load": [
             "src"
         ],
-        "zipped": false
+        "zipped": true
     },
     "resource_pack": {
         "load": [
             "src"
         ],
-        "zipped": false
+        "zipped": true
     },
     "meta": {
         "version": "2.0.0",

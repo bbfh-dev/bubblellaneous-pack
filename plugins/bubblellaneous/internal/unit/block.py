@@ -90,6 +90,9 @@ class BlockData:
         PLACE = "--local.uses.place"
         BLOCKSTATES = "--local.uses.blockstates"
         NO_BASE = "--local.uses.no_base"
+        CUSTOM_BASE = "--local.uses.custom_base"
+        TIMER = "--local.uses.timer"
+        BLOCKSTATE_HOOK = "--local.uses.blockstate_callback"
 
     @dataclass
     class RecipeEntry:
@@ -258,6 +261,11 @@ class Block(Base):
                                     enum: self.enum_prop(enum)
                                     for enum in ["base", "sound", "facing"]
                                 },
+                                "material": {
+                                    "name": self.prop("material", "default"),
+                                    "index": self.prop("material_index", 0),
+                                },
+                                "material_count": self.prop("material_len", 0),
                                 "custom_model_data": self.custom_model_data,
                                 "display_name": self.display_name,
                                 "block_type": {
@@ -367,11 +375,12 @@ class Block(Base):
                 state.path,
                 [
                     "scoreboard players set quit local.tmp 1",
-                    f"scoreboard players set @s local.block_state {(index * self.prop('material_len', 1))}",
+                    f"scoreboard players set @s local.block.model {index}",
                     "execute store result score model_id local.tmp run data get entity @s item.tag.[namespace].block_data.custom_model_data",
                     f"scoreboard players add model_id local.tmp {(index * self.prop('material_len', 1))}",
                     "execute store result entity @s item.tag.CustomModelData int 1 run scoreboard players get model_id local.tmp",
                     "$execute at @s run tp @s ~ ~ ~ ~$(rotation) ~",
+                    "execute as @s[tag=--local.uses.blockstate_callback] run function [namespace]:block/[unit_name]/blockstates/callback",
                 ],
             )
 

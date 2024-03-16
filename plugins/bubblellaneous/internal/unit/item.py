@@ -19,6 +19,11 @@ class Item(Base):
                 "item_properties": {},
                 "item_data": {
                     "id": self.complete_name,
+                    "name": self.name,
+                    "material": {
+                        "name": self.prop("material", "default"),
+                        "index": self.prop("material_index", 0),
+                    },
                 },
             }
         }

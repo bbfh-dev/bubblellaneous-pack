@@ -28,6 +28,7 @@ class Ladder(BlockVariant):
         BlockData.Uses.PLACE,
         BlockData.Uses.BLOCKSTATES,
         BlockData.Uses.NO_BASE,
+        BlockData.Uses.CUSTOM_BASE,
     ]
     blockstates = BlockData.BlockStates(
         "@self",
@@ -52,6 +53,7 @@ class PadlockBlock(BlockVariant):
     tags = [
         BlockData.Uses.PLACE,
         BlockData.Uses.NO_BASE,
+        BlockData.Uses.CUSTOM_BASE,
     ]
     blockstates = BlockData.BlockStates(
         "@self",
@@ -78,6 +80,7 @@ class RisingDoor(BlockVariant):
         BlockData.Uses.PLACE,
         BlockData.Uses.BLOCKSTATES,
         BlockData.Uses.NO_BASE,
+        BlockData.Uses.TIMER,
     ]
     blockstates = BlockData.BlockStates(
         "@self",
@@ -100,6 +103,7 @@ class Pipe(Block):
     ]
     tags = [
         BlockData.Uses.BLOCKSTATES,
+        BlockData.Uses.BLOCKSTATE_HOOK,
     ]
     blockstates = BlockData.BlockStates(
         "@self",
@@ -152,6 +156,7 @@ class Radiator(Block):
     tags = [
         BlockData.Uses.GUI,
         BlockData.Uses.BRIGHTNESS_FIX,
+        BlockData.Uses.TIMER,
     ]
     blockstates = BlockData.BlockStates(
         "<manual>",
@@ -176,6 +181,7 @@ class SurveillanceCamera(Block):
         BlockData.Uses.PLACE,
         BlockData.Uses.TICK,
         BlockData.Uses.NO_BASE,
+        BlockData.Uses.TIMER,
     ]
     blockstates = BlockData.BlockStates(
         "@self",
@@ -200,6 +206,7 @@ class SecurityMonitor(Block):
     tags = [
         BlockData.Uses.PLACE,
         BlockData.Uses.NO_BASE,
+        BlockData.Uses.CUSTOM_BASE,
     ]
     blockstates = BlockData.BlockStates(
         "@self",

@@ -1,4 +1,5 @@
 scoreboard players set did_cancel local.tmp 0
+scoreboard players reset NO_REPLACE local.tmp
 
 #region Summon the display
 $summon item_display ~ ~ ~ {Tags: ["+bubblellaneous", "local.block", "local.name.$(name)", "--local.new"], CustomName: '$(display_name)', item: {id: "$(base_item)", Count:1b, tag:{CustomModelData: $(custom_model_data)}}, width: 1f, height: 1f}
@@ -6,6 +7,8 @@ data modify entity @e[type=item_display,tag=--local.new,limit=1,sort=nearest] tr
 data modify entity @e[type=item_display,tag=--local.new,limit=1,sort=nearest] item.tag.bubblellaneous set from entity @s Item.tag.bubblellaneous
 execute store result score @e[type=item_display,tag=--local.new,limit=1,sort=nearest] local.block.id run scoreboard players add block_id local.block.id 1
 #endregion
+
+scoreboard players set @e[type=item_display,tag=--local.new,limit=1,sort=nearest] local.block_state 0
 
 #region Settings
 execute if score global.increased_view_range local.settings matches 1 run data modify entity @e[type=item_display,tag=--local.new,limit=1,sort=nearest] view_range set value 1000f
@@ -33,13 +36,16 @@ $playsound bubblellaneous:block.$(sound).place block @a ~ ~ ~ 1 1 0
 #endregion
 
 #region Tags
-execute as @s[tag=--local.uses.brightness_fix] run data modify entity @e[type=item_display,tag=--local.new,limit=1,sort=nearest] brightness set value {block: 15, sky: 15}
-execute as @s[tag=--local.uses.no_base] as @e[type=item_display,tag=--local.new,limit=1,sort=nearest] at @s run function bubblellaneous:blocks/type_specific/no_base/place
-execute as @s[tag=--local.uses.place] as @e[type=item_display,tag=--local.new,limit=1,sort=nearest] at @s run function bubblellaneous:block_placer/internal/custom_place/run with entity @s item.tag.bubblellaneous.block_data
-execute as @s[tag=--local.uses.blockstates] as @e[type=item_display,tag=--local.new,limit=1,sort=nearest] at @s run function bubblellaneous:block_placer/internal/initial_update_blockstates with entity @s item.tag.bubblellaneous.block_data
 function bubblellaneous:utils/block/placer/copy_uses_tag {name: "gui"}
 function bubblellaneous:utils/block/placer/copy_uses_tag {name: "tick"}
 function bubblellaneous:utils/block/placer/copy_uses_tag {name: "no_base"}
+function bubblellaneous:utils/block/placer/copy_uses_tag {name: "timer"}
+function bubblellaneous:utils/block/placer/copy_uses_tag {name: "blockstates"}
+function bubblellaneous:utils/block/placer/copy_uses_tag {name: "blockstate_callback"}
+execute as @s[tag=--local.uses.brightness_fix] run data modify entity @e[type=item_display,tag=--local.new,limit=1,sort=nearest] brightness set value {block: 15, sky: 15}
+execute as @s[tag=--local.uses.no_base,tag=!--local.uses.custom_base] as @e[type=item_display,tag=--local.new,limit=1,sort=nearest] at @s run function bubblellaneous:blocks/type_specific/no_base/place with entity @s item.tag.bubblellaneous.block_data
+execute as @s[tag=--local.uses.place] as @e[type=item_display,tag=--local.new,limit=1,sort=nearest] at @s run function bubblellaneous:block_placer/internal/custom_place/run with entity @s item.tag.bubblellaneous.block_data
+execute as @s[tag=--local.uses.blockstates] as @e[type=item_display,tag=--local.new,limit=1,sort=nearest] at @s run function bubblellaneous:block_placer/internal/initial_update_blockstates with entity @s item.tag.bubblellaneous.block_data
 #endregion
 
 tag @e[type=item_display,tag=--local.new,limit=1,sort=nearest] remove --local.new

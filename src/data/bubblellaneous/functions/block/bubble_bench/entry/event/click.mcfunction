@@ -7,5 +7,5 @@ function bubblellaneous:block/bubble_bench/entry/fetch/by_index with storage bub
 execute if data storage bubblellaneous tmp.entry.tag{CustomModelData: 370000} run return 0
 execute if data storage bubblellaneous tmp.entry.tag{CustomModelData: 370001} run return 0
 
-execute if data storage bubblellaneous tmp.entry{id: "minecraft:structure_void"} run function bubblellaneous:block/bubble_bench/entry/event/click_gui
+execute if data storage bubblellaneous tmp.entry{id: "minecraft:structure_void"} run return run function bubblellaneous:block/bubble_bench/entry/event/click_gui
 execute unless data storage bubblellaneous tmp.entry{id: "minecraft:structure_void"} run function bubblellaneous:block/bubble_bench/entry/event/click_item
