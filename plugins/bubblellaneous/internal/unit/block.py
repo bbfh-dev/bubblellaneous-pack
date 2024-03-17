@@ -68,7 +68,9 @@ class BlockData:
         LOWER = "petrified_oak_slab[type=bottom]"
         SOLID = "petrified_oak_slab[type=double]"
         TRIPWIRE = "tripwire"
-        CHAIN = "chain[axis=y]"
+        DRIPSTONE = (
+            "pointed_dripstone[thickness=tip,vertical_direction=up,waterlogged=false]"
+        )
         VOID = "structure_void"
 
     class Sound(Enum):

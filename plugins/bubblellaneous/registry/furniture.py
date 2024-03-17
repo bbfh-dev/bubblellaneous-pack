@@ -1,10 +1,5 @@
-from plugins.bubblellaneous.internal import (
-    Block,
-    BlockData,
-    BlockMaterials,
-    BlockType,
-    Variant,
-)
+from plugins.bubblellaneous.internal import (Block, BlockData, BlockMaterials,
+                                             BlockType, Variant)
 from plugins.bubblellaneous.internal.unit.variant import BlockVariant
 
 
@@ -104,7 +99,7 @@ class Drawer(BlockVariant):
 
     material = BlockMaterials.SOLID
 
-    base = BlockData.Base.CONTAINER
+    base = BlockData.Base.UPPER
     sound = BlockData.Sound.WOOD
     facing = BlockData.Facing.PLAYER
     recipe = [
@@ -211,7 +206,7 @@ class Barstool(BlockVariant):
     """
 
     material = BlockMaterials.WOOD
-    block_type = BlockType.seat(width=0.8, height=0.5)
+    block_type = BlockType.seat(width=0.8, height=0.7)
 
     base = BlockData.Base.VOID
     sound = BlockData.Sound.WOOD
@@ -333,7 +328,7 @@ class Trashcan(Block):
     TODO
     """
 
-    base = BlockData.Base.CHAIN
+    base = BlockData.Base.DRIPSTONE
     sound = BlockData.Sound.WOOD
     facing = BlockData.Facing.NONE
     recipe = [
@@ -377,7 +372,7 @@ class StreetLight(BlockVariant):
 
     base = BlockData.Base.NONE
     sound = BlockData.Sound.WOOD
-    facing = BlockData.Facing.WALL_NORMAL
+    facing = BlockData.Facing.NORMAL
     recipe = [
         BlockData.RecipeEntry("block", "[base]", 4),
     ]

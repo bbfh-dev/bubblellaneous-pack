@@ -19,5 +19,11 @@
 				"down": {"uv": [4, 8, 8, 12], "texture": "#0", "cullface": "down"}
 			}
 		}
-	]
+	],
+	"display": {
+		"gui": {
+			"rotation": [30, -135, 0],
+			"scale": [0.8, 0.8, 0.8]
+		}
+	}
 }

@@ -37,16 +37,15 @@
         "load": [
             "src"
         ],
-        "zipped": true
+        "zipped": false
     },
     "resource_pack": {
         "load": [
             "src"
         ],
-        "zipped": true
+        "zipped": false
     },
     "meta": {
-        "version": "2.0.0",
         "prefix": "bbln"
     }
 }

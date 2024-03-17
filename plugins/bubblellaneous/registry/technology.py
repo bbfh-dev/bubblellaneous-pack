@@ -108,15 +108,17 @@ class Pipe(Block):
     blockstates = BlockData.BlockStates(
         "@self",
         BlockData.State("default"),
+        # Straight
         BlockData.State(
             "straight",
             "110000:0",
             "001100:90",
-            "0100000:0",
+            "010000:0",
             "000100:90",
             "100000:0",
             "001000:90",
         ),
+        # Angles
         BlockData.State(
             "angle_left",
             "101000:0",
@@ -137,6 +139,99 @@ class Pipe(Block):
             "000101:-90",
             "100001:0",
             "010001:180",
+        ),
+        # Corners
+        BlockData.State(
+            "corner_up",
+            "101010:0",
+            "100110:-90",
+            "011010:90",
+            "010110:180",
+        ),
+        BlockData.State(
+            "corner_down",
+            "101001:0",
+            "100101:-90",
+            "011001:90",
+            "010101:180",
+        ),
+        # Sides
+        BlockData.State(
+            "side_left",
+            "111011:0",
+            "011111:90",
+            "110111:180",
+            "101111:-90",
+        ),
+        BlockData.State(
+            "side_up",
+            "111110:0",
+        ),
+        BlockData.State(
+            "side_down",
+            "111101:0",
+        ),
+        # Junctions
+        BlockData.State(
+            "junction_left",
+            "100011:0",
+            "010011:180",
+            "001011:90",
+            "000111:-90",
+        ),
+        BlockData.State(
+            "junction_up",
+            "110010:0",
+            "001110:90",
+        ),
+        BlockData.State(
+            "junction_down",
+            "110001:0",
+            "001101:90",
+        ),
+        # Edges
+        BlockData.State(
+            "edge_left",
+            "101011:0",
+            "100111:-90",
+            "011011:90",
+            "010111:180",
+        ),
+        BlockData.State(
+            "edge_up",
+            "111010:0",
+            "110110:180",
+            "101110:-90",
+            "011110:90",
+        ),
+        BlockData.State(
+            "edge_down",
+            "111001:0",
+            "110101:180",
+            "101101:-90",
+            "011101:90",
+        ),
+        # Partials (That didn't fit a category)
+        BlockData.State(
+            "partial_horizontal",
+            "111100:0",
+        ),
+        BlockData.State(
+            "partial_vertical",
+            "110011:0",
+            "001111:90",
+        ),
+        BlockData.State(
+            "partial_left",
+            "111000:0",
+            "110100:180",
+            "101100:-90",
+            "011100:90",
+        ),
+        # Cross
+        BlockData.State(
+            "cross",
+            "111111:0",
         ),
     )
 

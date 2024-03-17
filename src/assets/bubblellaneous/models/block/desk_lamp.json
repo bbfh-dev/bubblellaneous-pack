@@ -68,5 +68,11 @@
 				"down": {"uv": [5, 0, 11, 8], "texture": "#light_panel"}
 			}
 		}
-	]
+	],
+	"display": {
+		"gui": {
+			"rotation": [30, -135, 0],
+			"scale": [0.85, 0.85, 0.85]
+		}
+	}
 }

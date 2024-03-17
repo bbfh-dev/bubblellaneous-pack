@@ -9,30 +9,14 @@ from plugins.bubblellaneous.internal.tree import Tree
 
 from .base import Base
 from .block import Block, BlockData, BlockType
+from .const.materials import COLORS
 from .item import Item
-
-COLORS = [
-    "white",
-    "orange",
-    "magenta",
-    "light_blue",
-    "yellow",
-    "lime",
-    "pink",
-    "gray",
-    "light_gray",
-    "cyan",
-    "purple",
-    "blue",
-    "brown",
-    "green",
-    "red",
-    "black",
-]
 
 
 def get_translation_name(prefix: str) -> str:
-    for material in BlockMaterials.WOOL:
+    for material in sorted(
+        BlockMaterials.WOOL, key=lambda x: len(x.name), reverse=True
+    ):
         if prefix == material.name:
             return prefix
         if material.name in prefix:

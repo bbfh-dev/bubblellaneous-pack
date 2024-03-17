@@ -7,6 +7,7 @@ from beet import Advancement, Context, Function, ItemModifier, LootTable, Model
 from plugins.bubblellaneous.internal.category import Category
 from plugins.bubblellaneous.internal.template.items import ITEMS_TEMPLATE
 from plugins.bubblellaneous.internal.template.mcfunction import BENCH_TEMPLATE
+from plugins.bubblellaneous.internal.unit.const.materials import COLORS, SOLIDS
 from plugins.utils import NBT
 
 
@@ -31,9 +32,34 @@ class BenchRegistry:
             "entry": self.entry,
             "item": self.item,
             "count": self.count,
-            "items": sorted(self.items, key=lambda x: x),
+            "items": sorted(self.items, key=sort_bench_registry),
             "index": index,
         }
+
+
+def sort_bench_registry(key: BenchRegistry | str):
+    if type(key) is BenchRegistry:
+        unit, name = key.item.split("/")
+    else:
+        unit, name = str(key).split("/")
+
+    weights = [0, 0]
+
+    materials = [(i, x) for i, x in enumerate(SOLIDS)]
+    for i, block in sorted(materials, key=lambda i: len(i[1]), reverse=True):
+        if block not in name:
+            continue
+        weights[0] = i
+        break
+
+    materials = [(i, x) for i, x in enumerate(SOLIDS)]
+    for i, color in sorted(materials, key=lambda i: len(i[1]), reverse=True):
+        if color not in name:
+            continue
+        weights[1] = i
+        break
+
+    return unit, *weights
 
 
 @dataclass(init=False)
@@ -135,7 +161,7 @@ class Tree:
                         for i, entry in enumerate(
                             sorted(
                                 self.bench_registry[category],
-                                key=lambda x: x.item,
+                                key=sort_bench_registry,
                             )
                         )
                     ]

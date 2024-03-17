@@ -11,6 +11,7 @@ block	spruce_table	Spruce Table		Еловый Стол	Tavolo di abete
 block	birch_table	Birch Table		Берëзовый Стол	Tavolo di betulla		
 block	jungle_table	Jungle Table		Стол из тропического дерева	Tavolo della giungla		
 block	acacia_table	Acacia Table		Акациевый Стол	Tavolo di acacia		
+block	bamboo_table	Bamboo Table					
 block	dark_oak_table	Dark Oak Table		Стол из тëмного дуба	Tavolo di quercia scura		
 block	mangrove_table	Mangrove Table		Мангровый Стол	Tavolo di mangrovia		
 block	cherry_table	Cherry Table		Вишнёвый Стол	Tavolo di ciliegio		
@@ -31,6 +32,7 @@ block	spruce_shelf	Spruce Shelf		Еловая Полка	Mensola di abete
 block	birch_shelf	Birch Shelf		Берëзовая Полка	Mensola di betulla		
 block	jungle_shelf	Jungle Shelf		Полка из тропического дерева	Mensola della giungla		
 block	acacia_shelf	Acacia Shelf		Акациевая Полка	Mensola di acacia		
+block	bamboo_shelf	Bamboo Shelf					
 block	dark_oak_shelf	Dark Oak Shelf		Полка из тëмного дуба	Mensola di quercia scura		
 block	mangrove_shelf	Mangrove Shelf		Мангровая Полка	Mensola di mangrovia		
 block	cherry_shelf	Cherry Shelf		Вишнёвая Полка	Mensola di ciliegio		
@@ -51,6 +53,7 @@ block	spruce_cabinet	Spruce Cabinet		Еловый Ящик	Comodino di abete
 block	birch_cabinet	Birch Cabinet		Берëзовый Ящик	Comodino di betulla		
 block	jungle_cabinet	Jungle Cabinet		Ящик из тропического дерева	Comodino della giungla		
 block	acacia_cabinet	Acacia Cabinet		Акациевый Ящик	Comodino di acacia		
+block	bamboo_cabinet	Bamboo Cabinet					
 block	dark_oak_cabinet	Dark Oak Cabinet		Ящик из тëмного дуба	Comodino di quercia scura		
 block	mangrove_cabinet	Mangrove Cabinet		Мангровый Ящик	Comodino di mangrovia		
 block	cherry_cabinet	Cherry Cabinet		Вишнёвый Ящик	Comodino di ciliegio		
@@ -71,6 +74,7 @@ block	spruce_drawer	Spruce Drawer		Еловый Тумба	Cassetto di abete
 block	birch_drawer	Birch Drawer		Берëзовый Тумба	Cassetto di betulla		
 block	jungle_drawer	Jungle Drawer		Тумба из тропического дерева	Cassetto della giungla		
 block	acacia_drawer	Acacia Drawer		Акациевый Тумба	Cassetto di acacia		
+block	bamboo_drawer	Bamboo Drawer					
 block	dark_oak_drawer	Dark Oak Drawer		Тумба из тëмного дуба	Cassetto di quercia scura		
 block	mangrove_drawer	Mangrove Drawer		Мангровый Тумба	Cassetto di mangrovia		
 block	cherry_drawer	Cherry Drawer		Вишнёвый Тумба	Cassetto di ciliegio		
@@ -91,6 +95,7 @@ block	spruce_cupboard	Spruce Cupboard		Еловый Буфет	Credenza di abete
 block	birch_cupboard	Birch Cupboard		Берëзовый Буфет	Credenza di betulla		
 block	jungle_cupboard	Jungle Cupboard		Буфет из тропического дерева	Credenza della giungla		
 block	acacia_cupboard	Acacia Cupboard		Акациевый Буфет	Credenza di acacia		
+block	bamboo_cupboard	Bamboo Cupboard					
 block	dark_oak_cupboard	Dark Oak Cupboard		Буфет из тëмного дуба	Credenza di quercia scura		
 block	mangrove_cupboard	Mangrove Cupboard		Мангровый Буфет	Credenza di mangrovia		
 block	cherry_cupboard	Cherry Cupboard		Вишнёвый Буфет	Credenza di ciliegio		
@@ -111,6 +116,7 @@ block	spruce_bench	Spruce Bench		Еловая Скамья	Panchina di abete
 block	birch_bench	Birch Bench		Берëзовая Скамья	Panchina di betulla		
 block	jungle_bench	Jungle Bench		Скамья из тропического дерева	Panchina della giungla		
 block	acacia_bench	Acacia Bench		Акациевая Скамья	Panchina di acacia		
+block	bamboo_bench	Bamboo Bench					
 block	dark_oak_bench	Dark Oak Bench		Скамья из тëмного дуба	Panchina di quercia scura		
 block	mangrove_bench	Mangrove Bench		Мангровая Скамья	Panchina di mangrovia		
 block	cherry_bench	Cherry Bench		Вишнёвая Скамья	Panchina di ciliegio		
@@ -118,11 +124,20 @@ block	crimson_bench	Crimson Bench		Багровая Скамья	Panchina cremis
 block	warped_bench	Warped Bench		Искажëнная Скамья	Panchina distorta		
 block	stone_bench	Stone Bench		Каменная Скамья	Panchina di pietra		
 block	quartz_bench	Quartz Bench		Кварцевая Скамья	Panchina di quarzo		
+block	bamboo_bench	Bamboo Bench					
+block	deepslate_bench	Deepslate Bench					
+block	iron_bench	Iron Bench					
+block	copper_bench	Copper Bench					
+block	gold_bench	Golden Bench					
+block	diamond_bench	Diamond Bench					
+block	emerald_bench	Emerald Bench					
+block	netherite_bench	Netherite Bench					
 block	oak_stool	Oak Stool		Дубовый Табурет	Sgabello di quercia		
 block	spruce_stool	Spruce Stool		Еловый Табурет	Sgabello di abete		
 block	birch_stool	Birch Stool		Берëзовый Табурет	Sgabello di betulla		
 block	jungle_stool	Jungle Stool		Табурет из тропического дерева	Sgabello della giungla		
 block	acacia_stool	Acacia Stool		Акациевый Табурет	Sgabello di acacia		
+block	bamboo_stool	Bamboo Stool					
 block	dark_oak_stool	Dark Oak Stool		Табурет из тëмного дуба	Sgabello di quercia scura		
 block	mangrove_stool	Mangrove Stool		Мангровый Табурет	Sgabello di mangrovia		
 block	cherry_stool	Cherry Stool		Вишнёвый Табурет	Sgabello di ciliegio		
@@ -135,6 +150,7 @@ block	spruce_barstool	Spruce Bar Stool		Еловый Барный стул	Sgabe
 block	birch_barstool	Birch Bar Stool		Берëзовый Барный стул	Sgabello da bar di betulla		
 block	jungle_barstool	Jungle Bar Stool		Барный стул из тропического дерева	Sgabello da bar della giungla		
 block	acacia_barstool	Acacia Bar Stool		Акациевый Барный стул	Sgabello da bar di acacia		
+block	bamboo_barstool	Bamboo Bar Stool					
 block	dark_oak_barstool	Dark Oak Bar Stool		Барный стул из тëмного дуба	Sgabello da bar di quercia scura		
 block	mangrove_barstool	Mangrove Bar Stool		Мангровый Барный стул	Sgabello da bar di mangrovia		
 block	cherry_barstool	Cherry Bar Stool		Вишнёвый Барный стул	Sgabello da bar di ciliegio		
@@ -147,6 +163,7 @@ block	spruce_dinning_chair	Spruce Dinning Chair		Еловый Обеденный
 block	birch_dinning_chair	Birch Dinning Chair		Берëзовый Обеденный стул	Sedia di betulla		
 block	jungle_dinning_chair	Jungle Dinning Chair		Обеденный стул из тропического дерева	Sedia della giungla		
 block	acacia_dinning_chair	Acacia Dinning Chair		Акациевый Обеденный стул	Sedia di acacia		
+block	bamboo_dinning_chair	Bamboo Dinning Chair					
 block	dark_oak_dinning_chair	Dark Oak Dinning Chair		Обеденный стул из тëмного дуба	Sedia di quercia scura		
 block	mangrove_dinning_chair	Mangrove Dinning Chair		Мангровый Обеденный стул	Sedia di mangrovia		
 block	cherry_dinning_chair	Cherry Dinning Chair		Вишнёвый Обеденный стул	Sedia di ciliegio		
@@ -175,6 +192,7 @@ block	spruce_blinds	Spruce Blinds		Еловые Жалюзи
 block	birch_blinds	Birch Blinds		Берëзовые Жалюзи			
 block	jungle_blinds	Jungle Blinds		Жалюзи из тропического дерева			
 block	acacia_blinds	Acacia Blinds		Акациевые Жалюзи			
+block	bamboo_blinds	Bamboo Blinds					
 block	dark_oak_blinds	Dark Oak Blinds		Жалюзи из тëмного дуба			
 block	mangrove_blinds	Mangrove Blinds		Мангровые Жалюзи			
 block	cherry_blinds	Cherry Blinds		Вишнёвые Жалюзи			
@@ -195,6 +213,7 @@ block	spruce_kitchen_cabinet	Spruce Kitchen Cabinet		Еловый Кухонны
 block	birch_kitchen_cabinet	Birch Kitchen Cabinet		Берëзовый Кухонный Ящик			
 block	jungle_kitchen_cabinet	Jungle Kitchen Cabinet		Кухонный Ящик из тропического дерева			
 block	acacia_kitchen_cabinet	Acacia Kitchen Cabinet		Акациевый Кухонный Ящик			
+block	bamboo_kitchen_cabinet	Bamboo Kitchen Cabinet					
 block	dark_oak_kitchen_cabinet	Dark Oak Kitchen Cabinet		Кухонный Ящик из тëмного дуба			
 block	mangrove_kitchen_cabinet	Mangrove Kitchen Cabinet		Мангровый Кухонный Ящик			
 block	cherry_kitchen_cabinet	Cherry Kitchen Cabinet		Вишнёвый Кухонный Ящик			
@@ -215,6 +234,7 @@ block	spruce_ladder	Spruce Ladder
 block	birch_ladder	Birch Ladder					
 block	jungle_ladder	Jungle Ladder					
 block	acacia_ladder	Acacia Ladder					
+block	bamboo_ladder	Bamboo Ladder					
 block	dark_oak_ladder	Dark Oak Ladder					
 block	mangrove_ladder	Mangrove Ladder					
 block	cherry_ladder	Cherry Ladder					
@@ -267,6 +287,7 @@ block	spruce_rising_door	Spruce Rising Door
 block	birch_rising_door	Birch Rising Door					
 block	jungle_rising_door	Jungle Rising Door					
 block	acacia_rising_door	Acacia Rising Door					
+block	bamboo_rising_door	Bamboo Rising Door					
 block	dark_oak_rising_door	Dark Oak Rising Door					
 block	mangrove_rising_door	Mangrove Rising Door					
 block	cherry_rising_door	Cherry Rising Door					
@@ -303,6 +324,7 @@ block	spruce_street_light	Spruce Street Light
 block	birch_street_light	Birch Street Light					
 block	jungle_street_light	Jungle Street Light					
 block	acacia_street_light	Acacia Street Light					
+block	bamboo_street_light	Bamboo Street Light					
 block	dark_oak_street_light	Dark Oak Street Light					
 block	mangrove_street_light	Mangrove Street Light					
 block	cherry_street_light	Cherry Street Light					
@@ -339,6 +361,7 @@ block	spruce_upholstery_couch	Spruce Upholstery Couch
 block	birch_upholstery_couch	Birch Upholstery Couch					
 block	jungle_upholstery_couch	Jungle Upholstery Couch					
 block	acacia_upholstery_couch	Acacia Upholstery Couch					
+block	bamboo_upholstery_couch	Bamboo Upholstery Couch					
 block	dark_oak_upholstery_couch	Dark Oak Upholstery Couch					
 block	mangrove_upholstery_couch	Mangrove Upholstery Couch					
 block	cherry_upholstery_couch	Cherry Upholstery Couch					
@@ -369,7 +392,7 @@ block	trashcan	Trashcan		Мусорник
 block	pipe	Pipe					
 block	radiator	Radiator					
 block	curtains	Curtains					
-block	security_camera	Surveillance Camera					
+block	surveillance_camera	Surveillance Camera					
 block	security_monitor	Security Monitor					
 item	padlock	Padlock					
 ui	expand_variants	%s Click to Expand Variants		%s Нажмите чтобы показать варианты	%s Premi per espandere le varianti		
@@ -380,12 +403,8 @@ ui	craft_documentation	%s Press %s to View Documentation		%s Нажмите %s �
 ui	crafting_materials	%s Crafting materials		%s Материалы для крафта	%s Materiali per fabbricare		
 ui	crafting_not_enough_items	Not enough items to craft %s		Недостаточно предметов чтобы скрафтить %s	Non hai abbastanza oggetti per fabbricare %s		
 ui	navigation	Navigation		Навигация	Navigazione		
-ui	blacklist_mode	%s Currently in %s blacklisting mode!		%s В настоящее время находится в режиме черного списка %s!	%s Attualmente nella %s modalità lista nera!		
 ui	item_required	You need %s to unlock this block					
-ui	camera.no_name	You must rename the camera using a %s before you can link it!					
-ui	camera.renamed	Renamed camera to [%s]					
-ui	camera.linked	The camera was linked successfully					
-ui	camera.spectating	Now spectating [%s]					
 ui	camera.disabled	All cameras are currently disabled					
-ui	camera.disconnected	This monitor has not been linked yet					
-ui	camera.lost	The camera you are trying to view has been broken					
+ui	camera.offline	This monitor has not been linked yet					
+ui	camera.registered	The camera was linked successfully					
+ui	camera.not_found	The camera you are trying to view has been broken					
