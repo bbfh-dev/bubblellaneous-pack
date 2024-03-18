@@ -205,7 +205,17 @@ class Base:
 
         if self.prop("is_single") and not self.prop("is_unlisted"):
             tree.make_bench_registry(
-                tree.default_format(ctx, self.format), self.category_value, self.name
+                tree.default_format(ctx, self.format),
+                self.category_value,
+                self.name,
+                items=(
+                    []
+                    if len(children := self.read_property("children", [])) == 0
+                    else [
+                        tree.default_format(ctx, self.format)("[unit]/[name]"),
+                        *children,
+                    ]
+                ),
             )
 
         if self.prop("blockstates"):

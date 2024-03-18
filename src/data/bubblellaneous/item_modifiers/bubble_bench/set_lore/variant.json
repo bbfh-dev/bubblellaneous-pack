@@ -1,7 +1,7 @@
 [
     {
         "function": "minecraft:set_nbt",
-        "tag": "{bubblellaneous: {is_gui: 1b, is_variant: 1b}}"
+        "tag": "{bubblellaneous: {is_gui: 1b, is_variant: 1b}, HideFlags: 255}"
     },
     {
         "function": "minecraft:set_lore",
@@ -16,7 +16,7 @@
                         "text": "≔"
                     }
                 ],
-                "color": "dark_gray",
+                "color": "green",
                 "italic": false
             }
         ],

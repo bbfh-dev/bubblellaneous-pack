@@ -1,0 +1,184 @@
+from plugins.bubblellaneous.internal import (
+    Block,
+    BlockData,
+    BlockMaterials,
+    BlockType,
+    Variant,
+)
+from plugins.bubblellaneous.internal.unit.variant import BlockVariant
+
+
+class WindowBoards(BlockVariant):
+    """
+    :yellow [☶ Description]
+    TODO
+    """
+
+    material = BlockMaterials.SOLID
+
+    base = BlockData.Base.VOID
+    sound = BlockData.Sound.WOOD
+    facing = BlockData.Facing.WALL_NORMAL
+    recipe = [
+        BlockData.RecipeEntry("block", "[base]", 4),
+    ]
+    tags = [BlockData.Uses.BLOCKSTATES]
+    blockstates = BlockData.BlockStates(
+        "@self",
+        BlockData.State("default"),
+        BlockData.State("left", "~~01~~"),
+        BlockData.State("right", "~~10~~"),
+        BlockData.State("middle", "~~11~~"),
+    )
+
+
+class Hatch(Block):
+    """
+    :yellow [☶ Description]
+    TODO
+    """
+
+    base = BlockData.Base.VOID
+    sound = BlockData.Sound.INDUSTRIAL
+    facing = BlockData.Facing.NONE
+    recipe = [
+        BlockData.RecipeEntry("block", "stone", 4),
+    ]
+    tags = [
+        BlockData.Uses.PLACE,
+        BlockData.Uses.NO_BASE,
+        BlockData.Uses.CUSTOM_BASE,
+        BlockData.Uses.TIMER,
+    ]
+    blockstates = BlockData.BlockStates(
+        "<manual>",
+        BlockData.State("default"),
+        BlockData.State("rim"),
+        BlockData.State("latch"),
+    )
+
+
+class TrafficBarrier(Block):
+    """
+    :yellow [☶ Description]
+    TODO
+    """
+
+    children = ["block/mossy_traffic_barrier"]
+    base = BlockData.Base.UPPER
+    sound = BlockData.Sound.WOOD
+    facing = BlockData.Facing.PLAYER_PRECISE
+    recipe = [
+        BlockData.RecipeEntry("block", "oak_planks", 6),
+    ]
+    tags = []
+
+
+class MossyTrafficBarrier(Block):
+    """
+    :yellow [☶ Description]
+    TODO
+    """
+
+    is_unlisted = True
+    base = BlockData.Base.UPPER
+    sound = BlockData.Sound.WOOD
+    facing = BlockData.Facing.PLAYER_PRECISE
+    recipe = [
+        BlockData.RecipeEntry("block", "oak_planks", 6),
+    ]
+    tags = []
+
+
+class Pole(Block):
+    """
+    :yellow [☶ Description]
+    TODO
+    """
+
+    base = BlockData.Base.CHAIN
+    sound = BlockData.Sound.INDUSTRIAL
+    facing = BlockData.Facing.NONE
+    recipe = [
+        BlockData.RecipeEntry("block", "chain", 1),
+    ]
+    tags = []
+
+
+class RoadSign(Block):
+    """
+    :yellow [☶ Description]
+    TODO
+    """
+
+    base = BlockData.Base.CHAIN
+    sound = BlockData.Sound.INDUSTRIAL
+    facing = BlockData.Facing.PLAYER
+    recipe = [
+        BlockData.RecipeEntry("block", "chain", 1),
+    ]
+    tags = []
+
+
+class NoEntranceRoadSign(RoadSign):
+    children = [
+        "block/park_road_sign",
+        "block/arrow_down_road_sign",
+        "block/arrow_up_road_sign",
+        "block/arrow_left_road_sign",
+        "block/arrow_right_road_sign",
+    ]
+
+
+class ParkRoadSign(RoadSign):
+    is_unlisted = True
+
+
+class ArrowDownRoadSign(RoadSign):
+    is_unlisted = True
+
+
+class ArrowUpRoadSign(RoadSign):
+    is_unlisted = True
+
+
+class ArrowLeftRoadSign(RoadSign):
+    is_unlisted = True
+
+
+class ArrowRightRoadSign(RoadSign):
+    is_unlisted = True
+
+
+class Bell(Block):
+    """
+    :yellow [☶ Description]
+    TODO
+    """
+
+    base = BlockData.Base.VOID
+    sound = BlockData.Sound.INDUSTRIAL
+    facing = BlockData.Facing.NONE
+    recipe = [
+        BlockData.RecipeEntry("block", "stone", 1),
+    ]
+    tags = [
+        BlockData.Uses.PLACE,
+        BlockData.Uses.NO_BASE,
+        BlockData.Uses.CUSTOM_BASE,
+    ]
+
+
+class Box(Block):
+    """
+    :yellow [☶ Description]
+    TODO
+    """
+
+    base = BlockData.Base.CONTAINER
+    sound = BlockData.Sound.WOOL
+    facing = BlockData.Facing.PLAYER
+    recipe = [
+        BlockData.RecipeEntry("item", "leather", 8),
+    ]
+    tags = [BlockData.Uses.BRIGHTNESS_FIX]

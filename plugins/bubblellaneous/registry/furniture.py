@@ -1,5 +1,10 @@
-from plugins.bubblellaneous.internal import (Block, BlockData, BlockMaterials,
-                                             BlockType, Variant)
+from plugins.bubblellaneous.internal import (
+    Block,
+    BlockData,
+    BlockMaterials,
+    BlockType,
+    Variant,
+)
 from plugins.bubblellaneous.internal.unit.variant import BlockVariant
 
 

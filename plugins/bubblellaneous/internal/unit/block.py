@@ -71,6 +71,7 @@ class BlockData:
         DRIPSTONE = (
             "pointed_dripstone[thickness=tip,vertical_direction=up,waterlogged=false]"
         )
+        CHAIN = "chain[axis=y]"
         VOID = "structure_void"
 
     class Sound(Enum):
@@ -81,6 +82,7 @@ class BlockData:
     class Facing(Enum):
         NONE = "none"
         PLAYER = "player"
+        PLAYER_PRECISE = "player_precise"
         NORMAL = "normal"
         WALL_NORMAL = "wall_normal"
         DOOR = "door"
@@ -284,6 +286,13 @@ class Block(Base):
 
     @override
     def prepare(self) -> Self:
+        if not self.read_property("base", None):
+            parent = self.__class__.mro()[1](self.category)
+            block_type = BlockType("default", [])
+        else:
+            parent = self
+            block_type = parent.read_property("block_type", BlockType("default", []))
+
         return self.set_properties(
             material="",
             name=self.name,
@@ -291,9 +300,10 @@ class Block(Base):
             unit="block",
             path=[self.name],
             is_single=True,
-            block_type=self.read_property("block_type", BlockType("default", [])),
+            block_type=block_type,
+            is_unlisted=self.read_property("is_unlisted", False),
             **{
-                key: self.read_property(key, None)
+                key: parent.read_property(key, None)
                 for key in [
                     "base",
                     "sound",
@@ -301,7 +311,6 @@ class Block(Base):
                     "recipe",
                     "tags",
                     "blockstates",
-                    "is_unlisted",
                 ]
             },
         )

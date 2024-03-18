@@ -63,5 +63,12 @@
 				"down": {"uv": [1, 1, 8, 8], "texture": "#hatch"}
 			}
 		}
-	]
+	],
+	"display": {
+		"gui": {
+			"rotation": [45, -115, 0],
+			"translation": [0, 3, 0],
+			"scale": [0.6, 0.6, 0.6]
+		}
+	}
 }

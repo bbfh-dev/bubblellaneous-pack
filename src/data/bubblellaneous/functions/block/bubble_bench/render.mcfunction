@@ -21,8 +21,13 @@ item modify block ~ ~ ~ container.1 bubblellaneous:bubble_bench/set_technology
 # loot replace block ~ ~ ~ container.9 loot bubblellaneous:item/white_key
 # item modify block ~ ~ ~ container.9 bubblellaneous:bubble_bench/set_food
 
-# loot replace block ~ ~ ~ container.10 loot bubblellaneous:item/white_key
-# item modify block ~ ~ ~ container.10 bubblellaneous:bubble_bench/set_miscellaneous
+loot replace block ~ ~ ~ container.10 loot bubblellaneous:block/traffic_barrier
+item modify block ~ ~ ~ container.10 bubblellaneous:bubble_bench/set_miscellaneous
+
+execute if data entity @s item.tag.bubblellaneous.block_properties{category: "furniture"} run item modify block ~ ~ ~ container.0 bubblellaneous:bubble_bench/set_selected
+execute if data entity @s item.tag.bubblellaneous.block_properties{category: "technology"} run item modify block ~ ~ ~ container.1 bubblellaneous:bubble_bench/set_selected
+execute if data entity @s item.tag.bubblellaneous.block_properties{category: "food"} run item modify block ~ ~ ~ container.9 bubblellaneous:bubble_bench/set_selected
+execute if data entity @s item.tag.bubblellaneous.block_properties{category: "miscellaneous"} run item modify block ~ ~ ~ container.10 bubblellaneous:bubble_bench/set_selected
 #endregion
 
 scoreboard players set gui.last_page local.tmp 1

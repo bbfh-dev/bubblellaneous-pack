@@ -229,6 +229,27 @@ block	gold_kitchen_cabinet	Golden Kitchen Cabinet
 block	diamond_kitchen_cabinet	Diamond Kitchen Cabinet					
 block	emerald_kitchen_cabinet	Emerald Kitchen Cabinet					
 block	netherite_kitchen_cabinet	Netherite Kitchen Cabinet					
+block	oak_window_boards	Oak Window Boards					
+block	spruce_window_boards	Spruce Window Boards					
+block	birch_window_boards	Birch Window Boards					
+block	jungle_window_boards	Jungle Window Boards					
+block	acacia_window_boards	Acacia Window Boards					
+block	bamboo_window_boards	Bamboo Window Boards					
+block	dark_oak_window_boards	Dark Oak Window Boards					
+block	mangrove_window_boards	Mangrove Window Boards					
+block	cherry_window_boards	Cherry Window Boards					
+block	crimson_window_boards	Crimson Window Boards					
+block	warped_window_boards	Warped Window Boards					
+block	stone_window_boards	Stone Window Boards					
+block	quartz_window_boards	Quartz Window Boards					
+block	bamboo_window_boards	Bamboo Window Boards					
+block	deepslate_window_boards	Deepslate Window Boards					
+block	iron_window_boards	Iron Window Boards					
+block	copper_window_boards	Copper Window Boards					
+block	gold_window_boards	Golden Window Boards					
+block	diamond_window_boards	Diamond Window Boards					
+block	emerald_window_boards	Emerald Window Boards					
+block	netherite_window_boards	Netherite Window Boards					
 block	oak_ladder	Oak Ladder					
 block	spruce_ladder	Spruce Ladder					
 block	birch_ladder	Birch Ladder					
@@ -394,6 +415,18 @@ block	radiator	Radiator
 block	curtains	Curtains					
 block	surveillance_camera	Surveillance Camera					
 block	security_monitor	Security Monitor					
+block	hatch	Hatch					
+block	traffic_barrier	Traffic Barrier					
+block	mossy_traffic_barrier	Mossy Traffic Barrier					
+block	pole	Pole					
+block	no_entrance_road_sign	No-Entrance Road Sign					
+block	park_road_sign	Park Road Sign					
+block	arrow_down_road_sign	Arrow-down Road Sign					
+block	arrow_up_road_sign	Arrow-up Road Sign					
+block	arrow_left_road_sign	Arrow-left Road Sign					
+block	arrow_right_road_sign	Arrow-right Road Sign					
+block	bell	Bell					
+block	box	Box					
 item	padlock	Padlock					
 ui	expand_variants	%s Click to Expand Variants		%s Нажмите чтобы показать варианты	%s Premi per espandere le varianti		
 ui	craft	%s Click to Craft		%s Нажмите чтобы скрафтить	%s Premi per fabbricare		

@@ -122,10 +122,10 @@ class Tree:
     def make_loot_table(self, format: Callable, key: str, data: str):
         self.loot_tables[format(key)] = LootTable(json.loads(format(json.dumps(data))))
 
-    def make_bench_registry(self, format: Callable, category: str, name: str):
+    def make_bench_registry(self, format: Callable, category: str, name: str, items: list):
         self.bench_registry[category] = [
             *self.bench_registry.get(category, []),
-            BenchRegistry(name, format("[unit]/[name]"), []),
+            BenchRegistry(name, format("[unit]/[name]"), items, len(items)),
         ]
 
     def make_state_registry(self, block: str, data: list):
@@ -144,7 +144,7 @@ class Tree:
             if entry.entry == name
         ]
         if not indexes:
-            self.make_bench_registry(format, category, name)
+            self.make_bench_registry(format, category, name, [])
             return self.extend_bench_registry(format, category, name, item)
 
         self.bench_registry[category][indexes[0]] = self.bench_registry[category][

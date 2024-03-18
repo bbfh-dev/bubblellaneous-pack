@@ -1,6 +1,21 @@
 from plugins.bubblellaneous.internal.category import Category
 from plugins.bubblellaneous.internal.unit.base import Base
 from plugins.bubblellaneous.registry.furniture import *
+from plugins.bubblellaneous.registry.miscellaneous import (
+    ArrowDownRoadSign,
+    ArrowLeftRoadSign,
+    ArrowRightRoadSign,
+    ArrowUpRoadSign,
+    Bell,
+    Box,
+    Hatch,
+    MossyTrafficBarrier,
+    NoEntranceRoadSign,
+    ParkRoadSign,
+    Pole,
+    TrafficBarrier,
+    WindowBoards,
+)
 from plugins.bubblellaneous.registry.technology import *
 
 REGISTRY: list[Base] = [
@@ -36,4 +51,18 @@ REGISTRY: list[Base] = [
     SecurityMonitor(Category.TECHNOLOGY),
     Padlock(Category.TECHNOLOGY),
     Key(Category.TECHNOLOGY),
+    # ------
+    WindowBoards(Category.MISCELLANEOUS),
+    Hatch(Category.MISCELLANEOUS),
+    TrafficBarrier(Category.MISCELLANEOUS),
+    MossyTrafficBarrier(Category.MISCELLANEOUS),
+    Pole(Category.MISCELLANEOUS),
+    NoEntranceRoadSign(Category.MISCELLANEOUS),
+    ParkRoadSign(Category.MISCELLANEOUS),
+    ArrowUpRoadSign(Category.MISCELLANEOUS),
+    ArrowDownRoadSign(Category.MISCELLANEOUS),
+    ArrowLeftRoadSign(Category.MISCELLANEOUS),
+    ArrowRightRoadSign(Category.MISCELLANEOUS),
+    Box(Category.MISCELLANEOUS),
+    Bell(Category.MISCELLANEOUS),
 ]
