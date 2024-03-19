@@ -1,13 +1,26 @@
 from plugins.bubblellaneous.internal.category import Category
 from plugins.bubblellaneous.internal.unit.base import Base
+from plugins.bubblellaneous.registry.food import (
+    Broccoli,
+    Burger,
+    Cheese,
+    ChocolateBar,
+    CoffeeCup,
+    Cucumber,
+    Donut,
+    Grapes,
+    Omelette,
+    Toast,
+    Tomato,
+)
 from plugins.bubblellaneous.registry.furniture import *
 from plugins.bubblellaneous.registry.miscellaneous import (
     ArrowDownRoadSign,
     ArrowLeftRoadSign,
     ArrowRightRoadSign,
     ArrowUpRoadSign,
-    Bell,
     Box,
+    CallBell,
     Hatch,
     MossyTrafficBarrier,
     NoEntranceRoadSign,
@@ -64,5 +77,17 @@ REGISTRY: list[Base] = [
     ArrowLeftRoadSign(Category.MISCELLANEOUS),
     ArrowRightRoadSign(Category.MISCELLANEOUS),
     Box(Category.MISCELLANEOUS),
-    Bell(Category.MISCELLANEOUS),
+    CallBell(Category.MISCELLANEOUS),
+    # ------
+    CoffeeCup(Category.FOOD),
+    Cucumber(Category.FOOD),
+    Grapes(Category.FOOD),
+    Burger(Category.FOOD),
+    Toast(Category.FOOD),
+    Tomato(Category.FOOD),
+    Cheese(Category.FOOD),
+    ChocolateBar(Category.FOOD),
+    Donut(Category.FOOD),
+    Broccoli(Category.FOOD),
+    Omelette(Category.FOOD),
 ]

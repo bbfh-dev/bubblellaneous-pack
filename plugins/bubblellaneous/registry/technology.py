@@ -4,7 +4,6 @@ from plugins.bubblellaneous.internal import (
     BlockMaterials,
     Item,
     ItemData,
-    Variant,
 )
 from plugins.bubblellaneous.internal.unit.variant import BlockVariant, ItemVariant
 from plugins.utils import NBT
@@ -23,6 +22,7 @@ class Ladder(BlockVariant):
     facing = BlockData.Facing.WALL_NORMAL
     recipe = [
         BlockData.RecipeEntry("block", "ladder"),
+        BlockData.RecipeEntry("block", "[base]", 4),
     ]
     tags = [
         BlockData.Uses.PLACE,
@@ -74,7 +74,7 @@ class RisingDoor(BlockVariant):
     sound = BlockData.Sound.WOOD
     facing = BlockData.Facing.PLAYER
     recipe = [
-        BlockData.RecipeEntry("block", "[base]"),
+        BlockData.RecipeEntry("block", "[base]", 4),
     ]
     tags = [
         BlockData.Uses.PLACE,
@@ -247,6 +247,7 @@ class Radiator(Block):
     facing = BlockData.Facing.PLAYER
     recipe = [
         BlockData.RecipeEntry("block", "iron_block"),
+        BlockData.RecipeEntry("block", "copper_block"),
     ]
     tags = [
         BlockData.Uses.GUI,
@@ -270,7 +271,8 @@ class SurveillanceCamera(Block):
     sound = BlockData.Sound.INDUSTRIAL
     facing = BlockData.Facing.WALL_NORMAL
     recipe = [
-        BlockData.RecipeEntry("block", "iron_block"),
+        BlockData.RecipeEntry("item", "iron_ingot"),
+        BlockData.RecipeEntry("item", "ender_eye"),
     ]
     tags = [
         BlockData.Uses.PLACE,
@@ -296,7 +298,8 @@ class SecurityMonitor(Block):
     sound = BlockData.Sound.INDUSTRIAL
     facing = BlockData.Facing.WALL_NORMAL
     recipe = [
-        BlockData.RecipeEntry("block", "iron_block"),
+        BlockData.RecipeEntry("item", "iron_ingot", 2),
+        BlockData.RecipeEntry("block", "tinted_glass"),
     ]
     tags = [
         BlockData.Uses.PLACE,
@@ -311,9 +314,6 @@ class SecurityMonitor(Block):
     )
 
 
-# ------
-
-
 class Padlock(Item):
     """
     :yellow [☶ Description]
@@ -322,7 +322,7 @@ class Padlock(Item):
 
     base = ItemData.Base.INTERACTIVE
     recipe = [
-        BlockData.RecipeEntry("block", "iron_block"),
+        BlockData.RecipeEntry("item", "iron_ingot", 4),
     ]
     params = lambda *_: NBT({})
 
@@ -333,11 +333,12 @@ class Key(ItemVariant):
     TODO
     """
 
-    material = BlockMaterials.WOOL
+    material = BlockMaterials.DYE
 
     base = ItemData.Base.INTERACTIVE
     recipe = [
-        BlockData.RecipeEntry("block", "iron_block"),
+        BlockData.RecipeEntry("item", "iron_ingot"),
+        BlockData.RecipeEntry("item", "[color]"),
     ]
     params = lambda material, index: NBT(
         {"key": {"name": material.name, "index": index}}

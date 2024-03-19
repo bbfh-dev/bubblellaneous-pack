@@ -18,8 +18,8 @@ item modify block ~ ~ ~ container.0 bubblellaneous:bubble_bench/set_furniture
 loot replace block ~ ~ ~ container.1 loot bubblellaneous:block/iron_ladder
 item modify block ~ ~ ~ container.1 bubblellaneous:bubble_bench/set_technology
 
-# loot replace block ~ ~ ~ container.9 loot bubblellaneous:item/white_key
-# item modify block ~ ~ ~ container.9 bubblellaneous:bubble_bench/set_food
+loot replace block ~ ~ ~ container.9 loot bubblellaneous:item/cheese
+item modify block ~ ~ ~ container.9 bubblellaneous:bubble_bench/set_food
 
 loot replace block ~ ~ ~ container.10 loot bubblellaneous:block/traffic_barrier
 item modify block ~ ~ ~ container.10 bubblellaneous:bubble_bench/set_miscellaneous

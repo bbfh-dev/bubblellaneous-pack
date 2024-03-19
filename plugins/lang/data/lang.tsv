@@ -425,9 +425,20 @@ block	arrow_down_road_sign	Arrow-down Road Sign
 block	arrow_up_road_sign	Arrow-up Road Sign					
 block	arrow_left_road_sign	Arrow-left Road Sign					
 block	arrow_right_road_sign	Arrow-right Road Sign					
-block	bell	Bell					
+block	call_bell	Call Bell					
 block	box	Box					
 item	padlock	Padlock					
+item	coffee_cup	Coffee Cup					
+item	cucumber	Cucumber					
+item	grapes	Grapes					
+item	burger	Burger					
+item	toast	Toast					
+item	tomato	Tomato					
+item	cheese	Cheese					
+item	chocolate_bar	Chocolate bar					
+item	donut	Donut					
+item	broccoli	Broccoli					
+item	omelette	Omelette					
 ui	expand_variants	%s Click to Expand Variants		%s Нажмите чтобы показать варианты	%s Premi per espandere le varianti		
 ui	craft	%s Click to Craft		%s Нажмите чтобы скрафтить	%s Premi per fabbricare		
 ui	craft_maximum	%s Hold Shift to Craft Maximum		%s Удерживайте Shift, чтобы скрафтить максимум	%s Mantieni Shift per fabbricare il massimo		

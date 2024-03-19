@@ -2,8 +2,8 @@
 	"credit": "Bubblellaneous - by bbfh",
 	"parent": "minecraft:block/cube",
 	"textures": {
-		"particle": "bubblellaneous:block/bell",
-		"bell": "bubblellaneous:block/bell"
+		"particle": "bubblellaneous:block/call_bell",
+		"bell": "bubblellaneous:block/call_bell"
 	},
 	"elements": [
 		{

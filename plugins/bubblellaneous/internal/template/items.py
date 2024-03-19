@@ -7,4 +7,12 @@ ITEMS_TEMPLATE = {
         "parent": "minecraft:item/generated",
         "textures": {"layer0": "minecraft:item/item_frame"},
     },
+    "minecraft:bread": {
+        "parent": "minecraft:item/generated",
+        "textures": {"layer0": "minecraft:item/bread"},
+    },
+    "minecraft:honey_bottle": {
+        "parent": "minecraft:item/generated",
+        "textures": {"layer0": "minecraft:item/honey_bottle"},
+    },
 }

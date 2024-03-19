@@ -8,6 +8,8 @@ from .base import Base
 class ItemData:
     class Base(Enum):
         INTERACTIVE = "minecraft:carrot_on_a_stick"
+        DRINK = "minecraft:honey_bottle"
+        FOOD = "minecraft:bread"
 
 
 class Item(Base):

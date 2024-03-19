@@ -1,10 +1,4 @@
-from plugins.bubblellaneous.internal import (
-    Block,
-    BlockData,
-    BlockMaterials,
-    BlockType,
-    Variant,
-)
+from plugins.bubblellaneous.internal import Block, BlockData, BlockMaterials, BlockType
 from plugins.bubblellaneous.internal.unit.variant import BlockVariant
 
 
@@ -358,6 +352,7 @@ class TableLamp(BlockVariant):
     sound = BlockData.Sound.WOOD
     facing = BlockData.Facing.NONE
     recipe = [
+        BlockData.RecipeEntry("item", "glowstone_dust"),
         BlockData.RecipeEntry("block", "[color]", 4),
     ]
     tags = [
@@ -379,6 +374,7 @@ class StreetLight(BlockVariant):
     sound = BlockData.Sound.WOOD
     facing = BlockData.Facing.NORMAL
     recipe = [
+        BlockData.RecipeEntry("item", "glowstone_dust"),
         BlockData.RecipeEntry("block", "[base]", 4),
     ]
     tags = [
@@ -406,6 +402,7 @@ class DeskLamp(BlockVariant):
     sound = BlockData.Sound.WOOD
     facing = BlockData.Facing.PLAYER
     recipe = [
+        BlockData.RecipeEntry("item", "glowstone_dust"),
         BlockData.RecipeEntry("block", "[color]", 4),
     ]
     tags = [
@@ -456,7 +453,8 @@ class FloorLamp(BlockVariant):
     sound = BlockData.Sound.WOOL
     facing = BlockData.Facing.NONE
     recipe = [
-        BlockData.RecipeEntry("block", "[color]", 6),
+        BlockData.RecipeEntry("item", "glowstone_dust"),
+        BlockData.RecipeEntry("block", "[color]", 4),
     ]
     tags = [
         BlockData.Uses.PLACE,

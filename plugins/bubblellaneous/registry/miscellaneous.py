@@ -1,10 +1,4 @@
-from plugins.bubblellaneous.internal import (
-    Block,
-    BlockData,
-    BlockMaterials,
-    BlockType,
-    Variant,
-)
+from plugins.bubblellaneous.internal import Block, BlockData, BlockMaterials
 from plugins.bubblellaneous.internal.unit.variant import BlockVariant
 
 
@@ -42,7 +36,7 @@ class Hatch(Block):
     sound = BlockData.Sound.INDUSTRIAL
     facing = BlockData.Facing.NONE
     recipe = [
-        BlockData.RecipeEntry("block", "stone", 4),
+        BlockData.RecipeEntry("block", "iron_ingot", 4),
     ]
     tags = [
         BlockData.Uses.PLACE,
@@ -86,6 +80,7 @@ class MossyTrafficBarrier(Block):
     facing = BlockData.Facing.PLAYER_PRECISE
     recipe = [
         BlockData.RecipeEntry("block", "oak_planks", 6),
+        BlockData.RecipeEntry("block", "moss", 1),
     ]
     tags = []
 
@@ -116,6 +111,7 @@ class RoadSign(Block):
     facing = BlockData.Facing.PLAYER
     recipe = [
         BlockData.RecipeEntry("block", "chain", 1),
+        BlockData.RecipeEntry("block", "white_banner", 1),
     ]
     tags = []
 
@@ -150,7 +146,7 @@ class ArrowRightRoadSign(RoadSign):
     is_unlisted = True
 
 
-class Bell(Block):
+class CallBell(Block):
     """
     :yellow [☶ Description]
     TODO
@@ -160,7 +156,7 @@ class Bell(Block):
     sound = BlockData.Sound.INDUSTRIAL
     facing = BlockData.Facing.NONE
     recipe = [
-        BlockData.RecipeEntry("block", "stone", 1),
+        BlockData.RecipeEntry("item", "iron_ingot", 1),
     ]
     tags = [
         BlockData.Uses.PLACE,
