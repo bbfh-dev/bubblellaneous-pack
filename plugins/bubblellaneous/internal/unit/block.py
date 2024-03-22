@@ -8,9 +8,7 @@ from colorama import Fore
 
 from plugins.bubblellaneous.internal.category import Category
 from plugins.bubblellaneous.internal.template.mcfunction import (
-    PLACE_TEMPLATE,
-    RECIPE_TEMPLATE,
-)
+    PLACE_TEMPLATE, RECIPE_TEMPLATE)
 from plugins.bubblellaneous.internal.tree import BenchRegistry, Tree
 from plugins.utils.nbt import NBT
 
@@ -214,8 +212,8 @@ class BlockData:
 
 class BlockType:
     @classmethod
-    def shelf(cls, *, amount: int):
-        return BlockType("shelf", [], amount=amount)
+    def shelf(cls, *, amount: int, offset: float = 0.0):
+        return BlockType("shelf", [], amount=amount, offset=offset)
 
     @classmethod
     def seat(cls, *, width: float, height: float):

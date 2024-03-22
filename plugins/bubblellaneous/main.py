@@ -13,4 +13,4 @@ def compile(ctx: Context):
         unit_id += unit.allocate_ids()
 
     tree.compile(ctx)
-    print("(Bubblellaneous) Finished compiling.")
+    print(f"(Bubblellaneous) Finished compiling {len(REGISTRY)} units.")

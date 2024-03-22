@@ -1,34 +1,8 @@
 from plugins.bubblellaneous.internal.category import Category
 from plugins.bubblellaneous.internal.unit.base import Base
-from plugins.bubblellaneous.registry.food import (
-    Broccoli,
-    Burger,
-    Cheese,
-    ChocolateBar,
-    CoffeeCup,
-    Cucumber,
-    Donut,
-    Grapes,
-    Omelette,
-    Toast,
-    Tomato,
-)
+from plugins.bubblellaneous.registry.food import *
 from plugins.bubblellaneous.registry.furniture import *
-from plugins.bubblellaneous.registry.miscellaneous import (
-    ArrowDownRoadSign,
-    ArrowLeftRoadSign,
-    ArrowRightRoadSign,
-    ArrowUpRoadSign,
-    Box,
-    CallBell,
-    Hatch,
-    MossyTrafficBarrier,
-    NoEntranceRoadSign,
-    ParkRoadSign,
-    Pole,
-    TrafficBarrier,
-    WindowBoards,
-)
+from plugins.bubblellaneous.registry.miscellaneous import *
 from plugins.bubblellaneous.registry.technology import *
 
 REGISTRY: list[Base] = [
@@ -64,6 +38,11 @@ REGISTRY: list[Base] = [
     SecurityMonitor(Category.TECHNOLOGY),
     Padlock(Category.TECHNOLOGY),
     Key(Category.TECHNOLOGY),
+    KeypadLock(Category.TECHNOLOGY),
+    RetinaScanner(Category.TECHNOLOGY),
+    ItemScanner(Category.TECHNOLOGY),
+    Computer(Category.TECHNOLOGY),
+    Calculator(Category.TECHNOLOGY),
     # ------
     WindowBoards(Category.MISCELLANEOUS),
     Hatch(Category.MISCELLANEOUS),
@@ -78,6 +57,12 @@ REGISTRY: list[Base] = [
     ArrowRightRoadSign(Category.MISCELLANEOUS),
     Box(Category.MISCELLANEOUS),
     CallBell(Category.MISCELLANEOUS),
+    VendingMachine(Category.MISCELLANEOUS),
+    Megaphone(Category.MISCELLANEOUS),
+    Cup(Category.MISCELLANEOUS),
+    Clipboard(Category.MISCELLANEOUS),
+    Plate(Category.MISCELLANEOUS),
+    Speakers(Category.MISCELLANEOUS),
     # ------
     CoffeeCup(Category.FOOD),
     Cucumber(Category.FOOD),
@@ -90,4 +75,7 @@ REGISTRY: list[Base] = [
     Donut(Category.FOOD),
     Broccoli(Category.FOOD),
     Omelette(Category.FOOD),
+    Strawberry(Category.FOOD),
+    Cereal(Category.FOOD),
+    BeerBottle(Category.FOOD),
 ]

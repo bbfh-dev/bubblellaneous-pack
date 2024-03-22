@@ -66,7 +66,7 @@ class BlockMaterials:
 
     DYE: list[BlockData.Material] = [
         BlockData.Material(
-            color, f"{color}_wool", f"{color}_terracotta", color=f"{color}_dye"
+            color, f"{color}", f"{color}_terracotta", color=f"{color}_dye"
         )
         for color in COLORS
     ]

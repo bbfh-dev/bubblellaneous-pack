@@ -1,5 +1,6 @@
 from plugins.bubblellaneous.internal import BlockData, Item
 from plugins.bubblellaneous.internal.unit.item import ItemData
+from plugins.bubblellaneous.internal.unit.variant import BlockMaterials, ItemVariant
 from plugins.utils.nbt import NBT
 
 
@@ -146,3 +147,47 @@ class Omelette(Item):
         BlockData.RecipeEntry("item", "egg"),
     ]
     params = lambda *_: NBT({})
+
+
+class Strawberry(Item):
+    """
+    :yellow [☶ Description]
+    TODO
+    """
+
+    base = ItemData.Base.FOOD
+    recipe = [
+        BlockData.RecipeEntry("item", "wheat_seeds"),
+    ]
+    params = lambda *_: NBT({})
+
+
+class Cereal(Item):
+    """
+    :yellow [☶ Description]
+    TODO
+    """
+
+    base = ItemData.Base.FOOD
+    recipe = [
+        BlockData.RecipeEntry("item", "wheat", 2),
+    ]
+    params = lambda *_: NBT({})
+
+
+class BeerBottle(ItemVariant):
+    """
+    :yellow [☶ Description]
+    TODO
+    """
+
+    material = BlockMaterials.DYE
+
+    base = ItemData.Base.DRINK
+    recipe = [
+        BlockData.RecipeEntry("item", "glass_bottle"),
+        BlockData.RecipeEntry("item", "[color]"),
+    ]
+    params = lambda material, index: NBT(
+        {"key": {"name": material.name, "index": index}}
+    )

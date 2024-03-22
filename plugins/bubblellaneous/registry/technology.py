@@ -307,7 +307,7 @@ class SecurityMonitor(Block):
         BlockData.Uses.CUSTOM_BASE,
     ]
     blockstates = BlockData.BlockStates(
-        "@self",
+        "<manual>",
         BlockData.State("default"),
         BlockData.State("off"),
         BlockData.State("disabled"),
@@ -343,3 +343,117 @@ class Key(ItemVariant):
     params = lambda material, index: NBT(
         {"key": {"name": material.name, "index": index}}
     )
+
+
+class KeypadLock(Block):
+    """
+    :yellow [☶ Description]
+    TODO
+    """
+
+    base = BlockData.Base.SOLID
+    sound = BlockData.Sound.INDUSTRIAL
+    facing = BlockData.Facing.PLAYER
+    recipe = [
+        BlockData.RecipeEntry("block", "iron_block"),
+    ]
+    tags = [
+        BlockData.Uses.PLACE,
+        BlockData.Uses.BRIGHTNESS_FIX,
+        BlockData.Uses.TIMER,
+    ]
+
+
+class RetinaScanner(Block):
+    """
+    :yellow [☶ Description]
+    TODO
+    """
+
+    base = BlockData.Base.CONTAINER
+    sound = BlockData.Sound.INDUSTRIAL
+    facing = BlockData.Facing.PLAYER
+    recipe = [
+        BlockData.RecipeEntry("block", "iron_block"),
+        BlockData.RecipeEntry("item", "spyglass"),
+    ]
+    tags = [
+        BlockData.Uses.GUI,
+        BlockData.Uses.BRIGHTNESS_FIX,
+        BlockData.Uses.TIMER,
+    ]
+    blockstates = BlockData.BlockStates(
+        "<manual>",
+        BlockData.State("default"),
+        BlockData.State("scan"),
+        BlockData.State("open"),
+        BlockData.State("error"),
+    )
+
+
+class ItemScanner(Block):
+    """
+    :yellow [☶ Description]
+    TODO
+    """
+
+    base = BlockData.Base.CONTAINER
+    sound = BlockData.Sound.INDUSTRIAL
+    facing = BlockData.Facing.PLAYER
+    recipe = [
+        BlockData.RecipeEntry("block", "iron_block"),
+        BlockData.RecipeEntry("block", "hopper"),
+    ]
+    tags = [
+        BlockData.Uses.GUI,
+        BlockData.Uses.BRIGHTNESS_FIX,
+        BlockData.Uses.TIMER,
+    ]
+    blockstates = BlockData.BlockStates(
+        "<manual>",
+        BlockData.State("default"),
+        BlockData.State("scan"),
+        BlockData.State("open"),
+        BlockData.State("error"),
+    )
+
+
+class Computer(Block):
+    """
+    :yellow [☶ Description]
+    TODO
+    """
+
+    base = BlockData.Base.VOID
+    sound = BlockData.Sound.INDUSTRIAL
+    facing = BlockData.Facing.PLAYER
+    recipe = [
+        BlockData.RecipeEntry("block", "iron_block"),
+        BlockData.RecipeEntry("item", "redstone"),
+    ]
+    tags = [
+        BlockData.Uses.NO_BASE,
+        BlockData.Uses.TIMER,
+    ]
+    blockstates = BlockData.BlockStates(
+        "<manual>",
+        BlockData.State("default"),
+        BlockData.State("boot"),
+        BlockData.State("login"),
+    )
+
+
+class Calculator(Block):
+    """
+    :yellow [☶ Description]
+    TODO
+    """
+
+    base = BlockData.Base.VOID
+    sound = BlockData.Sound.INDUSTRIAL
+    facing = BlockData.Facing.PLAYER_PRECISE
+    recipe = [
+        BlockData.RecipeEntry("item", "iron_ingot"),
+        BlockData.RecipeEntry("item", "redstone"),
+    ]
+    tags = []

@@ -352,7 +352,6 @@ class TableLamp(BlockVariant):
     sound = BlockData.Sound.WOOD
     facing = BlockData.Facing.NONE
     recipe = [
-        BlockData.RecipeEntry("item", "glowstone_dust"),
         BlockData.RecipeEntry("block", "[color]", 4),
     ]
     tags = [
@@ -374,7 +373,6 @@ class StreetLight(BlockVariant):
     sound = BlockData.Sound.WOOD
     facing = BlockData.Facing.NORMAL
     recipe = [
-        BlockData.RecipeEntry("item", "glowstone_dust"),
         BlockData.RecipeEntry("block", "[base]", 4),
     ]
     tags = [
@@ -402,8 +400,8 @@ class DeskLamp(BlockVariant):
     sound = BlockData.Sound.WOOD
     facing = BlockData.Facing.PLAYER
     recipe = [
-        BlockData.RecipeEntry("item", "glowstone_dust"),
         BlockData.RecipeEntry("block", "[color]", 4),
+        BlockData.RecipeEntry("item", "glowstone_dust"),
     ]
     tags = [
         BlockData.Uses.PLACE,
