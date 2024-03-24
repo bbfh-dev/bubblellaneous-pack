@@ -104,4 +104,4 @@ This pack uses [Beet](https://github.com/mcbeet/beet) Python module, and [rye](h
 # 🧑‍⚖️ Licensing
 
 - The project with its python code uses [MIT](./LICENSE) license.
-- All minecraft assets/code use [CC BY-NC-SA 4.0](./src/LICENSE) license.
+- All minecraft assets/code use [CC BY-SA 4.0](./src/LICENSE) license.
