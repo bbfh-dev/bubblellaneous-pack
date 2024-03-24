@@ -1,0 +1,6 @@
+{
+	"parent": "bubblellaneous:block/rotated_road_sign",
+	"textures": {
+		"sign": "bubblellaneous:block/road_sign/arrow_down"
+	}
+}

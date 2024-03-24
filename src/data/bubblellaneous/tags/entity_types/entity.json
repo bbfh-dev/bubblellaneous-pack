@@ -4,6 +4,7 @@
         "item_display",
         "text_display",
         "interaction",
+        "cave_spider",
         "marker"
     ]
 }

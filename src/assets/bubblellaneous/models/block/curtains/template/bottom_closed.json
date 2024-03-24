@@ -1,0 +1,19 @@
+{
+  "credit": "Bubblellaneous - by bbfh",
+  "parent": "minecraft:block/block",
+  "textures": {
+    "0": "bubblellaneous:block/curtains",
+    "particle": "bubblellaneous:block/curtains"
+  },
+  "elements": [
+    {
+      "from": [0, 0, 15.9],
+      "to": [16, 16, 15.9],
+      "faces": {
+        "north": { "uv": [8, 8, 16, 16], "texture": "#0" },
+        "south": { "uv": [16, 8, 8, 16], "texture": "#0" }
+      }
+    }
+  ]
+}
+

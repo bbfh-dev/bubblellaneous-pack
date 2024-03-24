@@ -1,6 +1,0 @@
-{
-    "parent": "bubblellaneous:gui/slot",
-    "textures": {
-        "overlay": "bubblellaneous:gui/arrow_right_inactive"
-    }
-}

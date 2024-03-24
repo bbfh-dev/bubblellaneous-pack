@@ -13,7 +13,7 @@ def beet_default(ctx: Context):
 
     for body in ctx.data.functions.values():
         for line in body.lines:
-            for i in [int(match) for match in re.findall(r"(\d+) local.int", line)]:
+            for i in [int(match) for match in re.findall(r"(\-?\d+) local.int", line)]:
                 numbers.add(i)
 
     ctx.data.functions["bubblellaneous:load"].lines.extend(

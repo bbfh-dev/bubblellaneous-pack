@@ -1,0 +1,30 @@
+{
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:player_interacted_with_entity",
+            "conditions": {
+                "player": [
+                    {
+                        "condition": "minecraft:inverted",
+                        "term": {
+                            "condition": "minecraft:entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "vehicle": {
+                                    "type": "minecraft:armor_stand"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "entity": {
+                    "type": "minecraft:interaction",
+                    "nbt": "{Tags:[\"local.ladder\"]}"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "bubblellaneous:player/event/use_block/ladder"
+    }
+}

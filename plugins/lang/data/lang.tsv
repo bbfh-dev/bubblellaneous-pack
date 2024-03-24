@@ -1,137 +1,556 @@
-CATEGORY	NAME	EN_US	EN_GB	RU_RU	IT_IT	PT_BR	JA_JP
-root	translation_author	Translated by BubbleFish	Translated by BubbleFish	Перевод: BubbleFish	Tradotto da FBreakDance30	the brickster	dorlonkho
-root	validate_pack_v1	%s Resource pack is successfully detected		%s Пакет ресурсов обнаружен успешно	%s Il pacchetto è stato rilevato con successo		
-block	bubble_bench	Bubble Bench		Бабл Верстак	Banco da lavoro bolla	Bancada Bubble	バブルベンチ
-block	oak_table	Oak Table		Дубовый Стол	Tavolo di quercia		
-block	spruce_table	Spruce Table		Еловый Стол	Tavolo di abete		
-block	birch_table	Birch Table		Берëзовый Стол	Tavolo di betulla		
-block	jungle_table	Jungle Table		Стол из тропического дерева	Tavolo della giungla		
-block	acacia_table	Acacia Table		Акациевый Стол	Tavolo di acacia		
-block	dark_oak_table	Dark Oak Table		Стол из тëмного дуба	Tavolo di quercia scura		
-block	mangrove_table	Mangrove Table		Мангровый Стол	Tavolo di mangrovia		
-block	cherry_table	Cherry Table		Вишнёвый Стол	Tavolo di ciliegio		
-block	crimson_table	Crimson Table		Багровый Стол	Tavolo cremisi		
-block	warped_table	Warped Table		Искажëнный Стол	Tavolo distorto		
-block	stone_table	Stone Table		Каменный Стол	Tavolo di pietra		
-block	quartz_table	Quartz Table		Кварцевый Стол	Tavolo di quarzo		
-block	oak_shelf	Oak Shelf		Дубовая Полка	Mensola di quercia		
-block	spruce_shelf	Spruce Shelf		Еловая Полка	Mensola di abete		
-block	birch_shelf	Birch Shelf		Берëзовая Полка	Mensola di betulla		
-block	jungle_shelf	Jungle Shelf		Полка из тропического дерева	Mensola della giungla		
-block	acacia_shelf	Acacia Shelf		Акациевая Полка	Mensola di acacia		
-block	dark_oak_shelf	Dark Oak Shelf		Полка из тëмного дуба	Mensola di quercia scura		
-block	mangrove_shelf	Mangrove Shelf		Мангровая Полка	Mensola di mangrovia		
-block	cherry_shelf	Cherry Shelf		Вишнёвая Полка	Mensola di ciliegio		
-block	crimson_shelf	Crimson Shelf		Багровая Полка	Mensola cremisi		
-block	warped_shelf	Warped Shelf		Искажëнная Полка	Mensola distorta		
-block	stone_shelf	Stone Shelf		Каменная Полка	Mensola di pietra		
-block	quartz_shelf	Quartz Shelf		Кварцевая Полка	Mensola di quarzo		
-block	oak_cabinet	Oak Cabinet		Дубовый Ящик	Comodino di quercia		
-block	spruce_cabinet	Spruce Cabinet		Еловый Ящик	Comodino di abete		
-block	birch_cabinet	Birch Cabinet		Берëзовый Ящик	Comodino di betulla		
-block	jungle_cabinet	Jungle Cabinet		Ящик из тропического дерева	Comodino della giungla		
-block	acacia_cabinet	Acacia Cabinet		Акациевый Ящик	Comodino di acacia		
-block	dark_oak_cabinet	Dark Oak Cabinet		Ящик из тëмного дуба	Comodino di quercia scura		
-block	mangrove_cabinet	Mangrove Cabinet		Мангровый Ящик	Comodino di mangrovia		
-block	cherry_cabinet	Cherry Cabinet		Вишнёвый Ящик	Comodino di ciliegio		
-block	crimson_cabinet	Crimson Cabinet		Багровый Ящик	Comodino cremisi		
-block	warped_cabinet	Warped Cabinet		Искажëнный Ящик	Comodino distorto		
-block	stone_cabinet	Stone Cabinet		Каменный Ящик	Comodino di pietra		
-block	quartz_cabinet	Quartz Cabinet		Кварцевый Ящик	Comodino di quarzo		
-block	oak_drawer	Oak Drawer		Дубовый Тумба	Cassetto di quercia		
-block	spruce_drawer	Spruce Drawer		Еловый Тумба	Cassetto di abete		
-block	birch_drawer	Birch Drawer		Берëзовый Тумба	Cassetto di betulla		
-block	jungle_drawer	Jungle Drawer		Тумба из тропического дерева	Cassetto della giungla		
-block	acacia_drawer	Acacia Drawer		Акациевый Тумба	Cassetto di acacia		
-block	dark_oak_drawer	Dark Oak Drawer		Тумба из тëмного дуба	Cassetto di quercia scura		
-block	mangrove_drawer	Mangrove Drawer		Мангровый Тумба	Cassetto di mangrovia		
-block	cherry_drawer	Cherry Drawer		Вишнёвый Тумба	Cassetto di ciliegio		
-block	crimson_drawer	Crimson Drawer		Багровый Тумба	Cassetto cremisi		
-block	warped_drawer	Warped Drawer		Искажëнный Тумба	Cassetto distorto		
-block	stone_drawer	Stone Drawer		Каменный Тумба	Cassetto di pietra		
-block	quartz_drawer	Quartz Drawer		Кварцевый Тумба	Cassetto di quarzo		
-block	oak_cupboard	Oak Cupboard		Дубовый Буфет	Credenza di quercia		
-block	spruce_cupboard	Spruce Cupboard		Еловый Буфет	Credenza di abete		
-block	birch_cupboard	Birch Cupboard		Берëзовый Буфет	Credenza di betulla		
-block	jungle_cupboard	Jungle Cupboard		Буфет из тропического дерева	Credenza della giungla		
-block	acacia_cupboard	Acacia Cupboard		Акациевый Буфет	Credenza di acacia		
-block	dark_oak_cupboard	Dark Oak Cupboard		Буфет из тëмного дуба	Credenza di quercia scura		
-block	mangrove_cupboard	Mangrove Cupboard		Мангровый Буфет	Credenza di mangrovia		
-block	cherry_cupboard	Cherry Cupboard		Вишнёвый Буфет	Credenza di ciliegio		
-block	crimson_cupboard	Crimson Cupboard		Багровый Буфет	Credenza cremisi		
-block	warped_cupboard	Warped Cupboard		Искажëнный Буфет	Credenza distorta		
-block	stone_cupboard	Stone Cupboard		Каменный Буфет	Credenza di pietra		
-block	quartz_cupboard	Quartz Cupboard		Кварцевый Буфет	Credenza di quarzo		
-block	oak_bench	Oak Bench		Дубовая Скамья	Panchina di quercia		
-block	spruce_bench	Spruce Bench		Еловая Скамья	Panchina di abete		
-block	birch_bench	Birch Bench		Берëзовая Скамья	Panchina di betulla		
-block	jungle_bench	Jungle Bench		Скамья из тропического дерева	Panchina della giungla		
-block	acacia_bench	Acacia Bench		Акациевая Скамья	Panchina di acacia		
-block	dark_oak_bench	Dark Oak Bench		Скамья из тëмного дуба	Panchina di quercia scura		
-block	mangrove_bench	Mangrove Bench		Мангровая Скамья	Panchina di mangrovia		
-block	cherry_bench	Cherry Bench		Вишнёвая Скамья	Panchina di ciliegio		
-block	crimson_bench	Crimson Bench		Багровая Скамья	Panchina cremisi		
-block	warped_bench	Warped Bench		Искажëнная Скамья	Panchina distorta		
-block	stone_bench	Stone Bench		Каменная Скамья	Panchina di pietra		
-block	quartz_bench	Quartz Bench		Кварцевая Скамья	Panchina di quarzo		
-block	oak_stool	Oak Stool		Дубовый Табурет	Sgabello di quercia		
-block	spruce_stool	Spruce Stool		Еловый Табурет	Sgabello di abete		
-block	birch_stool	Birch Stool		Берëзовый Табурет	Sgabello di betulla		
-block	jungle_stool	Jungle Stool		Табурет из тропического дерева	Sgabello della giungla		
-block	acacia_stool	Acacia Stool		Акациевый Табурет	Sgabello di acacia		
-block	dark_oak_stool	Dark Oak Stool		Табурет из тëмного дуба	Sgabello di quercia scura		
-block	mangrove_stool	Mangrove Stool		Мангровый Табурет	Sgabello di mangrovia		
-block	cherry_stool	Cherry Stool		Вишнёвый Табурет	Sgabello di ciliegio		
-block	crimson_stool	Crimson Stool		Багровый Табурет	Sgabello cremisi		
-block	warped_stool	Warped Stool		Искажëнный Табурет	Sgabello distorto		
-block	stone_stool	Stone Stool		Каменный Табурет	Sgabello di pietra		
-block	quartz_stool	Quartz Stool		Кварцевый Табурет	Sgabello di quarzo		
-block	oak_barstool	Oak Bar stool		Дубовый Барный стул	Sgabello da bar di quercia		
-block	spruce_barstool	Spruce Bar stool		Еловый Барный стул	Sgabello da bar di abete		
-block	birch_barstool	Birch Bar stool		Берëзовый Барный стул	Sgabello da bar di betulla		
-block	jungle_barstool	Jungle Bar stool		Барный стул из тропического дерева	Sgabello da bar della giungla		
-block	acacia_barstool	Acacia Bar stool		Акациевый Барный стул	Sgabello da bar di acacia		
-block	dark_oak_barstool	Dark Oak Bar stool		Барный стул из тëмного дуба	Sgabello da bar di quercia scura		
-block	mangrove_barstool	Mangrove Bar stool		Мангровый Барный стул	Sgabello da bar di mangrovia		
-block	cherry_barstool	Cherry Bar stool		Вишнёвый Барный стул	Sgabello da bar di ciliegio		
-block	crimson_barstool	Crimson Bar stool		Багровый Барный стул	Sgabello da bar cremisi		
-block	warped_barstool	Warped Bar stool		Искажëнный Барный стул	Sgabello da bar distorto		
-block	stone_barstool	Stone Bar stool		Каменный Барный стул	Sgabello da bar di pietra		
-block	quartz_barstool	Quartz Bar stool		Кварцевый Барный стул	Sgabello da bar di quarzo		
-block	oak_dinning_chair	Oak Dinning chair		Дубовый Обеденный стул	Sedia di quercia		
-block	spruce_dinning_chair	Spruce Dinning chair		Еловый Обеденный стул	Sedia di abete		
-block	birch_dinning_chair	Birch Dinning chair		Берëзовый Обеденный стул	Sedia di betulla		
-block	jungle_dinning_chair	Jungle Dinning chair		Обеденный стул из тропического дерева	Sedia della giungla		
-block	acacia_dinning_chair	Acacia Dinning chair		Акациевый Обеденный стул	Sedia di acacia		
-block	dark_oak_dinning_chair	Dark Oak Dinning chair		Обеденный стул из тëмного дуба	Sedia di quercia scura		
-block	mangrove_dinning_chair	Mangrove Dinning chair		Мангровый Обеденный стул	Sedia di mangrovia		
-block	cherry_dinning_chair	Cherry Dinning chair		Вишнёвый Обеденный стул	Sedia di ciliegio		
-block	crimson_dinning_chair	Crimson Dinning chair		Багровый Обеденный стул	Sedia cremisi		
-block	warped_dinning_chair	Warped Dinning chair		Искажëнный Обеденный стул	Sedia distorta		
-block	stone_dinning_chair	Stone Dinning chair		Каменный Обеденный стул	Sedia di pietra		
-block	quartz_dinning_chair	Quartz Dinning chair		Кварцевый Обеденный стул	Sedia di quarzo		
-block	white_couch	White Couch	White Sofa	Белый Диван	Divano bianco		
-block	orange_couch	Orange Couch	Orange Sofa	Оранжевый Диван	Divano arancione		
-block	magenta_couch	Magenta Couch	Magenta Sofa	Пурпурный Диван	Divano magenta		
-block	light_blue_couch	Light Blue Couch	Light Blue Sofa	Голубой Диван	Divano azzurro		
-block	yellow_couch	Yellow Couch	Yellow Sofa	Жёлтый Диван	Divano giallo		
-block	lime_couch	Lime Couch	Lime Sofa	Лаймовый Диван	Divano lime		
-block	pink_couch	Pink Couch	Pink Sofa	Розовый Диван	Divano rosa		
-block	gray_couch	Gray Couch	Gray Sofa	Серый Диван	Divano grigio		
-block	light_gray_couch	Light Gray Couch	Light Gray Sofa	Светло-серый Диван	Divano grigio chiaro		
-block	cyan_couch	Cyan Couch	Cyan Sofa	Бирюзовый Диван	Divano ciano		
-block	purple_couch	Purple Couch	Purple Sofa	Фиолетовый Диван	Divano viola		
-block	blue_couch	Blue Couch	Blue Sofa	Синий Диван	Divano blu		
-block	brown_couch	Brown Couch	Brown Sofa	Коричневый Диван	Divano marrone		
-block	green_couch	Green Couch	Green Sofa	Зелёный Диван	Divano verde		
-block	red_couch	Red Couch	Red Sofa	Красный Диван	Divano rosso		
-block	black_couch	Black Couch	Black Sofa	Чёрный Диван	Divano nero		
-ui	expand_variants	%s Click to Expand Variants		%s Нажмите чтобы показать варианты	%s Premi per espandere le varianti		
-ui	craft	%s Click to Craft		%s Нажмите чтобы скрафтить	%s Premi per fabbricare		
-ui	craft_maximum	%s Hold Shift to Craft Maximum		%s Удерживайте Shift, чтобы скрафтить максимум	%s Mantieni Shift per fabbricare il massimo		
-ui	jump_to_list_end_or_begin	%s Shift+Click an arrow to jump to the end		%s Shift+Нажмите на стрелку, чтобы перейти к концу	%s Fai Shift+Clic su una freccia per saltare alla fine		
-ui	craft_documentation	%s Press %s to View Documentation		%s Нажмите %s чтобы просмотреть документацию	%s Premi %s per vedere la documentazione		
-ui	crafting_materials	%s Crafting materials		%s Материалы для крафта	%s Materiali per fabbricare		
-ui	crafting_not_enough_items	Not enough items to craft %s		Недостаточно предметов чтобы скрафтить %s	Non hai abbastanza oggetti per fabbricare %s		
-ui	navigation	Navigation		Навигация	Navigazione		
-ui	blacklist_mode	%s Currently in %s blacklisting mode!		%s В настоящее время находится в режиме черного списка %s!	%s Attualmente nella %s modalità lista nera!		
+CATEGORY	NAME	EN_US	EN_GB	RU_RU	IT_IT	JA_JP
+root	translation_author	Translated by BubbleFish	Translated by BubbleFish	Перевод: BubbleFish	Tradotto da FBreakDance30	dorlonkho
+root	validate_pack_v1	%s Resource pack is successfully detected		%s Пакет ресурсов обнаружен успешно	%s Il pacchetto è stato rilevato con successo	
+group	furniture	%s Furniture		%s Мебель	Mobili	家具
+group	technology	%s Technology		%s Технологии	Tecnologia	セキュリティー
+group	food	%s Food		%s Еда	Cibo	食べ物
+group	miscellaneous	%s Miscellaneous		%s Прочее	Varie	その他
+block	bubble_bench	Bubble Bench		Бабл Верстак	Banco bolla	バブルベンチ
+block	oak_table	Oak Table		Дубовый Стол	Tavolo di quercia	オークのテーブル
+block	spruce_table	Spruce Table		Еловый Стол	Tavolo di abete	トウヒのテーブル
+block	birch_table	Birch Table		Берëзовый Стол	Tavolo di betulla	シラカバのテーブル
+block	jungle_table	Jungle Table		Стол из тропического дерева	Tavolo della giungla	ジャングルのテーブル
+block	acacia_table	Acacia Table		Акациевый Стол	Tavolo di acacia	アカシアのテーブル
+block	bamboo_table	Bamboo Table		Стол из бамбука	Tavolo di bambù	
+block	dark_oak_table	Dark Oak Table		Стол из тëмного дуба	Tavolo di quercia scura	ダークオークのテーブル
+block	mangrove_table	Mangrove Table		Мангровый Стол	Tavolo di mangrovia	
+block	cherry_table	Cherry Table		Вишнёвый Стол	Tavolo di ciliegio	
+block	crimson_table	Crimson Table		Багровый Стол	Tavolo cremisi	真紅のテーブル
+block	warped_table	Warped Table		Искажëнный Стол	Tavolo distorto	歪んだテーブル
+block	stone_table	Stone Table		Каменный Стол	Tavolo di pietra	石のテーブル
+block	quartz_table	Quartz Table		Кварцевый Стол	Tavolo di quarzo	
+block	deepslate_table	Deepslate Table		Глубинносланцевый Стол	Tavolo di ardesia profonda	
+block	iron_table	Iron Table		Железный Стол	Tavolo di ferro	
+block	copper_table	Copper Table		Медный Стол	Tavolo di rame	
+block	gold_table	Golden Table		Золотой Стол	Tavolo d'oro	
+block	diamond_table	Diamond Table		Алмазный Стол	Tavolo di diamante	
+block	emerald_table	Emerald Table		Изумрудный Стол	Tavolo di smeraldo	
+block	netherite_table	Netherite Table		Незеритовый Стол	Tavolo di netherite	
+block	oak_shelf	Oak Shelf		Дубовая Полка	Mensola di quercia	オークの壁掛け棚
+block	spruce_shelf	Spruce Shelf		Еловая Полка	Mensola di abete	トウヒの壁掛け棚
+block	birch_shelf	Birch Shelf		Берëзовая Полка	Mensola di betulla	シラカバの壁掛け棚
+block	jungle_shelf	Jungle Shelf		Полка из тропического дерева	Mensola della giungla	ジャングルの壁掛け棚
+block	acacia_shelf	Acacia Shelf		Акациевая Полка	Mensola di acacia	アカシアの壁掛け棚
+block	bamboo_shelf	Bamboo Shelf		Полка из бамбука	Mensola di bambù	
+block	dark_oak_shelf	Dark Oak Shelf		Полка из тëмного дуба	Mensola di quercia scura	ダークオークの壁掛け棚
+block	mangrove_shelf	Mangrove Shelf		Мангровая Полка	Mensola di mangrovia	
+block	cherry_shelf	Cherry Shelf		Вишнёвая Полка	Mensola di ciliegio	
+block	crimson_shelf	Crimson Shelf		Багровая Полка	Mensola cremisi	真紅の壁掛け棚
+block	warped_shelf	Warped Shelf		Искажëнная Полка	Mensola distorta	歪んだ壁掛け棚
+block	stone_shelf	Stone Shelf		Каменная Полка	Mensola di pietra	石の壁掛け棚
+block	quartz_shelf	Quartz Shelf		Кварцевая Полка	Mensola di quarzo	
+block	deepslate_shelf	Deepslate Shelf		Глубинносланцевая Полка	Mensola di ardesia profonda	
+block	iron_shelf	Iron Shelf		Железная Полка	Mensola di ferro	
+block	copper_shelf	Copper Shelf		Медная Полка	Mensola di rame	
+block	gold_shelf	Golden Shelf		Золотая Полка	Mensola d'oro	
+block	diamond_shelf	Diamond Shelf		Алмазная Полка	Mensola di diamante	
+block	emerald_shelf	Emerald Shelf		Изумрудная Полка	Mensola di smeraldo	
+block	netherite_shelf	Netherite Shelf		Незеритовая Полка	Mensola di netherite	
+block	oak_cabinet	Oak Cabinet		Дубовый Ящик	Comodino di quercia	オークのキャビネット
+block	spruce_cabinet	Spruce Cabinet		Еловый Ящик	Comodino di abete	トウヒのキャビネット
+block	birch_cabinet	Birch Cabinet		Берëзовый Ящик	Comodino di betulla	シラカバのキャビネット
+block	jungle_cabinet	Jungle Cabinet		Ящик из тропического дерева	Comodino della giungla	ジャングルのキャビネット
+block	acacia_cabinet	Acacia Cabinet		Акациевый Ящик	Comodino di acacia	アカシアのキャビネット
+block	bamboo_cabinet	Bamboo Cabinet		Ящик из бамбука	Comodino di bambù	
+block	dark_oak_cabinet	Dark Oak Cabinet		Ящик из тëмного дуба	Comodino di quercia scura	ダークオークのキャビネット
+block	mangrove_cabinet	Mangrove Cabinet		Мангровый Ящик	Comodino di mangrovia	
+block	cherry_cabinet	Cherry Cabinet		Вишнёвый Ящик	Comodino di ciliegio	
+block	crimson_cabinet	Crimson Cabinet		Багровый Ящик	Comodino cremisi	真紅のキャビネット
+block	warped_cabinet	Warped Cabinet		Искажëнный Ящик	Comodino distorto	歪んだキャビネット
+block	stone_cabinet	Stone Cabinet		Каменный Ящик	Comodino di pietra	石のキャビネット
+block	quartz_cabinet	Quartz Cabinet		Кварцевый Ящик	Comodino di quarzo	
+block	deepslate_cabinet	Deepslate Cabinet		Глубинносланцевый Ящик	Comodino di ardesia profonda	
+block	iron_cabinet	Iron Cabinet		Железный Ящик	Comodino di ferro	
+block	copper_cabinet	Copper Cabinet		Медный Ящик	Comodino di rame	
+block	gold_cabinet	Golden Cabinet		Золотой Ящик	Comodino d'oro	
+block	diamond_cabinet	Diamond Cabinet		Алмазный Ящик	Comodino di diamante	
+block	emerald_cabinet	Emerald Cabinet		Изумрудный Ящик	Comodino di smeraldo	
+block	netherite_cabinet	Netherite Cabinet		Незеритовый Ящик	Comodino di netherite	
+block	oak_drawer	Oak Drawer		Дубовая Тумба	Cassetto di quercia	オークの引き出し
+block	spruce_drawer	Spruce Drawer		Еловая Тумба	Cassetto di abete	トウヒの引き出し
+block	birch_drawer	Birch Drawer		Берëзовая Тумба	Cassetto di betulla	シラカバの引き出し
+block	jungle_drawer	Jungle Drawer		Тумба из тропического дерева	Cassetto della giungla	ジャングルの引き出し
+block	acacia_drawer	Acacia Drawer		Акациевая Тумба	Cassetto di acacia	アカシアの引き出し
+block	bamboo_drawer	Bamboo Drawer		Тумба из бамбука	Cassetto di bambù	
+block	dark_oak_drawer	Dark Oak Drawer		Тумба из тëмного дуба	Cassetto di quercia scura	ダークオークの引き出し
+block	mangrove_drawer	Mangrove Drawer		Мангровая Тумба	Cassetto di mangrovia	
+block	cherry_drawer	Cherry Drawer		Вишнёвая Тумба	Cassetto di ciliegio	
+block	crimson_drawer	Crimson Drawer		Багровая Тумба	Cassetto cremisi	真紅の引き出し
+block	warped_drawer	Warped Drawer		Искажëнная Тумба	Cassetto distorto	歪んだ引き出し
+block	stone_drawer	Stone Drawer		Каменная Тумба	Cassetto di pietra	石の引き出し
+block	quartz_drawer	Quartz Drawer		Кварцевая Тумба	Cassetto di quarzo	
+block	deepslate_drawer	Deepslate Drawer		Глубинносланцевая Тумба	Cassetto di ardesia profonda	
+block	iron_drawer	Iron Drawer		Железная Тумба	Cassetto di ferro	
+block	copper_drawer	Copper Drawer		Медная Тумба	Cassetto di rame	
+block	gold_drawer	Golden Drawer		Золотая Тумба	Cassetto d'oro	
+block	diamond_drawer	Diamond Drawer		Алмазная Тумба	Cassetto di diamante	
+block	emerald_drawer	Emerald Drawer		Изумрудная Тумба	Cassetto di smeraldo	
+block	netherite_drawer	Netherite Drawer		Незеритовая Тумба	Cassetto di netherite	
+block	oak_cupboard	Oak Cupboard		Дубовый Буфет	Credenza di quercia	オークの棚
+block	spruce_cupboard	Spruce Cupboard		Еловый Буфет	Credenza di abete	トウヒの棚
+block	birch_cupboard	Birch Cupboard		Берëзовый Буфет	Credenza di betulla	シラカバの棚
+block	jungle_cupboard	Jungle Cupboard		Буфет из тропического дерева	Credenza della giungla	ジャングルの棚
+block	acacia_cupboard	Acacia Cupboard		Акациевый Буфет	Credenza di acacia	アカシアの棚
+block	bamboo_cupboard	Bamboo Cupboard		Буфет из бамбука	Credenza di bambù	
+block	dark_oak_cupboard	Dark Oak Cupboard		Буфет из тëмного дуба	Credenza di quercia scura	ダークオークの棚
+block	mangrove_cupboard	Mangrove Cupboard		Мангровый Буфет	Credenza di mangrovia	
+block	cherry_cupboard	Cherry Cupboard		Вишнёвый Буфет	Credenza di ciliegio	
+block	crimson_cupboard	Crimson Cupboard		Багровый Буфет	Credenza cremisi	真紅の棚
+block	warped_cupboard	Warped Cupboard		Искажëнный Буфет	Credenza distorta	歪んだ棚
+block	stone_cupboard	Stone Cupboard		Каменный Буфет	Credenza di pietra	石の棚
+block	quartz_cupboard	Quartz Cupboard		Кварцевый Буфет	Credenza di quarzo	
+block	deepslate_cupboard	Deepslate Cupboard		Глубинносланцевый Буфет	Credenza di ardesia profonda	
+block	iron_cupboard	Iron Cupboard		Железный Буфет	Credenza di ferro	
+block	copper_cupboard	Copper Cupboard		Медный Буфет	Credenza di rame	
+block	gold_cupboard	Golden Cupboard		Золотой Буфет	Credenza d'oro	
+block	diamond_cupboard	Diamond Cupboard		Алмазный Буфет	Credenza di diamante	
+block	emerald_cupboard	Emerald Cupboard		Изумрудный Буфет	Credenza di smeraldo	
+block	netherite_cupboard	Netherite Cupboard		Незеритовый Буфет	Credenza di netherite	
+block	oak_bench	Oak Bench		Дубовая Скамья	Panchina di quercia	オークの腰かけ
+block	spruce_bench	Spruce Bench		Еловая Скамья	Panchina di abete	トウヒの腰かけ
+block	birch_bench	Birch Bench		Берëзовая Скамья	Panchina di betulla	シラカバの腰かけ
+block	jungle_bench	Jungle Bench		Скамья из тропического дерева	Panchina della giungla	ジャングルの腰かけ
+block	acacia_bench	Acacia Bench		Акациевая Скамья	Panchina di acacia	アカシアの腰かけ
+block	bamboo_bench	Bamboo Bench		Скамья из бамбука	Panchina di bambù	
+block	dark_oak_bench	Dark Oak Bench		Скамья из тëмного дуба	Panchina di quercia scura	ダークオークの腰かけ
+block	mangrove_bench	Mangrove Bench		Мангровая Скамья	Panchina di mangrovia	
+block	cherry_bench	Cherry Bench		Вишнёвая Скамья	Panchina di ciliegio	
+block	crimson_bench	Crimson Bench		Багровая Скамья	Panchina cremisi	真紅の腰かけ
+block	warped_bench	Warped Bench		Искажëнная Скамья	Panchina distorta	歪んだ腰かけ
+block	stone_bench	Stone Bench		Каменная Скамья	Panchina di pietra	石の腰かけ
+block	quartz_bench	Quartz Bench		Кварцевая Скамья	Panchina di quarzo	
+block	deepslate_bench	Deepslate Bench		Глубинносланцевая Скамья	Panchina di ardesia profonda	
+block	iron_bench	Iron Bench		Железная Скамья	Panchina di ferro	
+block	copper_bench	Copper Bench		Медная Скамья	Panchina di rame	
+block	gold_bench	Golden Bench		Золотая Скамья	Panchina d'oro	
+block	diamond_bench	Diamond Bench		Алмазная Скамья	Panchina di diamante	
+block	emerald_bench	Emerald Bench		Изумрудная Скамья	Panchina di smeraldo	
+block	netherite_bench	Netherite Bench		Незеритовая Скамья	Panchina di netherite	
+block	oak_stool	Oak Stool		Дубовый Табурет	Sgabello di quercia	
+block	spruce_stool	Spruce Stool		Еловый Табурет	Sgabello di abete	
+block	birch_stool	Birch Stool		Берëзовый Табурет	Sgabello di betulla	
+block	jungle_stool	Jungle Stool		Табурет из тропического дерева	Sgabello della giungla	
+block	acacia_stool	Acacia Stool		Акациевый Табурет	Sgabello di acacia	
+block	bamboo_stool	Bamboo Stool		Табурет из бамбука	Sgabello di bambù	
+block	dark_oak_stool	Dark Oak Stool		Табурет из тëмного дуба	Sgabello di quercia scura	
+block	mangrove_stool	Mangrove Stool		Мангровый Табурет	Sgabello di mangrovia	
+block	cherry_stool	Cherry Stool		Вишнёвый Табурет	Sgabello di ciliegio	
+block	crimson_stool	Crimson Stool		Багровый Табурет	Sgabello cremisi	
+block	warped_stool	Warped Stool		Искажëнный Табурет	Sgabello distorto	
+block	stone_stool	Stone Stool		Каменный Табурет	Sgabello di pietra	
+block	quartz_stool	Quartz Stool		Кварцевый Табурет	Sgabello di quarzo	
+block	oak_barstool	Oak Bar Stool		Дубовый Барный стул	Sgabello da bar di quercia	
+block	spruce_barstool	Spruce Bar Stool		Еловый Барный стул	Sgabello da bar di abete	
+block	birch_barstool	Birch Bar Stool		Берëзовый Барный стул	Sgabello da bar di betulla	
+block	jungle_barstool	Jungle Bar Stool		Барный стул из тропического дерева	Sgabello da bar della giungla	
+block	acacia_barstool	Acacia Bar Stool		Акациевый Барный стул	Sgabello da bar di acacia	
+block	bamboo_barstool	Bamboo Bar Stool		Барный стул из бамбука	Sgabello da bar di bambù	
+block	dark_oak_barstool	Dark Oak Bar Stool		Барный стул из тëмного дуба	Sgabello da bar di quercia scura	
+block	mangrove_barstool	Mangrove Bar Stool		Мангровый Барный стул	Sgabello da bar di mangrovia	
+block	cherry_barstool	Cherry Bar Stool		Вишнёвый Барный стул	Sgabello da bar di ciliegio	
+block	crimson_barstool	Crimson Bar Stool		Багровый Барный стул	Sgabello da bar cremisi	
+block	warped_barstool	Warped Bar Stool		Искажëнный Барный стул	Sgabello da bar distorto	
+block	stone_barstool	Stone Bar Stool		Каменный Барный стул	Sgabello da bar di pietra	
+block	quartz_barstool	Quartz Bar Stool		Кварцевый Барный стул	Sgabello da bar di quarzo	
+block	oak_dinning_chair	Oak Dinning Chair		Дубовый Обеденный стул	Sedia di quercia	
+block	spruce_dinning_chair	Spruce Dinning Chair		Еловый Обеденный стул	Sedia di abete	
+block	birch_dinning_chair	Birch Dinning Chair		Берëзовый Обеденный стул	Sedia di betulla	
+block	jungle_dinning_chair	Jungle Dinning Chair		Обеденный стул из тропического дерева	Sedia della giungla	
+block	acacia_dinning_chair	Acacia Dinning Chair		Акациевый Обеденный стул	Sedia di acacia	
+block	bamboo_dinning_chair	Bamboo Dinning Chair		Обеденный стул из бамбука	Sedia di bambù	
+block	dark_oak_dinning_chair	Dark Oak Dinning Chair		Обеденный стул из тëмного дуба	Sedia di quercia scura	
+block	mangrove_dinning_chair	Mangrove Dinning Chair		Мангровый Обеденный стул	Sedia di mangrovia	
+block	cherry_dinning_chair	Cherry Dinning Chair		Вишнёвый Обеденный стул	Sedia di ciliegio	
+block	crimson_dinning_chair	Crimson Dinning Chair		Багровый Обеденный стул	Sedia cremisi	
+block	warped_dinning_chair	Warped Dinning Chair		Искажëнный Обеденный стул	Sedia distorta	
+block	white_couch	White Couch	White Sofa	Белый Диван	Divano bianco	白色の二人掛けソファー
+block	orange_couch	Orange Couch	Orange Sofa	Оранжевый Диван	Divano arancione	橙色の二人掛けソファー
+block	magenta_couch	Magenta Couch	Magenta Sofa	Пурпурный Диван	Divano magenta	赤紫色の二人掛けソファー
+block	light_blue_couch	Light Blue Couch	Light Blue Sofa	Голубой Диван	Divano azzurro	空色の二人掛けソファー
+block	yellow_couch	Yellow Couch	Yellow Sofa	Жёлтый Диван	Divano giallo	黄色の二人掛けソファー
+block	lime_couch	Lime Couch	Lime Sofa	Лаймовый Диван	Divano lime	黄緑色の二人掛けソファー
+block	pink_couch	Pink Couch	Pink Sofa	Розовый Диван	Divano rosa	桃色の二人掛けソファー
+block	gray_couch	Gray Couch	Gray Sofa	Серый Диван	Divano grigio	灰色の二人掛けソファー
+block	light_gray_couch	Light Gray Couch	Light Gray Sofa	Светло-серый Диван	Divano grigio chiaro	薄灰色の二人掛けソファー
+block	cyan_couch	Cyan Couch	Cyan Sofa	Бирюзовый Диван	Divano ciano	青緑色の二人掛けソファー
+block	purple_couch	Purple Couch	Purple Sofa	Фиолетовый Диван	Divano viola	紫色の二人掛けソファー
+block	blue_couch	Blue Couch	Blue Sofa	Синий Диван	Divano blu	青色の二人掛けソファー
+block	brown_couch	Brown Couch	Brown Sofa	Коричневый Диван	Divano marrone	茶色の二人掛けソファー
+block	green_couch	Green Couch	Green Sofa	Зелёный Диван	Divano verde	緑色の二人掛けソファー
+block	red_couch	Red Couch	Red Sofa	Красный Диван	Divano rosso	赤色の二人掛けソファー
+block	black_couch	Black Couch	Black Sofa	Чёрный Диван	Divano nero	黒色の二人掛けソファー
+block	oak_blinds	Oak Blinds		Дубовые Жалюзи	Persiane di quercia	オークのブラインド
+block	spruce_blinds	Spruce Blinds		Еловые Жалюзи	Persiane di abete	トウヒのブラインド
+block	birch_blinds	Birch Blinds		Берëзовые Жалюзи	Persiane di betulla	シラカバのブラインド
+block	jungle_blinds	Jungle Blinds		Жалюзи из тропического дерева	Persiane della giungla	ジャングルのブラインド
+block	acacia_blinds	Acacia Blinds		Акациевые Жалюзи	Persiane di acacia	アカシアのブラインド
+block	bamboo_blinds	Bamboo Blinds		Жалюзи из бамбука	Persiane di bambù	
+block	dark_oak_blinds	Dark Oak Blinds		Жалюзи из тëмного дуба	Persiane di quercia scura	ダークオークのブラインド
+block	mangrove_blinds	Mangrove Blinds		Мангровые Жалюзи	Persiane di mangrovia	
+block	cherry_blinds	Cherry Blinds		Вишнёвые Жалюзи	Persiane di ciliegio	
+block	crimson_blinds	Crimson Blinds		Багровые Жалюзи	Persiane cremisi	真紅のブラインド
+block	warped_blinds	Warped Blinds		Искажëнные Жалюзи	Persiane distorte	歪んだブラインド
+block	stone_blinds	Stone Blinds		Каменные Жалюзи	Persiane di pietra	石のブラインド
+block	quartz_blinds	Quartz Blinds		Кварцевые Жалюзи	Persiane di quarzo	
+block	deepslate_blinds	Deepslate Blinds		Глубинносланцевые Жалюзи	Persiane di ardesia profonda	
+block	iron_blinds	Iron Blinds		Железные Жалюзи	Persiane di ferro	
+block	copper_blinds	Copper Blinds		Медные Жалюзи	Persiane di rame	
+block	gold_blinds	Golden Blinds		Золотые Жалюзи	Persiane d'oro	
+block	diamond_blinds	Diamond Blinds		Алмазные Жалюзи	Persiane di diamante	
+block	emerald_blinds	Emerald Blinds		Изумрудные Жалюзи	Persiane di smeraldo	
+block	netherite_blinds	Netherite Blinds		Незеритовые Жалюзи	Persiane di netherite	
+block	oak_kitchen_cabinet	Oak Kitchen Cabinet		Дубовый Кухонный Ящик	Armadio da cucina di quercia	
+block	spruce_kitchen_cabinet	Spruce Kitchen Cabinet		Еловый Кухонный Ящик	Armadio da cucina di abete	
+block	birch_kitchen_cabinet	Birch Kitchen Cabinet		Берëзовый Кухонный Ящик	Armadio da cucina di betulla	
+block	jungle_kitchen_cabinet	Jungle Kitchen Cabinet		Кухонный Ящик из тропического дерева	Armadio da cucina della giungla	
+block	acacia_kitchen_cabinet	Acacia Kitchen Cabinet		Акациевый Кухонный Ящик	Armadio da cucina di acacia	
+block	bamboo_kitchen_cabinet	Bamboo Kitchen Cabinet		Кухонный Ящик из бамбука	Armadio da cucina di bambù	
+block	dark_oak_kitchen_cabinet	Dark Oak Kitchen Cabinet		Кухонный Ящик из тëмного дуба	Armadio da cucina di quercia scura	
+block	mangrove_kitchen_cabinet	Mangrove Kitchen Cabinet		Мангровый Кухонный Ящик	Armadio da cucina di mangrovia	
+block	cherry_kitchen_cabinet	Cherry Kitchen Cabinet		Вишнёвый Кухонный Ящик	Armadio da cucina di ciliegio	
+block	crimson_kitchen_cabinet	Crimson Kitchen Cabinet		Багровый Кухонный Ящик	Armadio da cucina cremisi	
+block	warped_kitchen_cabinet	Warped Kitchen Cabinet		Искажëнный Кухонный Ящик	Armadio da cucina distorto	
+block	stone_kitchen_cabinet	Stone Kitchen Cabinet		Каменный Кухонный Ящик	Armadio da cucina di pietra	
+block	quartz_kitchen_cabinet	Quartz Kitchen Cabinet		Кварцевый Кухонный Ящик	Armadio da cucina di quarzo	
+block	deepslate_kitchen_cabinet	Deepslate Kitchen Cabinet		Глубинносланцевый Кухонный Ящик	Armadio da cucina di ardesia scura	
+block	iron_kitchen_cabinet	Iron Kitchen Cabinet		Железный Кухонный Ящик	Armadio da cucina di ferro	
+block	copper_kitchen_cabinet	Copper Kitchen Cabinet		Медный Кухонный Ящик	Armadio da cucina di rame	
+block	gold_kitchen_cabinet	Golden Kitchen Cabinet		Золотой Кухонный Ящик	Armadio da cucina d'oro	
+block	diamond_kitchen_cabinet	Diamond Kitchen Cabinet		Алмазный Кухонный Ящик	Armadio da cucina di diamante	
+block	emerald_kitchen_cabinet	Emerald Kitchen Cabinet		Изумрудный Кухонный Ящик	Armadio da cucina di smeraldo	
+block	netherite_kitchen_cabinet	Netherite Kitchen Cabinet		Незеритовый Кухонный Ящик	Armadio da cucina di netherite	
+block	oak_sink	Oak Sink		Дубовая Раковина		
+block	spruce_sink	Spruce Sink		Еловая Раковина		
+block	birch_sink	Birch Sink		Берëзовая Раковина		
+block	jungle_sink	Jungle Sink		Раковина из тропического дерева		
+block	acacia_sink	Acacia Sink		Акациевая Раковина		
+block	bamboo_sink	Bamboo Sink		Раковина из бамбука		
+block	dark_oak_sink	Dark Oak Sink		Раковина из тëмного дуба		
+block	mangrove_sink	Mangrove Sink		Мангровая Раковина		
+block	cherry_sink	Cherry Sink		Вишнёвая Раковина		
+block	crimson_sink	Crimson Sink		Багровая Раковина		
+block	warped_sink	Warped Sink		Искажëнная Раковина		
+block	stone_sink	Stone Sink		Каменная Раковина		
+block	quartz_sink	Quartz Sink		Кварцевая Раковина		
+block	deepslate_sink	Deepslate Sink		Глубинносланцевая Раковина		
+block	iron_sink	Iron Sink		Железная Раковина		
+block	copper_sink	Copper Sink		Медная Раковина		
+block	gold_sink	Golden Sink		Золотая Раковина		
+block	diamond_sink	Diamond Sink		Алмазная Раковина		
+block	emerald_sink	Emerald Sink		Изумрудная Раковина		
+block	netherite_sink	Netherite Sink		Незеритовая Раковина		
+block	oak_toilet	Oak Toilet		Дубовый Унитаз		
+block	spruce_toilet	Spruce Toilet		Еловый Унитаз		
+block	birch_toilet	Birch Toilet		Берëзовый Унитаз		
+block	jungle_toilet	Jungle Toilet		Унитаз из тропического дерева		
+block	acacia_toilet	Acacia Toilet		Акациевый Унитаз		
+block	bamboo_toilet	Bamboo Toilet		Унитаз из бамбука		
+block	dark_oak_toilet	Dark Oak Toilet		Унитаз из тëмного дуба		
+block	mangrove_toilet	Mangrove Toilet		Мангровый Унитаз		
+block	cherry_toilet	Cherry Toilet		Вишнёвый Унитаз		
+block	crimson_toilet	Crimson Toilet		Багровый Унитаз		
+block	warped_toilet	Warped Toilet		Искажëнный Унитаз		
+block	stone_toilet	Stone Toilet		Каменный Унитаз		
+block	quartz_toilet	Quartz Toilet		Кварцевый Унитаз		
+block	deepslate_toilet	Deepslate Toilet		Глубинносланцевый Унитаз		
+block	iron_toilet	Iron Toilet		Железный Унитаз		
+block	copper_toilet	Copper Toilet		Медный Унитаз		
+block	gold_toilet	Golden Toilet		Золотой Унитаз		
+block	diamond_toilet	Diamond Toilet		Алмазный Унитаз		
+block	emerald_toilet	Emerald Toilet		Изумрудный Унитаз		
+block	netherite_toilet	Netherite Toilet		Незеритовый Унитаз		
+block	oak_window_boards	Oak Window Boards		Дубовые Оконные доски		
+block	spruce_window_boards	Spruce Window Boards		Еловые Оконные доски		
+block	birch_window_boards	Birch Window Boards		Берëзовые Оконные доски		
+block	jungle_window_boards	Jungle Window Boards		Оконные доски из тропического дерева		
+block	acacia_window_boards	Acacia Window Boards		Акациевые Оконные доски		
+block	bamboo_window_boards	Bamboo Window Boards		Оконные доски из бамбука		
+block	dark_oak_window_boards	Dark Oak Window Boards		Оконные доски из тëмного дуба		
+block	mangrove_window_boards	Mangrove Window Boards		Мангровые Оконные доски		
+block	cherry_window_boards	Cherry Window Boards		Вишнёвые Оконные доски		
+block	crimson_window_boards	Crimson Window Boards		Багровые Оконные доски		
+block	warped_window_boards	Warped Window Boards		Искажëнные Оконные доски		
+block	stone_window_boards	Stone Window Boards		Каменные Оконные доски		
+block	quartz_window_boards	Quartz Window Boards		Кварцевые Оконные доски		
+block	deepslate_window_boards	Deepslate Window Boards		Глубинносланцевые Оконные доски		
+block	iron_window_boards	Iron Window Boards		Железные Оконные доски		
+block	copper_window_boards	Copper Window Boards		Медные Оконные доски		
+block	gold_window_boards	Golden Window Boards		Золотые Оконные доски		
+block	diamond_window_boards	Diamond Window Boards		Алмазные Оконные доски		
+block	emerald_window_boards	Emerald Window Boards		Изумрудные Оконные доски		
+block	netherite_window_boards	Netherite Window Boards		Незеритовые Оконные доски		
+block	oak_ladder	Oak Ladder		Дубовая Лестница		
+block	spruce_ladder	Spruce Ladder		Еловая Лестница		
+block	birch_ladder	Birch Ladder		Берëзовая Лестница		
+block	jungle_ladder	Jungle Ladder		Лестница из тропического дерева		
+block	acacia_ladder	Acacia Ladder		Акациевая Лестница		
+block	bamboo_ladder	Bamboo Ladder		Лестница из бамбука		
+block	dark_oak_ladder	Dark Oak Ladder		Лестница из тëмного дуба		
+block	mangrove_ladder	Mangrove Ladder		Мангровая Лестница		
+block	cherry_ladder	Cherry Ladder		Вишнёвая Лестница		
+block	crimson_ladder	Crimson Ladder		Багровая Лестница		
+block	warped_ladder	Warped Ladder		Искажëнная Лестница		
+block	stone_ladder	Stone Ladder		Каменная Лестница		
+block	quartz_ladder	Quartz Ladder		Кварцевая Лестница		
+block	deepslate_ladder	Deepslate Ladder		Глубинносланцевая Лестница		
+block	iron_ladder	Iron Ladder		Железная Лестница		
+block	copper_ladder	Copper Ladder		Медная Лестница		
+block	gold_ladder	Golden Ladder		Золотая Лестница		
+block	diamond_ladder	Diamond Ladder		Алмазная Лестница		
+block	emerald_ladder	Emerald Ladder		Изумрудная Лестница		
+block	netherite_ladder	Netherite Ladder		Незеритовая Лестница		
+block	white_padlock	White Padlock		Белый Навесной замок		
+block	orange_padlock	Orange Padlock		Оранжевый Навесной замок		
+block	magenta_padlock	Magenta Padlock		Пурпурный Навесной замок		
+block	light_blue_padlock	Light Blue Padlock		Голубой Навесной замок		
+block	yellow_padlock	Yellow Padlock		Жёлтый Навесной замок		
+block	lime_padlock	Lime Padlock		Лаймовый Навесной замок		
+block	pink_padlock	Pink Padlock		Розовый Навесной замок		
+block	gray_padlock	Gray Padlock		Серый Навесной замок		
+block	light_gray_padlock	Light Gray Padlock		Светло-серый Навесной замок		
+block	cyan_padlock	Cyan Padlock		Бирюзовый Навесной замок		
+block	purple_padlock	Purple Padlock		Фиолетовый Навесной замок		
+block	blue_padlock	Blue Padlock		Синий Навесной замок		
+block	brown_padlock	Brown Padlock		Коричневый Навесной замок		
+block	green_padlock	Green Padlock		Зелёный Навесной замок		
+block	red_padlock	Red Padlock		Красный Навесной замок		
+block	black_padlock	Black Padlock		Чёрный Навесной замок		
+item	white_key	White Key		Белый Ключ		
+item	orange_key	Orange Key		Оранжевый Ключ		
+item	magenta_key	Magenta Key		Пурпурный Ключ		
+item	light_blue_key	Light Blue Key		Голубой Ключ		
+item	yellow_key	Yellow Key		Жёлтый Ключ		黄色の鍵
+item	lime_key	Lime Key		Лаймовый Ключ		
+item	pink_key	Pink Key		Розовый Ключ		
+item	gray_key	Gray Key		Серый Ключ		
+item	light_gray_key	Light Gray Key		Светло-серый Ключ		
+item	cyan_key	Cyan Key		Бирюзовый Ключ		
+item	purple_key	Purple Key		Фиолетовый Ключ		
+item	blue_key	Blue Key		Синий Ключ		青色の鍵
+item	brown_key	Brown Key		Коричневый Ключ		
+item	green_key	Green Key		Зелёный Ключ		緑色の鍵
+item	red_key	Red Key		Красный Ключ		赤色の鍵
+item	black_key	Black Key		Чёрный Ключ		
+block	oak_rising_door	Oak Rising Door		Дубовая Поднимающаяся дверь		
+block	spruce_rising_door	Spruce Rising Door		Еловая Поднимающаяся дверь		
+block	birch_rising_door	Birch Rising Door		Берëзовая Поднимающаяся дверь		
+block	jungle_rising_door	Jungle Rising Door		Поднимающаяся дверь из тропического дерева		
+block	acacia_rising_door	Acacia Rising Door		Акациевая Поднимающаяся дверь		
+block	bamboo_rising_door	Bamboo Rising Door		Поднимающаяся дверь из бамбука		
+block	dark_oak_rising_door	Dark Oak Rising Door		Поднимающаяся дверь из тëмного дуба		
+block	mangrove_rising_door	Mangrove Rising Door		Мангровая Поднимающаяся дверь		
+block	cherry_rising_door	Cherry Rising Door		Вишнёвая Поднимающаяся дверь		
+block	crimson_rising_door	Crimson Rising Door		Багровая Поднимающаяся дверь		
+block	warped_rising_door	Warped Rising Door		Искажëнная Поднимающаяся дверь		
+block	stone_rising_door	Stone Rising Door		Каменная Поднимающаяся дверь		
+block	quartz_rising_door	Quartz Rising Door		Кварцевая Поднимающаяся дверь		
+block	deepslate_rising_door	Deepslate Rising Door		Глубинносланцевая Поднимающаяся дверь		
+block	iron_rising_door	Iron Rising Door		Железная Поднимающаяся дверь		
+block	copper_rising_door	Copper Rising Door		Медная Поднимающаяся дверь		
+block	gold_rising_door	Golden Rising Door		Золотая Поднимающаяся дверь		
+block	diamond_rising_door	Diamond Rising Door		Алмазная Поднимающаяся дверь		
+block	emerald_rising_door	Emerald Rising Door		Изумрудная Поднимающаяся дверь		
+block	netherite_rising_door	Netherite Rising Door		Незеритовая Поднимающаяся дверь		
+block	white_table_lamp	White Table Lamp		Белая Лампа		
+block	orange_table_lamp	Orange Table Lamp		Оранжевая Лампа		
+block	magenta_table_lamp	Magenta Table Lamp		Пурпурная Лампа		
+block	light_blue_table_lamp	Light Blue Table Lamp		Голубая Лампа		
+block	yellow_table_lamp	Yellow Table Lamp		Жёлтая Лампа		
+block	lime_table_lamp	Lime Table Lamp		Лаймовая Лампа		
+block	pink_table_lamp	Pink Table Lamp		Розовая Лампа		
+block	gray_table_lamp	Gray Table Lamp		Серая Лампа		
+block	light_gray_table_lamp	Light Gray Table Lamp		Светло-серая Лампа		
+block	cyan_table_lamp	Cyan Table Lamp		Бирюзовая Лампа		
+block	purple_table_lamp	Purple Table Lamp		Фиолетовая Лампа		
+block	blue_table_lamp	Blue Table Lamp		Синяя Лампа		
+block	brown_table_lamp	Brown Table Lamp		Коричневая Лампа		
+block	green_table_lamp	Green Table Lamp		Зелёная Лампа		
+block	red_table_lamp	Red Table Lamp		Красная Лампа		
+block	black_table_lamp	Black Table Lamp		Чёрная Лампа		
+block	oak_street_light	Oak Street Light		Дубовый Уличный фонарь		
+block	spruce_street_light	Spruce Street Light		Еловый Уличный фонарь		
+block	birch_street_light	Birch Street Light		Берëзовый Уличный фонарь		
+block	jungle_street_light	Jungle Street Light		Уличный фонарь из тропического дерева		
+block	acacia_street_light	Acacia Street Light		Акациевый Уличный фонарь		
+block	bamboo_street_light	Bamboo Street Light		Уличный фонарь из бамбука		
+block	dark_oak_street_light	Dark Oak Street Light		Уличный фонарь из тëмного дуба		
+block	mangrove_street_light	Mangrove Street Light		Мангровый Уличный фонарь		
+block	cherry_street_light	Cherry Street Light		Вишнёвый Уличный фонарь		
+block	crimson_street_light	Crimson Street Light		Багровый Уличный фонарь		
+block	warped_street_light	Warped Street Light		Искажëнный Уличный фонарь		
+block	stone_street_light	Stone Street Light		Каменный Уличный фонарь		
+block	quartz_street_light	Quartz Street Light		Кварцевый Уличный фонарь		
+block	deepslate_street_light	Deepslate Street Light		Глубинносланцевый Уличный фонарь		
+block	iron_street_light	Iron Street Light		Железный Уличный фонарь		
+block	copper_street_light	Copper Street Light		Медный Уличный фонарь		
+block	gold_street_light	Golden Street Light		Золотой Уличный фонарь		
+block	diamond_street_light	Diamond Street Light		Алмазный Уличный фонарь		
+block	emerald_street_light	Emerald Street Light		Изумрудный Уличный фонарь		
+block	netherite_street_light	Netherite Street Light		Незеритовый Уличный фонарь		
+block	white_desk_lamp	White Desk Lamp		Белая Настольная лампа		
+block	orange_desk_lamp	Orange Desk Lamp		Оранжевая Настольная лампа		
+block	magenta_desk_lamp	Magenta Desk Lamp		Пурпурная Настольная лампа		
+block	light_blue_desk_lamp	Light Blue Desk Lamp		Голубая Настольная лампа		
+block	yellow_desk_lamp	Yellow Desk Lamp		Жёлтая Настольная лампа		
+block	lime_desk_lamp	Lime Desk Lamp		Лаймовая Настольная лампа		
+block	pink_desk_lamp	Pink Desk Lamp		Розовая Настольная лампа		
+block	gray_desk_lamp	Gray Desk Lamp		Серая Настольная лампа		
+block	light_gray_desk_lamp	Light Gray Desk Lamp		Светло-серая Настольная лампа		
+block	cyan_desk_lamp	Cyan Desk Lamp		Бирюзовая Настольная лампа		
+block	purple_desk_lamp	Purple Desk Lamp		Фиолетовая Настольная лампа		
+block	blue_desk_lamp	Blue Desk Lamp		Синяя Настольная лампа		
+block	brown_desk_lamp	Brown Desk Lamp		Коричневая Настольная лампа		
+block	green_desk_lamp	Green Desk Lamp		Зелёная Настольная лампа		
+block	red_desk_lamp	Red Desk Lamp		Красная Настольная лампа		
+block	black_desk_lamp	Black Desk Lamp		Чёрная Настольная лампа		
+block	oak_upholstery_couch	Oak Upholstery Couch		Дубовый Диван с обивкой		
+block	spruce_upholstery_couch	Spruce Upholstery Couch		Еловый Диван с обивкой		
+block	birch_upholstery_couch	Birch Upholstery Couch		Берëзовый Диван с обивкой		
+block	jungle_upholstery_couch	Jungle Upholstery Couch		Диван с обивкой из тропического дерева		
+block	acacia_upholstery_couch	Acacia Upholstery Couch		Акациевый Диван с обивкой		
+block	bamboo_upholstery_couch	Bamboo Upholstery Couch		Диван с обивкой из бамбука		
+block	dark_oak_upholstery_couch	Dark Oak Upholstery Couch		Диван с обивкой из тëмного дуба		
+block	mangrove_upholstery_couch	Mangrove Upholstery Couch		Мангровый Диван с обивкой		
+block	cherry_upholstery_couch	Cherry Upholstery Couch		Вишнёвый Диван с обивкой		
+block	crimson_upholstery_couch	Crimson Upholstery Couch		Багровый Диван с обивкой		
+block	warped_upholstery_couch	Warped Upholstery Couch		Искажëнный Диван с обивкой		
+block	white_floor_lamp	White Floor Lamp		Белый Торшер		
+block	orange_floor_lamp	Orange Floor Lamp		Оранжевый Торшер		
+block	magenta_floor_lamp	Magenta Floor Lamp		Пурпурный Торшер		
+block	light_blue_floor_lamp	Light Blue Floor Lamp		Голубой Торшер		
+block	yellow_floor_lamp	Yellow Floor Lamp		Жёлтая Торшер		
+block	lime_floor_lamp	Lime Floor Lamp		Лаймовый Торшер		
+block	pink_floor_lamp	Pink Floor Lamp		Розовый Торшер		
+block	gray_floor_lamp	Gray Floor Lamp		Серый Торшер		
+block	light_gray_floor_lamp	Light Gray Floor Lamp		Светло-серый Торшер		
+block	cyan_floor_lamp	Cyan Floor Lamp		Бирюзовый Торшер		
+block	purple_floor_lamp	Purple Floor Lamp		Фиолетовый Торшер		
+block	blue_floor_lamp	Blue Floor Lamp		Синий Торшер		
+block	brown_floor_lamp	Brown Floor Lamp		Коричневый Торшер		
+block	green_floor_lamp	Green Floor Lamp		Зелёный Торшер		
+block	red_floor_lamp	Red Floor Lamp		Красный Торшер		
+block	black_floor_lamp	Black Floor Lamp		Чёрный Торшер		
+block	white_cup	White Cup		Белая Чашка		
+block	orange_cup	Orange Cup		Оранжевая Чашка		
+block	magenta_cup	Magenta Cup		Пурпурная Чашка		
+block	light_blue_cup	Light Blue Cup		Голубая Чашка		
+block	yellow_cup	Yellow Cup		Жёлтая Чашка		
+block	lime_cup	Lime Cup		Лаймовая Чашка		
+block	pink_cup	Pink Cup		Розовая Чашка		
+block	gray_cup	Gray Cup		Серая Чашка		
+block	light_gray_cup	Light Gray Cup		Светло-серая Чашка		
+block	cyan_cup	Cyan Cup		Бирюзовая Чашка		
+block	purple_cup	Purple Cup		Фиолетовая Чашка		
+block	blue_cup	Blue Cup		Синяя Чашка		
+block	brown_cup	Brown Cup		Коричневая Чашка		
+block	green_cup	Green Cup		Зелёная Чашка		
+block	red_cup	Red Cup		Красная Чашка		
+block	black_cup	Black Cup		Чёрная Чашка		
+item	white_beer_bottle	White Beer Bottle		Белая Пивная бутылка		
+item	orange_beer_bottle	Orange Beer Bottle		Оранжевая Пивная бутылка		
+item	magenta_beer_bottle	Magenta Beer Bottle		Пурпурная Пивная бутылка		
+item	light_blue_beer_bottle	Light Blue Beer Bottle		Голубая Пивная бутылка		
+item	yellow_beer_bottle	Yellow Beer Bottle		Жёлтая Пивная бутылка		
+item	lime_beer_bottle	Lime Beer Bottle		Лаймовая Пивная бутылка		
+item	pink_beer_bottle	Pink Beer Bottle		Розовая Пивная бутылка		
+item	gray_beer_bottle	Gray Beer Bottle		Серая Пивная бутылка		
+item	light_gray_beer_bottle	Light Gray Beer Bottle		Светло-серая Пивная бутылка		
+item	cyan_beer_bottle	Cyan Beer Bottle		Бирюзовая Пивная бутылка		
+item	purple_beer_bottle	Purple Beer Bottle		Фиолетовая Пивная бутылка		
+item	blue_beer_bottle	Blue Beer Bottle		Синяя Пивная бутылка		
+item	brown_beer_bottle	Brown Beer Bottle		Коричневая Пивная бутылка		
+item	green_beer_bottle	Green Beer Bottle		Зелёная Пивная бутылка		
+item	red_beer_bottle	Red Beer Bottle		Красная Пивная бутылка		
+item	black_beer_bottle	Black Beer Bottle		Чёрная Пивная бутылка		
+block	fridge	Fridge	Refrigerator	Холодильник		冷蔵庫
+block	washer	Washer	Washing Machine	Стиральная Машина		洗濯機
+block	trashcan	Trashcan		Мусорник		ゴミ箱
+block	pipe	Pipe		Труба		
+block	radiator	Radiator		Радиатор		
+block	curtains	Curtains		Занавески		
+block	surveillance_camera	Surveillance Camera		Камера видеонаблюдения		監視カメラ
+block	security_monitor	Security Monitor		Охранный монитор		カメラターミナル
+block	hatch	Hatch		Люк		
+block	traffic_barrier	Traffic Barrier		Дорожный барьер		
+block	mossy_traffic_barrier	Mossy Traffic Barrier		Моховой дорожный барьер		
+block	pole	Pole		Столб		
+block	no_entrance_road_sign	No-Entrance Road Sign		Дорожный знак "Въезд запрещен"		
+block	park_road_sign	Park Road Sign		Дорожный знак "Парковка"		
+block	arrow_down_road_sign	Arrow-down Road Sign		Дорожный знак со стрелкой вниз		
+block	arrow_up_road_sign	Arrow-up Road Sign		Дорожный знак со стрелкой вверх		
+block	arrow_left_road_sign	Arrow-left Road Sign		Дорожный знак со стрелкой влево		
+block	arrow_right_road_sign	Arrow-right Road Sign		Дорожный знак со стрелкой вправо		
+block	call_bell	Call Bell		Звонок		
+block	box	Box		Коробка		箱
+block	keypad_lock	Keypad Lock		PIN-Код замок		パスワードロック
+block	retina_scanner	Retina Scanner		Сканер сетчатки глаза		虹彩認証センサー
+block	item_scanner	Item Scanner		Сканер предметов		アイテムリーダー
+block	vending_machine	Vending Machine		Торговый автомат		
+block	computer	Computer		Компьютер		
+block	speakers	Speakers		Колонки		
+block	plate	Plate		Тарелка		
+block	alarm_clock	Alarm Clock		Будильник		
+block	alarm_block	Security Alarm Block		Сигнализация		
+block	laser_block	Laser Block		Лазерный блок		
+block	bear_trap	Bear Trap		Медвежий капкан		
+block	motion_sensor	Motion Sensor		Датчик движения		
+block	calculator	Calculator		Калькулятор		
+block	clipboard	Clipboard		Планшет		
+block	electrical_box	Electrical Box		Электрический ящик		
+item	padlock	Padlock		Навесной замок		南京錠
+item	coffee_cup	Coffee Cup		Чашка с Кофе		コーヒー
+item	cucumber	Cucumber		Огурец		
+item	grapes	Grapes		Виноград		
+item	burger	Burger		Бургер		バーガー
+item	toast	Toast		Тост		
+item	tomato	Tomato		Помидор		
+item	cheese	Cheese		Сыр		チーズ
+item	chocolate_bar	Chocolate bar		Шоколадная плитка		チョコレート
+item	donut	Donut		Пончик		ドーナツ
+item	broccoli	Broccoli		Брокколи		
+item	omelette	Omelette		Яичница		
+item	strawberry	Strawberry		Клубника		
+item	cereal	Cereal		Хлопья		
+item	megaphone	Loudspeaker		Громкоговоритель		
+item	flashlight	Flashlight		Фонарь		
+item	crowbar	Crowbar		Лом		
+item	nanoglasses	Nanoglasses		Наноочки		
+item	battery	Battery		Батарейка		
+item	umbrella	Umbrella		Зонт		
+ui	expand_variants	%s Click to Expand Variants		%s Нажмите чтобы показать варианты	%s Premi per espandere le varianti	
+ui	craft	%s Click to Craft		%s Нажмите чтобы скрафтить	%s Premi per fabbricare	
+ui	craft_maximum	%s Hold Shift to Craft Maximum		%s Удерживайте Shift, чтобы скрафтить максимум	%s Mantieni Shift per fabbricare il massimo	
+ui	jump_to_list_end_or_begin	%s Shift+Click an arrow to jump to the end		%s Shift+Нажмите на стрелку, чтобы перейти к концу	%s Fai Shift+Clic su una freccia per saltare alla fine	
+ui	craft_documentation	%s Press %s to View Documentation		%s Нажмите %s чтобы просмотреть документацию	%s Premi %s per vedere la documentazione	
+ui	crafting_materials	%s Crafting materials		%s Материалы для крафта	%s Materiali per fabbricare	
+ui	crafting_not_enough_items	Not enough items to craft %s		Недостаточно предметов чтобы скрафтить %s	Non hai abbastanza oggetti per fabbricare %s	
+ui	navigation	Navigation		Навигация	Navigazione	
+ui	item_required	You need %s to unlock this block		Вам нужно %s, чтобы разблокировать этот блок		
+ui	camera.disabled	All cameras are currently disabled		Все камеры в настоящее время отключены		
+ui	camera.offline	This monitor has not been linked yet		Этот монитор еще не был подключен		
+ui	camera.registered	The camera was linked successfully		Камера была успешно подключена		
+ui	camera.not_found	The camera you are trying to view has been broken		Камера, которую вы пытаетесь просмотреть, была сломана		
+ui	menu.title	Menu		Меню		
+ui	menu.debug	Debug Information		Информация для отладки		
+ui	menu.settings	Settings		Настройки		
+ui	menu.open_settings	Open Settings		Открыть Настройки		
+ui	menu.show_debug	Show Debug Information		Показать информацию для отладки		
+ui	menu.copy	Copy		Скопировать		
+ui	menu.click_to_show	Cick to show		Нажмите, чтобы показать		
+ui	menu.true	On		Вкл.		
+ui	menu.false	Off		Выкл.		
+ui	menu.set	Set value		Задать значение		
+ui	setting.increased_view_range	Increased view range		Увеличенная дальность обзора		
+ui	description.increased_view_range.0	Bypasses Entity Distance setting.		Обходит настройку расстояния между сущностями.		
+ui	description.increased_view_range.1	Disable if players are experiencing lag		Отключите, если игроки испытывают лаги		
+ui	setting.allow_crafting	Allow %s crafting		Разрешить создание %s		
+ui	description.allow_crafting	Drop %s on a %s to craft %s!		Бросьте %s на %s чтобы получить %s!		
+ui	setting.fixed_camera	Fix cameras in place		Закрепить камеры на месте		
+ui	description.fixed_camera	Prevents cameras from spinning		Предотвращает вращение камеры		
+ui	setting.disabled_camera	Disable cameras		Отключить камеры		
+ui	description.disabled_camera.0	Prevents players from using cameras.		Запрещает игрокам использовать камеры.		
+ui	description.disabled_camera.1	Can be used to simulate power outages.		Может использоваться для имитации отключения электричества.		
+ui	flashlight.no_battery	%s has ran out of battery!		У %s закончилась батарея!		
+ui	motion_sensor.notification	%s has detected movement nearby!		%s обнаружил движение поблизости!		
+ui	setting.bear_trap	%s cooldown		Время действия %s		
+ui	description.bear_trap	The amount of ticks %s will trap players for		Количество тиков %s, на которые игроки будут пойманы		

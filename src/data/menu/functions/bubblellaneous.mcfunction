@@ -1,0 +1,7 @@
+tellraw @s ["\n", "┌─── [ Bubblellaneous: ", {"text":"☄ ", "color":"yellow", "extra":[{"translate":"ui.bubblellaneous.menu.title"}]}, " ]"]
+tellraw @s ["│"]
+tellraw @s ["│ ", {"translate":"root.bubblellaneous.translation_author", "color":"green"}]
+tellraw @s ["│"]
+tellraw @s [{"text":"", "hoverEvent":{"action":"show_text", "contents":"☞"}, "clickEvent":{"action":"run_command", "value":"/function bubblellaneous:settings/open_menu"}}, "│ ", {"translate":"ui.bubblellaneous.menu.open_settings"}, " →"]
+tellraw @s [{"text":"", "hoverEvent":{"action":"show_text", "contents":"☞"}, "clickEvent":{"action":"run_command", "value":"/function bubblellaneous:utils/debug/open_menu"}}, "│ ", {"translate":"ui.bubblellaneous.menu.show_debug"}, " →"]
+tellraw @s ["└──────"]

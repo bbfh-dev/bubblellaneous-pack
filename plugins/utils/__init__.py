@@ -1,1 +1,1 @@
-from .nbt import NBT, NBTVar, NBTType
+from .nbt import NBT, NBTType, NBTVar

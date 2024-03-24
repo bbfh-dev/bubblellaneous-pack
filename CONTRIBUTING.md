@@ -1,6 +1,14 @@
 # 🤝 Contributing / Help
 
-I appreciate everybody who helps the project. As a contributor you get a discord role and a mention of your name on the project page + in-game.
+I appreciate everybody who helps the project in any shape or form!
+
+<!-- vim-markdown-toc GFM -->
+
+* [Translators](#translators)
+* [Developers](#developers)
+* [Financial support](#financial-support)
+
+<!-- vim-markdown-toc -->
 
 ## Translators
 
@@ -8,7 +16,11 @@ If you wish to translate the project into a language, just tell me in discord or
 
 ## Developers
 
-If you wish to create your own fork / improve the project feel free to create pull requests. You can find instructions on how to build project from source below. The datapack logic / resourcepack can be found inside `src/` directory. `plugins/` contains generated parts of the project, the one you might be most interested in is `plugins/bubblellaneous/blocks.py` and `plugins/bubblellaneous/items.py` for adding/removing content.
+If you wish to create your own fork / improve the project feel free to create pull requests.
+
+You can find instructions on how to build project from source [here](./README.md#%EF%B8%8F-building-from-source).
+
+The datapack logic / resourcepack can be found inside `src/` directory. `plugins/` contains generated parts of the project, the one you might be most interested in is `plugins/bubblellaneous/registry/...` for adding/removing content.
 
 ## Financial support
 

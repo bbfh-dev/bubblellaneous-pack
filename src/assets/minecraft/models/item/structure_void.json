@@ -8,43 +8,43 @@
             "predicate": {
                 "custom_model_data": 370000
             },
-            "model": "bubblellaneous:gui/air"
+            "model": "bubblellaneous:ui/air"
         },
         {
             "predicate": {
                 "custom_model_data": 370001
             },
-            "model": "bubblellaneous:gui/slot"
+            "model": "bubblellaneous:ui/slot"
         },
         {
             "predicate": {
                 "custom_model_data": 370002
             },
-            "model": "bubblellaneous:gui/arrow_left"
+            "model": "bubblellaneous:ui/arrow_left"
         },
         {
             "predicate": {
                 "custom_model_data": 370003
             },
-            "model": "bubblellaneous:gui/arrow_left_inactive"
+            "model": "bubblellaneous:ui/arrow_left_inactive"
         },
         {
             "predicate": {
                 "custom_model_data": 370004
             },
-            "model": "bubblellaneous:gui/arrow_right"
+            "model": "bubblellaneous:ui/arrow_right"
         },
         {
             "predicate": {
                 "custom_model_data": 370005
             },
-            "model": "bubblellaneous:gui/arrow_right_inactive"
+            "model": "bubblellaneous:ui/arrow_right_inactive"
         },
         {
             "predicate": {
                 "custom_model_data": 370006
             },
-            "model": "bubblellaneous:gui/compass"
+            "model": "bubblellaneous:ui/compass"
         }
     ]
 }

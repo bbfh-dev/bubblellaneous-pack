@@ -1,0 +1,6 @@
+{
+    "parent": "bubblellaneous:block/retina_scanner/template/_template",
+    "textures": {
+        "face": "bubblellaneous:block/retina_scanner/error"
+    }
+}

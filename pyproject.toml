@@ -20,6 +20,8 @@ build-backend = "hatchling.build"
 managed = true
 dev-dependencies = [
     "colorama>=0.4.6",
+    "black>=24.2.0",
+    "autoimport>=1.4.0",
 ]
 
 [tool.hatch.metadata]

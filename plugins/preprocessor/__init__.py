@@ -2,10 +2,14 @@ from beet import Context
 
 from plugins.utils import NBT
 
+from .pack_formats import PACK_FORMATS
+
 
 class Preprocessor:
-    @staticmethod
-    def print(line: str):
+    def __init__(self, ctx: Context) -> None:
+        self._ctx = ctx
+
+    def print(self, line: str):
         selector, scoreboard = line.split(" ")
         return "tellraw @a {}".format(
             NBT(
@@ -23,8 +27,7 @@ class Preprocessor:
             .replace('\\"', '"')
         )
 
-    @staticmethod
-    def printf(line: str):
+    def printf(self, line: str):
         category, selector, nbt = line.split(" ")
         return "tellraw @a {}".format(
             NBT(
@@ -40,8 +43,7 @@ class Preprocessor:
             )
         )
 
-    @staticmethod
-    def repeat(line: str):
+    def repeat(self, line: str):
         lines = []
         iterator, command = line.split(" | ")
         iter_var, iter_range = iterator.split("=")
@@ -51,13 +53,34 @@ class Preprocessor:
 
         return "\n".join(lines)
 
+    def overlay(self, line: str):
+        versions, command = line.split(" | ")
+        version_from, version_to = versions.split("-")
+        min_version = PACK_FORMATS.get(version_from)
+        max_version = PACK_FORMATS.get(version_to)
+        if min_version is None or max_version is None:
+            raise Exception(
+                f"Preprocessor caught unknown version: {min_version=}-{max_version=}"
+            )
+        pack_format = PACK_FORMATS.get(self._ctx.meta["minecraft"])
+        if pack_format is None:
+            raise Exception(f"Unknown Beet.json version {self._ctx.meta['minecraft']}")
+
+        if pack_format[0] >= min_version[0] and pack_format[0] <= max_version[-1]:
+            return command
+
+        return ""
+
 
 def beet_default(ctx: Context):
-    for key, value in Preprocessor.__dict__.items():
-        if key.startswith("__"):
+    preprocessor = Preprocessor(ctx)
+    for key, value in preprocessor.__class__.__dict__.items():
+        if key.startswith("_"):
             continue
         for fn_key, body in ctx.data.functions.items():
             for i, line in enumerate(body.lines):
                 if not line.startswith(f"#!/{key} "):
                     continue
-                ctx.data.functions[fn_key].lines[i] = value(line[len(key) + 4 :])
+                ctx.data.functions[fn_key].lines[i] = value(
+                    preprocessor, line[len(key) + 4 :]
+                )

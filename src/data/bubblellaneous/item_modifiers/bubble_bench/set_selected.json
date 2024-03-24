@@ -1,0 +1,8 @@
+[
+    {
+        "function": "minecraft:enchant_randomly",
+        "enchantments": [
+            "binding_curse"
+        ]
+    }
+]

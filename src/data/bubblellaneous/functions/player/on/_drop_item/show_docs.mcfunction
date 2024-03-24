@@ -1,1 +1,0 @@
-$function help:bubblellaneous/$(id)
