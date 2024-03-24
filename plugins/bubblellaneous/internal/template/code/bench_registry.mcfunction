@@ -19,3 +19,6 @@ scoreboard players add registry.food.pages local.var 1
 execute store result score registry.miscellaneous.pages local.var store result score registry.miscellaneous.size local.var run data get storage bubblellaneous bench_registry.miscellaneous
 scoreboard players operation registry.miscellaneous.pages local.var /= 18 local.int
 scoreboard players add registry.miscellaneous.pages local.var 1
+
+data modify storage bubblellaneous version set value "[version]"
+function bubblellaneous:block/bubble_bench/blacklist/load

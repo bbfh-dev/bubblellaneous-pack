@@ -6,7 +6,7 @@ from plugins.bubblellaneous.internal import (
     ItemData,
 )
 from plugins.bubblellaneous.internal.unit.variant import BlockVariant, ItemVariant
-from plugins.utils import NBT
+from plugins.utils.nbt import NBT
 
 
 class Ladder(BlockVariant):
@@ -324,7 +324,7 @@ class Padlock(Item):
     recipe = [
         BlockData.RecipeEntry("item", "iron_ingot", 4),
     ]
-    params = lambda *_: NBT({})
+    params = lambda *_: {}
 
 
 class Key(ItemVariant):
@@ -340,9 +340,7 @@ class Key(ItemVariant):
         BlockData.RecipeEntry("item", "iron_ingot"),
         BlockData.RecipeEntry("item", "[color]"),
     ]
-    params = lambda material, index: NBT(
-        {"key": {"name": material.name, "index": index}}
-    )
+    params = lambda material, index: {"key": {"name": material.name, "index": index}}
 
 
 class KeypadLock(Block):
@@ -457,3 +455,148 @@ class Calculator(Block):
         BlockData.RecipeEntry("item", "redstone"),
     ]
     tags = []
+
+
+class AlarmBlock(Block):
+    """
+    :yellow [☶ Description]
+    TODO
+    """
+
+    base = BlockData.Base.REDSTONE_ACTIVATED
+    sound = BlockData.Sound.INDUSTRIAL
+    facing = BlockData.Facing.NONE
+    recipe = [
+        BlockData.RecipeEntry("block", "bell"),
+        BlockData.RecipeEntry("item", "redstone"),
+    ]
+    tags = [
+        BlockData.Uses.TICK,
+        BlockData.Uses.BRIGHTNESS_FIX,
+        BlockData.Uses.TIMER,
+    ]
+
+
+class LaserBlock(Block):
+    """
+    :yellow [☶ Description]
+    TODO
+    """
+
+    base = BlockData.Base.SOLID
+    sound = BlockData.Sound.INDUSTRIAL
+    facing = BlockData.Facing.NORMAL
+    recipe = [
+        BlockData.RecipeEntry("block", "glass"),
+        BlockData.RecipeEntry("item", "redstone"),
+    ]
+    tags = [
+        BlockData.Uses.TICK,
+        BlockData.Uses.BRIGHTNESS_FIX,
+        BlockData.Uses.TIMER,
+    ]
+
+
+class Nanoglasses(Item):
+    """
+    :yellow [☶ Description]
+    TODO
+    """
+
+    base = ItemData.Base.INTERACTIVE
+    recipe = [
+        BlockData.RecipeEntry("item", "iron_ingot", 4),
+        BlockData.RecipeEntry("item", "redstone"),
+    ]
+    params = lambda *_: {}
+
+
+class Crowbar(Item):
+    """
+    :yellow [☶ Description]
+    TODO
+    """
+
+    base = ItemData.Base.PICKAXE
+    recipe = [
+        BlockData.RecipeEntry("item", "iron_ingot", 2),
+    ]
+    params = lambda *_: {}
+
+
+class Flashlight(Item):
+    """
+    :yellow [☶ Description]
+    TODO
+    """
+
+    base = ItemData.Base.INTERACTIVE
+    recipe = [
+        BlockData.RecipeEntry("block", "lantern", 1),
+        BlockData.RecipeEntry("item", "redstone"),
+    ]
+    params = lambda *_: {"battery": 12000, "max_charge": 12000, "is_turned_on": 0}
+    limit_attack_speed = True
+
+
+class Battery(Item):
+    """
+    :yellow [☶ Description]
+    TODO
+    """
+
+    base = ItemData.Base.NORMAL
+    recipe = [
+        BlockData.RecipeEntry("item", "redstone"),
+    ]
+    params = lambda *_: {}
+
+
+class MotionSensor(Block):
+    """
+    :yellow [☶ Description]
+    TODO
+    """
+
+    base = BlockData.Base.VOID
+    sound = BlockData.Sound.INDUSTRIAL
+    facing = BlockData.Facing.NONE
+    recipe = [
+        BlockData.RecipeEntry("block", "glass"),
+        BlockData.RecipeEntry("item", "redstone"),
+    ]
+    tags = [
+        BlockData.Uses.TICK,
+        BlockData.Uses.TIMER,
+        BlockData.Uses.PLACE,
+    ]
+    blockstates = BlockData.BlockStates(
+        "<manual>",
+        BlockData.State("default"),
+        BlockData.State("triggered"),
+    )
+
+
+class ElectricalBox(Block):
+    """
+    :yellow [☶ Description]
+    TODO
+    """
+
+    base = BlockData.Base.VOID
+    sound = BlockData.Sound.INDUSTRIAL
+    facing = BlockData.Facing.WALL_NORMAL
+    recipe = [
+        BlockData.RecipeEntry("item", "iron_ingot", 2),
+        BlockData.RecipeEntry("item", "redstone"),
+    ]
+    tags = [
+        BlockData.Uses.NO_BASE,
+        BlockData.Uses.CUSTOM_BASE,
+        BlockData.Uses.PLACE,
+    ]
+    blockstates = BlockData.BlockStates(
+        "<manual>",
+        BlockData.State("default"),
+        BlockData.State("disabled"),
+    )

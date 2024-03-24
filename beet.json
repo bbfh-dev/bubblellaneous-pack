@@ -38,6 +38,8 @@
     "zipped": false
   },
   "meta": {
-    "prefix": "bbln"
+    "prefix": "bbln",
+    "version_fallback": "0.0.1",
+    "minecraft": "1.20.4"
   }
 }

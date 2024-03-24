@@ -486,3 +486,46 @@ class Curtains(Block):
         BlockData.State("middle"),
         BlockData.State("empty"),
     )
+
+
+class Sink(BlockVariant):
+    """
+    :yellow [☶ Description]
+    TODO
+    """
+
+    material = BlockMaterials.SOLID
+
+    base = BlockData.Base.UPPER
+    sound = BlockData.Sound.WOOD
+    facing = BlockData.Facing.WALL_NORMAL
+    recipe = [
+        BlockData.RecipeEntry("block", "[base]", 5),
+    ]
+    tags = [
+        BlockData.Uses.PLACE,
+        BlockData.Uses.TICK,
+    ]
+    blockstates = BlockData.BlockStates(
+        "<manual>",
+        BlockData.State("default"),
+        BlockData.State("water"),
+    )
+
+
+class Toilet(BlockVariant):
+    """
+    :yellow [☶ Description]
+    TODO
+    """
+
+    material = BlockMaterials.SOLID
+    block_type = BlockType.seat(width=0.6, height=0.51)
+
+    base = BlockData.Base.TRIPWIRE
+    sound = BlockData.Sound.WOOD
+    facing = BlockData.Facing.PLAYER
+    recipe = [
+        BlockData.RecipeEntry("block", "[base]", 5),
+    ]
+    tags = [BlockData.Uses.PLACE]

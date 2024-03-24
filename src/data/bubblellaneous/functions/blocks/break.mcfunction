@@ -1,3 +1,6 @@
+scoreboard players set do_quit local.tmp 0
+execute store result score do_quit local.tmp run function #bubblellaneous:block/all/on_break
+execute if score do_quit local.tmp matches 1 run return 0
 setblock ~ ~ ~ air
 
 scoreboard players set uses_blockstates local.tmp 0

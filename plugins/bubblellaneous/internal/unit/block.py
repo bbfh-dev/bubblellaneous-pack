@@ -71,6 +71,7 @@ class BlockData:
         )
         CHAIN = "chain[axis=y]"
         VOID = "structure_void"
+        REDSTONE_ACTIVATED = "redstone_lamp"
 
     class Sound(Enum):
         INDUSTRIAL = "industrial"
@@ -385,6 +386,7 @@ class Block(Base):
                 [
                     "scoreboard players set quit local.tmp 1",
                     f"scoreboard players set @s local.block.model {index}",
+                    f"data modify entity @s item.tag.[namespace].block_properties.block_state set value \"{state.name}\"",
                     "execute store result score model_id local.tmp run data get entity @s item.tag.[namespace].block_data.custom_model_data",
                     f"scoreboard players add model_id local.tmp {(index * self.prop('material_len', 1))}",
                     "execute store result entity @s item.tag.CustomModelData int 1 run scoreboard players get model_id local.tmp",

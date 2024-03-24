@@ -97,7 +97,13 @@ class Tree:
 
     def default_format(self, ctx: Context, fn: Callable) -> Callable:
         def format(string: str):
-            return fn(string).replace("[namespace]", ctx.project_id)
+            return (
+                fn(string)
+                .replace("[namespace]", ctx.project_id)
+                .replace(
+                    "[version]", ctx.project_version or ctx.meta.get("version_fallback")
+                )
+            )
 
         return format
 
@@ -120,9 +126,20 @@ class Tree:
         )
 
     def make_loot_table(self, format: Callable, key: str, data: str):
-        self.loot_tables[format(key)] = LootTable(json.loads(format(json.dumps(data))))
+        json_data = (format(json.dumps(data)).replace("\\\\\"!!", "").replace("!!\\\\\"", ""))
+        try:
+            self.loot_tables[format(key)] = LootTable(json.loads(json_data))
+        except Exception as e:
+            buffer = 120
+            index = int(e.args[0].split(" ")[-1][:-1])
+            print(json_data[index-buffer:min(index+4, len(json_data))])
+            print()
+            print(json_data[index-3:min(index+4, len(json_data))])
+            raise e
 
-    def make_bench_registry(self, format: Callable, category: str, name: str, items: list):
+    def make_bench_registry(
+        self, format: Callable, category: str, name: str, items: list
+    ):
         self.bench_registry[category] = [
             *self.bench_registry.get(category, []),
             BenchRegistry(name, format("[unit]/[name]"), items, len(items)),
@@ -206,21 +223,23 @@ class Tree:
             ]
 
         for name, models in merged_models.items():
-            ctx.assets.models[f"minecraft:item/{name}"] = Model(
-                {
-                    **ITEMS_TEMPLATE.get(f"minecraft:{name}", {}),
-                    "overrides": [
-                        {
-                            "predicate": {
-                                "custom_model_data": model.model.custom_model_data
-                            },
-                            "model": model.path,
-                        }
-                        for model in sorted(
-                            models,
-                            key=lambda i: i.model.custom_model_data,
-                            reverse=False,
-                        )
-                    ],
-                }
-            )
+            template = ITEMS_TEMPLATE.get(f"minecraft:{name}", {})
+            if not template:
+                print("Unknown template for ", name)
+            template["overrides"] = [
+                *template["overrides"],
+                *[
+                    {
+                        "predicate": {
+                            "custom_model_data": model.model.custom_model_data
+                        },
+                        "model": model.path,
+                    }
+                    for model in sorted(
+                        models,
+                        key=lambda i: i.model.custom_model_data,
+                        reverse=False,
+                    )
+                ],
+            ]
+            ctx.assets.models[f"minecraft:item/{name}"] = Model(template)

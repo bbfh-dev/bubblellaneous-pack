@@ -135,7 +135,13 @@ class Base:
 
     def format(self, string: str) -> str:
         return (
-            string.replace("[tag]", self.tag.replace('"', '\\\\"'))
+            string.replace(
+                "[tag]",
+                self.tag.replace('"', '\\\\"').replace(
+                    '\\\\"[attack_speed]\\\\"',
+                    '[{AttributeName:\\\\\\"generic.attack_speed\\\\\\",Name:\\\\\\"generic.attack_speed\\\\\\",Amount:-1,Operation:2,UUID:[I;-452395758,-53525831,-1380709785,1247774612],Slot:\\\\\\"mainhand\\\\\\"}]',
+                ),
+            )
             .replace("[name]", self.complete_name)
             .replace("[unit_name]", self.name)
             .replace("[display_name]", self.prop("translation_name", self.name))

@@ -28,6 +28,8 @@ REGISTRY: list[Base] = [
     UpholsteryCouch(Category.FURNITURE),
     FloorLamp(Category.FURNITURE),
     Curtains(Category.FURNITURE),
+    Sink(Category.FURNITURE),
+    Toilet(Category.FURNITURE),
     # ------
     Ladder(Category.TECHNOLOGY),
     PadlockBlock(Category.TECHNOLOGY),
@@ -43,6 +45,14 @@ REGISTRY: list[Base] = [
     ItemScanner(Category.TECHNOLOGY),
     Computer(Category.TECHNOLOGY),
     Calculator(Category.TECHNOLOGY),
+    AlarmBlock(Category.TECHNOLOGY),
+    LaserBlock(Category.TECHNOLOGY),
+    Nanoglasses(Category.TECHNOLOGY),
+    Crowbar(Category.TECHNOLOGY),
+    Flashlight(Category.TECHNOLOGY),
+    Battery(Category.TECHNOLOGY),
+    MotionSensor(Category.TECHNOLOGY),
+    ElectricalBox(Category.TECHNOLOGY),
     # ------
     WindowBoards(Category.MISCELLANEOUS),
     Hatch(Category.MISCELLANEOUS),
@@ -63,6 +73,9 @@ REGISTRY: list[Base] = [
     Clipboard(Category.MISCELLANEOUS),
     Plate(Category.MISCELLANEOUS),
     Speakers(Category.MISCELLANEOUS),
+    AlarmClock(Category.MISCELLANEOUS),
+    Umbrella(Category.MISCELLANEOUS),
+    BearTrap(Category.MISCELLANEOUS),
     # ------
     CoffeeCup(Category.FOOD),
     Cucumber(Category.FOOD),

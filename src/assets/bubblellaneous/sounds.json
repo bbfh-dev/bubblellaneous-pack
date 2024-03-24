@@ -50,7 +50,50 @@
     },
     "block.security_alarm.alarm": {
         "sounds": [
-            "bubblellaneous:block/security_alarm/alarm"
+            {
+                "name": "bubblellaneous:block/security_alarm/alarm",
+                "volume": 0.7,
+                "stream": true
+            }
+        ]
+    },
+    "block.motion_sensor.scan": {
+        "category": "block",
+        "sounds": [
+            {
+                "name": "bubblellaneous:block/motion_sensor/scan",
+                "volume": 0.25,
+                "attenuation_distance": 32
+            }
+        ]
+    },
+    "block.bear_trap.close": {
+        "category": "block",
+        "sounds": [
+            {
+                "name": "bubblellaneous:block/bear_trap/close",
+                "volume": 1
+            }
+        ]
+    },
+    "block.electrical_box.disable": {
+        "category": "block",
+        "sounds": [
+            {
+                "name": "bubblellaneous:block/electrical_box/disable",
+                "volume": 0.4,
+                "pitch": 1.5
+            }
+        ]
+    },
+    "block.electrical_box.enable": {
+        "category": "block",
+        "sounds": [
+            {
+                "name": "bubblellaneous:block/electrical_box/enable",
+                "volume": 0.4,
+                "pitch": 1.5
+            }
         ]
     }
 }

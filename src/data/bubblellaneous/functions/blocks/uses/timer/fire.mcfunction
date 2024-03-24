@@ -5,3 +5,6 @@ execute as @s[tag=local.name.retina_scanner] run function bubblellaneous:block/r
 execute as @s[tag=local.name.item_scanner] run function bubblellaneous:block/item_scanner/close
 execute as @s[tag=local.name.keypad_lock] run function bubblellaneous:block/keypad_lock/close
 execute as @s[tag=local.name.computer] run function bubblellaneous:block/computer/blockstates/apply/login {rotation: 0}
+execute as @s[tag=local.name.laser_block] run function bubblellaneous:block/laser_block/deactivate
+execute as @s[tag=local.name.motion_sensor] run function bubblellaneous:block/motion_sensor/timeout
+execute as @s[tag=local.name.bear_trap] if score @s local.block_state matches 1 run function bubblellaneous:block/bear_trap/timeout

@@ -1,1 +1,1 @@
-$tp @s ~ ~ ~ $(rotation_x) 0
+$tp @s ~ ~ ~ $(rotation_x) $(rotation_y)

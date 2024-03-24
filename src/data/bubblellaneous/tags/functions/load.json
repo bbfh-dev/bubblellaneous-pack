@@ -1,6 +1,7 @@
 {
     "values": [
         "bubblellaneous:load",
-        "bubblellaneous:tick"
+        "bubblellaneous:tick",
+        "minecraft:bubblellaneous/garbage_collector"
     ]
 }

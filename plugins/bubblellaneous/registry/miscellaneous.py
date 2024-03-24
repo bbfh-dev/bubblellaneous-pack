@@ -2,7 +2,6 @@ from plugins.bubblellaneous.internal import Block, BlockData, BlockMaterials
 from plugins.bubblellaneous.internal.unit.block import BlockType
 from plugins.bubblellaneous.internal.unit.item import Item, ItemData
 from plugins.bubblellaneous.internal.unit.variant import BlockVariant
-from plugins.utils.nbt import NBT
 
 
 class WindowBoards(BlockVariant):
@@ -39,7 +38,7 @@ class Hatch(Block):
     sound = BlockData.Sound.INDUSTRIAL
     facing = BlockData.Facing.NONE
     recipe = [
-        BlockData.RecipeEntry("block", "iron_ingot", 4),
+        BlockData.RecipeEntry("item", "iron_ingot", 4),
     ]
     tags = [
         BlockData.Uses.PLACE,
@@ -83,7 +82,7 @@ class MossyTrafficBarrier(Block):
     facing = BlockData.Facing.PLAYER_PRECISE
     recipe = [
         BlockData.RecipeEntry("block", "oak_planks", 6),
-        BlockData.RecipeEntry("block", "moss", 1),
+        BlockData.RecipeEntry("block", "moss_carpet", 1),
     ]
     tags = []
 
@@ -194,7 +193,7 @@ class VendingMachine(Block):
     facing = BlockData.Facing.PLAYER
     recipe = [
         BlockData.RecipeEntry("block", "glass", 1),
-        BlockData.RecipeEntry("block", "iron_ingot", 2),
+        BlockData.RecipeEntry("item", "iron_ingot", 2),
     ]
     tags = [
         BlockData.Uses.BRIGHTNESS_FIX,
@@ -231,7 +230,7 @@ class Megaphone(Item):
     recipe = [
         BlockData.RecipeEntry("item", "iron_ingot", 1),
     ]
-    params = lambda *_: NBT({})
+    params = lambda *_: {}
 
 
 class Cup(BlockVariant):
@@ -296,3 +295,54 @@ class Speakers(Block):
         BlockData.RecipeEntry("block", "black_wool", 1),
     ]
     tags = [BlockData.Uses.BRIGHTNESS_FIX]
+
+
+class AlarmClock(Block):
+    """
+    :yellow [☶ Description]
+    TODO
+    """
+
+    base = BlockData.Base.VOID
+    sound = BlockData.Sound.INDUSTRIAL
+    facing = BlockData.Facing.PLAYER_PRECISE
+    recipe = [
+        BlockData.RecipeEntry("block", "bell"),
+    ]
+    tags = []
+
+
+class Umbrella(Item):
+    """
+    :yellow [☶ Description]
+    TODO
+    """
+
+    base = ItemData.Base.INTERACTIVE
+    recipe = [
+        BlockData.RecipeEntry("item", "leather", 4),
+    ]
+    params = lambda *_: {}
+
+
+class BearTrap(Block):
+    """
+    :yellow [☶ Description]
+    TODO
+    """
+
+    base = BlockData.Base.TRIPWIRE
+    sound = BlockData.Sound.INDUSTRIAL
+    facing = BlockData.Facing.PLAYER
+    recipe = [
+        BlockData.RecipeEntry("item", "iron_ingot", 2),
+    ]
+    tags = [
+        BlockData.Uses.TICK,
+        BlockData.Uses.TIMER,
+    ]
+    blockstates = BlockData.BlockStates(
+        "<manual>",
+        BlockData.State("default"),
+        BlockData.State("closed"),
+    )

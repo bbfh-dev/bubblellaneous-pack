@@ -18,6 +18,7 @@ execute if score global.increased_view_range local.settings matches 1 run data m
 $data modify storage bubblellaneous tmp.in.facing set value "$(facing)"
 execute store result score facing local.tmp run data get entity @s Facing
 
+data modify storage bubblellaneous tmp.in.rotation_y set value 0
 execute if data storage bubblellaneous tmp.in{facing: "player"} facing entity @p[gamemode=!spectator] feet store result storage bubblellaneous tmp.in.rotation_x int 1 run function bubblellaneous:block_placer/internal/facing/player
 execute if data storage bubblellaneous tmp.in{facing: "player_precise"} facing entity @p[gamemode=!spectator] feet store result storage bubblellaneous tmp.in.rotation_x int 1 run function bubblellaneous:block_placer/internal/facing/player_precise
 execute if data storage bubblellaneous tmp.in{facing: "normal"} store result storage bubblellaneous tmp.in.rotation_x int 1 run function bubblellaneous:block_placer/internal/facing/normal
@@ -51,3 +52,4 @@ execute as @s[tag=--local.uses.blockstates] as @e[type=item_display,tag=--local.
 #endregion
 
 tag @e[type=item_display,tag=--local.new,limit=1,sort=nearest] remove --local.new
+execute as @e[type=item_display,tag=--local.new,limit=1,sort=nearest] at @s run function #bubblellaneous:block/all/on_place

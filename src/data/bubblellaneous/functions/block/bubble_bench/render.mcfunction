@@ -46,8 +46,7 @@ execute if score i local.tmp < size local.tmp run scoreboard players set gui.las
 execute if score @s local.block_state matches 0 run item replace block ~ ~ ~ container.2 with structure_void{CustomModelData: 370001, display: {Name: '""'}, bubblellaneous: {is_gui: 1b}}
 execute if score @s local.block_state matches 1 run item replace block ~ ~ ~ container.2 with structure_void{CustomModelData: 370002, display: {Name: '""'}, bubblellaneous: {is_gui: 1b, action: "close_variant"}}
 
-item replace block ~ ~ ~ container.11 with structure_void{CustomModelData: 370001, display: {Name: '""'}, bubblellaneous: {is_gui: 1b}}
-
+item replace block ~ ~ ~ container.11 with structure_void{CustomModelData: 370006, display: {Name: '{"translate": "ui.bubblellaneous.navigation", "color": "aqua", "italic": false}', Lore: ['""', '{"translate": "ui.bubblellaneous.jump_to_list_end_or_begin", "with":["≔"], "color":"gray", "italic": false}', '{"translate": "ui.bubblellaneous.craft_maximum", "with":["≔"], "color":"gray", "italic": false}', '{"translate": "ui.bubblellaneous.craft_documentation", "with":["≔", {"keybind": "key.drop"}], "color":"gray", "italic": false}']}, bubblellaneous: {is_gui: 1b}} 1
 execute if score @s local.gui.page matches 2.. run item replace block ~ ~ ~ container.18 with structure_void{CustomModelData: 370002, display: {Name: '""'}, bubblellaneous: {is_gui: 1b, action: "previous_page"}}
 execute if score @s local.gui.page matches 1 run item replace block ~ ~ ~ container.18 with structure_void{CustomModelData: 370003, display: {Name: '""'}, bubblellaneous: {is_gui: 1b, action: "none"}}
 

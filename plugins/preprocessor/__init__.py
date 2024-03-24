@@ -62,11 +62,11 @@ class Preprocessor:
             raise Exception(
                 f"Preprocessor caught unknown version: {min_version=}-{max_version=}"
             )
+        pack_format = PACK_FORMATS.get(self._ctx.meta["minecraft"])
+        if pack_format is None:
+            raise Exception(f"Unknown Beet.json version {self._ctx.meta['minecraft']}")
 
-        if (
-            self._ctx.data.pack_format >= min_version[0]
-            and self._ctx.data.pack_format <= max_version[-1]
-        ):
+        if pack_format[0] >= min_version[0] and pack_format[0] <= max_version[-1]:
             return command
 
         return ""

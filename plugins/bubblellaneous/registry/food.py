@@ -1,7 +1,6 @@
 from plugins.bubblellaneous.internal import BlockData, Item
 from plugins.bubblellaneous.internal.unit.item import ItemData
 from plugins.bubblellaneous.internal.unit.variant import BlockMaterials, ItemVariant
-from plugins.utils.nbt import NBT
 
 
 class CoffeeCup(Item):
@@ -14,7 +13,7 @@ class CoffeeCup(Item):
     recipe = [
         BlockData.RecipeEntry("item", "cocoa_beans", 2),
     ]
-    params = lambda *_: NBT({})
+    params = lambda *_: {}
 
 
 class Cucumber(Item):
@@ -27,7 +26,7 @@ class Cucumber(Item):
     recipe = [
         BlockData.RecipeEntry("item", "wheat_seeds"),
     ]
-    params = lambda *_: NBT({})
+    params = lambda *_: {}
 
 
 class Grapes(Item):
@@ -40,7 +39,7 @@ class Grapes(Item):
     recipe = [
         BlockData.RecipeEntry("item", "wheat_seeds"),
     ]
-    params = lambda *_: NBT({})
+    params = lambda *_: {}
 
 
 class Burger(Item):
@@ -54,7 +53,7 @@ class Burger(Item):
         BlockData.RecipeEntry("item", "bread"),
         BlockData.RecipeEntry("item", "cooked_beef"),
     ]
-    params = lambda *_: NBT({})
+    params = lambda *_: {}
 
 
 class Toast(Item):
@@ -67,7 +66,7 @@ class Toast(Item):
     recipe = [
         BlockData.RecipeEntry("item", "bread"),
     ]
-    params = lambda *_: NBT({})
+    params = lambda *_: {}
 
 
 class Tomato(Item):
@@ -80,7 +79,7 @@ class Tomato(Item):
     recipe = [
         BlockData.RecipeEntry("item", "wheat_seeds"),
     ]
-    params = lambda *_: NBT({})
+    params = lambda *_: {}
 
 
 class Cheese(Item):
@@ -93,7 +92,7 @@ class Cheese(Item):
     recipe = [
         BlockData.RecipeEntry("item", "milk_bucket"),
     ]
-    params = lambda *_: NBT({})
+    params = lambda *_: {}
 
 
 class ChocolateBar(Item):
@@ -106,7 +105,7 @@ class ChocolateBar(Item):
     recipe = [
         BlockData.RecipeEntry("item", "cocoa_beans"),
     ]
-    params = lambda *_: NBT({})
+    params = lambda *_: {}
 
 
 class Donut(Item):
@@ -120,7 +119,7 @@ class Donut(Item):
         BlockData.RecipeEntry("item", "bread"),
         BlockData.RecipeEntry("item", "sugar"),
     ]
-    params = lambda *_: NBT({})
+    params = lambda *_: {}
 
 
 class Broccoli(Item):
@@ -133,7 +132,7 @@ class Broccoli(Item):
     recipe = [
         BlockData.RecipeEntry("item", "wheat_seeds"),
     ]
-    params = lambda *_: NBT({})
+    params = lambda *_: {}
 
 
 class Omelette(Item):
@@ -146,7 +145,7 @@ class Omelette(Item):
     recipe = [
         BlockData.RecipeEntry("item", "egg"),
     ]
-    params = lambda *_: NBT({})
+    params = lambda *_: {}
 
 
 class Strawberry(Item):
@@ -159,7 +158,7 @@ class Strawberry(Item):
     recipe = [
         BlockData.RecipeEntry("item", "wheat_seeds"),
     ]
-    params = lambda *_: NBT({})
+    params = lambda *_: {}
 
 
 class Cereal(Item):
@@ -172,7 +171,7 @@ class Cereal(Item):
     recipe = [
         BlockData.RecipeEntry("item", "wheat", 2),
     ]
-    params = lambda *_: NBT({})
+    params = lambda *_: {}
 
 
 class BeerBottle(ItemVariant):
@@ -188,6 +187,4 @@ class BeerBottle(ItemVariant):
         BlockData.RecipeEntry("item", "glass_bottle"),
         BlockData.RecipeEntry("item", "[color]"),
     ]
-    params = lambda material, index: NBT(
-        {"key": {"name": material.name, "index": index}}
-    )
+    params = lambda material, index: {"key": {"name": material.name, "index": index}}
