@@ -2,6 +2,8 @@
 
 This Minecraft pack adds Furniture, Technology, Food & Miscellaneous blocks and items.
 
+If you wish to contribute, refer to [CONTRIBUTING.md](./CONTRIBUTING.md)
+
 <!-- vim-markdown-toc GFM -->
 
 * [🔖 Translations](#-translations)
