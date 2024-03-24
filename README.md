@@ -26,7 +26,8 @@ Thanks to wonderful people you can enjoy this pack in different languages:
 | BubbleFish              | 🇬🇧 English (UK) \[100%\] |
 | BubbleFish              | 🇷🇺 Russian \[100%\]      |
 | FBreakDance30           | 🇮🇹 Italian \[52%\]       |
-| dorlonkho               | 🇯🇵 Japanesse \[22%\]     |
+| Dorlonkho               | 🇯🇵 Japanesse \[22%\]     |
+| Unintegrated            | 🇨🇿 Czech \[47%\]         |
 
 If you want to help with translations, refer to [CONTRIBUTING.md](./CONTRIBUTING.md)
 
