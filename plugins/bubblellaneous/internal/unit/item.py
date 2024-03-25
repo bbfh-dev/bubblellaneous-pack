@@ -30,6 +30,7 @@ class Item(Base):
                 ),
                 "item_data": {
                     "id": self.complete_name,
+                    "unit": "item",
                     "name": self.name,
                     "material": {
                         "name": self.prop("material", "default"),

@@ -9,7 +9,7 @@ from plugins.bubblellaneous.internal.tree import Tree
 
 from .base import Base
 from .block import Block, BlockData, BlockType
-from .const.materials import COLORS
+from .const.materials import CARDS, COLORS
 from .item import Item
 
 
@@ -70,6 +70,18 @@ class BlockMaterials:
         )
         for color in COLORS
     ]
+
+    CARD_DECK: list[BlockData.Material] = []
+
+    for deck in ["spades", "clubs", "hearts", "diamonds"]:
+        for card in CARDS:
+            CARD_DECK.append(
+                BlockData.Material(
+                    f"{deck}_{card}",
+                    f"{deck}_{card}",
+                    f"{deck}_{card}",
+                )
+            )
 
     WOOD_WITH_WOOL: list[BlockData.Material] = [
         BlockData.Material(

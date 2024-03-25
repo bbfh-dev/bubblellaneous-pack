@@ -53,7 +53,7 @@
             {
                 "name": "bubblellaneous:block/security_alarm/alarm",
                 "volume": 0.7,
-                "stream": true
+                "attenuation_distance": 32
             }
         ]
     },
@@ -93,6 +93,24 @@
                 "name": "bubblellaneous:block/electrical_box/enable",
                 "volume": 0.4,
                 "pitch": 1.5
+            }
+        ]
+    },
+    "block.safe_block.open": {
+        "category": "block",
+        "sounds": [
+            {
+                "name": "bubblellaneous:block/safe_block/open",
+                "volume": 0.4
+            }
+        ]
+    },
+    "block.safe_block.close": {
+        "category": "block",
+        "sounds": [
+            {
+                "name": "bubblellaneous:block/safe_block/close",
+                "volume": 0.4
             }
         ]
     }

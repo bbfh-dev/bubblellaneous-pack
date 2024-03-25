@@ -1,18 +1,16 @@
-from plugins.bubblellaneous.internal import (
-    Block,
-    BlockData,
-    BlockMaterials,
-    Item,
-    ItemData,
-)
-from plugins.bubblellaneous.internal.unit.variant import BlockVariant, ItemVariant
+from plugins.bubblellaneous.internal import (Block, BlockData, BlockMaterials,
+                                             Item, ItemData)
+from plugins.bubblellaneous.internal.unit.variant import (BlockVariant,
+                                                          ItemVariant)
 from plugins.utils.nbt import NBT
 
 
 class Ladder(BlockVariant):
     """
     :yellow [☶ Description]
-    TODO
+    Right Click to latch onto the ladder.
+    Once attached you can go forward/backwards to climb up/down.
+    Sneak to get off, you get teleported on top of a block in-front if you're close enough.
     """
 
     material = BlockMaterials.SOLID
@@ -40,7 +38,7 @@ class Ladder(BlockVariant):
 class PadlockBlock(BlockVariant):
     """
     :yellow [☶ Description]
-    TODO
+    Empty.
     """
 
     material = BlockMaterials.WOOL
@@ -65,7 +63,10 @@ class PadlockBlock(BlockVariant):
 class RisingDoor(BlockVariant):
     """
     :yellow [☶ Description]
-    TODO
+    Right Click to open/close.
+
+    :light_purple [⇄ Connectivity]
+    Can connect to other rising doors.
     """
 
     material = BlockMaterials.SOLID
@@ -92,7 +93,10 @@ class RisingDoor(BlockVariant):
 class Pipe(Block):
     """
     :yellow [☶ Description]
-    TODO
+    Empty.
+
+    :light_purple [⇄ Connectivity]
+    Can connect to other pipes in all 6 directions.
     """
 
     base = BlockData.Base.VOID
@@ -239,7 +243,8 @@ class Pipe(Block):
 class Radiator(Block):
     """
     :yellow [☶ Description]
-    TODO
+    Melts snow/ice blocks in a 5 block radius.
+    Radiates the heat through pipes to cover larger areas.
     """
 
     base = BlockData.Base.CONTAINER
@@ -264,7 +269,7 @@ class Radiator(Block):
 class SurveillanceCamera(Block):
     """
     :yellow [☶ Description]
-    TODO
+    Used alongside with Security Monitor for players to spectate a certain area.
     """
 
     base = BlockData.Base.NONE
@@ -291,7 +296,8 @@ class SurveillanceCamera(Block):
 class SecurityMonitor(Block):
     """
     :yellow [☶ Description]
-    TODO
+    The name of the item represents the name used for identifying camera. Use an anvil to rename.
+    Right Click on a camera to link, place and Right Click to spectate. Once spectating Sneak to leave the camera.
     """
 
     base = BlockData.Base.NONE
@@ -317,7 +323,8 @@ class SecurityMonitor(Block):
 class Padlock(Item):
     """
     :yellow [☶ Description]
-    TODO
+    Right Click while looking at a door to lock it.
+    The first key to be used on the padlock is going to be the key required to unlock it in the future.
     """
 
     base = ItemData.Base.INTERACTIVE
@@ -330,7 +337,7 @@ class Padlock(Item):
 class Key(ItemVariant):
     """
     :yellow [☶ Description]
-    TODO
+    Empty.
     """
 
     material = BlockMaterials.DYE
@@ -346,7 +353,9 @@ class Key(ItemVariant):
 class KeypadLock(Block):
     """
     :yellow [☶ Description]
-    TODO
+    Use the keys in-front of the block to interact.
+    The first password to be entered is going to be saved as credentials for future unlocking.
+    Emits redstone signal when unlocked.
     """
 
     base = BlockData.Base.SOLID
@@ -365,7 +374,9 @@ class KeypadLock(Block):
 class RetinaScanner(Block):
     """
     :yellow [☶ Description]
-    TODO
+    The first player to interact with the block will be saved as credentials for future unlocking.
+    You can equip a player head to impersonate another player.
+    Emits redstone signal when unlocked.
     """
 
     base = BlockData.Base.CONTAINER
@@ -392,7 +403,9 @@ class RetinaScanner(Block):
 class ItemScanner(Block):
     """
     :yellow [☶ Description]
-    TODO
+    The first item to be used will be saved as credentials for future unlocking.
+    Uses both item id and tag to verify the item, supports custom/modded items.
+    Emits redstone signal when unlocked.
     """
 
     base = BlockData.Base.CONTAINER
@@ -419,7 +432,7 @@ class ItemScanner(Block):
 class Computer(Block):
     """
     :yellow [☶ Description]
-    TODO
+    Right Click to turn on/off.
     """
 
     base = BlockData.Base.VOID
@@ -444,7 +457,7 @@ class Computer(Block):
 class Calculator(Block):
     """
     :yellow [☶ Description]
-    TODO
+    Empty.
     """
 
     base = BlockData.Base.VOID
@@ -460,7 +473,7 @@ class Calculator(Block):
 class AlarmBlock(Block):
     """
     :yellow [☶ Description]
-    TODO
+    Produces a loud (32 block radius) alarm sound when activated by redstone.
     """
 
     base = BlockData.Base.REDSTONE_ACTIVATED
@@ -480,7 +493,8 @@ class AlarmBlock(Block):
 class LaserBlock(Block):
     """
     :yellow [☶ Description]
-    TODO
+    Looks for players 5 blocks in front of itself.
+    Can be hidden behind a 1-block thick wall, however can be obstructed by blocks placed any further than that.
     """
 
     base = BlockData.Base.SOLID
@@ -500,7 +514,7 @@ class LaserBlock(Block):
 class Nanoglasses(Item):
     """
     :yellow [☶ Description]
-    TODO
+    Right Click to equip. When equipped you can see laser rays.
     """
 
     base = ItemData.Base.INTERACTIVE
@@ -514,7 +528,7 @@ class Nanoglasses(Item):
 class Crowbar(Item):
     """
     :yellow [☶ Description]
-    TODO
+    Acts as a stone pickaxe.
     """
 
     base = ItemData.Base.PICKAXE
@@ -527,7 +541,9 @@ class Crowbar(Item):
 class Flashlight(Item):
     """
     :yellow [☶ Description]
-    TODO
+    Right Click to turn on/off.
+    Emits light up to 32 blocks ahead. Requires a configurable amount of charge, becomes more dim as it discharges.
+    When the battery level is 0 it will attempt to use a Battery item in player's inventory.
     """
 
     base = ItemData.Base.INTERACTIVE
@@ -542,7 +558,7 @@ class Flashlight(Item):
 class Battery(Item):
     """
     :yellow [☶ Description]
-    TODO
+    Empty.
     """
 
     base = ItemData.Base.NORMAL
@@ -555,7 +571,8 @@ class Battery(Item):
 class MotionSensor(Block):
     """
     :yellow [☶ Description]
-    TODO
+    Saves the player that placed it as its owner.
+    When a player is detected nearby it will alert with a loud (32 block radius) sound and notify the owner.
     """
 
     base = BlockData.Base.VOID
@@ -580,7 +597,7 @@ class MotionSensor(Block):
 class ElectricalBox(Block):
     """
     :yellow [☶ Description]
-    TODO
+    Right Click to turn on/off.
     """
 
     base = BlockData.Base.VOID
@@ -599,4 +616,30 @@ class ElectricalBox(Block):
         "<manual>",
         BlockData.State("default"),
         BlockData.State("disabled"),
+    )
+
+
+class SafeBlock(Block):
+    """
+    :yellow [☶ Description]
+    A container block (27 slots) that gets locked when it has no redstone signal.
+    When activated with redstone it opens for 30 ticks, can only close if nobody is currently interacting with it.
+    """
+
+    base = BlockData.Base.REDSTONE_ACTIVATED
+    sound = BlockData.Sound.INDUSTRIAL
+    facing = BlockData.Facing.PLAYER
+    recipe = [
+        BlockData.RecipeEntry("item", "iron_ingot", 2),
+        BlockData.RecipeEntry("item", "redstone"),
+    ]
+    tags = [
+        BlockData.Uses.TICK,
+        BlockData.Uses.BRIGHTNESS_FIX,
+        BlockData.Uses.TIMER,
+    ]
+    blockstates = BlockData.BlockStates(
+        "<manual>",
+        BlockData.State("default"),
+        BlockData.State("open"),
     )

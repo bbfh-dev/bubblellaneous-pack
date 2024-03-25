@@ -5,7 +5,7 @@ from plugins.bubblellaneous.internal.unit.variant import BlockVariant
 class BubbleBench(Block):
     """
     :yellow [☶ Description]
-    Used for obtaining all blocks & items.
+    Used for obtaining all custom blocks & items.
 
     :green [☄ Instructions]
     Open the block, use compass inside to view all help tooltips.
@@ -27,7 +27,10 @@ class BubbleBench(Block):
 class Table(BlockVariant):
     """
     :yellow [☶ Description]
-    TODO
+    Empty.
+
+    :light_purple [⇄ Connectivity]
+    Can connect to other tables.
     """
 
     material = BlockMaterials.SOLID
@@ -54,7 +57,7 @@ class Table(BlockVariant):
 class Shelf(BlockVariant):
     """
     :yellow [☶ Description]
-    TODO
+    Can store a single item stack.
     """
 
     material = BlockMaterials.SOLID
@@ -74,7 +77,7 @@ class Shelf(BlockVariant):
 class Cabinet(BlockVariant):
     """
     :yellow [☶ Description]
-    TODO
+    A regular container (27 slots).
     """
 
     material = BlockMaterials.SOLID
@@ -93,7 +96,7 @@ class Cabinet(BlockVariant):
 class Drawer(BlockVariant):
     """
     :yellow [☶ Description]
-    TODO
+    Empty.
     """
 
     material = BlockMaterials.SOLID
@@ -110,7 +113,7 @@ class Drawer(BlockVariant):
 class Cupboard(BlockVariant):
     """
     :yellow [☶ Description]
-    TODO
+    Can store up to 2 item stacks.
     """
 
     material = BlockMaterials.SOLID
@@ -131,7 +134,7 @@ class Cupboard(BlockVariant):
 class Bench(BlockVariant):
     """
     :yellow [☶ Description]
-    TODO
+    A seat.
     """
 
     material = BlockMaterials.SOLID
@@ -151,7 +154,10 @@ class Bench(BlockVariant):
 class Couch(BlockVariant):
     """
     :yellow [☶ Description]
-    TODO
+    A seat.
+
+    :light_purple [⇄ Connectivity]
+    Can connect to other couches with corners support.
     """
 
     material = BlockMaterials.WOOL
@@ -181,7 +187,7 @@ class Couch(BlockVariant):
 class Stool(BlockVariant):
     """
     :yellow [☶ Description]
-    TODO
+    A seat.
     """
 
     material = BlockMaterials.WOOD
@@ -201,7 +207,7 @@ class Stool(BlockVariant):
 class Barstool(BlockVariant):
     """
     :yellow [☶ Description]
-    TODO
+    A seat.
     """
 
     material = BlockMaterials.WOOD
@@ -221,7 +227,7 @@ class Barstool(BlockVariant):
 class DinningChair(BlockVariant):
     """
     :yellow [☶ Description]
-    TODO
+    A seat.
     """
 
     material = BlockMaterials.WOOD_WITH_WOOL
@@ -242,7 +248,7 @@ class DinningChair(BlockVariant):
 class Blinds(BlockVariant):
     """
     :yellow [☶ Description]
-    TODO
+    Empty.
     """
 
     material = BlockMaterials.SOLID
@@ -259,7 +265,7 @@ class Blinds(BlockVariant):
 class KitchenCabinet(BlockVariant):
     """
     :yellow [☶ Description]
-    TODO
+    A regular container (27 slots).
     """
 
     material = BlockMaterials.SOLID
@@ -278,7 +284,10 @@ class KitchenCabinet(BlockVariant):
 class Fridge(Block):
     """
     :yellow [☶ Description]
-    TODO
+    A regular container (27 slots).
+
+    :light_purple [⇄ Connectivity]
+    Can connect to other fridges placed on top.
     """
 
     base = BlockData.Base.CONTAINER
@@ -301,7 +310,7 @@ class Fridge(Block):
 class Washer(Block):
     """
     :yellow [☶ Description]
-    TODO
+    Place a block of water on top to refill. Cleans color from leather armor.
     """
 
     base = BlockData.Base.HOPPER
@@ -324,7 +333,7 @@ class Washer(Block):
 class Trashcan(Block):
     """
     :yellow [☶ Description]
-    TODO
+    Empty.
     """
 
     base = BlockData.Base.DRIPSTONE
@@ -342,7 +351,7 @@ class Trashcan(Block):
 class TableLamp(BlockVariant):
     """
     :yellow [☶ Description]
-    TODO
+    A light source.
     """
 
     material = BlockMaterials.WOOL
@@ -363,7 +372,7 @@ class TableLamp(BlockVariant):
 class StreetLight(BlockVariant):
     """
     :yellow [☶ Description]
-    TODO
+    A light source.
     """
 
     material = BlockMaterials.SOLID
@@ -390,7 +399,7 @@ class StreetLight(BlockVariant):
 class DeskLamp(BlockVariant):
     """
     :yellow [☶ Description]
-    TODO
+    A light source.
     """
 
     material = BlockMaterials.WOOL
@@ -412,7 +421,10 @@ class DeskLamp(BlockVariant):
 class UpholsteryCouch(BlockVariant):
     """
     :yellow [☶ Description]
-    TODO
+    A seat.
+
+    :light_purple [⇄ Connectivity]
+    Can connect to other couches to the left/right of it.
     """
 
     material = BlockMaterials.WOOD_WITH_WOOL
@@ -441,7 +453,7 @@ class UpholsteryCouch(BlockVariant):
 class FloorLamp(BlockVariant):
     """
     :yellow [☶ Description]
-    TODO
+    A light source.
     """
 
     material = BlockMaterials.WOOL
@@ -463,7 +475,10 @@ class FloorLamp(BlockVariant):
 class Curtains(Block):
     """
     :yellow [☶ Description]
-    TODO
+    Sneak+Click to open/close.
+
+    :light_purple [⇄ Connectivity]
+    Can connect to other curtains.
     """
 
     base = BlockData.Base.VOID
@@ -491,7 +506,7 @@ class Curtains(Block):
 class Sink(BlockVariant):
     """
     :yellow [☶ Description]
-    TODO
+    Click to toggle on/off.
     """
 
     material = BlockMaterials.SOLID
@@ -516,7 +531,7 @@ class Sink(BlockVariant):
 class Toilet(BlockVariant):
     """
     :yellow [☶ Description]
-    TODO
+    A seat.
     """
 
     material = BlockMaterials.SOLID

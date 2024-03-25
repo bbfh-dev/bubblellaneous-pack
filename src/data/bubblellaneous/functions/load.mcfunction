@@ -16,6 +16,7 @@ scoreboard objectives add local.player.leave custom:leave_game
 scoreboard objectives add local.player.sneak custom:sneak_time
 scoreboard objectives add local.player.right_click used:carrot_on_a_stick
 scoreboard objectives add local.player.drop custom:drop
+scoreboard objectives add local.player.death_count deathCount
 scoreboard objectives add local.player.pos_y dummy
 
 #region Settings

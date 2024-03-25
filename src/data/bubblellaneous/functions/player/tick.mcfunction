@@ -5,6 +5,7 @@ execute if score @s local.player.leave matches 1.. run function bubblellaneous:p
 execute if score @s local.player.right_click matches 1.. run function bubblellaneous:player/event/item/right_click
 execute if score @s local.player.sneak matches 1.. run function bubblellaneous:player/event/world/sneak
 execute if score @s local.player.drop matches 1.. run function bubblellaneous:player/event/item/drop
+execute if score @s local.player.death_count matches 1.. run function bubblellaneous:player/event/world/die
 
 #region GUI
 execute if entity @e[type=item_display,tag=local.name.bubble_bench,distance=..5] run function bubblellaneous:block/bubble_bench/as_player/tick

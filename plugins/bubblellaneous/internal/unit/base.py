@@ -14,7 +14,7 @@ from plugins.bubblellaneous.internal.tree import Tree
 from plugins.utils.nbt import NBT
 
 
-def format_docs_line(lines: list) -> str:
+def format_docs_line(name: str, lines: list) -> str:
     for i, line in enumerate(lines):
         line = line[4:]
         if line.startswith(":"):
@@ -23,7 +23,15 @@ def format_docs_line(lines: list) -> str:
             lines[i] = NBT({"text": f"[{text}]\\n", "color": color}, is_json=True)
         else:
             lines[i] = f"{line}\\n"
-    return NBT(["\\n", *lines]).get_list()
+    return NBT(
+        [
+            "-" * 8,
+            " ",
+            " ".join([i.capitalize() for i in name.split("_")]),
+            "\\n\\n",
+            *lines,
+        ]
+    ).get_list()
 
 
 class Base:
@@ -152,7 +160,10 @@ class Base:
     def get_documentation(self) -> str:
         if self.__class__.__doc__ is None:
             return "[]"
-        return format_docs_line(self.__class__.__doc__.split("\n")[1:-1])
+        return format_docs_line(
+            self.name,
+            self.__class__.__doc__.split("\n")[1:-1],
+        )
 
     def allocate_ids(self) -> int:
         return 1
