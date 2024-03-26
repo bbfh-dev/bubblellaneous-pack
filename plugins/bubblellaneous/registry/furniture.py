@@ -1,4 +1,5 @@
-from plugins.bubblellaneous.internal import Block, BlockData, BlockMaterials, BlockType
+from plugins.bubblellaneous.internal import (Block, BlockData, BlockMaterials,
+                                             BlockType)
 from plugins.bubblellaneous.internal.unit.variant import BlockVariant
 
 
@@ -489,6 +490,8 @@ class Curtains(Block):
     ]
     tags = [
         BlockData.Uses.PLACE,
+        BlockData.Uses.NO_BASE,
+        BlockData.Uses.CUSTOM_BASE,
     ]
     blockstates = BlockData.BlockStates(
         "@self",

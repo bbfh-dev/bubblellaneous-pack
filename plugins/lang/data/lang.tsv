@@ -6,46 +6,46 @@ group	technology	%s Technology		%s Технологии	Tecnologia	セキュリ�
 group	food	%s Food		%s Еда	Cibo	食べ物	%s Jídlo	%s moku
 group	miscellaneous	%s Miscellaneous		%s Прочее	Varie	その他	%s Ostatní	%s ante
 block	bubble_bench	Bubble Bench		Бабл Верстак	Banco bolla	バブルベンチ	Bubblův stůl	supa pali pi jan Papu
-block	oak_table	Oak Table		Дубовый Стол	Tavolo di quercia	オークのテーブル	Dubový stůl	
-block	spruce_table	Spruce Table		Еловый Стол	Tavolo di abete	トウヒのテーブル	Smrkový stůl	
-block	birch_table	Birch Table		Берëзовый Стол	Tavolo di betulla	シラカバのテーブル	Březový stůl	
-block	jungle_table	Jungle Table		Стол из тропического дерева	Tavolo della giungla	ジャングルのテーブル	Stůl z tropického dřeva	
-block	acacia_table	Acacia Table		Акациевый Стол	Tavolo di acacia	アカシアのテーブル	Akáciový stůl	
-block	bamboo_table	Bamboo Table		Стол из бамбука	Tavolo di bambù		Bambusový stůl	
-block	dark_oak_table	Dark Oak Table		Стол из тëмного дуба	Tavolo di quercia scura	ダークオークのテーブル	Stůl z tmavého dubu	
-block	mangrove_table	Mangrove Table		Мангровый Стол	Tavolo di mangrovia		Kořenovníkový stůl	
-block	cherry_table	Cherry Table		Вишнёвый Стол	Tavolo di ciliegio		Třešňový stůl	
-block	crimson_table	Crimson Table		Багровый Стол	Tavolo cremisi	真紅のテーブル	Karmínový stůl	
-block	warped_table	Warped Table		Искажëнный Стол	Tavolo distorto	歪んだテーブル	Přízračný stůl	
-block	stone_table	Stone Table		Каменный Стол	Tavolo di pietra	石のテーブル	Kamenný stůl	
-block	quartz_table	Quartz Table		Кварцевый Стол	Tavolo di quarzo		Křemenný stůl	
-block	deepslate_table	Deepslate Table		Глубинносланцевый Стол	Tavolo di ardesia profonda		Břidlicový stůl	
-block	iron_table	Iron Table		Железный Стол	Tavolo di ferro		Železný stůl	
-block	copper_table	Copper Table		Медный Стол	Tavolo di rame		Měděný stůl	
-block	gold_table	Golden Table		Золотой Стол	Tavolo d'oro		Zlatý stůl	
-block	diamond_table	Diamond Table		Алмазный Стол	Tavolo di diamante		Diamantový stůl	
-block	emerald_table	Emerald Table		Изумрудный Стол	Tavolo di smeraldo		Smaragdový stůl	
-block	netherite_table	Netherite Table		Незеритовый Стол	Tavolo di netherite		Netheritový stůl	
-block	oak_shelf	Oak Shelf		Дубовая Полка	Mensola di quercia	オークの壁掛け棚	Dubová police	
-block	spruce_shelf	Spruce Shelf		Еловая Полка	Mensola di abete	トウヒの壁掛け棚	Smrková police	
-block	birch_shelf	Birch Shelf		Берëзовая Полка	Mensola di betulla	シラカバの壁掛け棚	Březová police	
-block	jungle_shelf	Jungle Shelf		Полка из тропического дерева	Mensola della giungla	ジャングルの壁掛け棚	Police z tropického dřeva	
-block	acacia_shelf	Acacia Shelf		Акациевая Полка	Mensola di acacia	アカシアの壁掛け棚	Akáciová police	
-block	bamboo_shelf	Bamboo Shelf		Полка из бамбука	Mensola di bambù		Bambusová police	
-block	dark_oak_shelf	Dark Oak Shelf		Полка из тëмного дуба	Mensola di quercia scura	ダークオークの壁掛け棚	Police z tmavého dubu	
-block	mangrove_shelf	Mangrove Shelf		Мангровая Полка	Mensola di mangrovia		Kořenovníková police	
-block	cherry_shelf	Cherry Shelf		Вишнёвая Полка	Mensola di ciliegio		Třešňová police	
-block	crimson_shelf	Crimson Shelf		Багровая Полка	Mensola cremisi	真紅の壁掛け棚	Karmínová police	
-block	warped_shelf	Warped Shelf		Искажëнная Полка	Mensola distorta	歪んだ壁掛け棚	Přízračná police	
-block	stone_shelf	Stone Shelf		Каменная Полка	Mensola di pietra	石の壁掛け棚	Kamenná police	
-block	quartz_shelf	Quartz Shelf		Кварцевая Полка	Mensola di quarzo		Křemenná police	
-block	deepslate_shelf	Deepslate Shelf		Глубинносланцевая Полка	Mensola di ardesia profonda		Břidlicová police	
-block	iron_shelf	Iron Shelf		Железная Полка	Mensola di ferro		Železná police	
-block	copper_shelf	Copper Shelf		Медная Полка	Mensola di rame		Měděná police	
-block	gold_shelf	Golden Shelf		Золотая Полка	Mensola d'oro		Zlatá police	
-block	diamond_shelf	Diamond Shelf		Алмазная Полка	Mensola di diamante		Diamantová police	
-block	emerald_shelf	Emerald Shelf		Изумрудная Полка	Mensola di smeraldo		Smaragdová police	
-block	netherite_shelf	Netherite Shelf		Незеритовая Полка	Mensola di netherite		Netheritová police	
+block	oak_table	Oak Table		Дубовый Стол	Tavolo di quercia	オークのテーブル	Dubový stůl	supa pi kasi kili
+block	spruce_table	Spruce Table		Еловый Стол	Tavolo di abete	トウヒのテーブル	Smrkový stůl	supa pi kasi lete
+block	birch_table	Birch Table		Берëзовый Стол	Tavolo di betulla	シラカバのテーブル	Březový stůl	supa pi kasi walo
+block	jungle_table	Jungle Table		Стол из тропического дерева	Tavolo della giungla	ジャングルのテーブル	Stůl z tropického dřeva	supa pi kasi suli
+block	acacia_table	Acacia Table		Акациевый Стол	Tavolo di acacia	アカシアのテーブル	Akáciový stůl	supa pi kasi seli
+block	bamboo_table	Bamboo Table		Стол из бамбука	Tavolo di bambù		Bambusový stůl	supa pi kasi palisa
+block	dark_oak_table	Dark Oak Table		Стол из тëмного дуба	Tavolo di quercia scura	ダークオークのテーブル	Stůl z tmavého dubu	supa pi kasi pimeja
+block	mangrove_table	Mangrove Table		Мангровый Стол	Tavolo di mangrovia		Kořenovníkový stůl	supa pi kasi telo
+block	cherry_table	Cherry Table		Вишнёвый Стол	Tavolo di ciliegio		Třešňový stůl	supa pi kasi suwi
+block	crimson_table	Crimson Table		Багровый Стол	Tavolo cremisi	真紅のテーブル	Karmínový stůl	supa pi soko loje
+block	warped_table	Warped Table		Искажëнный Стол	Tavolo distorto	歪んだテーブル	Přízračný stůl	supa pi soko laso
+block	stone_table	Stone Table		Каменный Стол	Tavolo di pietra	石のテーブル	Kamenný stůl	supa kiwen
+block	quartz_table	Quartz Table		Кварцевый Стол	Tavolo di quarzo		Křemenný stůl	supa pi kiwen walo seli
+block	deepslate_table	Deepslate Table		Глубинносланцевый Стол	Tavolo di ardesia profonda		Břidlicový stůl	supa pi kiwen anpa
+block	iron_table	Iron Table		Железный Стол	Tavolo di ferro		Železný stůl	supa pi kiwen walo
+block	copper_table	Copper Table		Медный Стол	Tavolo di rame		Měděný stůl	supa pi kiwen ante
+block	gold_table	Golden Table		Золотой Стол	Tavolo d'oro		Zlatý stůl	supa pi kiwen jelo
+block	diamond_table	Diamond Table		Алмазный Стол	Tavolo di diamante		Diamantový stůl	supa pi kiwen laso
+block	emerald_table	Emerald Table		Изумрудный Стол	Tavolo di smeraldo		Smaragdový stůl	supa pi kiwen esun
+block	netherite_table	Netherite Table		Незеритовый Стол	Tavolo di netherite		Netheritový stůl	supa pi mani Netherite
+block	oak_shelf	Oak Shelf		Дубовая Полка	Mensola di quercia	オークの壁掛け棚	Dubová police	supa sinpin pi kasi kili
+block	spruce_shelf	Spruce Shelf		Еловая Полка	Mensola di abete	トウヒの壁掛け棚	Smrková police	supa sinpin pi kasi lete
+block	birch_shelf	Birch Shelf		Берëзовая Полка	Mensola di betulla	シラカバの壁掛け棚	Březová police	supa sinpin pi kasi walo
+block	jungle_shelf	Jungle Shelf		Полка из тропического дерева	Mensola della giungla	ジャングルの壁掛け棚	Police z tropického dřeva	supa sinpin pi kasi suli
+block	acacia_shelf	Acacia Shelf		Акациевая Полка	Mensola di acacia	アカシアの壁掛け棚	Akáciová police	supa sinpin pi kasi seli
+block	bamboo_shelf	Bamboo Shelf		Полка из бамбука	Mensola di bambù		Bambusová police	supa sinpin pi kasi palisa
+block	dark_oak_shelf	Dark Oak Shelf		Полка из тëмного дуба	Mensola di quercia scura	ダークオークの壁掛け棚	Police z tmavého dubu	supa sinpin pi kasi pimeja
+block	mangrove_shelf	Mangrove Shelf		Мангровая Полка	Mensola di mangrovia		Kořenovníková police	supa sinpin pi kasi telo
+block	cherry_shelf	Cherry Shelf		Вишнёвая Полка	Mensola di ciliegio		Třešňová police	supa sinpin pi kasi suwi
+block	crimson_shelf	Crimson Shelf		Багровая Полка	Mensola cremisi	真紅の壁掛け棚	Karmínová police	supa sinpin pi soko loje
+block	warped_shelf	Warped Shelf		Искажëнная Полка	Mensola distorta	歪んだ壁掛け棚	Přízračná police	supa sinpin pi soko laso
+block	stone_shelf	Stone Shelf		Каменная Полка	Mensola di pietra	石の壁掛け棚	Kamenná police	supa sinpin kiwen
+block	quartz_shelf	Quartz Shelf		Кварцевая Полка	Mensola di quarzo		Křemenná police	supa sinpin pi kiwen walo seli
+block	deepslate_shelf	Deepslate Shelf		Глубинносланцевая Полка	Mensola di ardesia profonda		Břidlicová police	supa sinpin pi kiwen anpa
+block	iron_shelf	Iron Shelf		Железная Полка	Mensola di ferro		Železná police	supa sinpin pi kiwen walo
+block	copper_shelf	Copper Shelf		Медная Полка	Mensola di rame		Měděná police	supa sinpin pi kiwen ante
+block	gold_shelf	Golden Shelf		Золотая Полка	Mensola d'oro		Zlatá police	supa sinpin pi kiwen jelo
+block	diamond_shelf	Diamond Shelf		Алмазная Полка	Mensola di diamante		Diamantová police	supa sinpin pi kiwen laso
+block	emerald_shelf	Emerald Shelf		Изумрудная Полка	Mensola di smeraldo		Smaragdová police	supa sinpin pi kiwen esun
+block	netherite_shelf	Netherite Shelf		Незеритовая Полка	Mensola di netherite		Netheritová police	supa sinpin pi mani Netherite
 block	oak_cabinet	Oak Cabinet		Дубовый Ящик	Comodino di quercia	オークのキャビネット	Dubová skříňka	
 block	spruce_cabinet	Spruce Cabinet		Еловый Ящик	Comodino di abete	トウヒのキャビネット	Smrková skříňka	
 block	birch_cabinet	Birch Cabinet		Берëзовый Ящик	Comodino di betulla	シラカバのキャビネット	Březová skříňka	
@@ -367,26 +367,26 @@ block	brown_table_lamp	Brown Table Lamp		Коричневая Лампа			Hněd
 block	green_table_lamp	Green Table Lamp		Зелёная Лампа			Zelená stolní lampa	ilo suno supa pi laso kasi
 block	red_table_lamp	Red Table Lamp		Красная Лампа			Červená stolní lampa	ilo suno supa loje
 block	black_table_lamp	Black Table Lamp		Чёрная Лампа			Černá stolní lampa	ilo suno supa pimeja
-block	oak_street_light	Oak Street Light		Дубовый Уличный фонарь			Dubová pouliční lampa	
-block	spruce_street_light	Spruce Street Light		Еловый Уличный фонарь			Smrková pouliční lampa	
-block	birch_street_light	Birch Street Light		Берëзовый Уличный фонарь			Březová pouliční lampa	
-block	jungle_street_light	Jungle Street Light		Уличный фонарь из тропического дерева			Pouliční lampa z tropického dřeva	
-block	acacia_street_light	Acacia Street Light		Акациевый Уличный фонарь			Akáciová pouliční lampa	
-block	bamboo_street_light	Bamboo Street Light		Уличный фонарь из бамбука			bambusová pouliční lampa	
-block	dark_oak_street_light	Dark Oak Street Light		Уличный фонарь из тëмного дуба			Pouliční lampa z tmavého dubu	
-block	mangrove_street_light	Mangrove Street Light		Мангровый Уличный фонарь			Kořenovníková pouliční lampa	
-block	cherry_street_light	Cherry Street Light		Вишнёвый Уличный фонарь			Třešňová pouliční lampa	
-block	crimson_street_light	Crimson Street Light		Багровый Уличный фонарь			Karmínová pouliční lampa	
-block	warped_street_light	Warped Street Light		Искажëнный Уличный фонарь			Přízračná pouliční lampa	
-block	stone_street_light	Stone Street Light		Каменный Уличный фонарь			Kamenná pouliční lampa	
-block	quartz_street_light	Quartz Street Light		Кварцевый Уличный фонарь			Křemenná pouliční lampa	
-block	deepslate_street_light	Deepslate Street Light		Глубинносланцевый Уличный фонарь			Břidlicová pouliční lampa	
-block	iron_street_light	Iron Street Light		Железный Уличный фонарь			Železná pouliční lampa	
-block	copper_street_light	Copper Street Light		Медный Уличный фонарь			Měděná pouliční lampa	
-block	gold_street_light	Golden Street Light		Золотой Уличный фонарь			Zlatá pouliční lampa	
-block	diamond_street_light	Diamond Street Light		Алмазный Уличный фонарь			Diamantová pouliční lampa	
-block	emerald_street_light	Emerald Street Light		Изумрудный Уличный фонарь			Smaragdová pouliční lampa	
-block	netherite_street_light	Netherite Street Light		Незеритовый Уличный фонарь			Netheritová pouliční lampa	
+block	oak_street_light	Oak Street Light		Дубовый Уличный фонарь			Dubová pouliční lampa	suno nasin pi kasi kili
+block	spruce_street_light	Spruce Street Light		Еловый Уличный фонарь			Smrková pouliční lampa	suno nasin pi kasi lete
+block	birch_street_light	Birch Street Light		Берëзовый Уличный фонарь			Březová pouliční lampa	suno nasin pi kasi walo
+block	jungle_street_light	Jungle Street Light		Уличный фонарь из тропического дерева			Pouliční lampa z tropického dřeva	suno nasin pi kasi suli
+block	acacia_street_light	Acacia Street Light		Акациевый Уличный фонарь			Akáciová pouliční lampa	suno nasin pi kasi seli
+block	bamboo_street_light	Bamboo Street Light		Уличный фонарь из бамбука			bambusová pouliční lampa	suno nasin pi kasi palisa
+block	dark_oak_street_light	Dark Oak Street Light		Уличный фонарь из тëмного дуба			Pouliční lampa z tmavého dubu	suno nasin pi kasi pimeja
+block	mangrove_street_light	Mangrove Street Light		Мангровый Уличный фонарь			Kořenovníková pouliční lampa	suno nasin pi kasi telo
+block	cherry_street_light	Cherry Street Light		Вишнёвый Уличный фонарь			Třešňová pouliční lampa	suno nasin pi kasi suwi
+block	crimson_street_light	Crimson Street Light		Багровый Уличный фонарь			Karmínová pouliční lampa	suno nasin pi soko loje
+block	warped_street_light	Warped Street Light		Искажëнный Уличный фонарь			Přízračná pouliční lampa	suno nasin pi soko laso
+block	stone_street_light	Stone Street Light		Каменный Уличный фонарь			Kamenná pouliční lampa	suno nasin kiwen
+block	quartz_street_light	Quartz Street Light		Кварцевый Уличный фонарь			Křemenná pouliční lampa	suno nasin pi kiwen walo seli
+block	deepslate_street_light	Deepslate Street Light		Глубинносланцевый Уличный фонарь			Břidlicová pouliční lampa	suno nasin pi kiwen anpa
+block	iron_street_light	Iron Street Light		Железный Уличный фонарь			Železná pouliční lampa	suno nasin pi kiwen walo
+block	copper_street_light	Copper Street Light		Медный Уличный фонарь			Měděná pouliční lampa	suno nasin pi kiwen ante
+block	gold_street_light	Golden Street Light		Золотой Уличный фонарь			Zlatá pouliční lampa	suno nasin pi kiwen jelo
+block	diamond_street_light	Diamond Street Light		Алмазный Уличный фонарь			Diamantová pouliční lampa	suno nasin pi kiwen laso
+block	emerald_street_light	Emerald Street Light		Изумрудный Уличный фонарь			Smaragdová pouliční lampa	suno nasin pi kiwen esun
+block	netherite_street_light	Netherite Street Light		Незеритовый Уличный фонарь			Netheritová pouliční lampa	suno nasin pi mani Netherite
 block	white_desk_lamp	White Desk Lamp		Белая Настольная лампа			Bíla stolní lampička	ilo suno pali walo
 block	orange_desk_lamp	Orange Desk Lamp		Оранжевая Настольная лампа			Oranžová stolní lampička	ilo suno pali pi loje jelo
 block	magenta_desk_lamp	Magenta Desk Lamp		Пурпурная Настольная лампа			Světle modrá stolní lampička	ilo suno pali pi loje laso
@@ -490,7 +490,7 @@ block	computer	Computer		Компьютер			Počítač	ilo sona
 block	speakers	Speakers		Колонки			Reproduktory	ilo pi kalama wawa
 block	plate	Plate		Тарелка			Talíř	supa moku
 block	alarm_clock	Alarm Clock		Будильник			Budík	ilo tenpo
-block	alarm_block	Security Alarm Block		Сигнализация			Bezpečnostní budík	ilo tenpo awen
+block	alarm_block	Security Alarm Block		Сигнализация			Blok bezpečnostního poplachu	ilo awen kalama
 block	laser_block	Laser Block		Лазерный блок			Laserový blok	ilo pi sona jan
 block	bear_trap	Bear Trap		Медвежий капкан			Medvědí past	ilo alasa pi soweli suli
 block	motion_sensor	Motion Sensor		Датчик движения			Snímač pohybu	ilo pi sona tawa
@@ -498,6 +498,7 @@ block	calculator	Calculator		Калькулятор			Kalkulačka	ilo nanpa
 block	clipboard	Clipboard		Планшет			Psací podložka	supa lili sitelen
 block	electrical_box	Electrical Box		Электрический ящик			Elektrická skříň	poki wawa
 block	safe_block	Safe Block		Сейф			Trezor	poki mani
+block	telescope	Telescope		Телескоп				
 item	padlock	Padlock		Навесной замок		南京錠	Visací zámek	ilo awen
 item	coffee_cup	Coffee Cup		Чашка с Кофе		コーヒー	Šálek kávy	telo pi lape ala
 item	cucumber	Cucumber		Огурец			Okurka	kili palisa laso

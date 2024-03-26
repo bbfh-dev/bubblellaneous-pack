@@ -1,5 +1,8 @@
 tag @e[type=item_display,tag=local.block,distance=..32] add --local.loaded
 
+execute store result score gamemode local.tmp run data get entity @s playerGameType
+execute unless score gamemode local.tmp = @s local.player.gamemode run function bubblellaneous:player/event/world/change_gamemode
+
 execute store result score @s local.player.pos_y run data get entity @s Pos[1]
 execute if score @s local.player.leave matches 1.. run function bubblellaneous:player/event/world/leave
 execute if score @s local.player.right_click matches 1.. run function bubblellaneous:player/event/item/right_click
@@ -8,7 +11,7 @@ execute if score @s local.player.drop matches 1.. run function bubblellaneous:pl
 execute if score @s local.player.death_count matches 1.. run function bubblellaneous:player/event/world/die
 
 #region GUI
-execute if entity @e[type=item_display,tag=local.name.bubble_bench,distance=..5] run function bubblellaneous:block/bubble_bench/as_player/tick
+execute if entity @e[type=item_display,tag=local.name.bubble_bench,distance=..16] run function bubblellaneous:block/bubble_bench/as_player/tick
 #endregion
 
 #region Sound

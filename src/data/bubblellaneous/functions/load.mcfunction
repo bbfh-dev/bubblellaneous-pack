@@ -18,6 +18,7 @@ scoreboard objectives add local.player.right_click used:carrot_on_a_stick
 scoreboard objectives add local.player.drop custom:drop
 scoreboard objectives add local.player.death_count deathCount
 scoreboard objectives add local.player.pos_y dummy
+scoreboard objectives add local.player.gamemode dummy
 
 #region Settings
 scoreboard objectives add local.settings dummy
