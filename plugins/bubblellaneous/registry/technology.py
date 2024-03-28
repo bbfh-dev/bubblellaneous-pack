@@ -376,6 +376,7 @@ class RetinaScanner(Block):
     :yellow [☶ Description]
     The first player to interact with the block will be saved as credentials for future unlocking.
     You can equip a player head to impersonate another player.
+    Fails to scan retina if player is wearing a mask (mob head).
     Emits redstone signal when unlocked.
     """
 
@@ -642,4 +643,30 @@ class SafeBlock(Block):
         "<manual>",
         BlockData.State("default"),
         BlockData.State("open"),
+    )
+
+
+class Telescope(Block):
+    """
+    :yellow [☶ Description]
+    Right Click to use. You can navigate using your regular controls.
+    To exit go all the way backwards and sneak.
+    """
+
+    base = BlockData.Base.VOID
+    sound = BlockData.Sound.INDUSTRIAL
+    facing = BlockData.Facing.PLAYER_PRECISE
+    recipe = [
+        BlockData.RecipeEntry("item", "spyglass"),
+    ]
+    tags = [
+        BlockData.Uses.PLACE,
+        BlockData.Uses.NO_BASE,
+        BlockData.Uses.CUSTOM_BASE,
+    ]
+    blockstates = BlockData.BlockStates(
+        "<manual>",
+        BlockData.State("default"),
+        BlockData.State("stand"),
+        BlockData.State("optics"),
     )

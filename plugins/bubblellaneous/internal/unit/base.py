@@ -159,7 +159,7 @@ class Base:
 
     def get_documentation(self) -> str:
         if self.__class__.__doc__ is None:
-            return "[]"
+            return '[""]'
         return format_docs_line(
             self.name,
             self.__class__.__doc__.split("\n")[1:-1],

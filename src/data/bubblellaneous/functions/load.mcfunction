@@ -28,8 +28,10 @@ function bubblellaneous:utils/settings/set_default {name: "bench.allow_crafting"
 function bubblellaneous:utils/settings/set_default {name: "camera.fixed", value: 0}
 function bubblellaneous:utils/settings/set_default {name: "camera.disabled", value: 0}
 function bubblellaneous:utils/settings/set_default {name: "bear_trap.time", value: 200}
+function bubblellaneous:utils/settings/set_default {name: "experimental", value: 0}
 function bubblellaneous:settings/load
 #endregion
 
 forceload add 0 0
 say LOADED
+function bubblellaneous:utils/moyang_fix

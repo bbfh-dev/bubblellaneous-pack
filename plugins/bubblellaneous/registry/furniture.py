@@ -40,7 +40,7 @@ class Table(BlockVariant):
     sound = BlockData.Sound.WOOD
     facing = BlockData.Facing.NONE
     recipe = [
-        BlockData.RecipeEntry("block", "[base]", 7),
+        BlockData.RecipeEntry("block", "[base]", 1),
     ]
     tags = [
         BlockData.Uses.PLACE,
@@ -68,7 +68,7 @@ class Shelf(BlockVariant):
     sound = BlockData.Sound.WOOD
     facing = BlockData.Facing.WALL_NORMAL
     recipe = [
-        BlockData.RecipeEntry("block", "[base]", 6),
+        BlockData.RecipeEntry("block", "[base]", 1),
     ]
     tags = [
         BlockData.Uses.PLACE,
@@ -87,7 +87,7 @@ class Cabinet(BlockVariant):
     sound = BlockData.Sound.WOOD
     facing = BlockData.Facing.PLAYER
     recipe = [
-        BlockData.RecipeEntry("block", "[base]", 8),
+        BlockData.RecipeEntry("block", "[base]", 1),
     ]
     tags = [
         BlockData.Uses.BRIGHTNESS_FIX,
@@ -106,7 +106,7 @@ class Drawer(BlockVariant):
     sound = BlockData.Sound.WOOD
     facing = BlockData.Facing.PLAYER
     recipe = [
-        BlockData.RecipeEntry("block", "[base]", 7),
+        BlockData.RecipeEntry("block", "[base]", 1),
     ]
     tags = []
 
@@ -124,7 +124,7 @@ class Cupboard(BlockVariant):
     sound = BlockData.Sound.WOOD
     facing = BlockData.Facing.PLAYER
     recipe = [
-        BlockData.RecipeEntry("block", "[base]", 9),
+        BlockData.RecipeEntry("block", "[base]", 1),
     ]
     tags = [
         BlockData.Uses.PLACE,
@@ -145,7 +145,7 @@ class Bench(BlockVariant):
     sound = BlockData.Sound.WOOD
     facing = BlockData.Facing.PLAYER
     recipe = [
-        BlockData.RecipeEntry("block", "[base]", 6),
+        BlockData.RecipeEntry("block", "[base]", 1),
     ]
     tags = [
         BlockData.Uses.PLACE,
@@ -198,7 +198,7 @@ class Stool(BlockVariant):
     sound = BlockData.Sound.WOOD
     facing = BlockData.Facing.NONE
     recipe = [
-        BlockData.RecipeEntry("block", "[base]", 7),
+        BlockData.RecipeEntry("block", "[base]", 1),
     ]
     tags = [
         BlockData.Uses.PLACE,
@@ -218,7 +218,7 @@ class Barstool(BlockVariant):
     sound = BlockData.Sound.WOOD
     facing = BlockData.Facing.NONE
     recipe = [
-        BlockData.RecipeEntry("block", "[base]", 7),
+        BlockData.RecipeEntry("block", "[base]", 1),
     ]
     tags = [
         BlockData.Uses.PLACE,
@@ -238,7 +238,7 @@ class DinningChair(BlockVariant):
     sound = BlockData.Sound.WOOD
     facing = BlockData.Facing.PLAYER
     recipe = [
-        BlockData.RecipeEntry("block", "[base]", 6),
+        BlockData.RecipeEntry("block", "[base]", 1),
         BlockData.RecipeEntry("block", "[color]", 2),
     ]
     tags = [
@@ -258,7 +258,7 @@ class Blinds(BlockVariant):
     sound = BlockData.Sound.WOOD
     facing = BlockData.Facing.WALL_NORMAL
     recipe = [
-        BlockData.RecipeEntry("block", "[base]", 4),
+        BlockData.RecipeEntry("block", "[base]", 1),
     ]
     tags = []
 
@@ -275,7 +275,7 @@ class KitchenCabinet(BlockVariant):
     sound = BlockData.Sound.WOOD
     facing = BlockData.Facing.PLAYER
     recipe = [
-        BlockData.RecipeEntry("block", "[base]", 8),
+        BlockData.RecipeEntry("block", "[base]", 1),
     ]
     tags = [
         BlockData.Uses.BRIGHTNESS_FIX,
@@ -383,7 +383,7 @@ class StreetLight(BlockVariant):
     sound = BlockData.Sound.WOOD
     facing = BlockData.Facing.NORMAL
     recipe = [
-        BlockData.RecipeEntry("block", "[base]", 4),
+        BlockData.RecipeEntry("block", "[base]", 1),
     ]
     tags = [
         BlockData.Uses.PLACE,
@@ -435,7 +435,7 @@ class UpholsteryCouch(BlockVariant):
     sound = BlockData.Sound.WOOD
     facing = BlockData.Facing.PLAYER
     recipe = [
-        BlockData.RecipeEntry("block", "[base]", 2),
+        BlockData.RecipeEntry("block", "[base]", 1),
         BlockData.RecipeEntry("block", "[color]", 6),
     ]
     tags = [
@@ -518,7 +518,7 @@ class Sink(BlockVariant):
     sound = BlockData.Sound.WOOD
     facing = BlockData.Facing.WALL_NORMAL
     recipe = [
-        BlockData.RecipeEntry("block", "[base]", 5),
+        BlockData.RecipeEntry("block", "[base]", 1),
     ]
     tags = [
         BlockData.Uses.PLACE,
@@ -544,6 +544,6 @@ class Toilet(BlockVariant):
     sound = BlockData.Sound.WOOD
     facing = BlockData.Facing.PLAYER
     recipe = [
-        BlockData.RecipeEntry("block", "[base]", 5),
+        BlockData.RecipeEntry("block", "[base]", 1),
     ]
     tags = [BlockData.Uses.PLACE]

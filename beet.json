@@ -1,5 +1,7 @@
 {
   "name": "bubblellaneous",
+  "version": "2.0.0",
+  "minecraft": "1.20",
   "description": [
     {
       "text": "\u2b50 Adds new Blocks & Items",
@@ -31,15 +33,15 @@
   ],
   "data_pack": {
     "load": ["src"],
-    "zipped": false
+    "zipped": true
   },
   "resource_pack": {
     "load": ["src"],
-    "zipped": false
+    "zipped": true
   },
   "meta": {
     "prefix": "bbln",
-    "version_fallback": "0.0.1",
+    "version_fallback": "2.0.0",
     "minecraft": "1.20.4"
   }
 }

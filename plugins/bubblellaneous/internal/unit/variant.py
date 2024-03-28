@@ -26,6 +26,7 @@ def get_translation_name(prefix: str) -> str:
 
 class BlockMaterials:
     WOOD: list[BlockData.Material] = [
+        BlockData.Material("oak", "oak_planks", "dark_oak_log", base="oak_planks"),
         BlockData.Material(
             "acacia", "acacia_planks", "acacia_log", base="acacia_planks"
         ),
@@ -48,7 +49,6 @@ class BlockMaterials:
         BlockData.Material(
             "mangrove", "mangrove_planks", "cherry_log", base="mangrove_planks"
         ),
-        BlockData.Material("oak", "oak_planks", "dark_oak_log", base="oak_planks"),
         BlockData.Material(
             "spruce", "spruce_planks", "spruce_log", base="spruce_planks"
         ),

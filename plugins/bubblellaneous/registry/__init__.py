@@ -54,6 +54,7 @@ REGISTRY: list[Base] = [
     MotionSensor(Category.TECHNOLOGY),
     ElectricalBox(Category.TECHNOLOGY),
     SafeBlock(Category.TECHNOLOGY),
+    Telescope(Category.TECHNOLOGY),
     # ------
     WindowBoards(Category.MISCELLANEOUS),
     Hatch(Category.MISCELLANEOUS),

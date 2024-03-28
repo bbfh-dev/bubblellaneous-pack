@@ -2,6 +2,11 @@ setblock ~ ~ ~ air
 setblock ~ ~ ~ barrel[facing=up]
 
 execute if score @s local.block.timer matches 1.. run return 0
+execute if entity @p[tag=--local.event_player,nbt={Inventory: [{Slot: 103b, id: "minecraft:zombie_head"}]}] run return run function bubblellaneous:block/retina_scanner/error
+execute if entity @p[tag=--local.event_player,nbt={Inventory: [{Slot: 103b, id: "minecraft:creeper_head"}]}] run return run function bubblellaneous:block/retina_scanner/error
+execute if entity @p[tag=--local.event_player,nbt={Inventory: [{Slot: 103b, id: "minecraft:piglin_head"}]}] run return run function bubblellaneous:block/retina_scanner/error
+execute if entity @p[tag=--local.event_player,nbt={Inventory: [{Slot: 103b, id: "minecraft:dragon_head"}]}] run return run function bubblellaneous:block/retina_scanner/error
+
 function bubblellaneous:block/retina_scanner/blockstates/apply/scan {rotation: 0}
 execute if score @s local.block_state matches 0 run return run function bubblellaneous:block/retina_scanner/set_credentials
 

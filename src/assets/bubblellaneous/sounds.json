@@ -113,5 +113,20 @@
                 "volume": 0.4
             }
         ]
+    },
+    "block.telescope.view": {
+        "category": "block",
+        "sounds": [
+            "bubblellaneous:block/telescope/view1",
+            "bubblellaneous:block/telescope/view2",
+            "bubblellaneous:block/telescope/view3"
+        ]
+    },
+    "block.telescope.exit": {
+        "category": "block",
+        "sounds": [
+            "bubblellaneous:block/telescope/exit1",
+            "bubblellaneous:block/telescope/exit2"
+        ]
     }
 }
