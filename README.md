@@ -4,6 +4,8 @@ This Minecraft pack adds Furniture, Technology, Food & Miscellaneous blocks and 
 
 To use it you must [install the data pack](https://minecraft.wiki/w/Data_pack#Usage) in your world. All players playing on your server must have [the resource pack installed](https://minecraft.wiki/w/Resource_pack#Java_Edition).
 
+Use `/function menu:bubblellaneous` for settings/debugging!
+
 | Minecraft version  | Status                                 |
 | ------             | -----                                  |
 | 1.20.2 and earlier | 🚫 Broken due to Minecraft limitations |
