@@ -17,10 +17,28 @@
                         }
                     }
                 ],
-                "entity": {
-                    "type": "minecraft:interaction",
-                    "nbt": "{Tags:[\"local.seat\"]}"
-                }
+                "entity": [
+                    {
+                        "condition": "minecraft:inverted",
+                        "term": {
+                            "condition": "minecraft:entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "passenger": {
+                                    "type": "minecraft:player"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "condition": "minecraft:entity_properties",
+                        "entity": "this",
+                        "predicate": {
+                            "type": "minecraft:interaction",
+                            "nbt": "{Tags:[\"local.seat\"]}"
+                        }
+                    }
+                ]
             }
         }
     },

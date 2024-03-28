@@ -1,5 +1,5 @@
 execute unless score @s local.gui.page matches 1..2147483647 run scoreboard players set @s local.gui.page 1
-playsound ui.button.click block @a ~ ~ ~ 1 1 0
+playsound ui.button.click block @p ~ ~ ~ 1 1 0
 
 #region Pages
 scoreboard players operation page.as_index local.tmp = @s local.gui.page

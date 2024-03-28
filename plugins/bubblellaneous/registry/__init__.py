@@ -53,6 +53,8 @@ REGISTRY: list[Base] = [
     Battery(Category.TECHNOLOGY),
     MotionSensor(Category.TECHNOLOGY),
     ElectricalBox(Category.TECHNOLOGY),
+    SafeBlock(Category.TECHNOLOGY),
+    Telescope(Category.TECHNOLOGY),
     # ------
     WindowBoards(Category.MISCELLANEOUS),
     Hatch(Category.MISCELLANEOUS),
@@ -76,6 +78,7 @@ REGISTRY: list[Base] = [
     AlarmClock(Category.MISCELLANEOUS),
     Umbrella(Category.MISCELLANEOUS),
     BearTrap(Category.MISCELLANEOUS),
+    PlayingCard(Category.MISCELLANEOUS),
     # ------
     CoffeeCup(Category.FOOD),
     Cucumber(Category.FOOD),

@@ -1,6 +1,6 @@
 scoreboard players set @s local.block_state 0
 
-execute unless score is_playing local.tmp matches 1 run playsound block.iron_trapdoor.close block @a ~ ~ ~ 1 1 0
+execute unless score is_playing local.tmp matches 1 run playsound bubblellaneous:block.safe_block.close block @a ~ ~ ~ 1 1 0
 
 scoreboard players set is_playing local.tmp 1
 execute positioned ~ ~-1 ~ as @e[type=item_display,tag=local.name.rising_door,distance=..0.5,scores={local.block_state=1}] at @s run function bubblellaneous:block/rising_door/close

@@ -6,7 +6,7 @@ from plugins.bubblellaneous.internal.unit.variant import BlockMaterials, ItemVar
 class CoffeeCup(Item):
     """
     :yellow [☶ Description]
-    TODO
+    Empty.
     """
 
     base = ItemData.Base.DRINK
@@ -19,7 +19,7 @@ class CoffeeCup(Item):
 class Cucumber(Item):
     """
     :yellow [☶ Description]
-    TODO
+    Empty.
     """
 
     base = ItemData.Base.FOOD
@@ -32,7 +32,7 @@ class Cucumber(Item):
 class Grapes(Item):
     """
     :yellow [☶ Description]
-    TODO
+    Empty.
     """
 
     base = ItemData.Base.FOOD
@@ -45,7 +45,7 @@ class Grapes(Item):
 class Burger(Item):
     """
     :yellow [☶ Description]
-    TODO
+    Empty.
     """
 
     base = ItemData.Base.FOOD
@@ -59,7 +59,7 @@ class Burger(Item):
 class Toast(Item):
     """
     :yellow [☶ Description]
-    TODO
+    Empty.
     """
 
     base = ItemData.Base.FOOD
@@ -72,7 +72,7 @@ class Toast(Item):
 class Tomato(Item):
     """
     :yellow [☶ Description]
-    TODO
+    Empty.
     """
 
     base = ItemData.Base.FOOD
@@ -85,7 +85,7 @@ class Tomato(Item):
 class Cheese(Item):
     """
     :yellow [☶ Description]
-    TODO
+    Empty.
     """
 
     base = ItemData.Base.FOOD
@@ -98,7 +98,7 @@ class Cheese(Item):
 class ChocolateBar(Item):
     """
     :yellow [☶ Description]
-    TODO
+    Empty.
     """
 
     base = ItemData.Base.FOOD
@@ -111,7 +111,7 @@ class ChocolateBar(Item):
 class Donut(Item):
     """
     :yellow [☶ Description]
-    TODO
+    Empty.
     """
 
     base = ItemData.Base.FOOD
@@ -125,7 +125,7 @@ class Donut(Item):
 class Broccoli(Item):
     """
     :yellow [☶ Description]
-    TODO
+    Empty.
     """
 
     base = ItemData.Base.FOOD
@@ -138,7 +138,7 @@ class Broccoli(Item):
 class Omelette(Item):
     """
     :yellow [☶ Description]
-    TODO
+    Empty.
     """
 
     base = ItemData.Base.FOOD
@@ -151,7 +151,7 @@ class Omelette(Item):
 class Strawberry(Item):
     """
     :yellow [☶ Description]
-    TODO
+    Empty.
     """
 
     base = ItemData.Base.FOOD
@@ -164,7 +164,7 @@ class Strawberry(Item):
 class Cereal(Item):
     """
     :yellow [☶ Description]
-    TODO
+    Empty.
     """
 
     base = ItemData.Base.FOOD
@@ -177,7 +177,7 @@ class Cereal(Item):
 class BeerBottle(ItemVariant):
     """
     :yellow [☶ Description]
-    TODO
+    Empty.
     """
 
     material = BlockMaterials.DYE

@@ -7,4 +7,4 @@ execute at @a[tag=--local.bear_trap.trapped] if score @s local.player.id = @p lo
 scoreboard players reset @s local.player.id
 function bubblellaneous:block/bear_trap/blockstates/apply/default {rotation: 0}
 playsound block.iron_trapdoor.open block @a ~ ~ ~ 1 1 0
-function #bubblellaneous:block/bear_trap/on_open
+function #bubblellaneous:block/bear_trap/on_release

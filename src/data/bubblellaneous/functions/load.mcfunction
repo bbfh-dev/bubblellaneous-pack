@@ -16,7 +16,9 @@ scoreboard objectives add local.player.leave custom:leave_game
 scoreboard objectives add local.player.sneak custom:sneak_time
 scoreboard objectives add local.player.right_click used:carrot_on_a_stick
 scoreboard objectives add local.player.drop custom:drop
+scoreboard objectives add local.player.death_count deathCount
 scoreboard objectives add local.player.pos_y dummy
+scoreboard objectives add local.player.gamemode dummy
 
 #region Settings
 scoreboard objectives add local.settings dummy
@@ -26,8 +28,10 @@ function bubblellaneous:utils/settings/set_default {name: "bench.allow_crafting"
 function bubblellaneous:utils/settings/set_default {name: "camera.fixed", value: 0}
 function bubblellaneous:utils/settings/set_default {name: "camera.disabled", value: 0}
 function bubblellaneous:utils/settings/set_default {name: "bear_trap.time", value: 200}
+function bubblellaneous:utils/settings/set_default {name: "experimental", value: 0}
 function bubblellaneous:settings/load
 #endregion
 
 forceload add 0 0
 say LOADED
+function bubblellaneous:utils/moyang_fix

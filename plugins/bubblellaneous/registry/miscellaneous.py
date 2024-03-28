@@ -1,13 +1,16 @@
 from plugins.bubblellaneous.internal import Block, BlockData, BlockMaterials
 from plugins.bubblellaneous.internal.unit.block import BlockType
 from plugins.bubblellaneous.internal.unit.item import Item, ItemData
-from plugins.bubblellaneous.internal.unit.variant import BlockVariant
+from plugins.bubblellaneous.internal.unit.variant import BlockVariant, ItemVariant
 
 
 class WindowBoards(BlockVariant):
     """
     :yellow [☶ Description]
-    TODO
+    Empty.
+
+    :light_purple [⇄ Connectivity]
+    Can connect to other window boards.
     """
 
     material = BlockMaterials.SOLID
@@ -31,7 +34,7 @@ class WindowBoards(BlockVariant):
 class Hatch(Block):
     """
     :yellow [☶ Description]
-    TODO
+    Click to open/close.
     """
 
     base = BlockData.Base.VOID
@@ -57,7 +60,7 @@ class Hatch(Block):
 class TrafficBarrier(Block):
     """
     :yellow [☶ Description]
-    TODO
+    Empty.
     """
 
     children = ["block/mossy_traffic_barrier"]
@@ -73,7 +76,7 @@ class TrafficBarrier(Block):
 class MossyTrafficBarrier(Block):
     """
     :yellow [☶ Description]
-    TODO
+    Empty.
     """
 
     is_unlisted = True
@@ -90,7 +93,7 @@ class MossyTrafficBarrier(Block):
 class Pole(Block):
     """
     :yellow [☶ Description]
-    TODO
+    Empty.
     """
 
     base = BlockData.Base.CHAIN
@@ -105,7 +108,7 @@ class Pole(Block):
 class RoadSign(Block):
     """
     :yellow [☶ Description]
-    TODO
+    Empty.
     """
 
     base = BlockData.Base.CHAIN
@@ -151,7 +154,7 @@ class ArrowRightRoadSign(RoadSign):
 class CallBell(Block):
     """
     :yellow [☶ Description]
-    TODO
+    Click to play bell sound.
     """
 
     base = BlockData.Base.VOID
@@ -170,7 +173,7 @@ class CallBell(Block):
 class Box(Block):
     """
     :yellow [☶ Description]
-    TODO
+    A regular container (27 slots).
     """
 
     base = BlockData.Base.CONTAINER
@@ -185,7 +188,10 @@ class Box(Block):
 class VendingMachine(Block):
     """
     :yellow [☶ Description]
-    TODO
+    Empty.
+
+    :light_purple [⇄ Connectivity]
+    Can connect to other vending machines.
     """
 
     base = BlockData.Base.SOLID
@@ -223,7 +229,7 @@ class VendingMachine(Block):
 class Megaphone(Item):
     """
     :yellow [☶ Description]
-    TODO
+    Empty.
     """
 
     base = ItemData.Base.INTERACTIVE
@@ -236,7 +242,7 @@ class Megaphone(Item):
 class Cup(BlockVariant):
     """
     :yellow [☶ Description]
-    TODO
+    Empty.
     """
 
     material = BlockMaterials.DYE
@@ -253,7 +259,7 @@ class Cup(BlockVariant):
 class Clipboard(Block):
     """
     :yellow [☶ Description]
-    TODO
+    Empty.
     """
 
     base = BlockData.Base.VOID
@@ -268,7 +274,7 @@ class Clipboard(Block):
 class Plate(Block):
     """
     :yellow [☶ Description]
-    TODO
+    Can store a single item stack.
     """
 
     block_type = BlockType.shelf(amount=1, offset=-0.45)
@@ -285,7 +291,7 @@ class Plate(Block):
 class Speakers(Block):
     """
     :yellow [☶ Description]
-    TODO
+    Empty.
     """
 
     base = BlockData.Base.SOLID
@@ -300,7 +306,7 @@ class Speakers(Block):
 class AlarmClock(Block):
     """
     :yellow [☶ Description]
-    TODO
+    Empty.
     """
 
     base = BlockData.Base.VOID
@@ -315,7 +321,7 @@ class AlarmClock(Block):
 class Umbrella(Item):
     """
     :yellow [☶ Description]
-    TODO
+    Hold Right Click to get slow falling.
     """
 
     base = ItemData.Base.INTERACTIVE
@@ -328,7 +334,7 @@ class Umbrella(Item):
 class BearTrap(Block):
     """
     :yellow [☶ Description]
-    TODO
+    Traps a player that steps on top of it for a set period of time.
     """
 
     base = BlockData.Base.TRIPWIRE
@@ -346,3 +352,18 @@ class BearTrap(Block):
         BlockData.State("default"),
         BlockData.State("closed"),
     )
+
+
+class PlayingCard(ItemVariant):
+    """
+    :yellow [☶ Description]
+    Empty.
+    """
+
+    material = BlockMaterials.CARD_DECK
+
+    base = ItemData.Base.NORMAL
+    recipe = [
+        BlockData.RecipeEntry("item", "paper", 1),
+    ]
+    params = lambda *_: {}
