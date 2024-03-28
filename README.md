@@ -13,7 +13,7 @@ Use `/function menu:bubblellaneous` for settings/debugging!
 | 1.20.4             | ✅ Supported                           |
 | 1.20.5             | 🎯 Will be supported in the future     |
 
-If you wish to contribute, refer to [CONTRIBUTING.md](./CONTRIBUTING.md)
+If you wish to contribute, refer to [CONTRIBUTING.md](https://github.com/bbfh-dev/bubblellaneous-pack/blob/main/CONTRIBUTING.md)
 
 <!-- vim-markdown-toc GFM -->
 
@@ -42,7 +42,7 @@ Thanks to wonderful people you can enjoy this pack in different languages:
 | FBreakDance30                                      | 🇮🇹 Italian \[52%\]       |
 | Dorlonkho                                          | 🇯🇵 Japanesse \[22%\]     |
 
-If you want to help with translations, refer to [CONTRIBUTING.md](./CONTRIBUTING.md)
+If you want to help with translations, refer to [CONTRIBUTING.md](https://github.com/bbfh-dev/bubblellaneous-pack/blob/main/CONTRIBUTING.md)
 
 # 🖥️ About Bubblellaneous
 
@@ -50,15 +50,15 @@ This data pack was originally published by me on Nov 21st, 2021. This is a compl
 
 - You can obtain all custom content without memorizing recipes using Bubble Bench: Drop a glass bottle onto a crafting table!
 
-![Bubble Bench GUI](./docs/bubble_bench.png)
+![Bubble Bench GUI](https://github.com/bbfh-dev/bubblellaneous-pack/blob/main/docs/bubble_bench.png?raw=true)
 
 - Many blocks/items have different variants (variating in color and material):
 
-![Block Variations](./docs/block_variations.png)
+![Block Variations](https://github.com/bbfh-dev/bubblellaneous-pack/blob/main/docs/block_variations.png?raw=true)
 
 - Have fun with all the content! Feel free to [join my discord](https://discord.gg/5kugW5Q7wB):
 
-![Demo](./docs/demo.jpg)
+![Demo](https://github.com/bbfh-dev/bubblellaneous-pack/blob/main/docs/demo.jpg?raw=true)
 
 # 📦 For Map Makers / Developers
 
@@ -138,5 +138,5 @@ This pack uses [Beet](https://github.com/mcbeet/beet) Python module, and [rye](h
 
 # 🧑‍⚖️ Licensing
 
-- The project with its python code uses [MIT](./LICENSE) license.
-- All minecraft assets/code use [CC BY-SA 4.0](./src/LICENSE) license.
+- The project with its python code uses [MIT](https://github.com/bbfh-dev/bubblellaneous-pack/blob/main/LICENSE) license.
+- All minecraft assets/code use [CC BY-SA 4.0](https://github.com/bbfh-dev/bubblellaneous-pack/blob/main/src/LICENSE) license.
