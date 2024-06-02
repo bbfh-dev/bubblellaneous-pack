@@ -4,10 +4,10 @@ This Minecraft pack adds Furniture, Technology, Food & Miscellaneous blocks and 
 
 To use it you must [install the data pack](https://minecraft.wiki/w/Data_pack#Usage) in your world. All players playing on your server must have [the resource pack installed](https://minecraft.wiki/w/Resource_pack#Java_Edition).
 
-Use `/function menu:bubblellaneous` for settings/debugging!
-Use `/function give:bubblellaneous/<item_name>` to give an item.
-Use `/function spawn:bubblellaneous/<item_name>` to spawn an item.
-Use `/function place:bubblellaneous/<block_name>` to place a block.
+- Use `/function menu:bubblellaneous` for settings/debugging!
+- Use `/function give:bubblellaneous/<item_name>` to give an item.
+- Use `/function spawn:bubblellaneous/<item_name>` to spawn an item.
+- Use `/function place:bubblellaneous/<block_name>` to place a block.
 
 | Minecraft version  | Status                                 |
 | ------             | -----                                  |
