@@ -1,0 +1,50 @@
+{
+	"credit": "Bubblellaneous - by bbfh",
+	"parent": "minecraft:block/block",
+	"textures": {
+		"particle": "bubblellaneous:block/cup/primary",
+		"material": "bubblellaneous:block/cup/primary"
+	},
+	"elements": [
+		{
+			"from": [5, 1, 5],
+			"to": [11, 8, 11],
+			"faces": {
+				"north": {"uv": [0, 6, 6, 13], "texture": "#material"},
+				"east": {"uv": [0, 6, 6, 13], "texture": "#material"},
+				"south": {"uv": [0, 6, 6, 13], "texture": "#material"},
+				"west": {"uv": [0, 6, 6, 13], "texture": "#material"},
+				"up": {"uv": [0, 0, 6, 6], "texture": "#material"},
+				"down": {"uv": [6, 0, 12, 6], "texture": "#material"}
+			}
+		},
+		{
+			"from": [2, 2, 7.5],
+			"to": [5, 7, 8.5],
+			"faces": {
+				"north": {"uv": [6, 7, 9, 12], "texture": "#material"},
+				"south": {"uv": [9, 7, 6, 12], "texture": "#material"},
+				"west": {"uv": [9, 7, 10, 12], "texture": "#material"},
+				"up": {"uv": [6, 6, 9, 7], "texture": "#material"},
+				"down": {"uv": [6, 12, 9, 13], "texture": "#material"}
+			}
+		},
+		{
+			"from": [6, 0, 6],
+			"to": [10, 1, 10],
+			"faces": {
+				"north": {"uv": [1, 13, 5, 14], "texture": "#material"},
+				"east": {"uv": [1, 13, 5, 14], "texture": "#material"},
+				"south": {"uv": [1, 13, 5, 14], "texture": "#material"},
+				"west": {"uv": [1, 13, 5, 14], "texture": "#material"},
+				"down": {"uv": [7, 1, 11, 5], "texture": "#material", "cullface": "down"}
+			}
+		}
+	],
+	"display": {
+		"gui": {
+			"rotation": [30, -135, 0],
+			"translation": [0, 3, 0]
+		}
+	}
+}

@@ -1,0 +1,16 @@
+{
+	"pack": {
+		"pack_format": 45,
+		"supported_formats": 45,
+		"description": {
+			"text": "Bubblellaneous",
+			"color": "gray",
+			"extra": [
+				{
+					"text": "\nby bbfh",
+					"color": "yellow"
+				}
+			]
+		}
+	}
+}

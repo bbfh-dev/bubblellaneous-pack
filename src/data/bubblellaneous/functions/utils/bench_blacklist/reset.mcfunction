@@ -1,2 +1,0 @@
-data remove storage minecraft:bubblellaneous bench_blacklist
-function bubblellaneous:load_registry

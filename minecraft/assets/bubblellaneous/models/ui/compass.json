@@ -1,0 +1,6 @@
+{
+    "parent": "bubblellaneous:ui/slot_small",
+    "textures": {
+        "overlay": "minecraft:item/compass_18"
+    }
+}

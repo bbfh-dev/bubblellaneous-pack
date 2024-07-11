@@ -1,0 +1,39 @@
+{
+  "credit": "Bubblellaneous - by bbfh",
+  "parent": "minecraft:block/block",
+  "textures": {
+    "particle": "bubblellaneous:block/padlock",
+    "layer0": "bubblellaneous:block/padlock",
+    "material": "block/primary"
+  },
+  "elements": [
+    {
+      "from": [11, 10, -0.05],
+      "to": [15, 18, 3.05],
+      "faces": {
+        "north": {
+          "uv": [4, 0, 0, 8],
+          "texture": "#layer0"
+        },
+        "south": {
+          "uv": [0, 0, 4, 8],
+          "texture": "#layer0"
+        }
+      }
+    },
+    {
+      "from": [12, 11, -0.1],
+      "to": [14, 13, 3.1],
+      "faces": {
+        "north": {
+          "uv": [12, 3, 14, 5],
+          "texture": "#material"
+        },
+        "south": {
+          "uv": [2, 3, 4, 5],
+          "texture": "#material"
+        }
+      }
+    }
+  ]
+}
