@@ -1,39 +1,39 @@
 {
-  "credit": "Bubblellaneous - by bbfh",
-  "parent": "minecraft:block/block",
-  "textures": {
-    "particle": "bubblellaneous:block/padlock",
-    "layer0": "bubblellaneous:block/padlock",
-    "material": "block/primary"
-  },
-  "elements": [
-    {
-      "from": [1, 10, -0.05],
-      "to": [5, 18, 3.05],
-      "faces": {
-        "north": {
-          "uv": [0, 0, 4, 8],
-          "texture": "#layer0"
-        },
-        "south": {
-          "uv": [4, 0, 0, 8],
-          "texture": "#layer0"
-        }
-      }
-    },
-    {
-      "from": [2, 11, -0.1],
-      "to": [4, 13, 3.1],
-      "faces": {
-        "north": {
-          "uv": [12, 3, 14, 5],
-          "texture": "#material"
-        },
-        "south": {
-          "uv": [2, 3, 4, 5],
-          "texture": "#material"
-        }
-      }
-    }
-  ]
+	"credit": "Bubblellaneous - by bbfh",
+	"parent": "minecraft:block/block",
+	"textures": {
+		"particle": "bubblellaneous:block/padlock",
+		"layer0": "bubblellaneous:block/padlock",
+		"material": "block/[primary]"
+	},
+	"elements": [
+		{
+			"from": [1, 10, -0.05],
+			"to": [5, 18, 3.05],
+			"faces": {
+				"north": {
+					"uv": [0, 0, 4, 8],
+					"texture": "#layer0"
+				},
+				"south": {
+					"uv": [4, 0, 0, 8],
+					"texture": "#layer0"
+				}
+			}
+		},
+		{
+			"from": [2, 11, -0.1],
+			"to": [4, 13, 3.1],
+			"faces": {
+				"north": {
+					"uv": [12, 3, 14, 5],
+					"texture": "#material"
+				},
+				"south": {
+					"uv": [2, 3, 4, 5],
+					"texture": "#material"
+				}
+			}
+		}
+	]
 }

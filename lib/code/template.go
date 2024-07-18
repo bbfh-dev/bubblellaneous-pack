@@ -6,6 +6,8 @@ import (
 	"os"
 	"path/filepath"
 	"strings"
+
+	"github.com/bbfh-dev/bubblellaneous-pack/lib"
 )
 
 type Template struct {
@@ -25,7 +27,7 @@ func NewTemplate(name string) *Template {
 }
 
 func (template *Template) Load() *Template {
-	path, _ := filepath.Abs(fmt.Sprintf("./bubblellaneous/code/%s.template", template.Name))
+	path, _ := filepath.Abs(fmt.Sprintf("./lib/code/%s.template", template.Name))
 	data, err := os.ReadFile(path)
 	if err != nil {
 		log.Panicf("Template %q could not be loaded: %v", template.Name, err)
@@ -98,4 +100,10 @@ func (template *Template) Format() *Template {
 	}
 
 	return template
+}
+
+func (template *Template) Write(tree *lib.Tree) {
+	for _, section := range template.Sections {
+		section.Write(tree)
+	}
 }

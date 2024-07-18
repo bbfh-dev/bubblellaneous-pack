@@ -2,6 +2,8 @@ package code
 
 import (
 	"strings"
+
+	"github.com/bbfh-dev/bubblellaneous-pack/lib"
 )
 
 type Section struct {
@@ -29,4 +31,12 @@ func (section *Section) Matches() bool {
 
 func (section *Section) Body() []string {
 	return section.lines
+}
+
+func (section *Section) Write(tree *lib.Tree) {
+	if !section.Matches() {
+		return
+	}
+
+	tree.MkFunction(section.Function(), section.Body())
 }

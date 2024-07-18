@@ -8,10 +8,10 @@ import (
 )
 
 type Material struct {
-	name      string
-	primary   string
-	secondary string
-	textures  map[string]string
+	Name      string
+	Primary   string
+	Secondary string
+	Textures  map[string]string
 }
 
 func NewMaterial(
@@ -21,10 +21,10 @@ func NewMaterial(
 	textures map[string]string,
 ) Material {
 	return Material{
-		name:      name,
-		primary:   primary,
-		secondary: secondary,
-		textures:  textures,
+		Name:      name,
+		Primary:   primary,
+		Secondary: secondary,
+		Textures:  textures,
 	}
 }
 
@@ -192,10 +192,10 @@ var WOOD_WITH_WOOL_MATERIAL = lo.Map(
 	func(item [2]Material, _ int) Material {
 		wood, wool := item[0], item[1]
 		return NewMaterial(
-			fmt.Sprintf("%s_%s", wool.name, wood.name),
-			wood.primary,
-			wool.primary,
-			util.Merge(wood.textures, wool.textures),
+			fmt.Sprintf("%s_%s", wool.Name, wood.Name),
+			wood.Primary,
+			wool.Primary,
+			util.Merge(wood.Textures, wool.Textures),
 		)
 	},
 )
