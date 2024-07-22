@@ -23,16 +23,16 @@ build: setup merge
 	go run ./main.go $(realpath ${GENERATED}) $(realpath ${RESOURCE}/assets) $(realpath ${LANG})
 	cp -r ${GENERATED}/data/* ${DATA}/data/.
 	cp -r ${GENERATED}/assets/* ${RESOURCE}/assets/.
-	cp pack.mcmeta pack.png ${DATA}/.
-	cp pack.mcmeta pack.png ${RESOURCE}/.
+	cp pack-data.mcmeta ${DATA}/pack.mcmeta
+	cp pack.png ${DATA}/.
+	cp pack-assets.mcmeta ${RESOURCE}/pack.mcmeta
+	cp pack.png ${RESOURCE}/.
+	# --- Clean up
 	rm -rf ${GENERATED}
 	find $(realpath ${RESOURCE}/assets/) -type d -name 'template' -exec rm -r {} +
 	find $(realpath ./dist/) -type d -empty -delete
+	# --- Apply datapack prefix
+	find ./dist/ -type f -exec sed -i 's/local\./bbln\./g' {} +
 
 format:
-	@for file in $(shell find ./dist -name '*.json'); do \
-        jq --tab . $$file > /tmp/code.json; \
-		mv /tmp/code.json $$file; \
-		echo -ne "\r"$$file"---------"; \
-    done
-	echo -ne "\rDone!";
+	./format.sh # outsourced to bash

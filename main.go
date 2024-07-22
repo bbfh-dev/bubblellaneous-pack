@@ -9,6 +9,7 @@ import (
 	"github.com/bbfh-dev/bubblellaneous-pack/lib"
 	"github.com/bbfh-dev/bubblellaneous-pack/lib/code"
 	"github.com/bbfh-dev/bubblellaneous-pack/lib/lang"
+	"github.com/bbfh-dev/bubblellaneous-pack/lib/nbt"
 )
 
 func main() {
@@ -37,6 +38,24 @@ func main() {
 			customModelData,
 		)
 	}
+
+	//region Baked block states
+	node := nbt.Tree()
+	for block, registry := range tree.StateRegistry {
+		if len(registry) == 0 {
+			continue
+		}
+
+		leaf := nbt.Tree()
+		for key, value := range registry {
+			leaf.Set(key, value.NBT())
+		}
+		node.Set(block, leaf)
+	}
+	code.NewTemplate("load_blockstates").
+		Replace("registry", node.String()).
+		Format().Write(tree)
+	//endregion
 
 	tree.WriteToFileSystem(outputDir)
 	fmt.Println(resourceDir)

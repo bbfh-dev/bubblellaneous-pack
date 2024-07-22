@@ -1,4 +1,4 @@
-execute store success score modifier.shift local.tmp run data get entity @s Inventory[{tag: {bubblellaneous: {is_gui: 1b}}}]
+execute store success score modifier.shift local.tmp run data get entity @s Inventory[{components: {"minecraft:custom_data": {bubblellaneous: {is_gui: 1b}}}}]
 
 execute store result score slot local.tmp run function bubblellaneous:block/bubble_bench/as_player/determine_empty_slot
 

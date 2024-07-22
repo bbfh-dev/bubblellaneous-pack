@@ -273,7 +273,7 @@ var Technology = unit.NewCategory().
 	)).
 	Add(unit.NewItem(
 		"crowbar",
-		field.ITEM_PICKAXE,
+		field.ITEM_NORMAL,
 		[]field.RecipeEntry{
 			field.NewRecipeEntry("item", "iron_ingot", 2),
 		},

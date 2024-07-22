@@ -46,7 +46,7 @@ var Furniture = unit.NewCategory().
 				field.NewRecipeEntry("block", "[base]", 1),
 			},
 			field.USE_PLACE,
-		)
+		).WithBlockType(field.ShelfBlock(1, 0))
 	}, field.SOLID_MATERIAL).Units()...).
 	Add(unit.NewVariant(func() unit.Unit {
 		return unit.NewBlock(
@@ -82,7 +82,7 @@ var Furniture = unit.NewCategory().
 			},
 			field.USE_PLACE,
 			field.USE_BRIGHTNESS_FIX,
-		)
+		).WithBlockType(field.ShelfBlock(2, 0))
 	}, field.SOLID_MATERIAL).Units()...).
 	Add(unit.NewVariant(func() unit.Unit {
 		return unit.NewBlock(
@@ -94,7 +94,7 @@ var Furniture = unit.NewCategory().
 				field.NewRecipeEntry("block", "[base]", 1),
 			},
 			field.USE_PLACE,
-		)
+		).WithBlockType(field.SeatBlock(0.8, 0.6))
 	}, field.SOLID_MATERIAL).Units()...).
 	Add(unit.NewVariant(func() unit.Unit {
 		return unit.NewBlock(
@@ -114,7 +114,7 @@ var Furniture = unit.NewCategory().
 			field.NewBlockState("middle", "0011~~"),
 			field.NewBlockState("corner", "1010~~:90", "1001~~:0"),
 			field.NewBlockState("slab", "~1~~~~"),
-		)
+		).WithBlockType(field.SeatBlock(0.8, 0.5))
 	}, field.WOOL_MATERIAL).Units()...).
 	Add(unit.NewVariant(func() unit.Unit {
 		return unit.NewBlock(
@@ -126,7 +126,7 @@ var Furniture = unit.NewCategory().
 				field.NewRecipeEntry("block", "[base]", 1),
 			},
 			field.USE_PLACE,
-		)
+		).WithBlockType(field.SeatBlock(0.8, 0.6))
 	}, field.WOOD_MATERIAL).Units()...).
 	Add(unit.NewVariant(func() unit.Unit {
 		return unit.NewBlock(
@@ -138,7 +138,7 @@ var Furniture = unit.NewCategory().
 				field.NewRecipeEntry("block", "[base]", 1),
 			},
 			field.USE_PLACE,
-		)
+		).WithBlockType(field.SeatBlock(0.8, 0.7))
 	}, field.WOOD_MATERIAL).Units()...).
 	Add(unit.NewVariant(func() unit.Unit {
 		return unit.NewBlock(
@@ -151,7 +151,7 @@ var Furniture = unit.NewCategory().
 				field.NewRecipeEntry("block", "[color]", 2),
 			},
 			field.USE_PLACE,
-		)
+		).WithBlockType(field.SeatBlock(0.8, 0.4))
 	}, field.WOOD_WITH_WOOL_MATERIAL).Units()...).
 	Add(unit.NewVariant(func() unit.Unit {
 		return unit.NewBlock(
@@ -226,7 +226,7 @@ var Furniture = unit.NewCategory().
 			},
 			field.USE_PLACE,
 			field.USE_NO_BASE,
-		)
+		).WithBlockType(field.LightBlock(15))
 	}, field.WOOL_MATERIAL).Units()...).
 	Add(unit.NewVariant(func() unit.Unit {
 		return unit.NewBlock(
@@ -243,7 +243,7 @@ var Furniture = unit.NewCategory().
 		).WithBlockstates(
 			"!#no_solid_collision", field.NewBlockState("default"),
 			field.NewBlockState("wall", "~1~~~~"),
-		)
+		).WithBlockType(field.LightBlock(15))
 	}, field.SOLID_MATERIAL).Units()...).
 	Add(unit.NewVariant(func() unit.Unit {
 		return unit.NewBlock(
@@ -257,7 +257,7 @@ var Furniture = unit.NewCategory().
 			},
 			field.USE_PLACE,
 			field.USE_NO_BASE,
-		)
+		).WithBlockType(field.LightBlock(15))
 	}, field.WOOL_MATERIAL).Units()...).
 	Add(unit.NewVariant(func() unit.Unit {
 		return unit.NewBlock(
@@ -276,7 +276,7 @@ var Furniture = unit.NewCategory().
 			field.NewBlockState("left", "~~01~~"),
 			field.NewBlockState("right", "~~10~~"),
 			field.NewBlockState("middle", "~~11~~"),
-		)
+		).WithBlockType(field.SeatBlock(0.9, 0.5))
 	}, field.WOOD_WITH_WOOL_MATERIAL).Units()...).
 	Add(unit.NewVariant(func() unit.Unit {
 		return unit.NewBlock(
@@ -290,7 +290,7 @@ var Furniture = unit.NewCategory().
 			},
 			field.USE_PLACE,
 			field.USE_NO_BASE,
-		)
+		).WithBlockType(field.LightBlock(15))
 	}, field.WOOL_MATERIAL).Units()...).
 	Add(unit.NewBlock(
 		"curtains",
@@ -339,5 +339,5 @@ var Furniture = unit.NewCategory().
 				field.NewRecipeEntry("block", "[base]", 1),
 			},
 			field.USE_PLACE,
-		)
+		).WithBlockType(field.SeatBlock(0.6, 0.51))
 	}, field.SOLID_MATERIAL).Units()...)

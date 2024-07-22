@@ -157,7 +157,7 @@ var Miscellaneous = unit.NewCategory().
 			field.NewRecipeEntry("block", "quartz_block", 1),
 		},
 		field.USE_PLACE,
-	)).
+	).WithBlockType(field.ShelfBlock(1, -0.45))).
 	Add(unit.NewBlock(
 		"speakers",
 		field.BASE_SOLID,

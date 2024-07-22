@@ -19,10 +19,13 @@ func NewVariant[T Unit](newUnit func() T, materials []field.Material) Variant[T]
 }
 
 func (variant Variant[T]) Units() (units []Unit) {
-	for _, material := range variant.materials {
+	for i, material := range variant.materials {
 		unit := variant.newUnit()
-		unit = unit.SetVariant(fmt.Sprintf("%s_%s", material.Name, unit.Id()),
+		unit = unit.SetVariant(
+			fmt.Sprintf("%s_%s", material.Name, unit.Id()),
 			material,
+			len(variant.materials),
+			i,
 		).(T)
 
 		units = append(units, unit)

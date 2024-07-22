@@ -7,6 +7,12 @@ import (
 	"github.com/samber/lo"
 )
 
+type JSONFloatNBT float64
+
+func (nbt JSONFloatNBT) String() string {
+	return fmt.Sprintf("%f", nbt)
+}
+
 type ByteNBT int8
 
 func (nbt ByteNBT) String() string {
@@ -44,10 +50,6 @@ func (nbt LongNBT) String() string {
 type FloatNBT float32
 
 func (nbt FloatNBT) String() string {
-	if value := fmt.Sprintf("%ff", nbt); strings.Contains(value, ".0") {
-		return fmt.Sprintf("%s.0f", strings.SplitN(value, ".", 1)[0])
-	}
-
 	return fmt.Sprintf("%f.0f", nbt)
 }
 

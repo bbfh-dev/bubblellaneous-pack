@@ -5,19 +5,25 @@ import (
 	"strings"
 
 	"github.com/bbfh-dev/bubblellaneous-pack/lib"
+	"github.com/bbfh-dev/bubblellaneous-pack/lib/code"
 	"github.com/bbfh-dev/bubblellaneous-pack/lib/field"
+	"github.com/bbfh-dev/bubblellaneous-pack/lib/nbt"
+	"github.com/bbfh-dev/bubblellaneous-pack/lib/util"
 )
 
 type Block struct {
-	unit_id  string
-	id       string
-	material *field.Material
-	base     string
-	sound    string
-	facing   string
-	recipe   []field.RecipeEntry
-	uses     []string
-	states   field.States
+	unit_id       string
+	id            string
+	material      *field.Material
+	base          string
+	sound         string
+	facing        string
+	recipe        []field.RecipeEntry
+	uses          []string
+	states        field.States
+	materialCount int
+	materialIndex int
+	blockType     *field.BlockType
 }
 
 func (block Block) WithBlockstates(match string, states ...field.BlockState) Block {
@@ -25,6 +31,12 @@ func (block Block) WithBlockstates(match string, states ...field.BlockState) Blo
 		Match:  match,
 		States: states,
 	}
+
+	return block
+}
+
+func (block Block) WithBlockType(blockType *field.BlockType) Block {
+	block.blockType = blockType
 
 	return block
 }
@@ -38,16 +50,25 @@ func NewBlock(
 	uses ...string,
 ) Block {
 	return Block{
-		unit_id:  id,
-		id:       id,
-		material: nil,
-		base:     base,
-		sound:    sound,
-		facing:   facing,
-		recipe:   recipe,
-		uses:     uses,
-		states:   field.States{},
+		unit_id:       id,
+		id:            id,
+		material:      nil,
+		base:          base,
+		sound:         sound,
+		facing:        facing,
+		recipe:        recipe,
+		uses:          uses,
+		states:        field.States{},
+		materialCount: 0,
+		materialIndex: 0,
 	}
+}
+
+func (unit Block) tags() (tags []nbt.StringNBT) {
+	for _, use := range unit.uses {
+		tags = append(tags, nbt.StringNBT(use))
+	}
+	return tags
 }
 
 func (unit Block) Id() string {
@@ -62,7 +83,11 @@ func (unit Block) Material() *field.Material {
 	return unit.material
 }
 
-func (unit Block) SetVariant(id string, material field.Material) Unit {
+func (unit Block) MinecraftBase() string {
+	return "minecraft:item_frame"
+}
+
+func (unit Block) SetVariant(id string, material field.Material, count int, index int) Unit {
 	for i, entry := range unit.recipe {
 		for key, texture := range material.Textures {
 			entry.Id = strings.ReplaceAll(entry.Id, fmt.Sprintf("[%s]", key), texture)
@@ -72,6 +97,8 @@ func (unit Block) SetVariant(id string, material field.Material) Unit {
 
 	unit.material = &material
 	unit.id = id
+	unit.materialCount = count
+	unit.materialIndex = index
 	return unit
 }
 
@@ -81,7 +108,99 @@ func (unit Block) Type() string {
 
 func (unit Block) Compile(tree *lib.Tree, customModelData int) (int, bool) {
 	if len(unit.states.States) > 0 {
-		// TODO: Compile block states
+		if unit.states.Match != "<manual>" && unit.materialIndex == 0 {
+			tree.MkStateRegistry(unit.unit_id, unit.states.States)
+			var blockStates []string
+			for i, direction := range field.DIRECTIONS {
+				predicate := strings.ReplaceAll( // TODO: Move into a function instead
+					strings.ReplaceAll(
+						strings.ReplaceAll(
+							unit.states.Predicate(),
+							"[coords]",
+							direction.Coordinates,
+						),
+						"[-coords]",
+						direction.Negative,
+					),
+					"[name]",
+					unit.UnitId(),
+				)
+				blockStates = append(
+					blockStates,
+					fmt.Sprintf(
+						"%s run data modify storage bubblellaneous tmp.in.bit%d set value \"i\"",
+						predicate,
+						i,
+					),
+				)
+			}
+			code.NewTemplate("blockstate_update").
+				Replace("name", unit.unit_id).
+				Replace("block_states", strings.Join(blockStates, "\n")).
+				Format().Write(tree)
+		}
+
+		for i, blockState := range unit.states.States {
+			if unit.Material() != nil {
+				tree.MkModel(
+					customModelData+i,
+					unit.MinecraftBase(),
+					func(body string) string {
+						body = strings.ReplaceAll(body, "[material]", unit.Material().Primary)
+						body = strings.ReplaceAll(body, "[primary]", unit.Material().Primary)
+						body = strings.ReplaceAll(body, "[secondary]", unit.Material().Secondary)
+						return body
+					},
+					fmt.Sprintf(
+						"%s/bubblellaneous/models/%s/%s/template/%s",
+						tree.ResourceDir,
+						unit.Type(),
+						unit.UnitId(),
+						blockState.Name,
+					),
+					fmt.Sprintf(
+						"bubblellaneous/models/%s/%s/%s/%s",
+						unit.Type(),
+						unit.UnitId(),
+						unit.Material().Name,
+						blockState.Name,
+					),
+				)
+			} else {
+				tree.MkModel(
+					customModelData+i,
+					unit.MinecraftBase(),
+					func(body string) string {
+						return body
+					},
+					fmt.Sprintf(
+						"%s/bubblellaneous/models/%s/%s/template/%s",
+						tree.ResourceDir,
+						unit.Type(),
+						unit.UnitId(),
+						blockState.Name,
+					),
+					fmt.Sprintf(
+						"bubblellaneous/models/%s/%s/%s",
+						unit.Type(),
+						unit.UnitId(),
+						blockState.Name,
+					),
+				)
+			}
+
+			if unit.materialIndex != 0 {
+				continue
+			}
+
+			code.NewTemplate("block_state").
+				Replace("block_state", blockState.Name).
+				Replace("index", fmt.Sprintf("%d", i)).
+				Replace("name", unit.UnitId()).
+				Replace("model_id", fmt.Sprintf("%d", i*unit.materialCount)).
+				Format().Write(tree)
+		}
+
 		return len(unit.states.States), true
 	}
 
@@ -95,4 +214,45 @@ func (unit Block) Recipe() []field.RecipeEntry {
 func (unit Block) SetRecipe(recipe []field.RecipeEntry) Unit {
 	unit.recipe = recipe
 	return unit
+}
+
+func (unit Block) NBT(customModelData int) nbt.TreeNBT {
+	return nbt.Tree().
+		Set(
+			"minecraft:entity_data",
+			nbt.Tree().
+				Set("id", nbt.StringNBT("minecraft:item_frame")).
+				Set("Invisible", nbt.IntNBT(1)).
+				Set("Tags", append(nbt.ListNBT[nbt.StringNBT]{"+bubblellaneous", "local.place"}, unit.tags()...)).
+				Set("Fixed", nbt.IntNBT(1)).
+				Set("Invulnerable", nbt.IntNBT(1)).
+				Set("Silent", nbt.IntNBT(1)).
+				Set(
+					"Item",
+					nbt.Tree().
+						Set("id", nbt.StringNBT("minecraft:stone_button")).
+						Set("count", nbt.IntNBT(1)).
+						Set("components", nbt.Tree().Set("minecraft:custom_data", nbt.Tree().Set(
+							"bubblellaneous",
+							nbt.Tree().Set("block_properties", nbt.Tree()).Set(
+								"block_data",
+								nbt.Tree().
+									Set("id", nbt.StringNBT(unit.id)).
+									Set("custom_model_data", nbt.IntNBT(customModelData)).
+									Set("display_name", nbt.StringNBT(fmt.Sprintf(`{"translate":"%s.bubblellaneous.%s"}`, unit.Type(), unit.Id()))).
+									Set("material_count", nbt.IntNBT(unit.materialCount)).
+									Set("material", nbt.Tree().
+										Set("index", nbt.IntNBT(unit.materialIndex)).
+										Set("name", nbt.StringNBT(util.GetOrDefault(unit.Material(), field.DEFAULT_MATERIAL).Name)),
+									).Set("block_type", util.GetOrDefault(unit.blockType, field.DEFAULT_BLOCK_TYPE).NBT()).
+									Set("name", nbt.StringNBT(unit.unit_id)).
+									Set("base_item", nbt.StringNBT(unit.MinecraftBase())).
+									Set("base", nbt.StringNBT(unit.base)).
+									Set("sound", nbt.StringNBT(unit.sound)).
+									Set("facing", nbt.StringNBT(unit.facing)).
+									Set("unit", nbt.StringNBT(unit.Type())),
+							),
+						))),
+				),
+		)
 }

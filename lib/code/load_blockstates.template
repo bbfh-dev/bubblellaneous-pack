@@ -1,0 +1,2 @@
+#=> bubblellaneous:generated/load_blockstates
+data modify storage bubblellaneous state_registry set value [registry]

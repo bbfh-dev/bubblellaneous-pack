@@ -1,7 +1,10 @@
 {
 	"pack": {
-		"pack_format": 45,
-		"supported_formats": 45,
+		"pack_format": 48,
+		"supported_formats": {
+			"min_inclusive": 45,
+			"max_inclusive": 48
+		},
 		"description": {
 			"text": "Bubblellaneous",
 			"color": "gray",

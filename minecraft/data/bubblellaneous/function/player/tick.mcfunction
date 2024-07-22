@@ -24,7 +24,7 @@ execute as @s[tag=--local.ladder.attached] run function bubblellaneous:block/lad
 execute as @s[tag=--local.bear_trap.trapped] unless data entity @s RootVehicle run function bubblellaneous:block/bear_trap/player/tick
 execute as @s[tag=--local.camera.spectating] run function bubblellaneous:block/surveillance_camera/player/tick
 execute as @s[tag=--local.camera.leaving] at @s if loaded ~ ~ ~ if entity @e[type=armor_stand,tag=local.dummy_player,distance=..5] run function bubblellaneous:block/surveillance_camera/player/finish_leaving
-execute as @s[tag=--local.flashlight.in_use] as @s[nbt={SelectedItem: {tag: {bubblellaneous: {item_data: {id: "flashlight"}, item_properties: {is_turned_on: 1}}}}}] anchored eyes positioned ^ ^ ^1 run function bubblellaneous:item/flashlight/tick
-execute as @s[tag=--local.umbrella.using] as @s[nbt=!{SelectedItem: {tag: {bubblellaneous: {item_data: {id: "umbrella"}}}}}] run function bubblellaneous:item/umbrella/stop_flying
+execute as @s[tag=--local.flashlight.in_use] as @s[nbt={SelectedItem: {components: {"minecraft:custom_data": {bubblellaneous: {item_data: {id: "flashlight"}, item_properties: {is_turned_on: 1}}}}}}] anchored eyes positioned ^ ^ ^1 run function bubblellaneous:item/flashlight/tick
+execute as @s[tag=--local.umbrella.using] as @s[nbt=!{SelectedItem: {components: {"minecraft:custom_data": {bubblellaneous: {item_data: {id: "umbrella"}}}}}}] run function bubblellaneous:item/umbrella/stop_flying
 tag @s remove --local.player
 tag @s remove --local.event_player

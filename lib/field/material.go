@@ -7,6 +7,8 @@ import (
 	"github.com/samber/lo"
 )
 
+var DEFAULT_MATERIAL = NewMaterial("default", "", "", map[string]string{})
+
 type Material struct {
 	Name      string
 	Primary   string
