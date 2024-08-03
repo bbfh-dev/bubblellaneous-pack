@@ -14,6 +14,7 @@ import (
 type Block struct {
 	unit_id       string
 	id            string
+	translateId   string
 	material      *field.Material
 	base          string
 	sound         string
@@ -24,6 +25,9 @@ type Block struct {
 	materialCount int
 	materialIndex int
 	blockType     *field.BlockType
+	category      string
+	groupOverride string
+	hidden        bool
 }
 
 func (block Block) WithBlockstates(match string, states ...field.BlockState) Block {
@@ -35,8 +39,26 @@ func (block Block) WithBlockstates(match string, states ...field.BlockState) Blo
 	return block
 }
 
+func (block Block) WithGroupOverride(override string) Block {
+	block.groupOverride = override
+
+	return block
+}
+
 func (block Block) WithBlockType(blockType *field.BlockType) Block {
 	block.blockType = blockType
+
+	return block
+}
+
+func (block Block) WithGroupId(id string) Block {
+	block.unit_id = id
+
+	return block
+}
+
+func (block Block) Hide() Block {
+	block.hidden = true
 
 	return block
 }
@@ -52,6 +74,7 @@ func NewBlock(
 	return Block{
 		unit_id:       id,
 		id:            id,
+		translateId:   id,
 		material:      nil,
 		base:          base,
 		sound:         sound,
@@ -61,6 +84,10 @@ func NewBlock(
 		states:        field.States{},
 		materialCount: 0,
 		materialIndex: 0,
+		blockType:     nil,
+		category:      "",
+		groupOverride: "",
+		hidden:        false,
 	}
 }
 
@@ -79,6 +106,10 @@ func (unit Block) UnitId() string {
 	return unit.unit_id
 }
 
+func (unit Block) TranslateId() string {
+	return unit.translateId
+}
+
 func (unit Block) Material() *field.Material {
 	return unit.material
 }
@@ -95,8 +126,21 @@ func (unit Block) SetVariant(id string, material field.Material, count int, inde
 		unit.recipe[i] = entry
 	}
 
-	unit.material = &material
+	a := material
+	unit.material = &a
 	unit.id = id
+	unit.translateId = id
+	for _, material := range field.SOLIDS {
+		if strings.Contains(id, material) {
+			for _, color := range field.COLORS {
+				if strings.HasPrefix(id, color) {
+					unit.translateId = strings.TrimPrefix(id, color+"_")
+					break
+				}
+			}
+			break
+		}
+	}
 	unit.materialCount = count
 	unit.materialIndex = index
 	return unit
@@ -197,7 +241,7 @@ func (unit Block) Compile(tree *lib.Tree, customModelData int) (int, bool) {
 				Replace("block_state", blockState.Name).
 				Replace("index", fmt.Sprintf("%d", i)).
 				Replace("name", unit.UnitId()).
-				Replace("model_id", fmt.Sprintf("%d", i*unit.materialCount)).
+				Replace("model_id", fmt.Sprintf("%d", i)).
 				Format().Write(tree)
 		}
 
@@ -239,7 +283,7 @@ func (unit Block) NBT(customModelData int) nbt.TreeNBT {
 								nbt.Tree().
 									Set("id", nbt.StringNBT(unit.id)).
 									Set("custom_model_data", nbt.IntNBT(customModelData)).
-									Set("display_name", nbt.StringNBT(fmt.Sprintf(`{"translate":"%s.bubblellaneous.%s"}`, unit.Type(), unit.Id()))).
+									Set("display_name", nbt.StringNBT(fmt.Sprintf(`{"translate":"%s.bubblellaneous.%s"}`, unit.Type(), unit.TranslateId()))).
 									Set("material_count", nbt.IntNBT(unit.materialCount)).
 									Set("material", nbt.Tree().
 										Set("index", nbt.IntNBT(unit.materialIndex)).
@@ -255,4 +299,24 @@ func (unit Block) NBT(customModelData int) nbt.TreeNBT {
 						))),
 				),
 		)
+}
+
+func (unit Block) Category() string {
+	return unit.category
+}
+
+func (unit Block) SetCategory(category string) Unit {
+	unit.category = category
+	return unit
+}
+
+func (unit Block) Group() string {
+	if len(unit.groupOverride) > 0 {
+		return unit.groupOverride
+	}
+	return unit.UnitId()
+}
+
+func (unit Block) Hidden() bool {
+	return unit.hidden
 }

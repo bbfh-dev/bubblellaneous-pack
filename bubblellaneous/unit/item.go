@@ -1,6 +1,9 @@
 package unit
 
 import (
+	"fmt"
+	"strings"
+
 	"github.com/bbfh-dev/bubblellaneous-pack/lib"
 	"github.com/bbfh-dev/bubblellaneous-pack/lib/field"
 	"github.com/bbfh-dev/bubblellaneous-pack/lib/nbt"
@@ -16,6 +19,30 @@ type Item struct {
 	components    nbt.Entry
 	materialCount int
 	materialIndex int
+	category      string
+	food          *field.Food
+	itemData      nbt.TreeNBT
+	nbtCallback   func(nbt.TreeNBT) nbt.TreeNBT
+}
+
+func (item Item) WithFood(nutrition int, saturation int, always bool, time float64) Item {
+	item.food = &field.Food{
+		Nutrition:    nutrition,
+		Saturation:   saturation,
+		CanAlwaysEat: always,
+		EatSeconds:   time,
+	}
+	return item
+}
+
+func (item Item) WithData(tree nbt.TreeNBT) Item {
+	item.itemData = tree
+	return item
+}
+
+func (item Item) WithCallback(callback func(nbt.TreeNBT) nbt.TreeNBT) Item {
+	item.nbtCallback = callback
+	return item
 }
 
 func NewItem(
@@ -33,6 +60,12 @@ func NewItem(
 		components:    components,
 		materialCount: 0,
 		materialIndex: 0,
+		category:      "",
+		food:          nil,
+		itemData:      nbt.Tree(),
+		nbtCallback: func(tree nbt.TreeNBT) nbt.TreeNBT {
+			return tree
+		},
 	}
 }
 
@@ -44,6 +77,10 @@ func (unit Item) UnitId() string {
 	return unit.unit_id
 }
 
+func (unit Item) TranslateId() string {
+	return unit.id
+}
+
 func (unit Item) Material() *field.Material {
 	return unit.material
 }
@@ -53,6 +90,13 @@ func (unit Item) MinecraftBase() string {
 }
 
 func (unit Item) SetVariant(id string, material field.Material, count int, index int) Unit {
+	for i, entry := range unit.recipe {
+		for key, texture := range material.Textures {
+			entry.Id = strings.ReplaceAll(entry.Id, fmt.Sprintf("[%s]", key), texture)
+		}
+		unit.recipe[i] = entry
+	}
+
 	unit.material = &material
 	unit.id = id
 	unit.materialCount = count
@@ -78,19 +122,43 @@ func (unit Item) SetRecipe(recipe []field.RecipeEntry) Unit {
 }
 
 func (unit Item) NBT(customModelData int) nbt.TreeNBT {
-	return nbt.Tree().Set("minecraft:custom_data", nbt.Tree().Set(
+	tree := nbt.Tree()
+	if unit.food != nil {
+		tree.Set("minecraft:food", unit.food.NBT())
+	}
+	data := tree.Set("minecraft:custom_data", nbt.Tree().Set(
 		"bubblellaneous",
-		nbt.Tree().Set("item_properties", nbt.Tree()).Set(
-			"item_data",
-			nbt.Tree().
-				Set("id", nbt.StringNBT(unit.Id())).
-				Set("unit", nbt.StringNBT("item")).
-				Set("name", nbt.StringNBT(unit.unit_id)).
-				Set("custom_model_data", nbt.IntNBT(customModelData)).
-				Set("material", nbt.Tree().
-					Set("index", nbt.IntNBT(unit.materialIndex)).
-					Set("name", nbt.StringNBT(util.GetOrDefault(unit.Material(), field.DEFAULT_MATERIAL).Name)),
-				),
-		),
+		nbt.Tree().
+			Set("item_properties", unit.itemData).
+			Set(
+				"item_data",
+				nbt.Tree().
+					Set("id", nbt.StringNBT(unit.Id())).
+					Set("unit", nbt.StringNBT("item")).
+					Set("name", nbt.StringNBT(unit.unit_id)).
+					Set("custom_model_data", nbt.IntNBT(customModelData)).
+					Set("material", nbt.Tree().
+						Set("index", nbt.IntNBT(unit.materialIndex)).
+						Set("name", nbt.StringNBT(util.GetOrDefault(unit.Material(), field.DEFAULT_MATERIAL).Name)),
+					),
+			),
 	))
+	return unit.nbtCallback(data)
+}
+
+func (unit Item) Category() string {
+	return unit.category
+}
+
+func (unit Item) SetCategory(category string) Unit {
+	unit.category = category
+	return unit
+}
+
+func (unit Item) Group() string {
+	return unit.UnitId()
+}
+
+func (unit Item) Hidden() bool {
+	return false
 }

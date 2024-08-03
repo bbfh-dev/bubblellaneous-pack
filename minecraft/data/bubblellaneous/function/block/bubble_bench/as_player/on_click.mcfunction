@@ -7,4 +7,4 @@ execute anchored eyes positioned ^ ^ ^2 as @e[type=item_display,tag=local.name.b
 tag @s remove --local.player
 
 scoreboard players set modifier.shift local.tmp 0
-clear @s #bubblellaneous:gui_item[custom_data={bubblellaneous: {is_gui: 1b}}]
+clear @s #bubblellaneous:gui_item[custom_data~{bubblellaneous: {is_gui: 1b}}]

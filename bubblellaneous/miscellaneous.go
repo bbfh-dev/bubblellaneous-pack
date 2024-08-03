@@ -199,6 +199,56 @@ var Miscellaneous = unit.NewCategory().
 		"<manual>", field.NewBlockState("default"),
 		field.NewBlockState("closed"),
 	)).
+	Add(unit.NewBlock(
+		"no_entrance_road_sign",
+		field.BASE_CHAIN,
+		field.SOUND_INDUSTRIAL,
+		field.FACING_PLAYER,
+		[]field.RecipeEntry{
+			field.NewRecipeEntry("block", "chain", 1),
+			field.NewRecipeEntry("block", "white_banner", 1),
+		},
+	).WithGroupId("road_sign")).
+	Add(unit.NewBlock(
+		"arrow_down_road_sign",
+		field.BASE_CHAIN,
+		field.SOUND_INDUSTRIAL,
+		field.FACING_PLAYER,
+		[]field.RecipeEntry{
+			field.NewRecipeEntry("block", "chain", 1),
+			field.NewRecipeEntry("block", "white_banner", 1),
+		},
+	).WithGroupId("road_sign")).
+	Add(unit.NewBlock(
+		"arrow_up_road_sign",
+		field.BASE_CHAIN,
+		field.SOUND_INDUSTRIAL,
+		field.FACING_PLAYER,
+		[]field.RecipeEntry{
+			field.NewRecipeEntry("block", "chain", 1),
+			field.NewRecipeEntry("block", "white_banner", 1),
+		},
+	).WithGroupId("road_sign")).
+	Add(unit.NewBlock(
+		"arrow_left_road_sign",
+		field.BASE_CHAIN,
+		field.SOUND_INDUSTRIAL,
+		field.FACING_PLAYER,
+		[]field.RecipeEntry{
+			field.NewRecipeEntry("block", "chain", 1),
+			field.NewRecipeEntry("block", "white_banner", 1),
+		},
+	).WithGroupId("road_sign")).
+	Add(unit.NewBlock(
+		"arrow_right_road_sign",
+		field.BASE_CHAIN,
+		field.SOUND_INDUSTRIAL,
+		field.FACING_PLAYER,
+		[]field.RecipeEntry{
+			field.NewRecipeEntry("block", "chain", 1),
+			field.NewRecipeEntry("block", "white_banner", 1),
+		},
+	).WithGroupId("road_sign")).
 	Add(unit.NewVariant(func() unit.Unit {
 		return unit.NewItem(
 			"playing_card",

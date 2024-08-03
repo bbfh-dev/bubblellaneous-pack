@@ -3,7 +3,6 @@ package field
 import (
 	"fmt"
 
-	"github.com/bbfh-dev/bubblellaneous-pack/lib/util"
 	"github.com/samber/lo"
 )
 
@@ -189,18 +188,29 @@ func CARD_DECK_MATERIAL() (materials []Material) {
 	return materials
 }
 
-var WOOD_WITH_WOOL_MATERIAL = lo.Map(
-	util.Product(WOOD_MATERIAL, WOOL_MATERIAL),
-	func(item [2]Material, _ int) Material {
-		wood, wool := item[0], item[1]
-		return NewMaterial(
-			fmt.Sprintf("%s_%s", wool.Name, wood.Name),
-			wood.Primary,
-			wool.Primary,
-			util.Merge(wood.Textures, wool.Textures),
-		)
-	},
-)
+func WOOD_WITH_WOOL_MATERIAL() (materials []Material) {
+	for _, wood := range WOOD_MATERIAL {
+		for _, wool := range WOOL_MATERIAL {
+			var textures = map[string]string{}
+
+			for key, value := range wood.Textures {
+				textures[key] = value
+			}
+			for key, value := range wool.Textures {
+				textures[key] = value
+			}
+
+			materials = append(materials, NewMaterial(
+				fmt.Sprintf("%s_%s", wool.Name, wood.Name),
+				wood.Primary,
+				wool.Primary,
+				textures,
+			))
+		}
+	}
+
+	return materials
+}
 
 var SOLID_MATERIAL = append(WOOD_MATERIAL, []Material{
 	NewMaterial(

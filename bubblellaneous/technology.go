@@ -39,7 +39,7 @@ var Technology = unit.NewCategory().
 		).WithBlockstates(
 			"@self", field.NewBlockState("left"),
 			field.NewBlockState("right"),
-		)
+		).Hide()
 	}, field.WOOL_MATERIAL).Units()...).
 	Add(unit.NewVariant(func() unit.Unit {
 		return unit.NewBlock(
@@ -287,7 +287,22 @@ var Technology = unit.NewCategory().
 			field.NewRecipeEntry("item", "redstone", 1),
 		},
 		nbt.Tree(),
-	)).
+	).WithData(nbt.Tree().
+		Set("battery", nbt.IntNBT(12000)).
+		Set("max_charge", nbt.IntNBT(12000)).
+		Set("is_turned_on", nbt.IntNBT(0))).WithCallback(func(tree nbt.TreeNBT) nbt.TreeNBT {
+		return tree.Set(
+			"minecraft:attribute_modifiers",
+			nbt.ListNBT[nbt.TreeNBT]{
+				nbt.Tree().
+					Set("id", nbt.StringNBT("flashlight")).
+					Set("type", nbt.StringNBT("generic.attack_speed")).
+					Set("amount", nbt.IntNBT(-1)).
+					Set("operation", nbt.StringNBT("add_multiplied_total")).
+					Set("slot", nbt.StringNBT("mainhand")),
+			},
+		)
+	})).
 	Add(unit.NewItem(
 		"battery",
 		field.ITEM_NORMAL,

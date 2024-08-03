@@ -28,24 +28,34 @@ func create(path string) *os.File {
 }
 
 type Tree struct {
-	ResourceDir      string
-	functions        map[string][]string
-	loot_tables      map[string]string
-	models           map[string]string
-	toBeDeleted      []string
-	customModelDatas map[string]map[int]string
-	StateRegistry    map[string]map[string]stateRegistry
+	ResourceDir                string
+	functions                  map[string][]string
+	loot_tables                map[string]string
+	models                     map[string]string
+	toBeDeleted                []string
+	customModelDatas           map[string]map[int]string
+	StateRegistry              map[string]map[string]stateRegistry
+	BenchRegistry              map[string][]benchRegistry
+	BenchRegistryFurniture     []benchRegistry
+	BenchRegistryTechnology    []benchRegistry
+	BenchRegistryMiscellaneous []benchRegistry
+	BenchRegistryFood          []benchRegistry
 }
 
 func NewTree(resourceDir string) *Tree {
 	return &Tree{
-		ResourceDir:      resourceDir,
-		functions:        map[string][]string{},
-		loot_tables:      map[string]string{},
-		models:           map[string]string{},
-		toBeDeleted:      []string{},
-		customModelDatas: map[string]map[int]string{},
-		StateRegistry:    map[string]map[string]stateRegistry{},
+		ResourceDir:                resourceDir,
+		functions:                  map[string][]string{},
+		loot_tables:                map[string]string{},
+		models:                     map[string]string{},
+		toBeDeleted:                []string{},
+		customModelDatas:           map[string]map[int]string{},
+		StateRegistry:              map[string]map[string]stateRegistry{},
+		BenchRegistry:              map[string][]benchRegistry{},
+		BenchRegistryFurniture:     []benchRegistry{},
+		BenchRegistryTechnology:    []benchRegistry{},
+		BenchRegistryMiscellaneous: []benchRegistry{},
+		BenchRegistryFood:          []benchRegistry{},
 	}
 }
 
@@ -158,6 +168,31 @@ func (tree *Tree) MkModelDir(
 	}
 }
 
+type benchRegistry struct {
+	Group string
+	Entry string
+	Item  string
+}
+
+func (tree *Tree) MkBenchRegistry(category string, entry string, item string, group string) {
+	treeEntry := benchRegistry{
+		Group: group,
+		Entry: entry,
+		Item:  item,
+	}
+
+	switch category {
+	case "furniture":
+		tree.BenchRegistryFurniture = append(tree.BenchRegistryFurniture, treeEntry)
+	case "technology":
+		tree.BenchRegistryTechnology = append(tree.BenchRegistryTechnology, treeEntry)
+	case "miscellaneous":
+		tree.BenchRegistryMiscellaneous = append(tree.BenchRegistryMiscellaneous, treeEntry)
+	case "food":
+		tree.BenchRegistryFood = append(tree.BenchRegistryFood, treeEntry)
+	}
+}
+
 func (tree *Tree) WriteToFileSystem(path string) {
 	for fn, body := range tree.functions {
 		file := create(fmt.Sprintf("%s/data/%s.mcfunction", path, fn))
@@ -232,4 +267,124 @@ func (tree *Tree) WriteLangFile(path string, langFile map[string]map[string]stri
 		file.Write(data)
 		file.WriteString("\n")
 	}
+}
+
+type group struct {
+	Items []nbt.StringNBT
+	Entry string
+}
+
+func getCategory(from []benchRegistry) nbt.ListNBT[nbt.TreeNBT] {
+	result := nbt.ListNBT[nbt.TreeNBT]{}
+
+	var indexes = map[string]int{}
+	var groups []group
+
+	for _, entry := range from {
+		index, ok := indexes[entry.Group]
+		if !ok {
+			indexes[entry.Group] = len(groups)
+			index = len(groups)
+			groups = append(groups, group{
+				Items: []nbt.StringNBT{nbt.StringNBT(entry.Item)},
+				Entry: entry.Entry,
+			})
+		} else {
+			group := groups[index]
+			group.Items = append(group.Items, nbt.StringNBT(entry.Item))
+			groups[index] = group
+		}
+	}
+
+	for i, group := range groups {
+		// Create a map from wood type to index
+		woodIndex := make(map[string]int)
+		for i, wood := range field.COLORS {
+			woodIndex[wood] = i
+		}
+
+		// Create a map from wood type to index
+		solidIndex := make(map[string]int)
+		for i, wood := range field.SOLIDS {
+			solidIndex[wood] = i
+		}
+
+		// Custom sort function
+		sort.Slice(group.Items, func(i, j int) bool {
+			// Extract the prefix from each item
+			var AprefixI, AprefixJ string
+			for _, wood := range field.SOLIDS {
+				if strings.HasPrefix(group.Items[i].Item(), wood) {
+					AprefixI = wood
+					break
+				}
+			}
+			for _, wood := range field.SOLIDS {
+				if strings.HasPrefix(group.Items[j].Item(), wood) {
+					AprefixJ = wood
+					break
+				}
+			}
+
+			// Extract the prefix from each item
+			var prefixI, prefixJ string
+			for _, wood := range field.COLORS {
+				if strings.HasPrefix(group.Items[i].Item(), wood) {
+					prefixI = wood
+					break
+				}
+			}
+			for _, wood := range field.COLORS {
+				if strings.HasPrefix(group.Items[j].Item(), wood) {
+					prefixJ = wood
+					break
+				}
+			}
+
+			// Compare the indices of the prefixes
+			a := woodIndex[prefixI] < woodIndex[prefixJ]
+			b := solidIndex[AprefixI] < solidIndex[AprefixJ]
+			return b || a
+		})
+
+		if len(group.Items) < 2 {
+			result = append(
+				result,
+				nbt.Tree().
+					Set("entry", nbt.StringNBT(group.Entry)).
+					Set("item", nbt.StringNBT(group.Items[0])).
+					Set("count", nbt.IntNBT(0)).
+					Set("index", nbt.IntNBT(i)).
+					Set("items", nbt.ListNBT[nbt.StringNBT]{}),
+			)
+		} else {
+			result = append(
+				result,
+				nbt.Tree().
+					Set("entry", nbt.StringNBT(group.Entry)).
+					Set("item", nbt.StringNBT(group.Items[0])).
+					Set("count", nbt.IntNBT(len(group.Items))).
+					Set("index", nbt.IntNBT(i)).
+					Set("items", nbt.ListNBT[nbt.StringNBT](group.Items)),
+			)
+		}
+	}
+
+	return result
+}
+
+func (tree *Tree) Furnitures() nbt.ListNBT[nbt.TreeNBT] {
+	return getCategory(tree.BenchRegistryFurniture)
+}
+
+func (tree *Tree) Technologies() nbt.ListNBT[nbt.TreeNBT] {
+	return getCategory(tree.BenchRegistryTechnology)
+}
+
+func (tree *Tree) Foods() nbt.ListNBT[nbt.TreeNBT] {
+	return getCategory(tree.BenchRegistryFood)
+}
+
+func (tree *Tree) Miscellaneous() nbt.ListNBT[nbt.TreeNBT] {
+	return getCategory(tree.BenchRegistryMiscellaneous)
 }

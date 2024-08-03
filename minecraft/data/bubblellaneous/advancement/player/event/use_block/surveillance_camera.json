@@ -4,7 +4,7 @@
 			"trigger": "minecraft:player_interacted_with_entity",
 			"conditions": {
 				"item": {
-					"nbt": "{EntityTag: {Item: {components: {\"minecraft:custom_data\": {bubblellaneous: {block_data: {name: \"security_monitor\"}}}}}}}"
+					"items": "item_frame"
 				},
 				"entity": {
 					"type": "minecraft:interaction",

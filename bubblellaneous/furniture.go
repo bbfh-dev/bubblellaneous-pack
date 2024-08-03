@@ -152,7 +152,7 @@ var Furniture = unit.NewCategory().
 			},
 			field.USE_PLACE,
 		).WithBlockType(field.SeatBlock(0.8, 0.4))
-	}, field.WOOD_WITH_WOOL_MATERIAL).Units()...).
+	}, field.WOOD_WITH_WOOL_MATERIAL()).Units()...).
 	Add(unit.NewVariant(func() unit.Unit {
 		return unit.NewBlock(
 			"blinds",
@@ -241,7 +241,8 @@ var Furniture = unit.NewCategory().
 			field.USE_BLOCKSTATES,
 			field.USE_NO_BASE,
 		).WithBlockstates(
-			"!#no_solid_collision", field.NewBlockState("default"),
+			"!#no_solid_collision",
+			field.NewBlockState("default"),
 			field.NewBlockState("wall", "~1~~~~"),
 		).WithBlockType(field.LightBlock(15))
 	}, field.SOLID_MATERIAL).Units()...).
@@ -277,7 +278,7 @@ var Furniture = unit.NewCategory().
 			field.NewBlockState("right", "~~10~~"),
 			field.NewBlockState("middle", "~~11~~"),
 		).WithBlockType(field.SeatBlock(0.9, 0.5))
-	}, field.WOOD_WITH_WOOL_MATERIAL).Units()...).
+	}, field.WOOD_WITH_WOOL_MATERIAL()).Units()...).
 	Add(unit.NewVariant(func() unit.Unit {
 		return unit.NewBlock(
 			"floor_lamp",

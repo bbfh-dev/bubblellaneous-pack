@@ -1,6 +1,6 @@
 scoreboard players set @s local.block_state 0
 
-item replace entity @p[tag=--local.event_player] weapon.mainhand from entity @e[type=item_display,tag=local.display_item,limit=1,sort=nearest] container.0
+item replace entity @p[tag=--local.event_player] weapon.mainhand from entity @e[type=item_display,tag=local.display_item,limit=1,sort=nearest] contents
 
 scoreboard players operation id local.tmp = @s local.block.id
 execute as @e[type=item_display,tag=local.display_item,distance=..0.1,limit=1,sort=nearest] if score @s local.block.id = id local.tmp run kill @s

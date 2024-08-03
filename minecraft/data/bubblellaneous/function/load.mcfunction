@@ -35,3 +35,10 @@ function bubblellaneous:settings/load
 forceload add 0 0
 say LOADED
 function bubblellaneous:utils/moyang_fix
+
+scoreboard players set 18 local.int 18
+scoreboard players set -1 local.int -1
+scoreboard players set 10 local.int 10
+scoreboard players set 100 local.int 100
+scoreboard players set 7 local.int 7
+scoreboard players set 5 local.int 5

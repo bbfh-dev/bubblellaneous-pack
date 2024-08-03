@@ -69,6 +69,15 @@ func (nbt StringNBT) String() string {
 	return fmt.Sprintf("%q", string(nbt))
 }
 
+func (nbt StringNBT) Item() string {
+	parts := strings.Split(nbt.String(), "/")
+	if len(parts) < 2 {
+		return parts[0]
+	}
+
+	return parts[1]
+}
+
 type ListNBT[T Entry] []T
 
 func (nbt ListNBT[V]) String() string {

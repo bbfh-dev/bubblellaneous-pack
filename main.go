@@ -12,6 +12,8 @@ import (
 	"github.com/bbfh-dev/bubblellaneous-pack/lib/nbt"
 )
 
+const VERSION = "2.1.0"
+
 func main() {
 	if len(os.Args) < 3 {
 		panic("Usage: main [output dir] [lang file]")
@@ -19,10 +21,11 @@ func main() {
 
 	var registry = unit.NewCategory()
 	registry.
-		Add(bubblellaneous.Furniture.Units()...).
-		Add(bubblellaneous.Food.Units()...).
-		Add(bubblellaneous.Miscellaneous.Units()...).
-		Add(bubblellaneous.Technology.Units()...)
+		Add(bubblellaneous.Furniture.Units("furniture")...).
+		Add(bubblellaneous.Food.Units("food")...).
+		Add(bubblellaneous.Miscellaneous.Units("miscellaneous")...).
+		Add(bubblellaneous.Technology.Units("technology")...).
+		Sort()
 
 	customModelData := 371000
 	outputDir := os.Args[1]
@@ -30,7 +33,7 @@ func main() {
 	langFile := os.Args[3]
 	tree := lib.NewTree(resourceDir)
 
-	for _, item := range registry.Units() {
+	for _, item := range registry.RawUnits() {
 		customModelData += unit.Compile(
 			item,
 			*code.NewTemplate("mcfunction"),
@@ -57,12 +60,22 @@ func main() {
 		Format().Write(tree)
 	//endregion
 
+	//region Bench registry
+	code.NewTemplate("registry").
+		Replace("version", VERSION).
+		Replace("furniture", tree.Furnitures().String()).
+		Replace("technology", tree.Technologies().String()).
+		Replace("food", tree.Foods().String()).
+		Replace("miscellaneous", tree.Miscellaneous().String()).
+		Format().Write(tree)
+	//endregistry
+
 	tree.WriteToFileSystem(outputDir)
 	fmt.Println(resourceDir)
 
 	fmt.Printf(
 		"Finished compiling %d units with %d models!\n",
-		len(registry.Units()),
+		len(registry.RawUnits()),
 		customModelData-371000,
 	)
 

@@ -29,7 +29,7 @@ build: setup merge
 	cp pack.png ${RESOURCE}/.
 	# --- Clean up
 	rm -rf ${GENERATED}
-	find $(realpath ${RESOURCE}/assets/) -type d -name 'template' -exec rm -r {} +
+	# find $(realpath ${RESOURCE}/assets/) -type d -name 'template' -exec rm -r {} +
 	find $(realpath ./dist/) -type d -empty -delete
 	# --- Apply datapack prefix
 	find ./dist/ -type f -exec sed -i 's/local\./bbln\./g' {} +

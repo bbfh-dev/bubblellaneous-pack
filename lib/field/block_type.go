@@ -2,7 +2,7 @@ package field
 
 import "github.com/bbfh-dev/bubblellaneous-pack/lib/nbt"
 
-var DEFAULT_BLOCK_TYPE = *NewBlockType("default", nil)
+var DEFAULT_BLOCK_TYPE = *NewBlockType("default", map[string]nbt.Entry{})
 
 type BlockType struct {
 	name   string
