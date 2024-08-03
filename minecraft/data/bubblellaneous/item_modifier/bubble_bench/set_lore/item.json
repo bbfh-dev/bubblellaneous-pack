@@ -1,0 +1,34 @@
+[
+    {
+        "function": "minecraft:set_custom_data",
+        "tag": "{bubblellaneous: {is_gui: 1b}}"
+    },
+    {
+        "function": "minecraft:set_lore",
+        "lore": [
+            {
+                "text": ""
+            },
+            {
+                "translate": "ui.bubblellaneous.crafting_materials",
+                "with": [
+                    "⌘"
+                ],
+                "color": "dark_gray",
+                "italic": false
+            },
+            {
+                "text": ""
+            },
+            {
+                "translate": "ui.bubblellaneous.craft",
+                "with": [
+                    "≔"
+                ],
+                "color": "dark_gray",
+                "italic": false
+            }
+        ],
+        "mode": "replace_all"
+    }
+]

@@ -1,0 +1,10 @@
+#=> bubblellaneous:block/[name]/blockstates/apply/[block_state]
+scoreboard players set quit local.tmp 1
+scoreboard players set @s local.block.model [index]
+data modify entity @s item.components.minecraft:custom_data.bubblellaneous.block_properties.block_state set value "[block_state]"
+execute store result score model_id local.tmp run data get entity @s item.components.minecraft:custom_data.bubblellaneous.block_data.custom_model_data
+scoreboard players add model_id local.tmp [model_id]
+execute store result entity @s item.components.minecraft:custom_model_data int 1 run scoreboard players get model_id local.tmp
+$execute at @s run tp @s ~ ~ ~ ~$(rotation) ~
+execute as @s[tag=--local.uses.blockstate_callback] run function bubblellaneous:block/[name]/blockstates/callback
+

@@ -1,0 +1,29 @@
+execute anchored eyes positioned ^ ^ ^2 as @e[type=item_display,tag=local.name.bubble_bench,limit=1,sort=nearest] at @s run data modify storage bubblellaneous tmp.items set from block ~ ~ ~ Items
+
+execute unless data storage bubblellaneous tmp.items[{Slot: 0b}] run return 0
+execute unless data storage bubblellaneous tmp.items[{Slot: 1b}] run return 1
+execute unless data storage bubblellaneous tmp.items[{Slot: 2b}] run return 2
+execute unless data storage bubblellaneous tmp.items[{Slot: 3b}] run return 3
+execute unless data storage bubblellaneous tmp.items[{Slot: 4b}] run return 4
+execute unless data storage bubblellaneous tmp.items[{Slot: 5b}] run return 5
+execute unless data storage bubblellaneous tmp.items[{Slot: 6b}] run return 6
+execute unless data storage bubblellaneous tmp.items[{Slot: 7b}] run return 7
+execute unless data storage bubblellaneous tmp.items[{Slot: 8b}] run return 8
+execute unless data storage bubblellaneous tmp.items[{Slot: 9b}] run return 9
+execute unless data storage bubblellaneous tmp.items[{Slot: 10b}] run return 10
+execute unless data storage bubblellaneous tmp.items[{Slot: 11b}] run return 11
+execute unless data storage bubblellaneous tmp.items[{Slot: 12b}] run return 12
+execute unless data storage bubblellaneous tmp.items[{Slot: 13b}] run return 13
+execute unless data storage bubblellaneous tmp.items[{Slot: 14b}] run return 14
+execute unless data storage bubblellaneous tmp.items[{Slot: 15b}] run return 15
+execute unless data storage bubblellaneous tmp.items[{Slot: 16b}] run return 16
+execute unless data storage bubblellaneous tmp.items[{Slot: 17b}] run return 17
+execute unless data storage bubblellaneous tmp.items[{Slot: 18b}] run return 18
+execute unless data storage bubblellaneous tmp.items[{Slot: 19b}] run return 19
+execute unless data storage bubblellaneous tmp.items[{Slot: 20b}] run return 20
+execute unless data storage bubblellaneous tmp.items[{Slot: 21b}] run return 21
+execute unless data storage bubblellaneous tmp.items[{Slot: 22b}] run return 22
+execute unless data storage bubblellaneous tmp.items[{Slot: 23b}] run return 23
+execute unless data storage bubblellaneous tmp.items[{Slot: 24b}] run return 24
+execute unless data storage bubblellaneous tmp.items[{Slot: 25b}] run return 25
+execute unless data storage bubblellaneous tmp.items[{Slot: 26b}] run return 26

@@ -1,0 +1,8 @@
+#=> bubblellaneous:block/[name]/blockstates/update
+function bubblellaneous:block_placer/internal/reset_blockstate
+
+[block_states]
+
+data modify storage bubblellaneous tmp.states set from storage bubblellaneous state_registry.[name]
+data modify storage bubblellaneous tmp.block set value "[name]"
+function bubblellaneous:block_placer/internal/set_blockstate with storage bubblellaneous tmp.in

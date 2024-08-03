@@ -1,0 +1,6 @@
+[
+    {
+        "function": "minecraft:set_custom_data",
+        "tag": "{bubblellaneous: {item_properties: {is_turned_on: 1}}}"
+    }
+]

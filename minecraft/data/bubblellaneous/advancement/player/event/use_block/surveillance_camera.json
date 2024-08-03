@@ -1,0 +1,19 @@
+{
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:player_interacted_with_entity",
+			"conditions": {
+				"item": {
+					"items": "item_frame"
+				},
+				"entity": {
+					"type": "minecraft:interaction",
+					"nbt": "{Tags:[\"local.base.surveillance_camera\"]}"
+				}
+			}
+		}
+	},
+	"rewards": {
+		"function": "bubblellaneous:player/event/use_block/surveillance_camera"
+	}
+}
