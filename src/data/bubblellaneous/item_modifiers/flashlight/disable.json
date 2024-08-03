@@ -1,6 +1,0 @@
-[
-    {
-        "function": "minecraft:set_nbt",
-        "tag": "{bubblellaneous: {item_properties: {is_turned_on: 0}}}"
-    }
-]
