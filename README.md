@@ -14,7 +14,7 @@ To use it you must [install the data pack](https://minecraft.wiki/w/Data_pack#Us
 | 1.20.2 and earlier | 🚫 Broken due to Minecraft limitations |
 | 1.20.3             | ✅ Supported (only 2.0.0)              |
 | 1.20.4             | ✅ Supported (only 2.0.0)              |
-| 1.20.5 and later   | ✅ Supported                           |
+| 1.21               | ✅ Supported                           |
 
 If you wish to contribute, refer to [CONTRIBUTING.md](https://github.com/bbfh-dev/bubblellaneous-pack/blob/main/CONTRIBUTING.md)
 
