@@ -151,7 +151,7 @@ var Furniture = unit.NewCategory().
 				field.NewRecipeEntry("block", "[color]", 2),
 			},
 			field.USE_PLACE,
-		).WithBlockType(field.SeatBlock(0.8, 0.4))
+		).WithBlockType(field.SeatBlock(0.8, 0.46))
 	}, field.WOOD_WITH_WOOL_MATERIAL()).Units()...).
 	Add(unit.NewVariant(func() unit.Unit {
 		return unit.NewBlock(
