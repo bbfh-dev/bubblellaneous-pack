@@ -42,6 +42,7 @@ Thanks to wonderful people you can enjoy this pack in different languages:
 | [BubbleFish](https://modrinth.com/user/BubbleFish) | 🇷🇺 Russian \[100%\]      |
 | [Unintegrated](https://linktr.ee/unintegrated)     | 🇨🇿 Czech \[100%\]        |
 | [Unintegrated](https://linktr.ee/unintegrated)     | 🌍 Toki Pona \[100%\]      |
+| [Atten007]([https://github.com/Atten007](https://github.com/Atten007)) | 🇩🇪 German \[100%\]     |
 | FBreakDance30                                      | 🇮🇹 Italian \[52%\]       |
 | Dorlonkho                                          | 🇯🇵 Japanesse \[22%\]     |
 
