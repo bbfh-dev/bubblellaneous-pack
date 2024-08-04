@@ -11,6 +11,7 @@ type Line struct {
 	JA_JP    string
 	CS_CZ    string
 	TOK      string
+	DE_DE    string
 }
 
 func NewLine(line []string) *Line {
@@ -24,5 +25,6 @@ func NewLine(line []string) *Line {
 		JA_JP:    line[6],
 		CS_CZ:    line[7],
 		TOK:      line[8],
+		DE_DE:    line[9],
 	}
 }
