@@ -35,16 +35,17 @@ If you wish to contribute, refer to [CONTRIBUTING.md](https://github.com/bbfh-de
 
 Thanks to wonderful people you can enjoy this pack in different languages:
 
-| Maintainer                                         | Translation                |
-| -----------------------                            | -----------------          |
-| [BubbleFish](https://modrinth.com/user/BubbleFish) | 🇺🇸 English (US) \[100%\] |
-| [BubbleFish](https://modrinth.com/user/BubbleFish) | 🇬🇧 English (UK) \[100%\] |
-| [BubbleFish](https://modrinth.com/user/BubbleFish) | 🇷🇺 Russian \[100%\]      |
-| [Unintegrated](https://linktr.ee/unintegrated)     | 🇨🇿 Czech \[100%\]        |
-| [Unintegrated](https://linktr.ee/unintegrated)     | 🌍 Toki Pona \[100%\]      |
-| [Atten007]([https://github.com/Atten007](https://github.com/Atten007)) | 🇩🇪 German \[100%\]     |
-| FBreakDance30                                      | 🇮🇹 Italian \[52%\]       |
-| Dorlonkho                                          | 🇯🇵 Japanesse \[22%\]     |
+| Maintainer                                                             | Translation                |
+| -----------------------                                                | -----------------          |
+| [BubbleFish](https://modrinth.com/user/BubbleFish)                     | 🇺🇸 English (US) \[100%\] |
+| [BubbleFish](https://modrinth.com/user/BubbleFish)                     | 🇬🇧 English (UK) \[100%\] |
+| [BubbleFish](https://modrinth.com/user/BubbleFish)                     | 🇷🇺 Russian \[100%\]      |
+| [Unintegrated](https://linktr.ee/unintegrated)                         | 🇨🇿 Czech \[100%\]        |
+| [Unintegrated](https://linktr.ee/unintegrated)                         | 🌍 Toki Pona \[100%\]      |
+| [Atten007]([https://github.com/Atten007](https://github.com/Atten007)) | 🇩🇪 German \[100%\]       |
+| Caesar_Galahad                                                         | 🇨🇳 Chinese \[100%\]      |
+| FBreakDance30                                                          | 🇮🇹 Italian \[52%\]       |
+| Dorlonkho                                                              | 🇯🇵 Japanesse \[22%\]     |
 
 If you want to help with translations, refer to [CONTRIBUTING.md](https://github.com/bbfh-dev/bubblellaneous-pack/blob/main/CONTRIBUTING.md)
 

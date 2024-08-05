@@ -1,4 +1,4 @@
-VERSION=2-1-2
+VERSION=2-1-3
 DATA=./dist/bubblellaneous_${VERSION}_data_pack
 RESOURCE=./dist/bubblellaneous_${VERSION}_resource_pack
 GENERATED=/tmp/bubblellaneous-generated
@@ -27,6 +27,8 @@ build: setup merge
 	cp pack.png ${DATA}/.
 	cp pack-assets.mcmeta ${RESOURCE}/pack.mcmeta
 	cp pack.png ${RESOURCE}/.
+	# --- Append processed translations
+	cp ./minecraft/zh_cn.json ${RESOURCE}/assets/minecraft/lang/zh_cn.json
 	# --- Clean up
 	rm -rf ${GENERATED}
 	# find $(realpath ${RESOURCE}/assets/) -type d -name 'template' -exec rm -r {} +
