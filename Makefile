@@ -7,6 +7,7 @@ LANG=./minecraft/lang.tsv
 setup:
 	# --- Setup directories
 	rm -rf ./dist/*
+	mkdir ./dist
 	mkdir ${DATA}
 	mkdir ${RESOURCE}
 	mkdir -p ${GENERATED}/data
