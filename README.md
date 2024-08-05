@@ -130,18 +130,11 @@ The changes will apply on the next `/reload`.
 
 # 🛠️ Building from source
 
-This pack uses [Beet](https://github.com/mcbeet/beet) Python module, and [rye](https://github.com/mitsuhiko/rye) for project dependency management.
+This datapack uses `Go`. All pipelines are defined within the `Makefile`.
 
-**Step 1. Set up your virtual environment:**
-
-- Create a virtual environment with the python version from `.python-version` file to ensure the code compiles.
-- Run `pip install -r requirements.lock`.
-
-**Step 2. Build the project:**
-
-- Run `beet build` or `beet watch` to build the project into `dist/` directory.
+1. Run `make build` to build the project.
+2. Run `make format` (optional, requires `jq` to be installed) to format the built project.
 
 # 🧑‍⚖️ Licensing
 
-- The project with its python code uses [MIT](https://github.com/bbfh-dev/bubblellaneous-pack/blob/main/LICENSE) license.
-- All minecraft assets/code use [CC BY-SA 4.0](https://github.com/bbfh-dev/bubblellaneous-pack/blob/main/src/LICENSE) license.
+- The project uses [MIT](https://github.com/bbfh-dev/bubblellaneous-pack/blob/main/LICENSE) license.
