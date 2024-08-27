@@ -3,7 +3,7 @@ execute store result storage bubblellaneous tmp.in.pos_x int 1 run data get enti
 execute store result storage bubblellaneous tmp.in.pos_y int 1 run data get entity @s Pos[1]
 execute store result storage bubblellaneous tmp.in.pos_z int 1 run data get entity @s Pos[2]
 data modify storage bubblellaneous tmp.in.dimension set from entity @p[tag=--local.event_player] Dimension
-data modify storage bubblellaneous tmp.in.name set from entity @p[tag=--local.event_player] SelectedItem.components."minecraft:item_name"
+data modify storage bubblellaneous tmp.in.name set from entity @p[tag=--local.event_player] SelectedItem.components."minecraft:custom_name"
 
 function bubblellaneous:block/surveillance_camera/link/apply_properties with storage bubblellaneous tmp.in
 
