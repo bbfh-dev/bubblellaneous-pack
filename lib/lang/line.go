@@ -12,6 +12,9 @@ type Line struct {
 	CS_CZ    string
 	TOK      string
 	DE_DE    string
+	ES_CL    string
+	ES_MX    string
+	ES_ES    string
 }
 
 func NewLine(line []string) *Line {
@@ -26,5 +29,8 @@ func NewLine(line []string) *Line {
 		CS_CZ:    line[7],
 		TOK:      line[8],
 		DE_DE:    line[9],
+		ES_CL:    line[10],
+		ES_MX:    line[11],
+		ES_ES:    line[12],
 	}
 }

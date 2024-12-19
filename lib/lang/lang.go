@@ -28,7 +28,19 @@ func ReadFromFile(filepath string) (lines []*Line) {
 
 func GetLangFile(lines []*Line) map[string]map[string]string {
 	langs := map[string]map[string]string{}
-	keys := []string{"en_us", "en_gb", "ru_ru", "ja_jp", "cs_cz", "it_it", "tok", "de_de"}
+	keys := []string{
+		"en_us",
+		"en_gb",
+		"ru_ru",
+		"ja_jp",
+		"cs_cz",
+		"it_it",
+		"tok",
+		"de_de",
+		"es_cl",
+		"es_mx",
+		"es_es",
+	}
 
 	for _, key := range keys {
 		langs[key] = map[string]string{}
@@ -58,6 +70,15 @@ func GetLangFile(lines []*Line) map[string]map[string]string {
 		}
 		if len(line.DE_DE) > 0 {
 			langs["de_de"][fmt.Sprintf("%s.bubblellaneous.%s", line.Category, line.Name)] = line.DE_DE
+		}
+		if len(line.ES_CL) > 0 {
+			langs["es_cl"][fmt.Sprintf("%s.bubblellaneous.%s", line.Category, line.Name)] = line.ES_CL
+		}
+		if len(line.ES_MX) > 0 {
+			langs["es_mx"][fmt.Sprintf("%s.bubblellaneous.%s", line.Category, line.Name)] = line.ES_MX
+		}
+		if len(line.ES_ES) > 0 {
+			langs["es_es"][fmt.Sprintf("%s.bubblellaneous.%s", line.Category, line.Name)] = line.ES_ES
 		}
 	}
 
