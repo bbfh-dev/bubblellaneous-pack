@@ -296,7 +296,7 @@ var Technology = unit.NewCategory().
 			nbt.ListNBT[nbt.TreeNBT]{
 				nbt.Tree().
 					Set("id", nbt.StringNBT("flashlight")).
-					Set("type", nbt.StringNBT("generic.attack_speed")).
+					Set("type", nbt.StringNBT("minecraft:attack_speed")).
 					Set("amount", nbt.IntNBT(-1)).
 					Set("operation", nbt.StringNBT("add_multiplied_total")).
 					Set("slot", nbt.StringNBT("mainhand")),
