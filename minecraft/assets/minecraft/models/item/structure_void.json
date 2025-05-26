@@ -1,50 +1,50 @@
 {
-    "parent": "minecraft:item/generated",
-    "textures": {
-        "layer0": "minecraft:item/structure_void"
-    },
-    "overrides": [
-        {
-            "predicate": {
-                "custom_model_data": 370000
-            },
-            "model": "bubblellaneous:ui/air"
-        },
-        {
-            "predicate": {
-                "custom_model_data": 370001
-            },
-            "model": "bubblellaneous:ui/slot"
-        },
-        {
-            "predicate": {
-                "custom_model_data": 370002
-            },
-            "model": "bubblellaneous:ui/arrow_left"
-        },
-        {
-            "predicate": {
-                "custom_model_data": 370003
-            },
-            "model": "bubblellaneous:ui/arrow_left_inactive"
-        },
-        {
-            "predicate": {
-                "custom_model_data": 370004
-            },
-            "model": "bubblellaneous:ui/arrow_right"
-        },
-        {
-            "predicate": {
-                "custom_model_data": 370005
-            },
-            "model": "bubblellaneous:ui/arrow_right_inactive"
-        },
-        {
-            "predicate": {
-                "custom_model_data": 370006
-            },
-            "model": "bubblellaneous:ui/compass"
-        }
-    ]
+	"parent": "minecraft:item/generated",
+	"textures": {
+		"layer0": "minecraft:item/structure_void"
+	},
+	"overrides": [
+		{
+			"predicate": {
+				"custom_model_data": 370000
+			},
+			"model": "bubblellaneous:ui/air"
+		},
+		{
+			"predicate": {
+				"custom_model_data": 370001
+			},
+			"model": "bubblellaneous:ui/slot"
+		},
+		{
+			"predicate": {
+				"custom_model_data": 370002
+			},
+			"model": "bubblellaneous:ui/arrow_left"
+		},
+		{
+			"predicate": {
+				"custom_model_data": 370003
+			},
+			"model": "bubblellaneous:ui/arrow_left_inactive"
+		},
+		{
+			"predicate": {
+				"custom_model_data": 370004
+			},
+			"model": "bubblellaneous:ui/arrow_right"
+		},
+		{
+			"predicate": {
+				"custom_model_data": 370005
+			},
+			"model": "bubblellaneous:ui/arrow_right_inactive"
+		},
+		{
+			"predicate": {
+				"custom_model_data": 370006
+			},
+			"model": "bubblellaneous:ui/compass"
+		}
+	]
 }

@@ -1,16 +1,16 @@
 {
-    "criteria": {
-        "requirement": {
-            "trigger": "minecraft:player_interacted_with_entity",
-            "conditions": {
-                "entity": {
-                    "type": "minecraft:interaction",
-                    "nbt": "{Tags:[\"local.keypad.enter\"]}"
-                }
-            }
-        }
-    },
-    "rewards": {
-        "function": "bubblellaneous:player/event/use_block/keypad_lock/click_enter"
-    }
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:player_interacted_with_entity",
+			"conditions": {
+				"entity": {
+					"type": "minecraft:interaction",
+					"nbt": "{Tags:[\"local.keypad.enter\"]}"
+				}
+			}
+		}
+	},
+	"rewards": {
+		"function": "bubblellaneous:player/event/use_block/keypad_lock/click_enter"
+	}
 }

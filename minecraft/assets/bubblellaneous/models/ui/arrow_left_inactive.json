@@ -1,6 +1,6 @@
 {
-    "parent": "bubblellaneous:ui/slot",
-    "textures": {
-        "overlay": "bubblellaneous:ui/arrow_left_inactive"
-    }
+	"parent": "bubblellaneous:ui/slot",
+	"textures": {
+		"overlay": "bubblellaneous:ui/arrow_left_inactive"
+	}
 }

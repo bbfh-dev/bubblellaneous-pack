@@ -1,24 +1,89 @@
 {
-  "credit": "Bubblellaneous - by bbfh",
-  "parent": "minecraft:block/block",
-  "textures": {
-    "0": "bubblellaneous:block/security_camera",
-    "particle": "bubblellaneous:block/security_camera"
-  },
-  "elements": [
-    {
-      "from": [5, 8, 3],
-      "to": [11, 13, 13],
-      "rotation": { "angle": -22.5, "axis": "x", "origin": [8, 11, 8] },
-      "faces": {
-        "north": { "uv": [0, 0, 6, 5], "texture": "#0" },
-        "east": { "uv": [16, 0, 6, 5], "texture": "#0" },
-        "south": { "uv": [0, 5, 6, 10], "texture": "#0" },
-        "west": { "uv": [6, 0, 16, 5], "texture": "#0" },
-        "up": { "uv": [6, 5, 16, 11], "rotation": 90, "texture": "#0" },
-        "down": { "uv": [6, 5, 16, 11], "rotation": 90, "texture": "#0" }
-      }
-    }
-  ]
+	"credit": "Bubblellaneous - by bbfh",
+	"parent": "minecraft:block/block",
+	"textures": {
+		"0": "bubblellaneous:block/security_camera",
+		"particle": "bubblellaneous:block/security_camera"
+	},
+	"elements": [
+		{
+			"from": [
+				5,
+				8,
+				3
+			],
+			"to": [
+				11,
+				13,
+				13
+			],
+			"rotation": {
+				"angle": -22.5,
+				"axis": "x",
+				"origin": [
+					8,
+					11,
+					8
+				]
+			},
+			"faces": {
+				"north": {
+					"uv": [
+						0,
+						0,
+						6,
+						5
+					],
+					"texture": "#0"
+				},
+				"east": {
+					"uv": [
+						16,
+						0,
+						6,
+						5
+					],
+					"texture": "#0"
+				},
+				"south": {
+					"uv": [
+						0,
+						5,
+						6,
+						10
+					],
+					"texture": "#0"
+				},
+				"west": {
+					"uv": [
+						6,
+						0,
+						16,
+						5
+					],
+					"texture": "#0"
+				},
+				"up": {
+					"uv": [
+						6,
+						5,
+						16,
+						11
+					],
+					"rotation": 90,
+					"texture": "#0"
+				},
+				"down": {
+					"uv": [
+						6,
+						5,
+						16,
+						11
+					],
+					"rotation": 90,
+					"texture": "#0"
+				}
+			}
+		}
+	]
 }
-

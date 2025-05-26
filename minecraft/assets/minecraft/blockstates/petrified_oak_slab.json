@@ -1,13 +1,13 @@
 {
-    "variants": {
-        "type=bottom": {
-            "model": "bubblellaneous:block/empty"
-        },
-        "type=double": {
-            "model": "bubblellaneous:block/empty"
-        },
-        "type=top": {
-            "model": "bubblellaneous:block/empty"
-        }
-    }
+	"variants": {
+		"type=bottom": {
+			"model": "bubblellaneous:block/empty"
+		},
+		"type=double": {
+			"model": "bubblellaneous:block/empty"
+		},
+		"type=top": {
+			"model": "bubblellaneous:block/empty"
+		}
+	}
 }

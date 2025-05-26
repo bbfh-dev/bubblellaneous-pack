@@ -13,7 +13,9 @@
 								"predicate": {
 									"type_specific": {
 										"type": "player",
-										"gamemode": ["creative"]
+										"gamemode": [
+											"creative"
+										]
 									}
 								}
 							},
@@ -23,7 +25,9 @@
 								"predicate": {
 									"type_specific": {
 										"type": "player",
-										"gamemode": ["survival"]
+										"gamemode": [
+											"survival"
+										]
 									},
 									"flags": {
 										"is_sneaking": true

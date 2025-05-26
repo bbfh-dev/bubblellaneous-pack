@@ -1,9 +1,9 @@
 {
-    "values": [
-        "copper_block",
-        "waxed_copper_block",
-        "waxed_exposed_copper",
-        "waxed_oxidized_copper",
-        "waxed_weathered_copper"
-    ]
+	"values": [
+		"copper_block",
+		"waxed_copper_block",
+		"waxed_exposed_copper",
+		"waxed_oxidized_copper",
+		"waxed_weathered_copper"
+	]
 }

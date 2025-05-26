@@ -1,16 +1,16 @@
 {
-    "criteria": {
-        "requirement": {
-            "trigger": "minecraft:player_interacted_with_entity",
-            "conditions": {
-                "entity": {
-                    "type": "minecraft:interaction",
-                    "nbt": "{Tags:[\"local.base.rising_door\"]}"
-                }
-            }
-        }
-    },
-    "rewards": {
-        "function": "bubblellaneous:player/event/use_block/rising_door"
-    }
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:player_interacted_with_entity",
+			"conditions": {
+				"entity": {
+					"type": "minecraft:interaction",
+					"nbt": "{Tags:[\"local.base.rising_door\"]}"
+				}
+			}
+		}
+	},
+	"rewards": {
+		"function": "bubblellaneous:player/event/use_block/rising_door"
+	}
 }
