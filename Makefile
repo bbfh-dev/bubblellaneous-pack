@@ -1,4 +1,4 @@
-VERSION=2-1-6
+VERSION=2-2-0
 DATA=./dist/bubblellaneous_${VERSION}_data_pack
 RESOURCE=./dist/bubblellaneous_${VERSION}_resource_pack
 GENERATED=/tmp/bubblellaneous-generated
