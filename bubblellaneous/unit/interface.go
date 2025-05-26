@@ -64,7 +64,10 @@ func Compile(unit Unit, template code.Template, tree *lib.Tree, customModelData 
 		loot_table,
 		"[components]",
 		nbt.Tree().
-			Set("minecraft:custom_model_data", nbt.IntNBT(customModelData)).
+			Set("minecraft:custom_model_data", nbt.Tree().Set(
+				"floats",
+				nbt.ListNBT[nbt.IntNBT]{nbt.IntNBT(customModelData)},
+			)).
 			Set("minecraft:item_name", nbt.StringNBT(fmt.Sprintf(`{"translate":"%s.bubblellaneous.%s"}`, unit.Type(), unit.TranslateId()))).
 			Extend(unit.NBT(customModelData)).
 			String(),

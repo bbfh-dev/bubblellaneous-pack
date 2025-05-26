@@ -2,7 +2,7 @@ scoreboard players set did_cancel local.tmp 0
 scoreboard players reset NO_REPLACE local.tmp
 
 #region Summon the display
-$summon item_display ~ ~ ~ {Tags: ["+bubblellaneous", "local.block", "local.name.$(name)", "--local.new"], CustomName: '$(display_name)', item: {id: "$(base_item)", count:1, components:{custom_model_data: $(custom_model_data)}, width: 1f, height: 1f}}
+$summon item_display ~ ~ ~ {Tags: ["+bubblellaneous", "local.block", "local.name.$(name)", "--local.new"], CustomName: '$(display_name)', item: {id: "$(base_item)", count:1, components:{custom_model_data:{floats:[$(custom_model_data)]}}, width: 1f, height: 1f}}
 data modify entity @e[type=item_display,tag=--local.new,limit=1,sort=nearest] transformation set value {translation: [0f, 0f, 0f], scale: [1.001f, 1.001f, 1.001f], left_rotation: [0f, 0f, 0f, 1f], right_rotation: [0f, 0f, 0f, 1f]}
 data modify entity @e[type=item_display,tag=--local.new,limit=1,sort=nearest] item.components.minecraft:custom_data.bubblellaneous set from entity @s Item.components.minecraft:custom_data.bubblellaneous
 execute store result score @e[type=item_display,tag=--local.new,limit=1,sort=nearest] local.block.id run scoreboard players add block_id local.block.id 1
