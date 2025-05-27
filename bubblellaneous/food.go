@@ -14,7 +14,7 @@ var Food = unit.NewCategory().
 			field.NewRecipeEntry("item", "cocoa_beans", 2),
 		},
 		nbt.Tree(),
-	).WithFood(3, 1, true, 2.0)).
+	).WithFood(3, 1, true, 2.0, "drink")).
 	Add(unit.NewItem(
 		"cucumber",
 		field.ITEM_NORMAL,
@@ -22,7 +22,7 @@ var Food = unit.NewCategory().
 			field.NewRecipeEntry("item", "wheat_seeds", 1),
 		},
 		nbt.Tree(),
-	).WithFood(2, 1, false, 1.0)).
+	).WithFood(2, 1, false, 1.0, "eat")).
 	Add(unit.NewItem(
 		"grapes",
 		field.ITEM_NORMAL,
@@ -30,7 +30,7 @@ var Food = unit.NewCategory().
 			field.NewRecipeEntry("item", "wheat_seeds", 1),
 		},
 		nbt.Tree(),
-	).WithFood(1, 1, false, 1.0)).
+	).WithFood(1, 1, false, 1.0, "eat")).
 	Add(unit.NewItem(
 		"burger",
 		field.ITEM_NORMAL,
@@ -39,7 +39,7 @@ var Food = unit.NewCategory().
 			field.NewRecipeEntry("item", "cooked_beef", 1),
 		},
 		nbt.Tree(),
-	).WithFood(8, 6, false, 5.0)).
+	).WithFood(8, 6, false, 5.0, "eat")).
 	Add(unit.NewItem(
 		"toast",
 		field.ITEM_NORMAL,
@@ -47,7 +47,7 @@ var Food = unit.NewCategory().
 			field.NewRecipeEntry("item", "bread", 1),
 		},
 		nbt.Tree(),
-	).WithFood(2, 5, false, 2.0)).
+	).WithFood(2, 5, false, 2.0, "eat")).
 	Add(unit.NewItem(
 		"tomato",
 		field.ITEM_NORMAL,
@@ -55,7 +55,7 @@ var Food = unit.NewCategory().
 			field.NewRecipeEntry("item", "wheat_seeds", 1),
 		},
 		nbt.Tree(),
-	).WithFood(1, 1, false, 1.0)).
+	).WithFood(1, 1, false, 1.0, "eat")).
 	Add(unit.NewItem(
 		"cheese",
 		field.ITEM_NORMAL,
@@ -63,7 +63,7 @@ var Food = unit.NewCategory().
 			field.NewRecipeEntry("item", "milk_bucket", 1),
 		},
 		nbt.Tree(),
-	).WithFood(1, 5, false, 1.0)).
+	).WithFood(1, 5, false, 1.0, "eat")).
 	Add(unit.NewItem(
 		"chocolate_bar",
 		field.ITEM_NORMAL,
@@ -71,7 +71,7 @@ var Food = unit.NewCategory().
 			field.NewRecipeEntry("item", "cocoa_beans", 1),
 		},
 		nbt.Tree(),
-	).WithFood(3, 1, false, 1.5)).
+	).WithFood(3, 1, false, 1.5, "eat")).
 	Add(unit.NewItem(
 		"donut",
 		field.ITEM_NORMAL,
@@ -80,7 +80,7 @@ var Food = unit.NewCategory().
 			field.NewRecipeEntry("item", "sugar", 1),
 		},
 		nbt.Tree(),
-	).WithFood(8, 5, false, 4.0)).
+	).WithFood(8, 5, false, 4.0, "eat")).
 	Add(unit.NewItem(
 		"broccoli",
 		field.ITEM_NORMAL,
@@ -88,7 +88,7 @@ var Food = unit.NewCategory().
 			field.NewRecipeEntry("item", "wheat_seeds", 1),
 		},
 		nbt.Tree(),
-	).WithFood(3, 3, false, 1.0)).
+	).WithFood(3, 3, false, 1.0, "eat")).
 	Add(unit.NewItem(
 		"omelette",
 		field.ITEM_NORMAL,
@@ -96,7 +96,7 @@ var Food = unit.NewCategory().
 			field.NewRecipeEntry("item", "egg", 1),
 		},
 		nbt.Tree(),
-	).WithFood(2, 4, false, 1.5)).
+	).WithFood(2, 4, false, 1.5, "eat")).
 	Add(unit.NewItem(
 		"strawberry",
 		field.ITEM_NORMAL,
@@ -104,7 +104,7 @@ var Food = unit.NewCategory().
 			field.NewRecipeEntry("item", "wheat_seeds", 1),
 		},
 		nbt.Tree(),
-	).WithFood(1, 1, false, 0.5)).
+	).WithFood(1, 1, false, 0.5, "eat")).
 	Add(unit.NewItem(
 		"cereal",
 		field.ITEM_NORMAL,
@@ -112,7 +112,7 @@ var Food = unit.NewCategory().
 			field.NewRecipeEntry("item", "wheat", 2),
 		},
 		nbt.Tree(),
-	).WithFood(10, 14, false, 6.0)).
+	).WithFood(10, 14, false, 6.0, "eat")).
 	Add(unit.NewVariant(func() unit.Unit {
 		return unit.NewItem(
 			"beer_bottle",
@@ -122,5 +122,5 @@ var Food = unit.NewCategory().
 				field.NewRecipeEntry("item", "[color]", 1),
 			},
 			nbt.Tree(),
-		).WithFood(4, 5, true, 4.0)
+		).WithFood(4, 5, true, 4.0, "drink")
 	}, field.DYE_MATERIAL).Units()...)

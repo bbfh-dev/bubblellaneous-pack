@@ -25,12 +25,13 @@ type Item struct {
 	nbtCallback   func(nbt.TreeNBT) nbt.TreeNBT
 }
 
-func (item Item) WithFood(nutrition int, saturation int, always bool, time float64) Item {
+func (item Item) WithFood(nutrition, saturation int, always bool, time float64, animation string) Item {
 	item.food = &field.Food{
 		Nutrition:    nutrition,
 		Saturation:   saturation,
 		CanAlwaysEat: always,
 		EatSeconds:   time,
+		Animation:    animation,
 	}
 	return item
 }
@@ -124,7 +125,9 @@ func (unit Item) SetRecipe(recipe []field.RecipeEntry) Unit {
 func (unit Item) NBT(customModelData int) nbt.TreeNBT {
 	tree := nbt.Tree()
 	if unit.food != nil {
-		tree.Set("minecraft:food", unit.food.NBT())
+		consumable, food := unit.food.NBT()
+		tree.Set("minecraft:consumable", consumable)
+		tree.Set("minecraft:food", food)
 	}
 	data := tree.Set("minecraft:custom_data", nbt.Tree().Set(
 		"bubblellaneous",
