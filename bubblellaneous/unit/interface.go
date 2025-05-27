@@ -19,6 +19,7 @@ type Unit interface {
 	MinecraftBase() string
 	SetVariant(id string, material field.Material, count int, index int) Unit
 	Type() string
+	DefaultBlockstate() string
 	Compile(*lib.Tree, int) (int, bool)
 	Recipe() []field.RecipeEntry
 	SetRecipe([]field.RecipeEntry) Unit
@@ -87,16 +88,18 @@ func Compile(unit Unit, template code.Template, tree *lib.Tree, customModelData 
 	if overwritten {
 		if unit.Material() != nil {
 			tree.MkItem(unit.Id(), fmt.Sprintf(
-				"bubblellaneous:%s/%s/%s/default",
+				"bubblellaneous:%s/%s/%s/%s",
 				unit.Type(),
 				unit.UnitId(),
 				unit.Material().Name,
+				unit.DefaultBlockstate(),
 			))
 		} else {
 			tree.MkItem(unit.Id(), fmt.Sprintf(
-				"bubblellaneous:%s/%s/default",
+				"bubblellaneous:%s/%s/%s",
 				unit.Type(),
 				unit.Id(),
+				unit.DefaultBlockstate(),
 			))
 		}
 

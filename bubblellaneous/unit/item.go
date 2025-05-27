@@ -25,6 +25,10 @@ type Item struct {
 	nbtCallback   func(nbt.TreeNBT) nbt.TreeNBT
 }
 
+func (item Item) DefaultBlockstate() string {
+	return "default"
+}
+
 func (item Item) WithFood(nutrition, saturation int, always bool, time float64, animation string) Item {
 	item.food = &field.Food{
 		Nutrition:    nutrition,

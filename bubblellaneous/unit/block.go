@@ -30,6 +30,13 @@ type Block struct {
 	hidden        bool
 }
 
+func (block Block) DefaultBlockstate() string {
+	if len(block.states.States) > 0 {
+		return block.states.States[0].Name
+	}
+	return "default"
+}
+
 func (block Block) WithBlockstates(match string, states ...field.BlockState) Block {
 	block.states = field.States{
 		Match:  match,
