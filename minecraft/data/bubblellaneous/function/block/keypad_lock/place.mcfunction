@@ -1,5 +1,5 @@
 #region Screen
-summon text_display ~ ~ ~ {Tags: ["+bubblellaneous", "local.keypad.screen", "--local.new"], width: 1f, height: 1f, text: '{"text":"××××", "color":"gray"}', shadow: 1b, background: 0, brightness: {sky: 15, block: 15}}
+summon text_display ~ ~ ~ {Tags: ["+bubblellaneous", "local.keypad.screen", "--local.new"], width: 1f, height: 1f, text: {"text":"××××", "color":"gray"}, shadow: 1b, background: 0, brightness: {sky: 15, block: 15}}
 execute align xyz positioned ~.5 ~ ~.5 run tp @e[type=text_display,tag=--local.new,limit=1,sort=nearest] ^-0.015 ^0.5938 ^0.51 ~ ~
 scoreboard players operation @e[type=text_display,tag=--local.new,limit=1,sort=nearest] local.block.id = @s local.block.id
 tag @e[type=text_display,tag=--local.new,limit=1,sort=nearest] remove --local.new

@@ -7,6 +7,12 @@ import (
 	"github.com/samber/lo"
 )
 
+type RawNBT string
+
+func (nbt RawNBT) String() string {
+	return fmt.Sprintf("%s", string(nbt))
+}
+
 type JSONFloatNBT float64
 
 func (nbt JSONFloatNBT) String() string {

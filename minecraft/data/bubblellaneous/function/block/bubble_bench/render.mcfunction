@@ -69,17 +69,17 @@ execute if score i local.tmp < size local.tmp run scoreboard players set gui.las
 #endregion
 
 #region Controls
-execute if score @s local.block_state matches 0 run item replace block ~ ~ ~ container.2 with structure_void[minecraft:item_model="bubblellaneous:ui_slot", minecraft:item_name='""', minecraft:custom_data={bubblellaneous: {is_gui: 1b}}]
-execute if score @s local.block_state matches 1 run item replace block ~ ~ ~ container.2 with minecraft:structure_void[minecraft:item_model="bubblellaneous:ui_arrow_left",minecraft:item_name='""',minecraft:custom_data={bubblellaneous:{action:"close_variant",is_gui:1b}}]
+execute if score @s local.block_state matches 0 run item replace block ~ ~ ~ container.2 with structure_void[minecraft:item_model="bubblellaneous:ui_slot", minecraft:item_name="", minecraft:custom_data={bubblellaneous: {is_gui: 1b}}]
+execute if score @s local.block_state matches 1 run item replace block ~ ~ ~ container.2 with minecraft:structure_void[minecraft:item_model="bubblellaneous:ui_arrow_left",minecraft:item_name="",minecraft:custom_data={bubblellaneous:{action:"close_variant",is_gui:1b}}]
 
-item replace block ~ ~ ~ container.11 with minecraft:structure_void[minecraft:item_model="bubblellaneous:ui_compass",minecraft:lore=['""','{"translate": "ui.bubblellaneous.jump_to_list_end_or_begin", "with":["≔"], "color":"gray", "italic": false}','{"translate": "ui.bubblellaneous.craft_maximum", "with":["≔"], "color":"gray", "italic": false}','{"translate": "ui.bubblellaneous.craft_documentation", "with":["≔", {"keybind": "key.drop"}], "color":"gray", "italic": false}'],minecraft:item_name='{"translate": "ui.bubblellaneous.navigation", "color": "aqua"}',minecraft:custom_data={bubblellaneous:{is_gui:1b}}] 1
-execute if score @s local.gui.page matches 2.. run item replace block ~ ~ ~ container.18 with minecraft:structure_void[minecraft:item_model="bubblellaneous:ui_arrow_left",minecraft:item_name='""',minecraft:custom_data={bubblellaneous:{action:"previous_page",is_gui:1b}}]
-execute if score @s local.gui.page matches 1 run item replace block ~ ~ ~ container.18 with minecraft:structure_void[minecraft:item_model="bubblellaneous:ui_arrow_left_inactive",minecraft:item_name='""',minecraft:custom_data={bubblellaneous:{action:"none",is_gui:1b}}]
+item replace block ~ ~ ~ container.11 with minecraft:structure_void[minecraft:item_model="bubblellaneous:ui_compass",minecraft:lore=["",{"translate": "ui.bubblellaneous.jump_to_list_end_or_begin", "with":["≔"], "color":"gray", "italic": false},{"translate": "ui.bubblellaneous.craft_maximum", "with":["≔"], "color":"gray", "italic": false},{"translate": "ui.bubblellaneous.craft_documentation", "with":["≔", {"keybind": "key.drop"}], "color":"gray", "italic": false}],minecraft:item_name={"translate": "ui.bubblellaneous.navigation", "color": "aqua"},minecraft:custom_data={bubblellaneous:{is_gui:1b}}] 1
+execute if score @s local.gui.page matches 2.. run item replace block ~ ~ ~ container.18 with minecraft:structure_void[minecraft:item_model="bubblellaneous:ui_arrow_left",minecraft:item_name="",minecraft:custom_data={bubblellaneous:{action:"previous_page",is_gui:1b}}]
+execute if score @s local.gui.page matches 1 run item replace block ~ ~ ~ container.18 with minecraft:structure_void[minecraft:item_model="bubblellaneous:ui_arrow_left_inactive",minecraft:item_name="",minecraft:custom_data={bubblellaneous:{action:"none",is_gui:1b}}]
 
-execute if score gui.last_page local.tmp matches 0 run item replace block ~ ~ ~ container.19 with minecraft:structure_void[minecraft:item_model="bubblellaneous:ui_arrow_right",minecraft:item_name='""',minecraft:custom_data={bubblellaneous:{action:"next_page",is_gui:1b}}]
-execute if score gui.last_page local.tmp matches 1 run item replace block ~ ~ ~ container.19 with minecraft:structure_void[minecraft:item_model="bubblellaneous:ui_arrow_right_inactive",minecraft:item_name='""',minecraft:custom_data={bubblellaneous:{action:"none",is_gui:1b}}]
+execute if score gui.last_page local.tmp matches 0 run item replace block ~ ~ ~ container.19 with minecraft:structure_void[minecraft:item_model="bubblellaneous:ui_arrow_right",minecraft:item_name="",minecraft:custom_data={bubblellaneous:{action:"next_page",is_gui:1b}}]
+execute if score gui.last_page local.tmp matches 1 run item replace block ~ ~ ~ container.19 with minecraft:structure_void[minecraft:item_model="bubblellaneous:ui_arrow_right_inactive",minecraft:item_name="",minecraft:custom_data={bubblellaneous:{action:"none",is_gui:1b}}]
 
-item replace block ~ ~ ~ container.20 with minecraft:structure_void[minecraft:item_model="bubblellaneous:ui_slot",minecraft:item_name='""',minecraft:custom_data={bubblellaneous:{is_gui:1b}}]
+item replace block ~ ~ ~ container.20 with minecraft:structure_void[minecraft:item_model="bubblellaneous:ui_slot",minecraft:item_name="",minecraft:custom_data={bubblellaneous:{is_gui:1b}}]
 item modify block ~ ~ ~ container.20 bubblellaneous:bubble_bench/set_page
 #endregion
 

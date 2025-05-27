@@ -54,7 +54,7 @@ func Compile(unit Unit, template code.Template, tree *lib.Tree, customModelData 
 				Set("id", nbt.StringNBT(item.Id)).
 				Set("group", nbt.StringNBT(item.Group)).
 				Set("count", nbt.IntNBT(item.Amount)).
-				Set("lore", nbt.StringNBT(tree.String()))
+				Set("lore", nbt.RawNBT(tree.String()))
 		})).String()).
 		Format().Write(tree)
 
@@ -64,11 +64,8 @@ func Compile(unit Unit, template code.Template, tree *lib.Tree, customModelData 
 		loot_table,
 		"[components]",
 		nbt.Tree().
-			Set("minecraft:custom_model_data", nbt.Tree().Set(
-				"floats",
-				nbt.ListNBT[nbt.IntNBT]{nbt.IntNBT(customModelData)},
-			)).
-			Set("minecraft:item_name", nbt.StringNBT(fmt.Sprintf(`{"translate":"%s.bubblellaneous.%s"}`, unit.Type(), unit.TranslateId()))).
+			Set("minecraft:item_model", nbt.StringNBT(fmt.Sprintf("bubblellaneous:%s", unit.Id()))).
+			Set("minecraft:item_name", nbt.RawNBT(fmt.Sprintf(`{"translate":"%s.bubblellaneous.%s"}`, unit.Type(), unit.TranslateId()))).
 			Extend(unit.NBT(customModelData)).
 			String(),
 		1,
@@ -88,6 +85,21 @@ func Compile(unit Unit, template code.Template, tree *lib.Tree, customModelData 
 	}
 
 	if overwritten {
+		if unit.Material() != nil {
+			tree.MkItem(unit.Id(), fmt.Sprintf(
+				"bubblellaneous:%s/%s/%s/default",
+				unit.Type(),
+				unit.UnitId(),
+				unit.Material().Name,
+			))
+		} else {
+			tree.MkItem(unit.Id(), fmt.Sprintf(
+				"bubblellaneous:%s/%s/default",
+				unit.Type(),
+				unit.Id(),
+			))
+		}
+
 		return entries
 	}
 
