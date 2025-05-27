@@ -114,6 +114,12 @@ func Compile(unit Unit, template code.Template, tree *lib.Tree, customModelData 
 				unit.Material().Name,
 			),
 		)
+		tree.MkItem(unit.Id(), fmt.Sprintf(
+			"bubblellaneous:%s/%s/%s",
+			unit.Type(),
+			unit.UnitId(),
+			unit.Material().Name,
+		))
 	} else {
 		tree.AddModel(unit.MinecraftBase(), customModelData,
 			fmt.Sprintf(
@@ -122,6 +128,11 @@ func Compile(unit Unit, template code.Template, tree *lib.Tree, customModelData 
 				unit.Id(),
 			),
 		)
+		tree.MkItem(unit.Id(), fmt.Sprintf(
+			"bubblellaneous:%s/%s",
+			unit.Type(),
+			unit.Id(),
+		))
 	}
 
 	return 1

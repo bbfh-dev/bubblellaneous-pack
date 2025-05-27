@@ -282,6 +282,7 @@ func (unit Block) NBT(customModelData int) nbt.TreeNBT {
 								"block_data",
 								nbt.Tree().
 									Set("id", nbt.StringNBT(unit.id)).
+									Set("item_model", nbt.StringNBT(unit.id)).
 									Set("custom_model_data", nbt.IntNBT(customModelData)).
 									Set("display_name", nbt.StringNBT(fmt.Sprintf(`{"translate":"%s.bubblellaneous.%s"}`, unit.Type(), unit.TranslateId()))).
 									Set("material_count", nbt.IntNBT(unit.materialCount)).

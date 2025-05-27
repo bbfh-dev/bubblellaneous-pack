@@ -32,6 +32,7 @@ type Tree struct {
 	functions                  map[string][]string
 	loot_tables                map[string]string
 	models                     map[string]string
+	items                      map[string]string
 	toBeDeleted                []string
 	customModelDatas           map[string]map[int]string
 	StateRegistry              map[string]map[string]stateRegistry
@@ -48,6 +49,7 @@ func NewTree(resourceDir string) *Tree {
 		functions:                  map[string][]string{},
 		loot_tables:                map[string]string{},
 		models:                     map[string]string{},
+		items:                      map[string]string{},
 		toBeDeleted:                []string{},
 		customModelDatas:           map[string]map[int]string{},
 		StateRegistry:              map[string]map[string]stateRegistry{},
@@ -168,6 +170,10 @@ func (tree *Tree) MkModelDir(
 	}
 }
 
+func (tree *Tree) MkItem(path, model string) {
+	tree.items[path] = model
+}
+
 type benchRegistry struct {
 	Group string
 	Entry string
@@ -208,6 +214,11 @@ func (tree *Tree) WriteToFileSystem(path string) {
 	for target, body := range tree.models {
 		file := create(fmt.Sprintf("%s/assets/%s.json", path, target))
 		file.WriteString(body)
+	}
+
+	for location, model := range tree.items {
+		file := create(fmt.Sprintf("%s/assets/bubblellaneous/items/%s.json", path, location))
+		fmt.Fprintf(file, `{"model":{"type":"minecraft:model","model":%q}}`, model)
 	}
 
 	for base, customModelDatas := range tree.customModelDatas {
@@ -277,7 +288,7 @@ type group struct {
 func getCategory(from []benchRegistry) nbt.ListNBT[nbt.TreeNBT] {
 	result := nbt.ListNBT[nbt.TreeNBT]{}
 
-	var indexes = map[string]int{}
+	indexes := map[string]int{}
 	var groups []group
 
 	for _, entry := range from {
