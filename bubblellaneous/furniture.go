@@ -233,7 +233,7 @@ var Furniture = unit.NewCategory().
 			"street_light",
 			field.BASE_NONE,
 			field.SOUND_WOOD,
-			field.FACING_NORMAL,
+			field.FACING_ONLY_WALL_NORMAL,
 			[]field.RecipeEntry{
 				field.NewRecipeEntry("block", "[base]", 1),
 			},

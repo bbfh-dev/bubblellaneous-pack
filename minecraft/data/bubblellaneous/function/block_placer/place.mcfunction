@@ -23,6 +23,7 @@ execute if data storage bubblellaneous tmp.in{facing: "player"} facing entity @p
 execute if data storage bubblellaneous tmp.in{facing: "player_precise"} facing entity @p[gamemode=!spectator] feet store result storage bubblellaneous tmp.in.rotation_x int 1 run function bubblellaneous:block_placer/internal/facing/player_precise
 execute if data storage bubblellaneous tmp.in{facing: "normal"} store result storage bubblellaneous tmp.in.rotation_x int 1 run function bubblellaneous:block_placer/internal/facing/normal
 execute if data storage bubblellaneous tmp.in{facing: "wall_normal"} store result storage bubblellaneous tmp.in.rotation_x int 1 run function bubblellaneous:block_placer/internal/facing/wall_normal
+execute if data storage bubblellaneous tmp.in{facing: "only_wall_normal"} store result storage bubblellaneous tmp.in.rotation_x int 1 run function bubblellaneous:block_placer/internal/facing/only_wall_normal
 execute if data storage bubblellaneous tmp.in{facing: "door"} store result storage bubblellaneous tmp.in.rotation_x int 1 run function bubblellaneous:block_placer/internal/facing/door
 execute if data storage bubblellaneous tmp.in{facing: "none"} run data modify storage bubblellaneous tmp.in.rotation_x set value 0
 
