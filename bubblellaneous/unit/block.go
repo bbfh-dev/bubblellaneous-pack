@@ -267,6 +267,19 @@ func (unit Block) SetRecipe(recipe []field.RecipeEntry) Unit {
 	return unit
 }
 
+func (unit Block) nbtBlockStates() nbt.ListNBT[nbt.StringNBT] {
+	if len(unit.states.States) == 0 {
+		return nbt.ListNBT[nbt.StringNBT]{""}
+	}
+
+	out := nbt.ListNBT[nbt.StringNBT]{}
+	for _, state := range unit.states.States {
+		out = append(out, nbt.StringNBT(state.Name))
+	}
+
+	return out
+}
+
 func (unit Block) NBT(customModelData int) nbt.TreeNBT {
 	return nbt.Tree().
 		Set(
@@ -285,25 +298,28 @@ func (unit Block) NBT(customModelData int) nbt.TreeNBT {
 						Set("count", nbt.IntNBT(1)).
 						Set("components", nbt.Tree().Set("minecraft:custom_data", nbt.Tree().Set(
 							"bubblellaneous",
-							nbt.Tree().Set("block_properties", nbt.Tree()).Set(
-								"block_data",
-								nbt.Tree().
-									Set("id", nbt.StringNBT(unit.id)).
-									Set("item_model", nbt.StringNBT(unit.id)).
-									Set("custom_model_data", nbt.IntNBT(customModelData)).
-									Set("display_name", nbt.StringNBT(fmt.Sprintf(`{"translate":"%s.bubblellaneous.%s"}`, unit.Type(), unit.TranslateId()))).
-									Set("material_count", nbt.IntNBT(unit.materialCount)).
-									Set("material", nbt.Tree().
-										Set("index", nbt.IntNBT(unit.materialIndex)).
-										Set("name", nbt.StringNBT(util.GetOrDefault(unit.Material(), field.DEFAULT_MATERIAL).Name)),
-									).Set("block_type", util.GetOrDefault(unit.blockType, field.DEFAULT_BLOCK_TYPE).NBT()).
-									Set("name", nbt.StringNBT(unit.unit_id)).
-									Set("base_item", nbt.StringNBT(unit.MinecraftBase())).
-									Set("base", nbt.StringNBT(unit.base)).
-									Set("sound", nbt.StringNBT(unit.sound)).
-									Set("facing", nbt.StringNBT(unit.facing)).
-									Set("unit", nbt.StringNBT(unit.Type())),
-							),
+							nbt.Tree().
+								Set("block_properties", nbt.Tree()).
+								Set(
+									"block_data",
+									nbt.Tree().
+										Set("id", nbt.StringNBT(unit.id)).
+										Set("item_model", nbt.StringNBT(unit.id)).
+										Set("block_states", unit.nbtBlockStates()).
+										Set("custom_model_data", nbt.IntNBT(customModelData)).
+										Set("display_name", nbt.StringNBT(fmt.Sprintf(`{"translate":"%s.bubblellaneous.%s"}`, unit.Type(), unit.TranslateId()))).
+										Set("material_count", nbt.IntNBT(unit.materialCount)).
+										Set("material", nbt.Tree().
+											Set("index", nbt.IntNBT(unit.materialIndex)).
+											Set("name", nbt.StringNBT(util.GetOrDefault(unit.Material(), field.DEFAULT_MATERIAL).Name)),
+										).Set("block_type", util.GetOrDefault(unit.blockType, field.DEFAULT_BLOCK_TYPE).NBT()).
+										Set("name", nbt.StringNBT(unit.unit_id)).
+										Set("base_item", nbt.StringNBT(unit.MinecraftBase())).
+										Set("base", nbt.StringNBT(unit.base)).
+										Set("sound", nbt.StringNBT(unit.sound)).
+										Set("facing", nbt.StringNBT(unit.facing)).
+										Set("unit", nbt.StringNBT(unit.Type())),
+								),
 						))),
 				),
 		)

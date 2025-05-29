@@ -86,6 +86,8 @@ func Compile(unit Unit, template code.Template, tree *lib.Tree, customModelData 
 	}
 
 	if overwritten {
+		unit := unit.(Block)
+
 		if unit.Material() != nil {
 			tree.MkItem(unit.Id(), fmt.Sprintf(
 				"bubblellaneous:%s/%s/%s/%s",
@@ -94,6 +96,19 @@ func Compile(unit Unit, template code.Template, tree *lib.Tree, customModelData 
 				unit.Material().Name,
 				unit.DefaultBlockstate(),
 			))
+
+			for _, state := range unit.states.States {
+				tree.MkItem(
+					fmt.Sprintf("%s__%s", unit.Id(), state.Name),
+					fmt.Sprintf(
+						"bubblellaneous:%s/%s/%s/%s",
+						unit.Type(),
+						unit.UnitId(),
+						unit.Material().Name,
+						state.Name,
+					),
+				)
+			}
 		} else {
 			tree.MkItem(unit.Id(), fmt.Sprintf(
 				"bubblellaneous:%s/%s/%s",
@@ -101,6 +116,18 @@ func Compile(unit Unit, template code.Template, tree *lib.Tree, customModelData 
 				unit.Id(),
 				unit.DefaultBlockstate(),
 			))
+
+			for _, state := range unit.states.States {
+				tree.MkItem(
+					fmt.Sprintf("%s__%s", unit.Id(), state.Name),
+					fmt.Sprintf(
+						"bubblellaneous:%s/%s/%s",
+						unit.Type(),
+						unit.Id(),
+						state.Name,
+					),
+				)
+			}
 		}
 
 		return entries
