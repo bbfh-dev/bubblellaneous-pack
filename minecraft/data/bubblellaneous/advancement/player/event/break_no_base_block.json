@@ -30,7 +30,7 @@
 										]
 									},
 									"flags": {
-										"is_sneaking": true
+										"is_sneaking": false
 									}
 								}
 							}
