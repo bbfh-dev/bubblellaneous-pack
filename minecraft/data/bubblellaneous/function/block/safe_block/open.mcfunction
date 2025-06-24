@@ -1,4 +1,4 @@
-$setblock ~ ~ ~ barrel[facing=up]{CustomName: "$(display_name)"}
+$setblock ~ ~ ~ barrel[facing=up]{CustomName: $(display_name)}
 data modify block ~ ~ ~ Items set from entity @s item.components."minecraft:custom_data".bubblellaneous.block_properties.items
 
 function bubblellaneous:block/safe_block/blockstates/apply/open {rotation: 0}
