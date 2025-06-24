@@ -1,3 +1,4 @@
 tag @s add --local.flashlight.in_use
-item modify entity @s weapon.mainhand bubblellaneous:flashlight/enable
+execute if entity @s[nbt={SelectedItem: {id: "minecraft:carrot_on_a_stick"}}] run item modify entity @s weapon.mainhand bubblellaneous:flashlight/enable
+execute if entity @s[nbt={equipment: {offhand: {id: "minecraft:carrot_on_a_stick"}}}] run item modify entity @s weapon.offhand bubblellaneous:flashlight/enable
 playsound ui.button.click block @s ~ ~ ~ 1 1 0

@@ -1,7 +1,7 @@
-execute store result score battery local.tmp run data get entity @s SelectedItem.components.minecraft:custom_data.bubblellaneous.item_properties.battery
-execute store result score max_battery local.tmp run data get entity @s SelectedItem.components.minecraft:custom_data.bubblellaneous.item_properties.max_charge
+execute store result score battery local.tmp run data get entity @s equipment.offhand.components.minecraft:custom_data.bubblellaneous.item_properties.battery
+execute store result score max_battery local.tmp run data get entity @s equipment.offhand.components.minecraft:custom_data.bubblellaneous.item_properties.max_charge
 execute if score battery local.tmp matches ..0 run return run function bubblellaneous:item/flashlight/internal/error_no_battery
-say 1
+
 #region Drain battery
 execute store result storage bubblellaneous tmp.battery int 1 run scoreboard players remove battery local.tmp 1
 item modify entity @s weapon.mainhand bubblellaneous:flashlight/drain_battery
