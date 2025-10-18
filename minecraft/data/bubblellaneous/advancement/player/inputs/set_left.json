@@ -1,0 +1,25 @@
+{
+  "criteria": {
+    "main": {
+      "trigger": "minecraft:tick",
+      "conditions": {
+        "player": {
+          "type_specific": {
+            "type": "minecraft:player",
+            "input": {
+              "left": true
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "main"
+    ]
+  ],
+  "rewards": {
+    "function": "bubblellaneous:player/inputs/set_left"
+  }
+}
