@@ -1,4 +1,4 @@
-VERSION=2-2-3
+VERSION=2-2-4
 DATA=./dist/bubblellaneous_${VERSION}_data_pack
 RESOURCE=./dist/bubblellaneous_${VERSION}_resource_pack
 GENERATED=/tmp/bubblellaneous-generated
@@ -35,6 +35,10 @@ build: setup merge
 	find $(realpath ./dist/) -type d -empty -delete
 	# --- Apply datapack prefix
 	find ./dist/ -type f -exec sed -i 's/local\./bbln\./g' {} +
+	rm -rf /mnt/repo/minecraft/instances/latest_release/.minecraft/resourcepacks/bubblellaneous_resource_pack
+	ln -s $(realpath ${RESOURCE})/ /mnt/repo/minecraft/instances/latest_release/.minecraft/resourcepacks/bubblellaneous_resource_pack
+	rm -rf /mnt/repo/minecraft/instances/latest_release/.minecraft/saves/tmp/datapacks/bubblellaneous_data_pack
+	ln -s $(realpath ${DATA})/ /mnt/repo/minecraft/instances/latest_release/.minecraft/saves/tmp/datapacks/bubblellaneous_data_pack
 
 format:
 	./format.sh # outsourced to bash

@@ -1,0 +1,71 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"category": "misc",
+	"group": "shelf",
+	"key": {
+		"#": "minecraft:stripped_oak_log"
+	},
+	"pattern": [
+		"###",
+		"   ",
+		"###"
+	],
+	"result": {
+		"count": 1,
+		"id": "minecraft:item_frame",
+		"components": {
+			"minecraft:item_model": "bubblellaneous:bubble_bench",
+			"minecraft:item_name": {
+				"translate": "block.bubblellaneous.bubble_bench"
+			},
+			"minecraft:entity_data": {
+				"Invisible": 1,
+				"Tags": [
+					"+bubblellaneous",
+					"bbln.place",
+					"--bbln.uses.gui",
+					"--bbln.uses.brightness_fix"
+				],
+				"Fixed": 1,
+				"Invulnerable": 1,
+				"Silent": 1,
+				"Item": {
+					"id": "minecraft:stone_button",
+					"count": 1,
+					"components": {
+						"minecraft:custom_data": {
+							"bubblellaneous": {
+								"block_properties": {},
+								"block_data": {
+									"material_count": 0,
+									"block_type": {
+										"name": "default",
+										"parameters": {}
+									},
+									"name": "bubble_bench",
+									"base": "barrel[facing=up]",
+									"facing": "player",
+									"item_model": "bubble_bench",
+									"block_states": [
+										""
+									],
+									"custom_model_data": 371296,
+									"display_name": "{\"translate\":\"block.bubblellaneous.bubble_bench\"}",
+									"material": {
+										"index": 0,
+										"name": "default"
+									},
+									"base_item": "minecraft:item_frame",
+									"sound": "industrial",
+									"unit": "block",
+									"id": "bubble_bench"
+								}
+							}
+						}
+					}
+				},
+				"id": "minecraft:item_frame"
+			}
+		}
+	}
+}
