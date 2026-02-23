@@ -1,1 +1,0 @@
-function bubblellaneous:block/rising_door/internal/place_bars

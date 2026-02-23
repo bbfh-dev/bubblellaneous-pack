@@ -1,7 +1,0 @@
-{
-	"credit": "Bubblellaneous - by bbfh",
-	"parent": "bubblellaneous:block/computer/default",
-	"textures": {
-		"monitor": "bubblellaneous:block/computer/monitor_login"
-	}
-}

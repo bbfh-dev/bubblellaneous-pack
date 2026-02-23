@@ -1,6 +1,0 @@
-{
-	"parent": "bubblellaneous:block/road_sign",
-	"textures": {
-		"sign": "bubblellaneous:block/road_sign/block"
-	}
-}

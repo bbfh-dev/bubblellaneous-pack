@@ -1,6 +1,0 @@
-[
-	{
-		"function": "minecraft:set_custom_data",
-		"tag": "{bubblellaneous: {is_gui: 1b, is_icon: 1b}}"
-	}
-]
