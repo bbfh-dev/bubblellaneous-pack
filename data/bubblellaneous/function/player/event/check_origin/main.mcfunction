@@ -1,0 +1,1 @@
+return run execute on origin if entity @s[tag=--bbln.player]

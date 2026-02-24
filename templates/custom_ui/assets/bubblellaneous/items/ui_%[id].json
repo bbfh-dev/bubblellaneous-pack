@@ -1,0 +1,8 @@
+{
+	"model": {
+		"type": "minecraft:model",
+		"model": "bubblellaneous:ui/%[id]"
+	},
+	"hand_animation_on_swap": false,
+	"oversized_in_gui": true
+}

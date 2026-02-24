@@ -1,0 +1,6 @@
+{
+	"parent": "bubblellaneous:ui/slot_overlay",
+	"textures": {
+		"overlay": "bubblellaneous:ui/air"
+	}
+}

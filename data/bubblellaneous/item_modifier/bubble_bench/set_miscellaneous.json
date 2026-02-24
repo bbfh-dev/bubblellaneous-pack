@@ -1,0 +1,23 @@
+[
+  {
+    "function": "minecraft:set_custom_data",
+    "tag": "{bubblellaneous: {is_gui: 1b, is_category: 1b, category: \"miscellaneous\"}}"
+  },
+  {
+    "function": "minecraft:set_name",
+    "name": {
+      "translate": "group.bubblellaneous.miscellaneous",
+      "with": [
+        "☄"
+      ],
+      "color": "#e649ff",
+      "italic": false
+    }
+  },
+  {
+    "function": "minecraft:set_components",
+    "components": {
+      "!minecraft:entity_data": {}
+    }
+  }
+]

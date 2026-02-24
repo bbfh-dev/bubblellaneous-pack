@@ -1,0 +1,34 @@
+{
+	"category": "furniture",
+	"name": "speakers",
+	"display_id": "speakers",
+	"model": "bubblellaneous:block/speakers",
+	"base": "petrified_oak_slab[type=double]",
+	"sound": "industrial",
+	"facing": "player",
+	"recipe": [
+		{
+			"unit": "block",
+			"id": "black_wool",
+			"count": 4
+		}
+	],
+	"tags": [
+		"+bubblellaneous",
+		"bbln.place",
+		"--bbln.uses.brightness_fix",
+		"--bbln.ignore.break_block_properties.category",
+		"--bbln.ignore.break_block_properties.rotation"
+	],
+	"block_type": {
+		"name": "default",
+		"parameters": {}
+	},
+	"material_count": 0,
+	"material": {
+		"index": 0,
+		"name": "default"
+	},
+	"block_states": [],
+	"i": 0
+}

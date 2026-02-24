@@ -1,0 +1,37 @@
+{
+	"category": "miscellaneous",
+	"name": "plate",
+	"display_id": "plate",
+	"model": "bubblellaneous:block/plate",
+	"base": "structure_void",
+	"sound": "wood",
+	"facing": "player_precise",
+	"recipe": [
+		{
+			"unit": "item",
+			"id": "quartz",
+			"count": 3
+		}
+	],
+	"tags": [
+		"+bubblellaneous",
+		"bbln.place",
+		"--bbln.uses.place",
+		"--bbln.ignore.break_block_properties.category",
+		"--bbln.ignore.break_block_properties.rotation"
+	],
+	"block_type": {
+		"name": "shelf",
+		"parameters": {
+			"amount": 1,
+			"offset": -0.45
+		}
+	},
+	"material_count": 0,
+	"material": {
+		"index": 0,
+		"name": "default"
+	},
+	"block_states": [],
+	"i": 0
+}

@@ -1,0 +1,39 @@
+{
+	"category": "furniture",
+	"name": "cabinet",
+	"display_id": "%[solid]_cabinet",
+	"model": "bubblellaneous:block/cupboard/%[solid]",
+	"base": "petrified_oak_slab[type=double]",
+	"sound": "wood",
+	"facing": "player",
+	"recipe": [
+		{
+			"texture_atlas": "minecraft:blocks",
+			"texture": "block/%[solid.2]",
+			"unit": "block",
+			"id": "%[solid.1]",
+			"count": 1
+		}
+	],
+	"tags": [
+		"+bubblellaneous",
+		"bbln.place",
+		"--bbln.uses.place",
+		"--bbln.uses.brightness_fix",
+		"--bbln.ignore.break_block_properties.block_state",
+		"--bbln.ignore.break_block_properties.rotation"
+	],
+	"block_type": {
+		"name": "shelf",
+		"parameters": {
+			"amount": 2,
+			"offset": 0
+		}
+	},
+	"material_count": 20,
+	"material": {
+		"index": "%[i]",
+		"name": "%[solid.0]"
+	},
+	"block_states": []
+}

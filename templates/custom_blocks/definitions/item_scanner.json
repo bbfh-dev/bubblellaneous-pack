@@ -1,0 +1,48 @@
+{
+	"category": "technology",
+	"name": "item_scanner",
+	"display_id": "item_scanner",
+	"model": "bubblellaneous:block/item_scanner/default",
+	"base": "barrel[facing=up]",
+	"sound": "industrial",
+	"facing": "player",
+	"recipe": [
+		{
+			"unit": "item",
+			"id": "iron_ingot",
+			"count": 8
+		},
+		{
+			"texture_atlas": "minecraft:items",
+			"texture": "item/hopper",
+			"unit": "block",
+			"id": "hopper",
+			"count": 1
+		}
+	],
+	"tags": [
+		"+bubblellaneous",
+		"bbln.place",
+		"--bbln.uses.gui",
+		"--bbln.uses.brightness_fix",
+		"--bbln.uses.timer",
+		"--bbln.ignore.break_block_properties.category",
+		"--bbln.ignore.break_block_properties.rotation"
+	],
+	"block_type": {
+		"name": "default",
+		"parameters": {}
+	},
+	"material_count": 0,
+	"material": {
+		"index": 0,
+		"name": "default"
+	},
+	"block_states": [
+		"default",
+		"scan",
+		"open",
+		"error"
+	],
+	"i": 0
+}

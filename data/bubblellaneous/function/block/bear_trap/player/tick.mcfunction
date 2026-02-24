@@ -1,0 +1,2 @@
+execute unless entity @e[type=minecraft:item_display,tag=bbln.name.bear_trap,limit=1,distance=..16] run return run function bubblellaneous:block/bear_trap/player/remove
+execute if entity @s[gamemode=!survival,gamemode=!creative] run return run function bubblellaneous:block/bear_trap/player/remove

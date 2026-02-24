@@ -1,0 +1,2 @@
+tag @s add bbln.can_see_sky
+data modify entity @s brightness.sky set value 15

@@ -1,0 +1,40 @@
+{
+	"category": "miscellaneous",
+	"name": "mossy_traffic_barrier",
+	"display_id": "mossy_traffic_barrier",
+	"model": "bubblellaneous:block/mossy_traffic_barrier",
+	"base": "petrified_oak_slab[type=top]",
+	"sound": "wood",
+	"facing": "player_precise",
+	"recipe": [
+		{
+			"unit": "block",
+			"id": "oak_planks",
+			"count": 2
+		},
+		{
+			"texture_atlas": "minecraft:blocks",
+			"texture": "block/moss_block",
+			"unit": "block",
+			"id": "moss_carpet",
+			"count": 1
+		}
+	],
+	"tags": [
+		"+bubblellaneous",
+		"bbln.place",
+		"--bbln.ignore.break_block_properties.category",
+		"--bbln.ignore.break_block_properties.rotation"
+	],
+	"block_type": {
+		"name": "default",
+		"parameters": {}
+	},
+	"material_count": 0,
+	"material": {
+		"index": 0,
+		"name": "default"
+	},
+	"block_states": [],
+	"i": 0
+}

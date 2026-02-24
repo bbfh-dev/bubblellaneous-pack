@@ -1,0 +1,344 @@
+{
+	"credit": "Bubblellaneous - by bbfh",
+	"parent": "minecraft:block/block",
+	"textures": {
+		"particle": "block/stone",
+		"material": "block/stone"
+	},
+	"elements": [
+		{
+			"from": [
+				0,
+				15,
+				0
+			],
+			"to": [
+				16,
+				16,
+				16
+			],
+			"faces": {
+				"north": {
+					"uv": [
+						0,
+						0,
+						16,
+						1
+					],
+					"texture": "#material",
+					"cullface": "north"
+				},
+				"east": {
+					"uv": [
+						0,
+						0,
+						16,
+						1
+					],
+					"texture": "#material",
+					"cullface": "east"
+				},
+				"south": {
+					"uv": [
+						0,
+						0,
+						16,
+						1
+					],
+					"texture": "#material",
+					"cullface": "south"
+				},
+				"west": {
+					"uv": [
+						0,
+						0,
+						16,
+						1
+					],
+					"texture": "#material",
+					"cullface": "west"
+				},
+				"up": {
+					"uv": [
+						0,
+						0,
+						16,
+						16
+					],
+					"texture": "#material",
+					"cullface": "up"
+				},
+				"down": {
+					"uv": [
+						0,
+						0,
+						16,
+						16
+					],
+					"texture": "#material",
+					"cullface": "down"
+				}
+			}
+		},
+		{
+			"from": [
+				0,
+				0,
+				0
+			],
+			"to": [
+				16,
+				1,
+				16
+			],
+			"faces": {
+				"north": {
+					"uv": [
+						0,
+						15,
+						16,
+						16
+					],
+					"texture": "#material",
+					"cullface": "north"
+				},
+				"east": {
+					"uv": [
+						0,
+						15,
+						16,
+						16
+					],
+					"texture": "#material",
+					"cullface": "east"
+				},
+				"south": {
+					"uv": [
+						0,
+						15,
+						16,
+						16
+					],
+					"texture": "#material",
+					"cullface": "south"
+				},
+				"west": {
+					"uv": [
+						0,
+						15,
+						16,
+						16
+					],
+					"texture": "#material",
+					"cullface": "west"
+				},
+				"up": {
+					"uv": [
+						0,
+						0,
+						16,
+						16
+					],
+					"texture": "#material",
+					"cullface": "up"
+				},
+				"down": {
+					"uv": [
+						0,
+						0,
+						16,
+						16
+					],
+					"texture": "#material",
+					"cullface": "down"
+				}
+			}
+		},
+		{
+			"from": [
+				1,
+				8,
+				0
+			],
+			"to": [
+				15,
+				9,
+				15
+			],
+			"faces": {
+				"north": {
+					"uv": [
+						1,
+						7,
+						15,
+						8
+					],
+					"texture": "#material",
+					"cullface": "north"
+				},
+				"up": {
+					"uv": [
+						1,
+						0,
+						15,
+						15
+					],
+					"texture": "#material",
+					"cullface": "up"
+				},
+				"down": {
+					"uv": [
+						1,
+						1,
+						15,
+						16
+					],
+					"texture": "#material",
+					"cullface": "down"
+				}
+			}
+		},
+		{
+			"from": [
+				1,
+				1,
+				15
+			],
+			"to": [
+				15,
+				15,
+				16
+			],
+			"faces": {
+				"north": {
+					"uv": [
+						1,
+						1,
+						15,
+						15
+					],
+					"texture": "#material",
+					"cullface": "north"
+				},
+				"south": {
+					"uv": [
+						1,
+						1,
+						15,
+						15
+					],
+					"texture": "#material",
+					"cullface": "south"
+				}
+			}
+		},
+		{
+			"from": [
+				0,
+				1,
+				0
+			],
+			"to": [
+				1,
+				15,
+				16
+			],
+			"faces": {
+				"north": {
+					"uv": [
+						15,
+						1,
+						16,
+						15
+					],
+					"texture": "#material",
+					"cullface": "north"
+				},
+				"east": {
+					"uv": [
+						0,
+						1,
+						16,
+						15
+					],
+					"texture": "#material",
+					"cullface": "east"
+				},
+				"south": {
+					"uv": [
+						0,
+						1,
+						1,
+						15
+					],
+					"texture": "#material",
+					"cullface": "south"
+				},
+				"west": {
+					"uv": [
+						0,
+						1,
+						16,
+						15
+					],
+					"texture": "#material",
+					"cullface": "west"
+				}
+			}
+		},
+		{
+			"from": [
+				15,
+				1,
+				0
+			],
+			"to": [
+				16,
+				15,
+				16
+			],
+			"faces": {
+				"north": {
+					"uv": [
+						0,
+						1,
+						1,
+						15
+					],
+					"texture": "#material",
+					"cullface": "north"
+				},
+				"east": {
+					"uv": [
+						0,
+						1,
+						16,
+						15
+					],
+					"texture": "#material",
+					"cullface": "east"
+				},
+				"south": {
+					"uv": [
+						15,
+						1,
+						16,
+						15
+					],
+					"texture": "#material",
+					"cullface": "south"
+				},
+				"west": {
+					"uv": [
+						0,
+						1,
+						16,
+						15
+					],
+					"texture": "#material",
+					"cullface": "west"
+				}
+			}
+		}
+	]
+}

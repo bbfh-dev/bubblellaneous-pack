@@ -1,0 +1,38 @@
+{
+	"category": "furniture",
+	"name": "bench",
+	"display_id": "%[solid]_bench",
+	"model": "bubblellaneous:block/bench/%[solid]",
+	"base": "tripwire",
+	"sound": "wood",
+	"facing": "player",
+	"recipe": [
+		{
+			"texture_atlas": "minecraft:blocks",
+			"texture": "block/%[solid.2]",
+			"unit": "block",
+			"id": "%[solid.1]",
+			"count": 1
+		}
+	],
+	"tags": [
+		"+bubblellaneous",
+		"bbln.place",
+		"--bbln.uses.place",
+		"--bbln.ignore.break_block_properties.block_state",
+		"--bbln.ignore.break_block_properties.rotation"
+	],
+	"block_type": {
+		"name": "seat",
+		"parameters": {
+			"width": 0.8,
+			"height": 0.6
+		}
+	},
+	"material_count": 20,
+	"material": {
+		"index": "%[i]",
+		"name": "%[solid.0]"
+	},
+	"block_states": []
+}

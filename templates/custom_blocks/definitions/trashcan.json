@@ -1,0 +1,35 @@
+{
+	"category": "furniture",
+	"name": "trashcan",
+	"display_id": "trashcan",
+	"model": "bubblellaneous:block/trashcan",
+	"base": "pointed_dripstone[thickness=tip,vertical_direction=up]",
+	"sound": "wood",
+	"facing": "none",
+	"recipe": [
+		{
+			"unit": "block",
+			"id": "spruce_planks",
+			"count": 1
+		}
+	],
+	"tags": [
+		"+bubblellaneous",
+		"bbln.place",
+		"--bbln.uses.place",
+		"--bbln.uses.brightness_fix",
+		"--bbln.ignore.break_block_properties.category",
+		"--bbln.ignore.break_block_properties.rotation"
+	],
+	"block_type": {
+		"name": "default",
+		"parameters": {}
+	},
+	"material_count": 0,
+	"material": {
+		"index": 0,
+		"name": "default"
+	},
+	"block_states": [],
+	"i": 0
+}

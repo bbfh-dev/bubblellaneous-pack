@@ -1,0 +1,95 @@
+{
+	"rules": {
+		"default": null,
+		"single_left": [
+			[
+				"xxiooo",
+				0
+			]
+		],
+		"single_middle": [
+			[
+				"xxiioo",
+				0
+			]
+		],
+		"single_right": [
+			[
+				"xxoioo",
+				0
+			]
+		],
+		"top_single": [
+			[
+				"xxoooi",
+				0
+			]
+		],
+		"top_left": [
+			[
+				"xxiooi",
+				0
+			]
+		],
+		"top_middle": [
+			[
+				"xxiioi",
+				0
+			]
+		],
+		"top_right": [
+			[
+				"xxoioi",
+				0
+			]
+		],
+		"middle_single": [
+			[
+				"xxooii",
+				0
+			]
+		],
+		"middle_left": [
+			[
+				"xxioii",
+				0
+			]
+		],
+		"middle_middle": [
+			[
+				"xxiiii",
+				0
+			]
+		],
+		"middle_right": [
+			[
+				"xxoiii",
+				0
+			]
+		],
+		"bottom_single": [
+			[
+				"xxooio",
+				0
+			]
+		],
+		"bottom_left": [
+			[
+				"xxioio",
+				0
+			]
+		],
+		"bottom_middle": [
+			[
+				"xxi iio",
+				0
+			]
+		],
+		"bottom_right": [
+			[
+				"xxoiio",
+				0
+			]
+		]
+	}
+}

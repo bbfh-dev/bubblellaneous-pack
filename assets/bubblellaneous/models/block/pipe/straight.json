@@ -1,0 +1,23 @@
+{
+    "format_version": "1.21.11",
+    "credit": "Bubblellaneous - by bbfh",
+    "parent": "minecraft:block/block",
+    "textures": {
+        "0": "bubblellaneous:block/pipe",
+        "particle": "bubblellaneous:block/pipe"
+    },
+    "elements": [
+        {
+            "from": [5.99, 5.99, -0.01],
+            "to": [10.01, 10.01, 16.01],
+            "faces": {
+                "north": {"uv": [0, 8, 4, 12], "texture": "#0", "cullface": "north"},
+                "east": {"uv": [16, 4, 0, 8], "texture": "#0"},
+                "south": {"uv": [4, 8, 8, 12], "texture": "#0", "cullface": "south"},
+                "west": {"uv": [0, 4, 16, 8], "texture": "#0"},
+                "up": {"uv": [0, 0, 16, 4], "rotation": 90, "texture": "#0"},
+                "down": {"uv": [16, 0, 0, 4], "rotation": 90, "texture": "#0"}
+            }
+        }
+    ]
+}

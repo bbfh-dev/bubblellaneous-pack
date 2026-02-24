@@ -1,0 +1,11 @@
+{
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+        "movement": {
+            "x": {
+                "max": -0.0001
+            }
+        }
+    }
+}

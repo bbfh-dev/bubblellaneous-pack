@@ -1,0 +1,16 @@
+{
+	"$schema": "https://bbfh.me/vintage/template_manifest_schema.json",
+	"type": "generator",
+	"iterators": {
+		"ui": [
+			"air",
+			"arrow_left",
+			"arrow_left_inactive",
+			"arrow_right",
+			"arrow_right_inactive",
+			"compass",
+			"slot",
+			"slot_small"
+		]
+	}
+}

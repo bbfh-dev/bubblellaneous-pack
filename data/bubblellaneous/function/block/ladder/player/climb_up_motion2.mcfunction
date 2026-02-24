@@ -1,0 +1,1 @@
+$return run execute align xyz positioned ~0.5 ~0.5 ~0.5 rotated as @e[type=minecraft:item_display,tag=bbln.name.ladder,limit=1,distance=..0.1] positioned as @s positioned ^ ^ ^1 rotated as @s rotated ~ 0 facing ^$(x) ^ ^$(z) positioned ^ ^ ^-1 if entity @s[distance=..1.414]

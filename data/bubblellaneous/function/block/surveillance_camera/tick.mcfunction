@@ -1,0 +1,1 @@
+execute unless score @s bbln.block.timer matches 1.. if score #camera.fixed bbln.settings matches 0 if score #camera.disabled bbln.settings matches 0 run function bubblellaneous:block/surveillance_camera/tick_main

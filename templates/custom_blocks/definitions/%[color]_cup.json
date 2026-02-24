@@ -1,0 +1,32 @@
+{
+	"category": "miscellaneous",
+	"name": "cup",
+	"display_id": "%[color]_cup",
+	"model": "bubblellaneous:block/cup/%[color]",
+	"base": "structure_void",
+	"sound": "wool",
+	"facing": "player_precise",
+	"recipe": [
+		{
+			"unit": "block",
+			"id": "%[color]_terracotta",
+			"count": 1
+		}
+	],
+	"tags": [
+		"+bubblellaneous",
+		"bbln.place",
+		"--bbln.ignore.break_block_properties.block_state",
+		"--bbln.ignore.break_block_properties.rotation"
+	],
+	"block_type": {
+		"name": "default",
+		"parameters": {}
+	},
+	"material_count": 16,
+	"material": {
+		"index": "%[i]",
+		"name": "%[color]"
+	},
+	"block_states": []
+}

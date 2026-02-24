@@ -1,0 +1,40 @@
+{
+	"category": "technology",
+	"name": "telescope",
+	"display_id": "telescope",
+	"model": "bubblellaneous:block/telescope/default",
+	"base": "structure_void",
+	"sound": "industrial",
+	"facing": "player_precise",
+	"recipe": [
+		{
+			"unit": "item",
+			"id": "spyglass",
+			"count": 2
+		}
+	],
+	"tags": [
+		"+bubblellaneous",
+		"bbln.place",
+		"--bbln.uses.place",
+		"--bbln.uses.no_base",
+		"--bbln.uses.custom_base",
+		"--bbln.ignore.break_block_properties.category",
+		"--bbln.ignore.break_block_properties.rotation"
+	],
+	"block_type": {
+		"name": "default",
+		"parameters": {}
+	},
+	"material_count": 0,
+	"material": {
+		"index": 0,
+		"name": "default"
+	},
+	"block_states": [
+		"default",
+		"stand",
+		"optics"
+	],
+	"i": 0
+}

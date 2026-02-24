@@ -1,0 +1,33 @@
+{
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:player_interacted_with_entity",
+			"conditions": {
+				"item": {
+					"predicates": {
+						"minecraft:entity_data": {
+							"Item": {
+								"components": {
+									"minecraft:custom_data": {
+										"bubblellaneous": {
+											"block_data": {
+												"id": "security_monitor"
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				},
+				"entity": {
+					"type": "minecraft:interaction",
+					"nbt": "{Tags:[\"bbln.base.surveillance_camera\"]}"
+				}
+			}
+		}
+	},
+	"rewards": {
+		"function": "bubblellaneous:player/event/use_block/surveillance_camera"
+	}
+}

@@ -1,0 +1,10 @@
+{
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:any_block_use"
+		}
+	},
+	"rewards": {
+		"function": "bubblellaneous:player/event/gui/open"
+	}
+}

@@ -1,0 +1,23 @@
+{
+	"category": "miscellaneous",
+	"name": "umbrella",
+	"base": "minecraft:carrot_on_a_stick",
+	"model": "bubblellaneous:item/umbrella",
+	"material": {
+		"index": 0,
+		"name": "default"
+	},
+	"recipe": [
+		{
+			"unit": "item",
+			"id": "leather",
+			"count": 5
+		}
+	],
+	"consumable_prefix": "!",
+	"consumable_value": {},
+	"food_prefix": "!",
+	"food_value": {},
+	"max_stack_size": 1,
+	"i": 0
+}

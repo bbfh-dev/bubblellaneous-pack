@@ -1,0 +1,44 @@
+[
+    {
+        "function": "minecraft:set_custom_data",
+        "tag": {
+            "bubblellaneous": {
+                "is_gui": true,
+                "is_variant": true
+            }
+        }
+    },
+    {
+        "function": "minecraft:toggle_tooltips",
+        "toggles": {
+            "minecraft:attribute_modifiers": false,
+            "minecraft:can_break": false,
+            "minecraft:can_place_on": false,
+            "minecraft:base_color": false,
+            "minecraft:dyed_color": false,
+            "minecraft:container": false,
+            "minecraft:bundle_contents": false,
+            "minecraft:fireworks": false,
+            "minecraft:weapon": false
+        }
+    },
+    {
+        "function": "minecraft:set_lore",
+        "lore": [
+            {
+                "text": ""
+            },
+            {
+                "translate": "ui.bubblellaneous.expand_variants",
+                "with": [
+                    {
+                        "text": "≔"
+                    }
+                ],
+                "color": "green",
+                "italic": false
+            }
+        ],
+        "mode": "replace_all"
+    }
+]

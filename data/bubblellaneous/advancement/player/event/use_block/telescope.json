@@ -1,0 +1,43 @@
+{
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:player_interacted_with_entity",
+			"conditions": {
+                "player": [
+                    {
+                        "condition": "minecraft:inverted",
+                        "term": {
+                            "condition": "minecraft:entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "nbt": "{Tags:[\"--bbln.bear_trap.trapped\"]}"
+                            }
+                        }
+                    }
+                ],
+				"entity": [
+					{
+						"condition": "minecraft:value_check",
+						"value": {
+							"type": "minecraft:score",
+							"target": "this",
+							"score": "bbln.block_state"
+						},
+						"range": 0
+					},
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:interaction",
+							"nbt": "{Tags:[\"bbln.base.telescope\"]}"
+						}
+					}
+				]
+			}
+		}
+	},
+	"rewards": {
+		"function": "bubblellaneous:player/event/use_block/telescope"
+	}
+}

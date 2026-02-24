@@ -1,0 +1,31 @@
+{
+	"category": "food",
+	"name": "strawberry",
+	"base": "minecraft:poisonous_potato",
+	"model": "bubblellaneous:item/strawberry",
+	"material": {
+		"index": 0,
+		"name": "default"
+	},
+	"recipe": [
+		{
+			"unit": "item",
+			"id": "wheat_seeds",
+			"count": 1
+		}
+	],
+	"consumable_prefix": "",
+	"consumable_value": {
+		"animation": "eat",
+		"consume_seconds": 0.5,
+		"has_consume_particles": true
+	},
+	"food_prefix": "",
+	"food_value": {
+		"nutrition": 1,
+		"saturation": 1,
+		"can_always_eat": false
+	},
+	"max_stack_size": 64,
+	"i": 0
+}

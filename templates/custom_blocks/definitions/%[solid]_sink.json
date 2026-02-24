@@ -1,0 +1,39 @@
+{
+	"category": "furniture",
+	"name": "sink",
+	"display_id": "%[solid]_sink",
+	"model": "bubblellaneous:block/sink/%[solid]/default",
+	"base": "petrified_oak_slab[type=top]",
+	"sound": "wood",
+	"facing": "wall_normal",
+	"recipe": [
+		{
+			"texture_atlas": "minecraft:blocks",
+			"texture": "block/%[solid.2]",
+			"unit": "block",
+			"id": "%[solid.1]",
+			"count": 1
+		}
+	],
+	"tags": [
+		"+bubblellaneous",
+		"bbln.place",
+		"--bbln.uses.place",
+		"--bbln.uses.tick",
+		"--bbln.ignore.break_block_properties.block_state",
+		"--bbln.ignore.break_block_properties.rotation"
+	],
+	"block_type": {
+		"name": "default",
+		"parameters": {}
+	},
+	"material_count": 20,
+	"material": {
+		"index": "%[i]",
+		"name": "%[solid.0]"
+	},
+	"block_states": [
+		"default",
+		"activated"
+	]
+}

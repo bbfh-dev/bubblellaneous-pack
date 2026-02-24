@@ -1,0 +1,41 @@
+{
+	"category": "furniture",
+	"name": "dinning_chair",
+	"display_id": "%[wood]_dinning_chair",
+	"model": "bubblellaneous:block/dinning_chair/%[wool]_%[wood]",
+	"base": "structure_void",
+	"sound": "wood",
+	"facing": "player",
+	"recipe": [
+		{
+			"unit": "block",
+			"id": "%[wood.1]",
+			"count": 1
+		},
+		{
+			"unit": "block",
+			"id": "%[wool.1]",
+			"count": 1
+		}
+	],
+	"tags": [
+		"+bubblellaneous",
+		"bbln.place",
+		"--bbln.uses.place",
+		"--bbln.ignore.break_block_properties.block_state",
+		"--bbln.ignore.break_block_properties.rotation"
+	],
+	"block_type": {
+		"name": "seat",
+		"parameters": {
+			"width": 0.8,
+			"height": 0.46
+		}
+	},
+	"material_count": 176,
+	"material": {
+		"index": "%[i]",
+		"name": "%[wool]_%[wood]"
+	},
+	"block_states": []
+}

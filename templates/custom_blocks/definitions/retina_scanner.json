@@ -1,0 +1,53 @@
+{
+	"category": "technology",
+	"name": "retina_scanner",
+	"display_id": "retina_scanner",
+	"model": "bubblellaneous:block/retina_scanner/default",
+	"base": "barrel[facing=up]",
+	"sound": "industrial",
+	"facing": "player",
+	"recipe": [
+		{
+			"unit": "item",
+			"id": "iron_ingot",
+			"count": 8
+		},
+		{
+			"unit": "item",
+			"id": "quartz",
+			"count": 1
+		},
+		{
+			"texture_atlas": "minecraft:blocks",
+			"texture": "block/glass",
+			"unit": "block",
+			"id": "glass_pane",
+			"count": 1
+		}
+	],
+	"tags": [
+		"+bubblellaneous",
+		"bbln.place",
+		"--bbln.uses.gui",
+		"--bbln.uses.brightness_fix",
+		"--bbln.uses.timer",
+		"--bbln.ignore.break_block_properties.category",
+		"--bbln.ignore.break_block_properties.rotation"
+	],
+	"block_type": {
+		"name": "default",
+		"parameters": {}
+	},
+	"material_count": 0,
+	"material": {
+		"index": 0,
+		"name": "default"
+	},
+	"block_states": [
+		"default",
+		"scan",
+		"open",
+		"error"
+	],
+	"i": 0
+}

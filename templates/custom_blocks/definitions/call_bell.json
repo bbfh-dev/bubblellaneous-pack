@@ -1,0 +1,36 @@
+{
+	"category": "miscellaneous",
+	"name": "call_bell",
+	"display_id": "call_bell",
+	"model": "bubblellaneous:block/call_bell",
+	"base": "structure_void",
+	"sound": "industrial",
+	"facing": "none",
+	"recipe": [
+		{
+			"unit": "item",
+			"id": "iron_ingot",
+			"count": 1
+		}
+	],
+	"tags": [
+		"+bubblellaneous",
+		"bbln.place",
+		"--bbln.uses.place",
+		"--bbln.uses.no_base",
+		"--bbln.uses.custom_base",
+		"--bbln.ignore.break_block_properties.category",
+		"--bbln.ignore.break_block_properties.rotation"
+	],
+	"block_type": {
+		"name": "default",
+		"parameters": {}
+	},
+	"material_count": 0,
+	"material": {
+		"index": 0,
+		"name": "default"
+	},
+	"block_states": [],
+	"i": 0
+}

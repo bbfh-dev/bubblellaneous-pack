@@ -1,0 +1,1 @@
+return run data modify storage bubblellaneous tmp.code set from entity @s item.components."minecraft:custom_data".bubblellaneous.block_properties.lock

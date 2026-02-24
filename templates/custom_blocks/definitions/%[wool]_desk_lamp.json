@@ -1,0 +1,41 @@
+{
+	"category": "furniture",
+	"name": "desk_lamp",
+	"display_id": "%[wool]_desk_lamp",
+	"model": "bubblellaneous:block/desk_lamp/%[wool]",
+	"base": "air",
+	"sound": "wood",
+	"facing": "player",
+	"recipe": [
+		{
+			"unit": "block",
+			"id": "%[wool.1]",
+			"count": 2
+		},
+		{
+			"unit": "item",
+			"id": "glowstone_dust",
+			"count": 1
+		}
+	],
+	"tags": [
+		"+bubblellaneous",
+		"bbln.place",
+		"--bbln.uses.place",
+		"--bbln.uses.no_base",
+		"--bbln.ignore.break_block_properties.block_state",
+		"--bbln.ignore.break_block_properties.rotation"
+	],
+	"block_type": {
+		"name": "light",
+		"parameters": {
+			"light_level": 15
+		}
+	},
+	"material_count": 16,
+	"material": {
+		"index": "%[i]",
+		"name": "%[wool]"
+	},
+	"block_states": []
+}

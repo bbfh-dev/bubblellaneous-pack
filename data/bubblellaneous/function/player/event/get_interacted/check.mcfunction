@@ -1,0 +1,1 @@
+return run execute on target if entity @s[tag=--bbln.event_player]

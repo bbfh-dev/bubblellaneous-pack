@@ -1,0 +1,46 @@
+{
+	"category": "technology",
+	"name": "surveillance_camera",
+	"display_id": "surveillance_camera",
+	"model": "bubblellaneous:block/surveillance_camera/default",
+	"base": "air",
+	"sound": "industrial",
+	"facing": "wall_normal",
+	"recipe": [
+		{
+			"unit": "item",
+			"id": "iron_ingot",
+			"count": 4
+		},
+		{
+			"unit": "item",
+			"id": "ender_eye",
+			"count": 1
+		}
+	],
+	"tags": [
+		"+bubblellaneous",
+		"bbln.place",
+		"--bbln.uses.place",
+		"--bbln.uses.tick",
+		"--bbln.uses.no_base",
+		"--bbln.uses.timer",
+		"--bbln.ignore.break_block_properties.category",
+		"--bbln.ignore.break_block_properties.rotation"
+	],
+	"block_type": {
+		"name": "default",
+		"parameters": {}
+	},
+	"material_count": 0,
+	"material": {
+		"index": 0,
+		"name": "default"
+	},
+	"block_states": [
+		"default",
+		"stand",
+		"camera"
+	],
+	"i": 0
+}

@@ -1,0 +1,1 @@
+return run scoreboard players remove @s[scores={bbln.block_state=1..}] bbln.block_state 1

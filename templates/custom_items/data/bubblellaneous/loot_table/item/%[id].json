@@ -1,0 +1,39 @@
+{
+	"type": "minecraft:command",
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "%[base]",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"bubblellaneous": {
+										"item_properties": {},
+										"item_data": {
+											"unit": "item",
+											"id": "%[id]",
+											"name": "%[name]",
+											"material": "%[material]"
+										}
+									}
+								},
+								"minecraft:item_model": "bubblellaneous:%[id]",
+								"minecraft:item_name": {
+									"translate": "item.bubblellaneous.%[id]"
+								},
+								"%[consumable_prefix]minecraft:consumable": "%[consumable_value]",
+								"%[food_prefix]minecraft:food": "%[food_value]",
+								"minecraft:max_stack_size": "%[max_stack_size]"
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,22 @@
+{
+	"category": "miscellaneous",
+	"name": "playing_card",
+	"base": "minecraft:poisonous_potato",
+	"model": "bubblellaneous:item/playing_card/%[card_suit]_%[card_rank]",
+	"material": {
+		"index": "%[i]",
+		"name": "%[card_suit]_%[card_rank]"
+	},
+	"recipe": [
+		{
+			"unit": "item",
+			"id": "paper",
+			"count": 1
+		}
+	],
+	"consumable_prefix": "!",
+	"consumable_value": {},
+	"food_prefix": "!",
+	"food_value": {},
+	"max_stack_size": 64
+}

@@ -1,0 +1,45 @@
+{
+	"$schema": "https://bbfh.me/vintage/template_manifest_schema.json",
+	"type": "generator",
+	"iterators": {
+		"card_suit": [
+			"clubs",
+			"diamonds",
+			"hearts",
+			"spades"
+		],
+		"card_rank": [
+			"two",
+			"three",
+			"four",
+			"five",
+			"six",
+			"seven",
+			"eight",
+			"nine",
+			"ten",
+			"jack",
+			"queen",
+			"king",
+			"ace"
+		],
+		"color": [
+			"white",
+			"light_gray",
+			"gray",
+			"black",
+			"brown",
+			"red",
+			"orange",
+			"yellow",
+			"lime",
+			"green",
+			"cyan",
+			"light_blue",
+			"blue",
+			"purple",
+			"magenta",
+			"pink"
+		]
+	}
+}

@@ -1,0 +1,43 @@
+{
+	"category": "technology",
+	"name": "alarm_block",
+	"display_id": "alarm_block",
+	"model": "bubblellaneous:block/alarm_block",
+	"base": "redstone_lamp",
+	"sound": "industrial",
+	"facing": "none",
+	"recipe": [
+		{
+			"texture_atlas": "minecraft:items",
+			"texture": "item/bell",
+			"unit": "block",
+			"id": "bell",
+			"count": 1
+		},
+		{
+			"unit": "item",
+			"id": "redstone",
+			"count": 2
+		}
+	],
+	"tags": [
+		"+bubblellaneous",
+		"bbln.place",
+		"--bbln.uses.tick",
+		"--bbln.uses.brightness_fix",
+		"--bbln.uses.timer",
+		"--bbln.ignore.break_block_properties.category",
+		"--bbln.ignore.break_block_properties.rotation"
+	],
+	"block_type": {
+		"name": "default",
+		"parameters": {}
+	},
+	"material_count": 0,
+	"material": {
+		"index": 0,
+		"name": "default"
+	},
+	"block_states": [],
+	"i": 0
+}

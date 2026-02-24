@@ -1,0 +1,24 @@
+{
+	"pack": {
+		"description": {
+			"text": "Bubblellaneous by\n",
+			"color": "gray",
+			"extra": [
+				{
+					"text": "bbfh",
+					"color": "yellow"
+				},
+				" and ",
+				{
+					"text": "Antoha256M",
+					"color": "gold"
+				}
+			]
+		}
+	},
+	"meta": {
+		"name": "bubblellaneous",
+		"minecraft": "1.21.11",
+		"version": "3.0.2"
+	}
+}

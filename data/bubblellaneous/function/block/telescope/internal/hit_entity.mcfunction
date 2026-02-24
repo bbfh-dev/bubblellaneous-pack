@@ -1,0 +1,1 @@
+return run execute as @e[type=#bubblellaneous:living,tag=!--bbln.player,dx=0,limit=1] positioned ~-0.999 ~-0.999 ~-0.999 if entity @s[dx=0]

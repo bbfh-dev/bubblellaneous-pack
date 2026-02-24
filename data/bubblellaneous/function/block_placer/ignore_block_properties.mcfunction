@@ -1,0 +1,9 @@
+data modify storage bubblellaneous tmp.in.block_properties set from entity @s item.components."minecraft:custom_data".bubblellaneous.block_properties
+data modify storage bubblellaneous tmp.in.block_properties set from entity @s Item.components."minecraft:custom_data".bubblellaneous.block_properties
+execute if entity @s[tag=--bbln.ignore.break_block_properties.rotation] run data remove storage bubblellaneous tmp.in.block_properties.rotation
+execute if entity @s[tag=--bbln.ignore.break_block_properties.block_state] run data remove storage bubblellaneous tmp.in.block_properties.block_state
+execute if entity @s[tag=--bbln.ignore.break_block_properties.owner_uuid] run data remove storage bubblellaneous tmp.in.block_properties.owner_uuid
+execute if entity @s[tag=--bbln.ignore.break_block_properties.lock] run data remove storage bubblellaneous tmp.in.block_properties.lock
+execute if entity @s[tag=--bbln.ignore.break_block_properties.pincode] run data remove storage bubblellaneous tmp.in.block_properties.pincode
+execute if entity @s[tag=--bbln.ignore.break_block_properties.category] run data remove storage bubblellaneous tmp.in.block_properties.category
+execute if entity @s[tag=--bbln.ignore.break_block_properties.owner] run data remove storage bubblellaneous tmp.in.block_properties.owner

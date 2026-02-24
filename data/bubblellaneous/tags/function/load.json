@@ -1,0 +1,12 @@
+{
+	"values": [
+		"bubblellaneous:load",
+		"bubblellaneous:tick",
+		"bubblellaneous:generated/load_blockstates",
+		"bubblellaneous:generated/load_registry/furniture",
+		"bubblellaneous:generated/load_registry/miscellaneous",
+		"bubblellaneous:generated/load_registry/technology",
+		"bubblellaneous:generated/load_registry/food",
+		"minecraft:bubblellaneous/garbage_collector"
+	]
+}

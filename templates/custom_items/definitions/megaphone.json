@@ -1,0 +1,23 @@
+{
+	"category": "miscellaneous",
+	"name": "megaphone",
+	"base": "minecraft:poisonous_potato",
+	"model": "bubblellaneous:item/megaphone",
+	"material": {
+		"index": 0,
+		"name": "default"
+	},
+	"recipe": [
+		{
+			"unit": "item",
+			"id": "goat_horn",
+			"count": 1
+		}
+	],
+	"consumable_prefix": "!",
+	"consumable_value": {},
+	"food_prefix": "!",
+	"food_value": {},
+	"max_stack_size": 16,
+	"i": 0
+}

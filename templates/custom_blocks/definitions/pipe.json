@@ -1,0 +1,57 @@
+{
+	"category": "miscellaneous",
+	"name": "pipe",
+	"display_id": "pipe",
+	"model": "bubblellaneous:block/pipe/default",
+	"base": "structure_void",
+	"sound": "industrial",
+	"facing": "none",
+	"recipe": [
+		{
+			"unit": "block",
+			"id": "copper_block",
+			"count": 1
+		}
+	],
+	"tags": [
+		"+bubblellaneous",
+		"bbln.place",
+		"--bbln.uses.blockstates",
+		"--bbln.uses.blockstate_callback",
+		"--bbln.uses.timer",
+		"--bbln.ignore.break_block_properties.category",
+		"--bbln.ignore.break_block_properties.rotation"
+	],
+	"block_type": {
+		"name": "default",
+		"parameters": {}
+	},
+	"material_count": 0,
+	"material": {
+		"index": 0,
+		"name": "default"
+	},
+	"block_states": [
+		"default",
+		"straight",
+		"angle_left",
+		"angle_up",
+		"angle_down",
+		"corner_up",
+		"corner_down",
+		"side_left",
+		"side_up",
+		"side_down",
+		"junction_left",
+		"junction_up",
+		"junction_down",
+		"edge_left",
+		"edge_up",
+		"edge_down",
+		"partial_horizontal",
+		"partial_vertical",
+		"partial_left",
+		"cross"
+	],
+	"i": 0
+}

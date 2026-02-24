@@ -1,0 +1,41 @@
+{
+	"category": "miscellaneous",
+	"name": "road_sign",
+	"display_id": "%[road_sign]_road_sign",
+	"model": "bubblellaneous:block/%[road_sign]_road_sign",
+	"base": "iron_chain[axis=y]",
+	"sound": "industrial",
+	"facing": "player",
+	"recipe": [
+		{
+			"texture_atlas": "minecraft:items",
+			"texture": "item/iron_chain",
+			"unit": "block",
+			"id": "iron_chain",
+			"count": 1
+		},
+		{
+			"texture_atlas": "minecraft:map_decorations",
+			"texture": "%[road_sign.1]_banner",
+			"unit": "block",
+			"id": "%[road_sign.1]_banner",
+			"count": 1
+		}
+	],
+	"tags": [
+		"+bubblellaneous",
+		"bbln.place",
+		"--bbln.ignore.break_block_properties.block_state",
+		"--bbln.ignore.break_block_properties.rotation"
+	],
+	"block_type": {
+		"name": "default",
+		"parameters": {}
+	},
+	"material_count": 0,
+	"material": {
+		"index": 0,
+		"name": "default"
+	},
+	"block_states": []
+}

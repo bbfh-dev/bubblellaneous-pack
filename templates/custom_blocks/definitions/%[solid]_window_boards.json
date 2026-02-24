@@ -1,0 +1,40 @@
+{
+	"category": "furniture",
+	"name": "window_boards",
+	"display_id": "%[solid]_window_boards",
+	"model": "bubblellaneous:block/window_boards/%[solid]/default",
+	"base": "structure_void",
+	"sound": "wood",
+	"facing": "wall_normal",
+	"recipe": [
+		{
+			"texture_atlas": "minecraft:blocks",
+			"texture": "block/%[solid.2]",
+			"unit": "block",
+			"id": "%[solid.1]",
+			"count": 1
+		}
+	],
+	"tags": [
+		"+bubblellaneous",
+		"bbln.place",
+		"--bbln.uses.blockstates",
+		"--bbln.ignore.break_block_properties.block_state",
+		"--bbln.ignore.break_block_properties.rotation"
+	],
+	"block_type": {
+		"name": "default",
+		"parameters": {}
+	},
+	"material_count": 20,
+	"material": {
+		"index": "%[i]",
+		"name": "%[solid.0]"
+	},
+	"block_states": [
+		"default",
+		"left",
+		"right",
+		"middle"
+	]
+}

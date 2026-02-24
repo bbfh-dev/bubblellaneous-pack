@@ -1,0 +1,39 @@
+{
+	"rules": {
+		"default": null,
+		"left": [
+			[
+				"ooioxx",
+				0
+			]
+		],
+		"right": [
+			[
+				"oooixx",
+				0
+			]
+		],
+		"middle": [
+			[
+				"ooiixx",
+				0
+			]
+		],
+		"corner": [
+			[
+				"ioioxx",
+				90
+			],
+			[
+				"iooixx",
+				0
+			]
+		],
+		"slab": [
+			[
+				"xixxxx",
+				0
+			]
+		]
+	}
+}

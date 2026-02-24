@@ -1,0 +1,47 @@
+{
+	"category": "furniture",
+	"name": "upholstery_couch",
+	"display_id": "%[wood]_upholstery_couch",
+	"model": "bubblellaneous:block/upholstery_couch/%[wool]_%[wood]/default",
+	"base": "tripwire",
+	"sound": "wood",
+	"facing": "player",
+	"recipe": [
+		{
+			"unit": "block",
+			"id": "%[wood.1]",
+			"count": 1
+		},
+		{
+			"unit": "block",
+			"id": "%[wool.1]",
+			"count": 2
+		}
+	],
+	"tags": [
+		"+bubblellaneous",
+		"bbln.place",
+		"--bbln.uses.place",
+		"--bbln.uses.blockstates",
+		"--bbln.ignore.break_block_properties.block_state",
+		"--bbln.ignore.break_block_properties.rotation"
+	],
+	"block_type": {
+		"name": "seat",
+		"parameters": {
+			"width": 0.9,
+			"height": 0.5
+		}
+	},
+	"material_count": 176,
+	"material": {
+		"index": "%[i]",
+		"name": "%[wool]_%[wood]"
+	},
+	"block_states": [
+		"default",
+		"left",
+		"right",
+		"middle"
+	]
+}

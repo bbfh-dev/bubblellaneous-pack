@@ -1,0 +1,1 @@
+return run scoreboard players remove @s[scores={bbln.player.sound=1..}] bbln.player.sound 1

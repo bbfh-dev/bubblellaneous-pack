@@ -1,0 +1,348 @@
+{
+	"credit": "Bubblellaneous - by bbfh",
+	"parent": "minecraft:block/block",
+	"textures": {
+		"2": "block/smoker_top",
+		"particle": "block/jungle_planks",
+		"material": "block/jungle_planks",
+		"secondary": "block/mangrove_log"
+	},
+	"elements": [
+		{
+			"from": [
+				2,
+				4,
+				0
+			],
+			"to": [
+				14,
+				8,
+				12
+			],
+			"faces": {
+				"north": {
+					"uv": [
+						2,
+						8,
+						14,
+						12
+					],
+					"texture": "#material"
+				},
+				"east": {
+					"uv": [
+						4,
+						8,
+						16,
+						12
+					],
+					"texture": "#material"
+				},
+				"south": {
+					"uv": [
+						2,
+						8,
+						14,
+						12
+					],
+					"texture": "#material"
+				},
+				"west": {
+					"uv": [
+						0,
+						8,
+						12,
+						12
+					],
+					"texture": "#material"
+				},
+				"up": {
+					"uv": [
+						2,
+						0,
+						14,
+						12
+					],
+					"texture": "#material"
+				},
+				"down": {
+					"uv": [
+						2,
+						4,
+						14,
+						16
+					],
+					"texture": "#material"
+				}
+			}
+		},
+		{
+			"from": [
+				2,
+				8,
+				11
+			],
+			"to": [
+				14,
+				20,
+				12
+			],
+			"faces": {
+				"north": {
+					"uv": [
+						2,
+						0,
+						14,
+						12
+					],
+					"texture": "#material"
+				},
+				"east": {
+					"uv": [
+						4,
+						0,
+						5,
+						12
+					],
+					"texture": "#material"
+				},
+				"south": {
+					"uv": [
+						2,
+						0,
+						14,
+						12
+					],
+					"texture": "#material"
+				},
+				"west": {
+					"uv": [
+						11,
+						0,
+						12,
+						12
+					],
+					"texture": "#material"
+				},
+				"up": {
+					"uv": [
+						2,
+						11,
+						14,
+						12
+					],
+					"texture": "#material"
+				}
+			}
+		},
+		{
+			"from": [
+				3,
+				4,
+				12
+			],
+			"to": [
+				13,
+				16,
+				16
+			],
+			"faces": {
+				"north": {
+					"uv": [
+						3,
+						0,
+						13,
+						12
+					],
+					"texture": "#secondary"
+				},
+				"east": {
+					"uv": [
+						0,
+						0,
+						4,
+						12
+					],
+					"texture": "#secondary"
+				},
+				"south": {
+					"uv": [
+						3,
+						0,
+						13,
+						12
+					],
+					"texture": "#secondary"
+				},
+				"west": {
+					"uv": [
+						12,
+						0,
+						16,
+						12
+					],
+					"texture": "#secondary"
+				},
+				"up": {
+					"uv": [
+						3,
+						12,
+						13,
+						16
+					],
+					"texture": "#secondary"
+				},
+				"down": {
+					"uv": [
+						3,
+						0,
+						13,
+						4
+					],
+					"texture": "#secondary"
+				}
+			}
+		},
+		{
+			"from": [
+				4,
+				0,
+				3
+			],
+			"to": [
+				12,
+				1,
+				13
+			],
+			"faces": {
+				"north": {
+					"uv": [
+						4,
+						15,
+						12,
+						16
+					],
+					"texture": "#material"
+				},
+				"east": {
+					"uv": [
+						3,
+						15,
+						13,
+						16
+					],
+					"texture": "#material"
+				},
+				"south": {
+					"uv": [
+						4,
+						15,
+						12,
+						16
+					],
+					"texture": "#material"
+				},
+				"west": {
+					"uv": [
+						3,
+						15,
+						13,
+						16
+					],
+					"texture": "#material"
+				},
+				"up": {
+					"uv": [
+						4,
+						3,
+						12,
+						13
+					],
+					"texture": "#material"
+				},
+				"down": {
+					"uv": [
+						4,
+						3,
+						12,
+						13
+					],
+					"texture": "#material"
+				}
+			}
+		},
+		{
+			"from": [
+				5,
+				1,
+				5
+			],
+			"to": [
+				11,
+				4,
+				12
+			],
+			"faces": {
+				"north": {
+					"uv": [
+						5,
+						12,
+						11,
+						15
+					],
+					"texture": "#material"
+				},
+				"east": {
+					"uv": [
+						4,
+						12,
+						11,
+						15
+					],
+					"texture": "#material"
+				},
+				"south": {
+					"uv": [
+						5,
+						12,
+						11,
+						15
+					],
+					"texture": "#material"
+				},
+				"west": {
+					"uv": [
+						5,
+						12,
+						12,
+						15
+					],
+					"texture": "#material"
+				}
+			}
+		},
+		{
+			"from": [
+				4,
+				8.05,
+				2
+			],
+			"to": [
+				12,
+				8.05,
+				10
+			],
+			"faces": {
+				"up": {
+					"uv": [
+						4,
+						4,
+						12,
+						12
+					],
+					"texture": "#2"
+				}
+			}
+		}
+	]
+}

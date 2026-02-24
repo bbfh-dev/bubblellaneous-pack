@@ -1,0 +1,23 @@
+{
+	"rules": {
+		"default": null,
+		"left": [
+			[
+				"xxoixx",
+				0
+			]
+		],
+		"right": [
+			[
+				"xxioxx",
+				0
+			]
+		],
+		"middle": [
+			[
+				"xxiixx",
+				0
+			]
+		]
+	}
+}

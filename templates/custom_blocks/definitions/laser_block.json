@@ -1,0 +1,48 @@
+{
+	"category": "technology",
+	"name": "laser_block",
+	"display_id": "laser_block",
+	"model": "bubblellaneous:block/laser_block",
+	"base": "petrified_oak_slab[type=double]",
+	"sound": "industrial",
+	"facing": "normal",
+	"recipe": [
+		{
+			"unit": "item",
+			"id": "quartz",
+			"count": 2
+		},
+		{
+			"unit": "item",
+			"id": "redstone",
+			"count": 1
+		},
+		{
+			"texture_atlas": "minecraft:blocks",
+			"texture": "block/glass",
+			"unit": "block",
+			"id": "glass_pane",
+			"count": 1
+		}
+	],
+	"tags": [
+		"+bubblellaneous",
+		"bbln.place",
+		"--bbln.uses.tick",
+		"--bbln.uses.brightness_fix",
+		"--bbln.uses.timer",
+		"--bbln.ignore.break_block_properties.category",
+		"--bbln.ignore.break_block_properties.rotation"
+	],
+	"block_type": {
+		"name": "default",
+		"parameters": {}
+	},
+	"material_count": 0,
+	"material": {
+		"index": 0,
+		"name": "default"
+	},
+	"block_states": [],
+	"i": 0
+}

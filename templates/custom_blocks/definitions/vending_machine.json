@@ -1,0 +1,57 @@
+{
+	"category": "miscellaneous",
+	"name": "vending_machine",
+	"display_id": "vending_machine",
+	"model": "bubblellaneous:block/vending_machine/default",
+	"base": "petrified_oak_slab[type=double]",
+	"sound": "industrial",
+	"facing": "player",
+	"recipe": [
+		{
+			"unit": "block",
+			"id": "glass",
+			"count": 1
+		},
+		{
+			"unit": "item",
+			"id": "iron_ingot",
+			"count": 2
+		}
+	],
+	"tags": [
+		"+bubblellaneous",
+		"bbln.place",
+		"--bbln.uses.blockstates",
+		"--bbln.uses.brightness_fix",
+		"--bbln.ignore.break_block_properties.category",
+		"--bbln.ignore.break_block_properties.rotation"
+	],
+	"block_type": {
+		"name": "default",
+		"parameters": {}
+	},
+	"material_count": 0,
+	"material": {
+		"index": 0,
+		"name": "default"
+	},
+	"block_states": [
+		"default",
+		"single_left",
+		"single_middle",
+		"single_right",
+		"top_single",
+		"top_left",
+		"top_middle",
+		"top_right",
+		"middle_single",
+		"middle_left",
+		"middle_middle",
+		"middle_right",
+		"bottom_single",
+		"bottom_left",
+		"bottom_middle",
+		"bottom_right"
+	],
+	"i": 0
+}

@@ -1,0 +1,16 @@
+[
+  {
+    "function": "minecraft:set_count",
+    "count": {
+      "type": "minecraft:score",
+      "target": "this",
+      "score": "bbln.gui.page"
+    }
+  },
+  {
+    "function": "minecraft:set_components",
+    "components": {
+      "!minecraft:entity_data": {}
+    }
+  }
+]

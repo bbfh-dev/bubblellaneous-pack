@@ -1,0 +1,22 @@
+{
+    "values": [
+        "minecraft:ghast",
+        "minecraft:happy_ghast",
+        "minecraft:wither",
+        "minecraft:ender_dragon",
+        "minecraft:warden",
+        "minecraft:tadpole",
+        "minecraft:spider",
+        "minecraft:cave_spider",
+        "minecraft:shulker",
+        "minecraft:ravager",
+        "minecraft:iron_golem",
+        "minecraft:elder_guardian",
+        "minecraft:giant",
+        "minecraft:endermite",
+        "minecraft:breeze",
+        "minecraft:blaze",
+        "minecraft:bee",
+        "minecraft:vex"
+    ]
+}

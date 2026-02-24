@@ -1,0 +1,32 @@
+{
+	"category": "none",
+	"name": "padlock_block",
+	"display_id": "%[wool]_padlock_block",
+	"model": "bubblellaneous:block/padlock_block/%[wool]/right",
+	"base": "air",
+	"sound": "industrial",
+	"facing": "door",
+	"recipe": [],
+	"tags": [
+		"+bubblellaneous",
+		"bbln.place",
+		"--bbln.uses.place",
+		"--bbln.uses.no_base",
+		"--bbln.uses.custom_base",
+		"--bbln.ignore.break_block_properties.block_state",
+		"--bbln.ignore.break_block_properties.rotation"
+	],
+	"block_type": {
+		"name": "default",
+		"parameters": {}
+	},
+	"material_count": 16,
+	"material": {
+		"index": "%[i]",
+		"name": "%[wool]"
+	},
+	"block_states": [
+		"default",
+		"left"
+	]
+}

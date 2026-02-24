@@ -1,0 +1,41 @@
+{
+	"category": "furniture",
+	"name": "table",
+	"display_id": "%[solid]_table",
+	"model": "bubblellaneous:block/table/%[solid]/default",
+	"base": "petrified_oak_slab[type=top]",
+	"sound": "wood",
+	"facing": "none",
+	"recipe": [
+		{
+			"texture_atlas": "minecraft:blocks",
+			"texture": "block/%[solid.2]",
+			"unit": "block",
+			"id": "%[solid.1]",
+			"count": 1
+		}
+	],
+	"tags": [
+		"+bubblellaneous",
+		"bbln.place",
+		"--bbln.uses.place",
+		"--bbln.uses.blockstates",
+		"--bbln.ignore.break_block_properties.block_state",
+		"--bbln.ignore.break_block_properties.rotation"
+	],
+	"block_type": {
+		"name": "default",
+		"parameters": {}
+	},
+	"material_count": 20,
+	"material": {
+		"index": "%[i]",
+		"name": "%[solid.0]"
+	},
+	"block_states": [
+		"default",
+		"side",
+		"corner",
+		"middle"
+	]
+}

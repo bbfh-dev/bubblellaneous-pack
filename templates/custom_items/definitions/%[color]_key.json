@@ -1,0 +1,27 @@
+{
+	"category": "technology",
+	"name": "key",
+	"base": "minecraft:poisonous_potato",
+	"model": "bubblellaneous:item/key/%[color]",
+	"material": {
+		"index": "%[i]",
+		"name": "%[color]"
+	},
+	"recipe": [
+		{
+			"unit": "item",
+			"id": "iron_ingot",
+			"count": 1
+		},
+		{
+			"unit": "item",
+			"id": "%[color]_dye",
+			"count": 1
+		}
+	],
+	"consumable_prefix": "",
+	"consumable_value": {},
+	"food_prefix": "!",
+	"food_value": {},
+	"max_stack_size": 16
+}

@@ -1,0 +1,1 @@
+return run execute if items block ~ ~ ~ container.4 *[minecraft:dyed_color] run data remove block ~ ~ ~ Items[4].components."minecraft:dyed_color"

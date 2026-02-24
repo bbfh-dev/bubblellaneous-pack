@@ -1,0 +1,32 @@
+{
+	"category": "food",
+	"name": "coffee_cup",
+	"base": "minecraft:poisonous_potato",
+	"model": "bubblellaneous:item/coffee_cup",
+	"material": {
+		"index": 0,
+		"name": "default"
+	},
+	"recipe": [
+		{
+			"unit": "item",
+			"id": "cocoa_beans",
+			"count": 4
+		}
+	],
+	"consumable_prefix": "",
+	"consumable_value": {
+		"animation": "drink",
+		"consume_seconds": 3.0,
+		"has_consume_particles": false,
+		"sound": "minecraft:entity.generic.drink"
+	},
+	"food_prefix": "",
+	"food_value": {
+		"nutrition": 3,
+		"saturation": 10,
+		"can_always_eat": true
+	},
+	"max_stack_size": 4,
+	"i": 0
+}

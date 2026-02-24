@@ -1,0 +1,89 @@
+{
+	"credit": "Bubblellaneous - by bbfh",
+	"parent": "minecraft:block/block",
+	"texture_size": [
+		64,
+		64
+	],
+	"textures": {
+		"0": "bubblellaneous:block/vending_machine",
+		"1": "bubblellaneous:block/vending_machine_sides",
+		"particle": "bubblellaneous:block/vending_machine"
+	},
+	"elements": [
+		{
+			"from": [
+				0,
+				0,
+				0
+			],
+			"to": [
+				16,
+				16,
+				16
+			],
+			"faces": {
+				"north": {
+					"uv": [
+						8,
+						8,
+						12,
+						12
+					],
+					"texture": "#0",
+					"cullface": "north"
+				},
+				"east": {
+					"uv": [
+						16,
+						0,
+						8,
+						8
+					],
+					"texture": "#1",
+					"cullface": "east"
+				},
+				"south": {
+					"uv": [
+						0,
+						0,
+						8,
+						8
+					],
+					"texture": "#1",
+					"cullface": "south"
+				},
+				"west": {
+					"uv": [
+						16,
+						0,
+						8,
+						8
+					],
+					"texture": "#1",
+					"cullface": "west"
+				},
+				"up": {
+					"uv": [
+						8,
+						8,
+						16,
+						16
+					],
+					"texture": "#1",
+					"cullface": "up"
+				},
+				"down": {
+					"uv": [
+						0,
+						8,
+						8,
+						16
+					],
+					"texture": "#1",
+					"cullface": "down"
+				}
+			}
+		}
+	]
+}

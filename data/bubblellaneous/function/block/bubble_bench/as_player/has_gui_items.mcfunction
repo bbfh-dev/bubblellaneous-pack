@@ -1,0 +1,1 @@
+return run clear @s *[minecraft:custom_data~{bubblellaneous:{is_gui: true}}] 0
