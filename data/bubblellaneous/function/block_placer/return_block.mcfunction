@@ -6,4 +6,5 @@ execute if entity @a[tag=--bbln.event_player,limit=1,x=0,gamemode=creative] run 
 
 $function spawn:bubblellaneous/$(id)
 data modify entity @e[type=item,tag=!--bbln.item,nbt={Age: 0s},distance=..0.01,limit=1] Item.components."minecraft:entity_data".Item.components."minecraft:custom_data".bubblellaneous.block_properties set from storage bubblellaneous tmp.in.block_properties
+execute if entity @s[tag=--bbln.uses.blockstates] run data modify entity @e[type=item,tag=!--bbln.item,nbt={Age: 0s},distance=..0.01,limit=1] Item.components."minecraft:entity_data".Item.components."minecraft:custom_data".bubblellaneous.block_properties.block_state set value "default"
 execute if data storage bubblellaneous tmp.in.block_properties.items[0] run function bubblellaneous:block_placer/internal/items_to_container
