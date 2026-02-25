@@ -35,7 +35,7 @@ function bubblellaneous:settings/load
 
 forceload add 0 0
 data modify storage minecraft:bubblellaneous registry set value {furniture: {}, miscellaneous: {}, technology: {}, food: {}}
-say LOADED
+title @a actionbar "Bubblellaneous Loaded"
 
 scoreboard players set #100 bbln.int 100
 scoreboard players set #18 bbln.int 18
