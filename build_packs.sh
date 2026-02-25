@@ -1,3 +1,3 @@
 #!/bin/bash
 
-vintage build --zip --delete-unused-libs --force-stringify $*
+vintage build --delete-unused-libs --force-stringify $*
