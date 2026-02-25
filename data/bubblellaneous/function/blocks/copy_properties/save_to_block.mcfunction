@@ -1,5 +1,4 @@
 execute store result entity @s item.components."minecraft:custom_data".bubblellaneous.block_scores.block_id int 1 run scoreboard players get @s bbln.block.id
-execute store result entity @s item.components."minecraft:custom_data".bubblellaneous.block_scores.block_model int 1 run scoreboard players get @s bbln.block.model
 execute store result entity @s item.components."minecraft:custom_data".bubblellaneous.block_scores.block_timer int 1 run scoreboard players get @s bbln.block.timer
 execute store result entity @s item.components."minecraft:custom_data".bubblellaneous.block_scores.block_state int 1 run scoreboard players get @s bbln.block_state
 execute store result entity @s item.components."minecraft:custom_data".bubblellaneous.block_scores.gui_page int 1 run scoreboard players get @s bbln.gui.page
