@@ -1,6 +1,6 @@
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/RGn_skcWKsg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
 # 🫧 Bubblellaneous Pack
+
+[![thumbnail](https://i.ytimg.com/vi/RGn_skcWKsg/mqdefault.jpg)](https://youtu.be/RGn_skcWKsg)
 
 This Minecraft pack adds Furniture, Technology, Food & Miscellaneous blocks and items.
 
