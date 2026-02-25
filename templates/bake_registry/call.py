@@ -3,6 +3,7 @@
 from pathlib import Path
 import sys
 import json
+import math
 
 if len(sys.argv) != 2:
     sys.exit(1)
@@ -62,6 +63,11 @@ for category in ["furniture", "miscellaneous", "technology", "food"]:
 
     output_registry.sort(key=sort)
     data = json.dumps(output_registry, indent="\t")
+    lines = [
+        f"data modify storage minecraft:bubblellaneous registry.{category} set value {data.replace('\n', '\\\n')}",
+        f"scoreboard players set registry.{category}.size bbln.var {len(output_registry)}",
+        f"scoreboard players set registry.{category}.pages bbln.var {math.ceil(len(output_registry) / 18)}",
+    ]
     path.write_text(
-        f"data modify storage minecraft:bubblellaneous registry.{category} set value {data.replace('\n', '\\\n')}"
+        "\n".join(lines),
     )
