@@ -1,0 +1,56 @@
+name: Build Release
+
+on:
+    push:
+        tags:
+            - "v*"
+
+permissions:
+    contents: write # required to create releases
+
+jobs:
+    build:
+        name: Build
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+
+            - name: Set up Go
+              uses: actions/setup-go@v5
+              with:
+                  go-version: "1.25.5"
+
+            - name: Install Vintage
+              run: |
+                  go install github.com/bbfh-dev/vintage@v0.2.7-beta.1
+
+            - name: Build
+              run: |
+                  vintage build --delete-unused-libs --force-stringify --zip --debug
+
+            - name: Upload artifact
+              uses: actions/upload-artifact@v4
+              with:
+                  path: build/*.zip
+
+    release:
+        name: Create GitHub Release
+        runs-on: ubuntu-latest
+        needs: build
+
+        steps:
+            - name: Download all artifacts
+              uses: actions/download-artifact@v4
+              with:
+                  path: build
+
+            - name: Create release
+              uses: softprops/action-gh-release@v2
+              with:
+                  tag_name: ${{ github.ref_name }}
+                  name: Release ${{ github.ref_name }}
+                  draft: false
+                  prerelease: false
+                  files: build/**/*
