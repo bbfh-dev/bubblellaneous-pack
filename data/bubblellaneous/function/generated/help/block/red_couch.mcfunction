@@ -1,0 +1,1 @@
+tellraw @s ["--------", " ", "Couch", "\n\n", {"text": "[☶ Description]\n", "color": "yellow"}, "A seat.\n", "\n", {"text": "[⇄ Connectivity]\n", "color": "light_purple"}, "Can connect to other couches with corners support.\n"]

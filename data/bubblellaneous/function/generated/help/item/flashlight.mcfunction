@@ -1,0 +1,1 @@
+tellraw @s ["--------", " ", "Flashlight", "\n\n", {"text": "[☶ Description]\n", "color": "yellow"}, "Right Click to turn on/off.\n", "Emits light up to 32 blocks ahead. Requires a configurable amount of charge, becomes more dim as it discharges.\n", "When the battery level is 0 it will attempt to use a Battery item in player's inventory.\n"]

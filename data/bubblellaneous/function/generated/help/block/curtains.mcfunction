@@ -1,0 +1,1 @@
+tellraw @s ["--------", " ", "Curtains", "\n\n", {"text": "[☶ Description]\n", "color": "yellow"}, "Sneak+Click to open/close.\n", "\n", {"text": "[⇄ Connectivity]\n", "color": "light_purple"}, "Can connect to other curtains.\n"]

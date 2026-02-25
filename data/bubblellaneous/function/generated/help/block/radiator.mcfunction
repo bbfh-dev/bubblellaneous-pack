@@ -1,0 +1,1 @@
+tellraw @s ["--------", " ", "Radiator", "\n\n", {"text": "[☶ Description]\n", "color": "yellow"}, "Melts snow/ice blocks in a 5 block radius.\n", "Radiates the heat through pipes to cover larger areas.\n"]

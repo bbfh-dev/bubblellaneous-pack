@@ -1,0 +1,1 @@
+tellraw @s ["--------", " ", "Retina Scanner", "\n\n", {"text": "[☶ Description]\n", "color": "yellow"}, "The first player to interact with the block will be saved as credentials for future unlocking.\n", "You can equip a player head to impersonate another player.\n", "Fails to scan retina if player is wearing a mask (mob head).\n", "Emits redstone signal when unlocked.\n"]

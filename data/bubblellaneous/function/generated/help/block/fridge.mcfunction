@@ -1,0 +1,1 @@
+tellraw @s ["--------", " ", "Fridge", "\n\n", {"text": "[☶ Description]\n", "color": "yellow"}, "A regular container (27 slots).\n", "\n", {"text": "[⇄ Connectivity]\n", "color": "light_purple"}, "Can connect to other fridges placed on top.\n"]

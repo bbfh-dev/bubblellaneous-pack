@@ -1,0 +1,1 @@
+tellraw @s ["--------", " ", "Vending Machine", "\n\n", {"text": "[☶ Description]\n", "color": "yellow"}, "Empty.\n", "\n", {"text": "[⇄ Connectivity]\n", "color": "light_purple"}, "Can connect to other vending machines.\n"]

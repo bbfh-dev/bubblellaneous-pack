@@ -1,0 +1,1 @@
+tellraw @s ["--------", " ", "Bubble Bench", "\n\n", {"text": "[☶ Description]\n", "color": "yellow"}, "Used for obtaining all custom blocks & items.\n", "\n", {"text": "[☄ Instructions]\n", "color": "green"}, "Open the block, use compass inside to view all help tooltips.\n"]

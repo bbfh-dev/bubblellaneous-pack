@@ -1,0 +1,1 @@
+tellraw @s ["--------", " ", "Ladder", "\n\n", {"text": "[☶ Description]\n", "color": "yellow"}, "Right Click to latch onto the ladder.\n", "Once attached you can go forward/backwards to climb up/down.\n", "Sneak to get off, you get teleported on top of a block in-front if you're close enough.\n"]

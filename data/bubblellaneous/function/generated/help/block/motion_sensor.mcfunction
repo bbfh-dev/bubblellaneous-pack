@@ -1,0 +1,1 @@
+tellraw @s ["--------", " ", "Motion Sensor", "\n\n", {"text": "[☶ Description]\n", "color": "yellow"}, "Saves the player that placed it as its owner.\n", "When a player is detected nearby it will alert with a loud (32 block radius) sound and notify the owner.\n"]

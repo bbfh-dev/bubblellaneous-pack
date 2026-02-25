@@ -1,0 +1,1 @@
+tellraw @s ["--------", " ", "Telescope", "\n\n", {"text": "[☶ Description]\n", "color": "yellow"}, "Right Click to use. You can navigate using your regular controls.\n", "To exit go all the way backwards and sneak.\n"]

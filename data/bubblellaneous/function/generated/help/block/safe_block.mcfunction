@@ -1,0 +1,1 @@
+tellraw @s ["--------", " ", "Safe Block", "\n\n", {"text": "[☶ Description]\n", "color": "yellow"}, "A container block (27 slots) that gets locked when it has no redstone signal.\n", "When activated with redstone it opens for 30 ticks, can only close if nobody is currently interacting with it.\n"]

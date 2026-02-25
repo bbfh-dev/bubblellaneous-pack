@@ -1,0 +1,1 @@
+tellraw @s ["--------", " ", "Item Scanner", "\n\n", {"text": "[☶ Description]\n", "color": "yellow"}, "The first item to be used will be saved as credentials for future unlocking.\n", "Uses both item id and tag to verify the item, supports custom/modded items.\n", "Emits redstone signal when unlocked.\n"]

@@ -1,0 +1,1 @@
+tellraw @s ["--------", " ", "Laser Block", "\n\n", {"text": "[☶ Description]\n", "color": "yellow"}, "Looks for players 5 blocks in front of itself.\n", "Can be hidden behind a 1-block thick wall, however can be obstructed by blocks placed any further than that.\n"]

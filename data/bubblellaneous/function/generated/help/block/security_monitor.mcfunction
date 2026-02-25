@@ -1,0 +1,1 @@
+tellraw @s ["--------", " ", "Security Monitor", "\n\n", {"text": "[☶ Description]\n", "color": "yellow"}, "The name of the item represents the name used for identifying camera. Use an anvil to rename.\n", "Right Click on a camera to link, place and Right Click to spectate. Once spectating Sneak to leave the camera.\n"]

@@ -1,0 +1,1 @@
+tellraw @s ["--------", " ", "Keypad Lock", "\n\n", {"text": "[☶ Description]\n", "color": "yellow"}, "Use the keys in-front of the block to interact.\n", "The first password to be entered is going to be saved as credentials for future unlocking.\n", "Emits redstone signal when unlocked.\n"]

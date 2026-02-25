@@ -1,0 +1,1 @@
+tellraw @s ["--------", " ", "Padlock", "\n\n", {"text": "[☶ Description]\n", "color": "yellow"}, "Right Click while looking at a door to lock it.\n", "The first key to be used on the padlock is going to be the key required to unlock it in the future.\n"]

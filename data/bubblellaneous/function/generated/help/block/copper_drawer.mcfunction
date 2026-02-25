@@ -1,0 +1,1 @@
+tellraw @s ["--------", " ", "Drawer", "\n\n", {"text": "[☶ Description]\n", "color": "yellow"}, "Empty.\n"]

@@ -1,0 +1,1 @@
+tellraw @s ["--------", " ", "Rising Door", "\n\n", {"text": "[☶ Description]\n", "color": "yellow"}, "Right Click to open/close.\n", "\n", {"text": "[⇄ Connectivity]\n", "color": "light_purple"}, "Can connect to other rising doors.\n"]
