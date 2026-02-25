@@ -2,10 +2,15 @@
 	"rules": {
 		"default": null,
 		"bottom": [
-			[
-				"xxxxix",
-				0
-			]
+			{
+				"rotation": 0,
+				"infront": "*",
+				"behind": "*",
+				"leftward": "*",
+				"rightwards": "*",
+				"above": "block",
+				"below": "*"
+			}
 		]
 	}
 }

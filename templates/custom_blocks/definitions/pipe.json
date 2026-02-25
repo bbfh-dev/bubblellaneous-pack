@@ -18,7 +18,6 @@
 		"bbln.place",
 		"--bbln.uses.blockstates",
 		"--bbln.uses.blockstate_callback",
-		"--bbln.uses.timer",
 		"--bbln.ignore.break_block_properties.category",
 		"--bbln.ignore.break_block_properties.rotation",
 		"--bbln.ignore.blockstates_after_break"

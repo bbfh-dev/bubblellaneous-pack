@@ -2,22 +2,37 @@
 	"rules": {
 		"default": null,
 		"left": [
-			[
-				"xxoixx",
-				0
-			]
+			{
+				"rotation": 0,
+				"infront": "*",
+				"behind": "*",
+				"leftward": "air",
+				"rightwards": "block",
+				"above": "*",
+				"below": "*"
+			}
 		],
 		"right": [
-			[
-				"xxioxx",
-				0
-			]
+			{
+				"rotation": 0,
+				"infront": "*",
+				"behind": "*",
+				"leftward": "block",
+				"rightwards": "air",
+				"above": "*",
+				"below": "*"
+			}
 		],
 		"middle": [
-			[
-				"xxiixx",
-				0
-			]
+			{
+				"rotation": 0,
+				"infront": "*",
+				"behind": "*",
+				"leftward": "block",
+				"rightwards": "block",
+				"above": "*",
+				"below": "*"
+			}
 		]
 	}
 }

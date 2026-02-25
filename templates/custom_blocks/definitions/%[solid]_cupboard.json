@@ -1,7 +1,7 @@
 {
 	"category": "furniture",
-	"name": "cabinet",
-	"display_id": "%[solid]_cabinet",
+	"name": "cupboard",
+	"display_id": "%[solid]_cupboard",
 	"model": "bubblellaneous:block/cupboard/%[solid]",
 	"base": "petrified_oak_slab[type=double]",
 	"sound": "wood",

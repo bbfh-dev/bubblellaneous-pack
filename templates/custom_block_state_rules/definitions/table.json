@@ -2,50 +2,100 @@
 	"rules": {
 		"default": null,
 		"side": [
-			[
-				"oiooxx",
-				0
-			],
-			[
-				"ioooxx",
-				180
-			],
-			[
-				"ooioxx",
-				-90
-			],
-			[
-				"oooixx",
-				90
-			]
+			{
+				"rotation": 0,
+				"infront": "air",
+				"behind": "block",
+				"leftward": "air",
+				"rightwards": "air",
+				"above": "*",
+				"below": "*"
+			},
+			{
+				"rotation": 180,
+				"infront": "block",
+				"behind": "air",
+				"leftward": "air",
+				"rightwards": "air",
+				"above": "*",
+				"below": "*"
+			},
+			{
+				"rotation": -90,
+				"infront": "air",
+				"behind": "air",
+				"leftward": "block",
+				"rightwards": "air",
+				"above": "*",
+				"below": "*"
+			},
+			{
+				"rotation": 90,
+				"infront": "air",
+				"behind": "air",
+				"leftward": "air",
+				"rightwards": "block",
+				"above": "*",
+				"below": "*"
+			}
 		],
 		"corner": [
-			[
-				"ioioxx",
-				0
-			],
-			[
-				"iooixx",
-				-90
-			],
-			[
-				"oiioxx",
-				90
-			],
-			[
-				"oioixx",
-				180
-			]
+			{
+				"rotation": 0,
+				"infront": "block",
+				"behind": "air",
+				"leftward": "block",
+				"rightwards": "air",
+				"above": "*",
+				"below": "*"
+			},
+			{
+				"rotation": -90,
+				"infront": "block",
+				"behind": "air",
+				"leftward": "air",
+				"rightwards": "block",
+				"above": "*",
+				"below": "*"
+			},
+			{
+				"rotation": 90,
+				"infront": "air",
+				"behind": "block",
+				"leftward": "block",
+				"rightwards": "air",
+				"above": "*",
+				"below": "*"
+			},
+			{
+				"rotation": 180,
+				"infront": "air",
+				"behind": "block",
+				"leftward": "air",
+				"rightwards": "block",
+				"above": "*",
+				"below": "*"
+			}
 		],
 		"middle": [
-			[
-				"iixxxx",
-				0
-			],
-			[
-				"xxiixx",
-				0
-			]
+			{
+				"rotation": 0,
+				"infront": "block",
+				"behind": "block",
+				"leftward": "*",
+				"rightwards": "*",
+				"above": "*",
+				"below": "*"
+			},
+			{
+				"rotation": 0,
+				"infront": "*",
+				"behind": "*",
+				"leftward": "block",
+				"rightwards": "block",
+				"above": "*",
+				"below": "*"
+			}
 		]
 	}
 }

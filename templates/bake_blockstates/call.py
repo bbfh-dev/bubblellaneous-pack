@@ -2,42 +2,37 @@
 
 import sys
 import json
+import itertools
 
 if len(sys.argv) != 3:
     sys.exit(1)
 
 block_id = sys.argv[1]
-input = json.loads(sys.argv[2])
+input_data = json.loads(sys.argv[2])
 
 output = {}
 
+directions = ["infront", "behind", "leftward", "rightwards", "above", "below"]
 
-def expand_pattern(pattern):
-    results = []
-
-    def recurse(p):
-        idx = p.find("x")
-        if idx == -1:
-            results.append(p)
-            return
-        recurse(p[:idx] + "i" + p[idx + 1 :])
-        recurse(p[:idx] + "o" + p[idx + 1 :])
-
-    recurse(pattern)
-    return results
-
-
-for rule_name in input:
+for rule_name, entries in input_data.items():
     if rule_name == "default":
         continue
+    for entry in entries:
+        rotation = str(entry["rotation"])
+        allowed_chars = []
+        for d in directions:
+            cond = entry[d]
+            if cond == "block":
+                allowed_chars.append(["i"])
+            elif cond == "air":
+                allowed_chars.append(["o"])
+            else:  # cond == "*"
+                allowed_chars.append(["i", "o"])
 
-    for entry in input[rule_name]:
-        pattern = entry[0]
-        rotation = str(entry[1])
-
-        for concrete in expand_pattern(pattern):
-            if concrete not in output:
-                output[concrete] = {"name": rule_name, "rotation": rotation}
+        for combo in itertools.product(*allowed_chars):
+            pattern = "".join(combo)
+            if pattern not in output:
+                output[pattern] = {"name": rule_name, "rotation": rotation}
 
 result_json = json.dumps(output, separators=(",", ":"))
 
