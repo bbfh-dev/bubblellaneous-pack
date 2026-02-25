@@ -19,6 +19,7 @@
 		"+bubblellaneous",
 		"bbln.place",
 		"--bbln.uses.place",
+		"--bbln.uses.tick",
 		"--bbln.ignore.break_block_properties.block_state",
 		"--bbln.ignore.break_block_properties.rotation"
 	],
