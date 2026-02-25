@@ -5,74 +5,34 @@
 		"particle": "block/crimson_planks",
 		"material": "block/crimson_planks"
 	},
-	"elements": [
-		{
-			"from": [
-				0,
-				12,
-				0
-			],
-			"to": [
-				16,
-				16,
-				16
-			],
+	"elements": [{
+			"from": [0, 12, 0],
+			"to": [16, 16, 16],
 			"faces": {
 				"north": {
-					"uv": [
-						0,
-						0,
-						16,
-						4
-					],
+					"uv": [0, 0, 16, 4],
 					"texture": "#material"
 				},
 				"east": {
-					"uv": [
-						0,
-						0,
-						16,
-						4
-					],
+					"uv": [0, 0, 16, 4],
 					"texture": "#material"
 				},
 				"south": {
-					"uv": [
-						0,
-						0,
-						16,
-						4
-					],
+					"uv": [0, 0, 16, 4],
 					"texture": "#material"
 				},
 				"west": {
-					"uv": [
-						0,
-						0,
-						16,
-						4
-					],
+					"uv": [0, 0, 16, 4],
 					"texture": "#material"
 				},
 				"up": {
-					"uv": [
-						0,
-						0,
-						16,
-						16
-					],
+					"uv": [0, 0, 16, 16],
 					"texture": "#material"
 				},
 				"down": {
-					"uv": [
-						0,
-						0,
-						16,
-						16
-					],
+					"uv": [0, 0, 16, 16],
 					"texture": "#material"
 				}
 			}
-		}
-	]
+		}]
 }

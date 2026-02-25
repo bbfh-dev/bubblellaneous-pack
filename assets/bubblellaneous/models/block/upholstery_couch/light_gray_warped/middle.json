@@ -6,278 +6,121 @@
 		"planks": "block/warped_planks",
 		"material": "block/light_gray_wool"
 	},
-	"elements": [
-		{
-			"from": [
-				0,
-				3,
-				2
-			],
-			"to": [
-				16,
-				7,
-				15
-			],
+	"elements": [{
+			"from": [0, 3, 2],
+			"to": [16, 7, 15],
 			"faces": {
 				"north": {
-					"uv": [
-						0,
-						9,
-						16,
-						13
-					],
+					"uv": [0, 9, 16, 13],
 					"texture": "#material"
 				},
 				"east": {
-					"uv": [
-						1,
-						9,
-						14,
-						13
-					],
+					"uv": [1, 9, 14, 13],
 					"texture": "#material"
 				},
 				"south": {
-					"uv": [
-						0,
-						9,
-						16,
-						13
-					],
+					"uv": [0, 9, 16, 13],
 					"texture": "#material"
 				},
 				"west": {
-					"uv": [
-						2,
-						9,
-						15,
-						13
-					],
+					"uv": [2, 9, 15, 13],
 					"texture": "#material"
 				},
 				"up": {
-					"uv": [
-						0,
-						2,
-						16,
-						15
-					],
+					"uv": [0, 2, 16, 15],
 					"texture": "#material"
 				},
 				"down": {
-					"uv": [
-						0,
-						1,
-						16,
-						14
-					],
+					"uv": [0, 1, 16, 14],
 					"texture": "#material"
 				}
 			}
-		},
-		{
-			"from": [
-				0,
-				7,
-				13
-			],
-			"to": [
-				16,
-				18,
-				15
-			],
+		}, {
+			"from": [0, 7, 13],
+			"to": [16, 18, 15],
 			"faces": {
 				"north": {
-					"uv": [
-						0,
-						5,
-						16,
-						16
-					],
+					"uv": [0, 5, 16, 16],
 					"texture": "#material"
 				},
 				"east": {
-					"uv": [
-						1,
-						5,
-						3,
-						16
-					],
+					"uv": [1, 5, 3, 16],
 					"texture": "#material"
 				},
 				"south": {
-					"uv": [
-						0,
-						5,
-						16,
-						16
-					],
+					"uv": [0, 5, 16, 16],
 					"texture": "#material"
 				},
 				"west": {
-					"uv": [
-						13,
-						5,
-						15,
-						16
-					],
+					"uv": [13, 5, 15, 16],
 					"texture": "#material"
 				},
 				"up": {
-					"uv": [
-						0,
-						13,
-						16,
-						15
-					],
+					"uv": [0, 13, 16, 15],
 					"texture": "#material"
 				},
 				"down": {
-					"uv": [
-						0,
-						1,
-						16,
-						3
-					],
+					"uv": [0, 1, 16, 3],
 					"texture": "#material"
 				}
 			}
-		},
-		{
-			"from": [
-				0,
-				2,
-				2
-			],
-			"to": [
-				16,
-				3,
-				15
-			],
+		}, {
+			"from": [0, 2, 2],
+			"to": [16, 3, 15],
 			"faces": {
 				"north": {
-					"uv": [
-						0,
-						13,
-						16,
-						14
-					],
+					"uv": [0, 13, 16, 14],
 					"texture": "#planks"
 				},
 				"east": {
-					"uv": [
-						1,
-						13,
-						14,
-						14
-					],
+					"uv": [1, 13, 14, 14],
 					"texture": "#planks"
 				},
 				"south": {
-					"uv": [
-						0,
-						13,
-						16,
-						14
-					],
+					"uv": [0, 13, 16, 14],
 					"texture": "#planks"
 				},
 				"west": {
-					"uv": [
-						2,
-						13,
-						15,
-						14
-					],
+					"uv": [2, 13, 15, 14],
 					"texture": "#planks"
 				},
 				"up": {
-					"uv": [
-						0,
-						2,
-						16,
-						15
-					],
+					"uv": [0, 2, 16, 15],
 					"texture": "#planks"
 				},
 				"down": {
-					"uv": [
-						0,
-						1,
-						16,
-						14
-					],
+					"uv": [0, 1, 16, 14],
 					"texture": "#planks"
 				}
 			}
-		},
-		{
-			"from": [
-				0,
-				0,
-				15
-			],
-			"to": [
-				16,
-				16,
-				16
-			],
+		}, {
+			"from": [0, 0, 15],
+			"to": [16, 16, 16],
 			"faces": {
 				"north": {
-					"uv": [
-						0,
-						0,
-						16,
-						16
-					],
+					"uv": [0, 0, 16, 16],
 					"texture": "#planks"
 				},
 				"east": {
-					"uv": [
-						0,
-						0,
-						1,
-						16
-					],
+					"uv": [0, 0, 1, 16],
 					"texture": "#planks"
 				},
 				"south": {
-					"uv": [
-						0,
-						0,
-						16,
-						16
-					],
+					"uv": [0, 0, 16, 16],
 					"texture": "#planks"
 				},
 				"west": {
-					"uv": [
-						15,
-						0,
-						16,
-						16
-					],
+					"uv": [15, 0, 16, 16],
 					"texture": "#planks"
 				},
 				"up": {
-					"uv": [
-						0,
-						15,
-						16,
-						16
-					],
+					"uv": [0, 15, 16, 16],
 					"texture": "#planks"
 				},
 				"down": {
-					"uv": [
-						0,
-						0,
-						16,
-						1
-					],
+					"uv": [0, 0, 16, 1],
 					"texture": "#planks"
 				}
 			}
-		}
-	]
+		}]
 }

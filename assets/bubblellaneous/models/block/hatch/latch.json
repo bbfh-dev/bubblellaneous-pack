@@ -1,84 +1,41 @@
 {
 	"credit": "Bubblellaneous - by bbfh",
 	"parent": "minecraft:block/block",
-	"texture_size": [
-		32,
-		32
-	],
+	"texture_size": [32, 32],
 	"textures": {
 		"particle": "bubblellaneous:block/hatch",
 		"hatch": "bubblellaneous:block/hatch"
 	},
-	"elements": [
-		{
-			"from": [
-				1,
-				0.1,
-				1
-			],
-			"to": [
-				15,
-				1.1,
-				15
-			],
+	"elements": [{
+			"from": [1, 0.1, 1],
+			"to": [15, 1.1, 15],
 			"faces": {
 				"north": {
-					"uv": [
-						7.5,
-						1,
-						8,
-						8
-					],
+					"uv": [7.5, 1, 8, 8],
 					"rotation": 90,
 					"texture": "#hatch"
 				},
 				"east": {
-					"uv": [
-						1,
-						7.5,
-						8,
-						8
-					],
+					"uv": [1, 7.5, 8, 8],
 					"texture": "#hatch"
 				},
 				"south": {
-					"uv": [
-						1,
-						1,
-						1.5,
-						8
-					],
+					"uv": [1, 1, 1.5, 8],
 					"rotation": 90,
 					"texture": "#hatch"
 				},
 				"west": {
-					"uv": [
-						1,
-						1,
-						8,
-						1.5
-					],
+					"uv": [1, 1, 8, 1.5],
 					"texture": "#hatch"
 				},
 				"up": {
-					"uv": [
-						1,
-						1,
-						8,
-						8
-					],
+					"uv": [1, 1, 8, 8],
 					"texture": "#hatch"
 				},
 				"down": {
-					"uv": [
-						1,
-						1,
-						8,
-						8
-					],
+					"uv": [1, 1, 8, 8],
 					"texture": "#hatch"
 				}
 			}
-		}
-	]
+		}]
 }

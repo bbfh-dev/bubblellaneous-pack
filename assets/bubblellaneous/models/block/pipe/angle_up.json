@@ -1,45 +1,97 @@
 {
-    "format_version": "1.21.11",
-    "credit": "Bubblellaneous - by bbfh",
-    "parent": "minecraft:block/block",
-    "textures": {
-        "0": "bubblellaneous:block/pipe",
-        "particle": "bubblellaneous:block/pipe"
-    },
-    "elements": [
-        {
-            "from": [5.99, 5.99, 0],
-            "to": [10.01, 10.01, 10],
-            "faces": {
-                "north": {"uv": [0, 8, 4, 12], "texture": "#0", "cullface": "north"},
-                "east": {"uv": [10, 4, 0, 8], "texture": "#0"},
-                "west": {"uv": [0, 4, 10, 8], "texture": "#0"},
-                "up": {"uv": [0, 0, 10, 4], "rotation": 90, "texture": "#0"},
-                "down": {"uv": [10, 0, 0, 4], "rotation": 90, "texture": "#0"}
-            }
-        },
-        {
-            "from": [5.99, 10, 5.99],
-            "to": [10.01, 16, 10.01],
-            "faces": {
-                "north": {"uv": [0, 0, 6, 4], "rotation": 90, "texture": "#0"},
-                "east": {"uv": [0, 4, 6, 8], "rotation": 90, "texture": "#0"},
-                "south": {"uv": [0, 0, 6, 4], "rotation": 90, "texture": "#0"},
-                "west": {"uv": [0, 4, 6, 8], "rotation": 90, "texture": "#0"},
-                "up": {"uv": [0, 8, 4, 12], "texture": "#0", "cullface": "up"}
-            }
-        },
-        {
-            "from": [5, 5, 5],
-            "to": [11, 11, 11],
-            "faces": {
-                "north": {"uv": [1, 1, 7, 7], "texture": "#0"},
-                "east": {"uv": [9, 1, 15, 7], "texture": "#0"},
-                "south": {"uv": [1, 2, 7, 8], "texture": "#0"},
-                "west": {"uv": [9, 0, 15, 6], "texture": "#0"},
-                "up": {"uv": [1, 0, 7, 6], "texture": "#0"},
-                "down": {"uv": [9, 2, 15, 8], "texture": "#0"}
-            }
-        }
-    ]
+	"format_version": "1.21.11",
+	"credit": "Bubblellaneous - by bbfh",
+	"parent": "minecraft:block/block",
+	"textures": {
+		"0": "bubblellaneous:block/pipe",
+		"particle": "bubblellaneous:block/pipe"
+	},
+	"elements": [{
+			"from": [5.99, 5.99, 0],
+			"to": [10.01, 10.01, 10],
+			"faces": {
+				"north": {
+					"uv": [0, 8, 4, 12],
+					"texture": "#0",
+					"cullface": "north"
+				},
+				"east": {
+					"uv": [10, 4, 0, 8],
+					"texture": "#0"
+				},
+				"west": {
+					"uv": [0, 4, 10, 8],
+					"texture": "#0"
+				},
+				"up": {
+					"uv": [0, 0, 10, 4],
+					"rotation": 90,
+					"texture": "#0"
+				},
+				"down": {
+					"uv": [10, 0, 0, 4],
+					"rotation": 90,
+					"texture": "#0"
+				}
+			}
+		}, {
+			"from": [5.99, 10, 5.99],
+			"to": [10.01, 16, 10.01],
+			"faces": {
+				"north": {
+					"uv": [0, 0, 6, 4],
+					"rotation": 90,
+					"texture": "#0"
+				},
+				"east": {
+					"uv": [0, 4, 6, 8],
+					"rotation": 90,
+					"texture": "#0"
+				},
+				"south": {
+					"uv": [0, 0, 6, 4],
+					"rotation": 90,
+					"texture": "#0"
+				},
+				"west": {
+					"uv": [0, 4, 6, 8],
+					"rotation": 90,
+					"texture": "#0"
+				},
+				"up": {
+					"uv": [0, 8, 4, 12],
+					"texture": "#0",
+					"cullface": "up"
+				}
+			}
+		}, {
+			"from": [5, 5, 5],
+			"to": [11, 11, 11],
+			"faces": {
+				"north": {
+					"uv": [1, 1, 7, 7],
+					"texture": "#0"
+				},
+				"east": {
+					"uv": [9, 1, 15, 7],
+					"texture": "#0"
+				},
+				"south": {
+					"uv": [1, 2, 7, 8],
+					"texture": "#0"
+				},
+				"west": {
+					"uv": [9, 0, 15, 6],
+					"texture": "#0"
+				},
+				"up": {
+					"uv": [1, 0, 7, 6],
+					"texture": "#0"
+				},
+				"down": {
+					"uv": [9, 2, 15, 8],
+					"texture": "#0"
+				}
+			}
+		}]
 }

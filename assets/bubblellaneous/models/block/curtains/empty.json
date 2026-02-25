@@ -1,7 +1,7 @@
 {
-    "credit": "Bubblellaneous - by bbfh",
-    "textures": {
-        "layer0": "bubblellaneous:ui/air",
-        "particle": "bubblellaneous:ui/air"
-    }
+	"credit": "Bubblellaneous - by bbfh",
+	"textures": {
+		"layer0": "bubblellaneous:ui/air",
+		"particle": "bubblellaneous:ui/air"
+	}
 }

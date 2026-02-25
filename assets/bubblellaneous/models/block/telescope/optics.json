@@ -1,243 +1,112 @@
 {
 	"credit": "Bubblellaneous - by bbfh",
 	"parent": "minecraft:block/block",
-	"texture_size": [
-		32,
-		32
-	],
+	"texture_size": [32, 32],
 	"textures": {
 		"0": "bubblellaneous:block/telescope",
 		"particle": "bubblellaneous:block/telescope"
 	},
-	"elements": [
-		{
-			"from": [
-				3,
-				3,
-				-16
-			],
-			"to": [
-				13,
-				13,
-				0
-			],
+	"elements": [{
+			"from": [3, 3, -16],
+			"to": [13, 13, 0],
 			"faces": {
 				"north": {
-					"uv": [
-						8,
-						3,
-						13,
-						8
-					],
+					"uv": [8, 3, 13, 8],
 					"texture": "#0"
 				},
 				"east": {
-					"uv": [
-						8,
-						8,
-						0,
-						3
-					],
+					"uv": [8, 8, 0, 3],
 					"texture": "#0"
 				},
 				"south": {
-					"uv": [
-						8,
-						3,
-						13,
-						8
-					],
+					"uv": [8, 3, 13, 8],
 					"texture": "#0"
 				},
 				"west": {
-					"uv": [
-						0,
-						3,
-						8,
-						8
-					],
+					"uv": [0, 3, 8, 8],
 					"texture": "#0"
 				},
 				"up": {
-					"uv": [
-						0,
-						3,
-						8,
-						8
-					],
+					"uv": [0, 3, 8, 8],
 					"rotation": 90,
 					"texture": "#0"
 				},
 				"down": {
-					"uv": [
-						0,
-						8,
-						8,
-						3
-					],
+					"uv": [0, 8, 8, 3],
 					"rotation": 90,
 					"texture": "#0"
 				}
 			}
-		},
-		{
-			"from": [
-				4,
-				4,
-				0
-			],
-			"to": [
-				12,
-				12,
-				16
-			],
+		}, {
+			"from": [4, 4, 0],
+			"to": [12, 12, 16],
 			"rotation": {
 				"angle": 0,
 				"axis": "y",
-				"origin": [
-					0,
-					0,
-					16
-				]
+				"origin": [0, 0, 16]
 			},
 			"faces": {
 				"east": {
-					"uv": [
-						0,
-						8,
-						8,
-						12
-					],
+					"uv": [0, 8, 8, 12],
 					"texture": "#0"
 				},
 				"south": {
-					"uv": [
-						8,
-						8,
-						12,
-						12
-					],
+					"uv": [8, 8, 12, 12],
 					"texture": "#0"
 				},
 				"west": {
-					"uv": [
-						0,
-						8,
-						8,
-						12
-					],
+					"uv": [0, 8, 8, 12],
 					"texture": "#0"
 				},
 				"up": {
-					"uv": [
-						0,
-						8,
-						8,
-						12
-					],
+					"uv": [0, 8, 8, 12],
 					"rotation": 90,
 					"texture": "#0"
 				},
 				"down": {
-					"uv": [
-						0,
-						8,
-						8,
-						12
-					],
+					"uv": [0, 8, 8, 12],
 					"rotation": 90,
 					"texture": "#0"
 				}
 			}
-		},
-		{
-			"from": [
-				5,
-				5,
-				16
-			],
-			"to": [
-				11,
-				11,
-				32
-			],
+		}, {
+			"from": [5, 5, 16],
+			"to": [11, 11, 32],
 			"rotation": {
 				"angle": 0,
 				"axis": "y",
-				"origin": [
-					0,
-					0,
-					32
-				]
+				"origin": [0, 0, 32]
 			},
 			"faces": {
 				"east": {
-					"uv": [
-						0,
-						12,
-						8,
-						15
-					],
+					"uv": [0, 12, 8, 15],
 					"texture": "#0"
 				},
 				"south": {
-					"uv": [
-						8,
-						12,
-						11,
-						15
-					],
+					"uv": [8, 12, 11, 15],
 					"texture": "#0"
 				},
 				"west": {
-					"uv": [
-						0,
-						12,
-						8,
-						15
-					],
+					"uv": [0, 12, 8, 15],
 					"texture": "#0"
 				},
 				"up": {
-					"uv": [
-						0,
-						12,
-						8,
-						15
-					],
+					"uv": [0, 12, 8, 15],
 					"rotation": 90,
 					"texture": "#0"
 				},
 				"down": {
-					"uv": [
-						0,
-						12,
-						8,
-						15
-					],
+					"uv": [0, 12, 8, 15],
 					"rotation": 90,
 					"texture": "#0"
 				}
 			}
-		}
-	],
+		}],
 	"display": {
 		"gui": {
-			"rotation": [
-				30,
-				-135,
-				0
-			],
-			"translation": [
-				-0.25,
-				-2.5,
-				0
-			],
-			"scale": [
-				0.4,
-				0.4,
-				0.4
-			]
+			"rotation": [30, -135, 0],
+			"translation": [-0.25, -2.5, 0],
+			"scale": [0.4, 0.4, 0.4]
 		}
 	}
 }
