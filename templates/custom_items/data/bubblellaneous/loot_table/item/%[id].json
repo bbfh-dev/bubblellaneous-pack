@@ -27,8 +27,9 @@
 									"translate": "item.bubblellaneous.%[id]"
 								},
 								"%[consumable_prefix]minecraft:consumable": "%[consumable_value]",
-								"%[food_prefix]minecraft:food": "%[food_value]",
-								"minecraft:max_stack_size": "%[max_stack_size]"
+								"minecraft:food": "%[food?]",
+								"minecraft:max_stack_size": "%[max_stack_size]",
+								"minecraft:equippable": "%[equippable?]"
 							}
 						}
 					]

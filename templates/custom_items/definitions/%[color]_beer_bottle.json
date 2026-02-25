@@ -39,8 +39,7 @@
 			}
 		]
 	},
-	"food_prefix": "",
-	"food_value": {
+	"food": {
 		"nutrition": 4,
 		"saturation": 5,
 		"can_always_eat": true

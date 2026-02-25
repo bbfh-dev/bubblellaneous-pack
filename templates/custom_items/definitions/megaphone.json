@@ -16,8 +16,6 @@
 	],
 	"consumable_prefix": "!",
 	"consumable_value": {},
-	"food_prefix": "!",
-	"food_value": {},
 	"max_stack_size": 16,
 	"i": 0
 }

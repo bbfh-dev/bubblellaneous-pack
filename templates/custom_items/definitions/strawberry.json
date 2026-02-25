@@ -20,8 +20,7 @@
 		"consume_seconds": 0.5,
 		"has_consume_particles": true
 	},
-	"food_prefix": "",
-	"food_value": {
+	"food": {
 		"nutrition": 1,
 		"saturation": 1,
 		"can_always_eat": false
