@@ -1,1 +1,1 @@
-# %[i] item/%[id] %[recipe]
+# %[i] item/%[id]

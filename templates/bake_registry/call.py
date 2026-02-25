@@ -28,7 +28,6 @@ for category in ["furniture", "miscellaneous", "technology", "food"]:
                 {
                     "index": int(fields[0]),
                     "item": fields[1],
-                    "recipe": json.loads(fields[2]),
                 }
             )
         entries.sort(key=lambda x: x["index"])
