@@ -3,18 +3,18 @@
 		"requirement": {
 			"trigger": "minecraft:player_interacted_with_entity",
 			"conditions": {
-                "player": [
-                    {
-                        "condition": "minecraft:inverted",
-                        "term": {
-                            "condition": "minecraft:entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "nbt": "{Tags:[\"--bbln.bear_trap.trapped\"]}"
-                            }
-                        }
-                    }
-                ],
+				"player": [
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:entity_properties",
+							"entity": "this",
+							"predicate": {
+								"nbt": "{Tags:[\"--bbln.bear_trap.trapped\"]}"
+							}
+						}
+					}
+				],
 				"entity": [
 					{
 						"condition": "minecraft:value_check",

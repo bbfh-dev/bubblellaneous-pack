@@ -1,53 +1,54 @@
 {
-  "criteria": {
-    "requirement": {
-      "trigger": "minecraft:player_hurt_entity",
-      "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:inverted",
-            "term": {
-              "condition": "minecraft:any_of",
-              "terms": [
-                {
-                  "condition": "minecraft:entity_properties",
-                  "entity": "this",
-                  "predicate": {
-                    "type_specific": {
-                      "type": "minecraft:player",
-                      "gamemode": [
-                        "survival"
-                      ],
-                      "input": {
-                        "sneak": true
-                      }
-                    }
-                  }
-                },
-                {
-                  "condition": "minecraft:entity_properties",
-                  "entity": "this",
-                  "predicate": {
-                    "type_specific": {
-                      "type": "minecraft:player",
-                      "gamemode": [
-                        "adventure"
-                      ]
-                    }
-                  }
-                }
-              ]
-            }
-          }
-        ],
-        "entity": {
-          "type": "minecraft:interaction",
-          "nbt": "{Tags:[\"bbln.base\"]}"
-        }
-      }
-    }
-  },
-  "rewards": {
-    "function": "bubblellaneous:player/event/break_no_base_block"
-  }
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:player_hurt_entity",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:any_of",
+							"terms": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"type_specific": {
+											"type": "minecraft:player",
+											"gamemode": [
+												"survival"
+											],
+											"input": {
+												"sneak": true
+											}
+										}
+									}
+								},
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"type_specific": {
+											"type": "minecraft:player",
+											"gamemode": [
+												"adventure"
+											]
+										}
+									}
+								}
+							]
+						}
+					}
+				],
+				"entity": {
+					"type": "minecraft:interaction",
+					"nbt": "{Tags:[\"bbln.base\"]}"
+				}
+			}
+		}
+	},
+	"rewards": {
+		"function": "bubblellaneous:player/event/break_no_base_block"
+	}
 }
+

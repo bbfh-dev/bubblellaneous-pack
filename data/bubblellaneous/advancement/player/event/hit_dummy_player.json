@@ -1,16 +1,17 @@
 {
-  "criteria": {
-    "requirement": {
-      "trigger": "minecraft:player_hurt_entity",
-      "conditions": {
-        "entity": {
-          "type": "minecraft:mannequin",
-          "nbt": "{Tags:[\"bbln.dummy_player\"]}"
-        }
-      }
-    }
-  },
-  "rewards": {
-    "function": "bubblellaneous:player/event/hit_dummy_player"
-  }
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:player_hurt_entity",
+			"conditions": {
+				"entity": {
+					"type": "minecraft:mannequin",
+					"nbt": "{Tags:[\"bbln.dummy_player\"]}"
+				}
+			}
+		}
+	},
+	"rewards": {
+		"function": "bubblellaneous:player/event/hit_dummy_player"
+	}
 }
+

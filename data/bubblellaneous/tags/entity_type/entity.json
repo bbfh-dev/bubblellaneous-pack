@@ -1,10 +1,10 @@
 {
-    "values": [
-        "block_display",
-        "item_display",
-        "text_display",
-        "interaction",
-        "marker",
-        "minecraft:shulker"
-    ]
+	"values": [
+		"block_display",
+		"item_display",
+		"text_display",
+		"interaction",
+		"marker",
+		"minecraft:shulker"
+	]
 }

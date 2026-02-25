@@ -1,24 +1,24 @@
 {
-  "condition": "minecraft:entity_scores",
-  "entity": "this",
-  "scores": {
-    "bbln.player.id": {
-      "min": {
-        "type": "minecraft:score",
-        "target": {
-          "type": "minecraft:fixed",
-          "name": "#id_test"
-        },
-        "score": "bbln.tmp"
-      },
-      "max": {
-        "type": "minecraft:score",
-        "target": {
-          "type": "minecraft:fixed",
-          "name": "#id_test"
-        },
-        "score": "bbln.tmp"
-      }
-    }
-  }
+	"condition": "minecraft:entity_scores",
+	"entity": "this",
+	"scores": {
+		"bbln.player.id": {
+			"min": {
+				"type": "minecraft:score",
+				"target": {
+					"type": "minecraft:fixed",
+					"name": "#id_test"
+				},
+				"score": "bbln.tmp"
+			},
+			"max": {
+				"type": "minecraft:score",
+				"target": {
+					"type": "minecraft:fixed",
+					"name": "#id_test"
+				},
+				"score": "bbln.tmp"
+			}
+		}
+	}
 }

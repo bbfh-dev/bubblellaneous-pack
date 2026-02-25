@@ -1,7 +1,7 @@
 {
-    "condition": "minecraft:entity_properties",
-    "entity": "this",
-    "predicate": {
-        "passenger": {}
-    }
+	"condition": "minecraft:entity_properties",
+	"entity": "this",
+	"predicate": {
+		"passenger": {}
+	}
 }

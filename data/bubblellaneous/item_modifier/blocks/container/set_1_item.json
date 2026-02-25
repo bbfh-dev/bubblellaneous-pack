@@ -1,7 +1,7 @@
 [
-  {
-    "function": "minecraft:set_count",
-    "count": 1,
-    "add": false
-  }
+	{
+		"function": "minecraft:set_count",
+		"count": 1,
+		"add": false
+	}
 ]

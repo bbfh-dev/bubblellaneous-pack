@@ -1,91 +1,91 @@
 {
-    "condition": "minecraft:any_of",
-    "terms": [
-        {
-            "condition": "minecraft:all_of",
-            "terms": [
-                {
-                    "condition": "minecraft:entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "movement": {
-                            "y": {
-                                "min": -10,
-                                "max": 3
-                            }
-                        }
-                    }
-                },
-                {
-                    "condition": "minecraft:inverted",
-                    "term": {
-                        "condition": "minecraft:reference",
-                        "name": "bubblellaneous:input/sneak"
-                    }
-                }
-            ]
-        },
-        {
-            "condition": "minecraft:all_of",
-            "terms": [
-                {
-                    "condition": "minecraft:any_of",
-                    "terms": [
-                        {
-                            "condition": "minecraft:all_of",
-                            "terms": [
-                                {
-                                    "condition": "minecraft:entity_properties",
-                                    "entity": "this",
-                                    "predicate": {
-                                        "movement": {
-                                            "vertical_speed": 0
-                                        }
-                                    }
-                                },
-                                {
-                                    "condition": "minecraft:inverted",
-                                    "term": {
-                                        "condition": "minecraft:entity_properties",
-                                        "entity": "this",
-                                        "predicate": {
-                                            "nbt": "{Tags:[\"--bbln.ladder.levitation\"]}"
-                                        }
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "condition": "minecraft:all_of",
-                            "terms": [
-                                {
-                                    "condition": "minecraft:entity_properties",
-                                    "entity": "this",
-                                    "predicate": {
-                                        "movement": {
-                                            "y": {
-                                                "min": 0,
-                                                "max": 3
-                                            }
-                                        }
-                                    }
-                                },
-                                {
-                                    "condition": "minecraft:entity_properties",
-                                    "entity": "this",
-                                    "predicate": {
-                                        "nbt": "{Tags:[\"--bbln.ladder.levitation\"]}"
-                                    }
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "condition": "minecraft:reference",
-                    "name": "bubblellaneous:input/sneak"
-                }
-            ]
-        }
-    ]
+	"condition": "minecraft:any_of",
+	"terms": [
+		{
+			"condition": "minecraft:all_of",
+			"terms": [
+				{
+					"condition": "minecraft:entity_properties",
+					"entity": "this",
+					"predicate": {
+						"movement": {
+							"y": {
+								"min": -10,
+								"max": 3
+							}
+						}
+					}
+				},
+				{
+					"condition": "minecraft:inverted",
+					"term": {
+						"condition": "minecraft:reference",
+						"name": "bubblellaneous:input/sneak"
+					}
+				}
+			]
+		},
+		{
+			"condition": "minecraft:all_of",
+			"terms": [
+				{
+					"condition": "minecraft:any_of",
+					"terms": [
+						{
+							"condition": "minecraft:all_of",
+							"terms": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"movement": {
+											"vertical_speed": 0
+										}
+									}
+								},
+								{
+									"condition": "minecraft:inverted",
+									"term": {
+										"condition": "minecraft:entity_properties",
+										"entity": "this",
+										"predicate": {
+											"nbt": "{Tags:[\"--bbln.ladder.levitation\"]}"
+										}
+									}
+								}
+							]
+						},
+						{
+							"condition": "minecraft:all_of",
+							"terms": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"movement": {
+											"y": {
+												"min": 0,
+												"max": 3
+											}
+										}
+									}
+								},
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"nbt": "{Tags:[\"--bbln.ladder.levitation\"]}"
+									}
+								}
+							]
+						}
+					]
+				},
+				{
+					"condition": "minecraft:reference",
+					"name": "bubblellaneous:input/sneak"
+				}
+			]
+		}
+	]
 }
