@@ -29,7 +29,7 @@
 	"block_type": {
 		"name": "light",
 		"parameters": {
-			"light_level": 15
+			"light_level": 12
 		}
 	},
 	"material_count": 16,
