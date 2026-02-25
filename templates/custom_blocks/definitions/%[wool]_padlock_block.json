@@ -13,8 +13,7 @@
 		"--bbln.uses.place",
 		"--bbln.uses.no_base",
 		"--bbln.uses.custom_base",
-		"--bbln.ignore.break_block_properties.block_state",
-		"--bbln.ignore.break_block_properties.rotation"
+		"--bbln.ignore.break_dropped_items"
 	],
 	"block_type": {
 		"name": "default",

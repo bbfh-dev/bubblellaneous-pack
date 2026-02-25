@@ -23,7 +23,8 @@
 		"--bbln.uses.no_base",
 		"--bbln.uses.timer",
 		"--bbln.ignore.break_block_properties.block_state",
-		"--bbln.ignore.break_block_properties.rotation"
+		"--bbln.ignore.break_block_properties.rotation",
+		"--bbln.ignore.blockstates_after_break"
 	],
 	"block_type": {
 		"name": "default",

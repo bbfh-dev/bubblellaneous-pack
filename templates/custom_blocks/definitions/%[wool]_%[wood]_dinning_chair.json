@@ -21,9 +21,7 @@
 	"tags": [
 		"+bubblellaneous",
 		"bbln.place",
-		"--bbln.uses.place",
-		"--bbln.ignore.break_block_properties.block_state",
-		"--bbln.ignore.break_block_properties.rotation"
+		"--bbln.uses.place"
 	],
 	"block_type": {
 		"name": "seat",

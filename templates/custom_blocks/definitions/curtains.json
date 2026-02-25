@@ -19,6 +19,7 @@
 		"--bbln.uses.place",
 		"--bbln.uses.no_base",
 		"--bbln.uses.custom_base",
+		"--bbln.uses.blockstates",
 		"--bbln.ignore.break_block_properties.category",
 		"--bbln.ignore.break_block_properties.rotation"
 	],

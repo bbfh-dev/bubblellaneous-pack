@@ -3,7 +3,7 @@
 	"name": "hatch",
 	"display_id": "hatch",
 	"model": "bubblellaneous:block/hatch/default",
-	"base": "structure_void",
+	"base": "petrified_oak_slab[type=bottom]",
 	"sound": "industrial",
 	"facing": "none",
 	"recipe": [
@@ -17,7 +17,6 @@
 		"+bubblellaneous",
 		"bbln.place",
 		"--bbln.uses.place",
-		"--bbln.uses.no_base",
 		"--bbln.uses.custom_base",
 		"--bbln.uses.timer",
 		"--bbln.ignore.break_block_properties.category",

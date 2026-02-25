@@ -30,7 +30,8 @@
 		"--bbln.uses.brightness_fix",
 		"--bbln.uses.timer",
 		"--bbln.ignore.break_block_properties.category",
-		"--bbln.ignore.break_block_properties.rotation"
+		"--bbln.ignore.break_block_properties.rotation",
+		"--bbln.ignore.break_dropped_container"
 	],
 	"block_type": {
 		"name": "default",
