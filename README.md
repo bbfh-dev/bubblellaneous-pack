@@ -46,11 +46,11 @@ This data pack was originally published by me on Nov 21st, 2021. This is a compl
 
 - You can obtain all custom content without memorizing recipes using Bubble Bench: Drop a glass bottle onto a crafting table!
 
-![bubble bench](https://github.com/bbfh-dev/bubblellaneous-pack/blob/main/docs/bubble_bench.png?raw=true)
+![bubble bench](https://github.com/bbfh-dev/bubblellaneous-pack/blob/main/.github/images/bubble_bench.png?raw=true)
 
 - Many blocks/items have different variants (variating in color and material):
 
-![variants](https://github.com/bbfh-dev/bubblellaneous-pack/blob/main/docs/block_variations.png?raw=true)
+![variants](https://github.com/bbfh-dev/bubblellaneous-pack/blob/main/.github/images/block_variations.png?raw=true)
 
 - Have fun with all the content! Feel free to [join my discord](https://discord.gg/5kugW5Q7wB):
 
