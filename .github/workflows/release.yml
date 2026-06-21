@@ -25,7 +25,7 @@ jobs:
 
             - name: Install Vintage
               run: |
-                  go install codeberg.org/bbfh/vintage
+                  go install codeberg.org/bbfh/vintage@v0.2.9-beta.1
 
             - name: Build
               run: |
