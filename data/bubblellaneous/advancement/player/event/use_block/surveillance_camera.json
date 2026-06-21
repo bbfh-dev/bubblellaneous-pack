@@ -21,7 +21,7 @@
 					}
 				},
 				"entity": {
-					"type": "minecraft:interaction",
+					"minecraft:entity_type": "minecraft:interaction",
 					"nbt": "{Tags:[\"bbln.base.surveillance_camera\"]}"
 				}
 			}
@@ -31,4 +31,3 @@
 		"function": "bubblellaneous:player/event/use_block/surveillance_camera"
 	}
 }
-

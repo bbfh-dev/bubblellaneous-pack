@@ -5,3 +5,4 @@ tellraw @s ["│"]
 tellraw @s [{"text":"", "hover_event":{"action":"show_text", "value":"☞"}, "click_event":{"action":"run_command", "command":"/function bubblellaneous:settings/open_menu"}}, "│ ", {"translate":"ui.bubblellaneous.menu.open_settings"}, " →"]
 tellraw @s [{"text":"", "hover_event":{"action":"show_text", "value":"☞"}, "click_event":{"action":"run_command", "command":"/function bubblellaneous:utils/debug/open_menu"}}, "│ ", {"translate":"ui.bubblellaneous.menu.show_debug"}, " →"]
 tellraw @s ["└──────"]
+

@@ -9,7 +9,7 @@
 					}
 				},
 				"entity": {
-					"type": "minecraft:interaction",
+					"minecraft:entity_type": "minecraft:interaction",
 					"nbt": "{Tags:[\"bbln.curtains\"]}"
 				}
 			}

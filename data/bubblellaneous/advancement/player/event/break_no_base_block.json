@@ -13,8 +13,7 @@
 									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
-										"type_specific": {
-											"type": "minecraft:player",
+										"minecraft:type_specific/player": {
 											"gamemode": [
 												"survival"
 											],
@@ -28,8 +27,7 @@
 									"condition": "minecraft:entity_properties",
 									"entity": "this",
 									"predicate": {
-										"type_specific": {
-											"type": "minecraft:player",
+										"minecraft:type_specific/player": {
 											"gamemode": [
 												"adventure"
 											]
@@ -41,7 +39,7 @@
 					}
 				],
 				"entity": {
-					"type": "minecraft:interaction",
+					"minecraft:entity_type": "minecraft:interaction",
 					"nbt": "{Tags:[\"bbln.base\"]}"
 				}
 			}
@@ -51,4 +49,3 @@
 		"function": "bubblellaneous:player/event/break_no_base_block"
 	}
 }
-

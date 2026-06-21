@@ -4,7 +4,7 @@
 			"trigger": "minecraft:player_hurt_entity",
 			"conditions": {
 				"entity": {
-					"type": "minecraft:mannequin",
+					"minecraft:entity_type": "minecraft:mannequin",
 					"nbt": "{Tags:[\"bbln.dummy_player\"]}"
 				}
 			}
@@ -14,4 +14,3 @@
 		"function": "bubblellaneous:player/event/hit_dummy_player"
 	}
 }
-

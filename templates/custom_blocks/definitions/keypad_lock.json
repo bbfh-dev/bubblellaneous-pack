@@ -3,7 +3,7 @@
 	"name": "keypad_lock",
 	"display_id": "keypad_lock",
 	"model": "bubblellaneous:block/keypad_lock",
-	"base": "barrel[facing=up]",
+	"base": "petrified_oak_slab[type=double]",
 	"sound": "industrial",
 	"facing": "player",
 	"recipe": [
