@@ -4,6 +4,7 @@ on:
     push:
         tags:
             - "v*"
+    workflow_dispatch:
 
 permissions:
     contents: write # required to create releases
@@ -24,7 +25,7 @@ jobs:
 
             - name: Install Vintage
               run: |
-                  go install github.com/bbfh-dev/vintage@v0.2.7-beta.1
+                  go install codeberg.org/bbfh/vintage
 
             - name: Build
               run: |
