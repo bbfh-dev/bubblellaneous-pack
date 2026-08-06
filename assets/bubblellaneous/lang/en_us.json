@@ -575,6 +575,7 @@
 	"ui.bubblellaneous.camera.not_found": "The camera you are trying to view has been broken",
 	"ui.bubblellaneous.camera.offline": "This monitor has not been linked yet",
 	"ui.bubblellaneous.camera.registered": "The camera was linked successfully",
+	"ui.bubblellaneous.camera.manual_mode": "The camera is in manual mode! Use [%s] and [%s] to spin, press [%s] to revert to normal mode",
 	"ui.bubblellaneous.telescope.actionbar": "⏴ %s/256 ⏵",
 	"ui.bubblellaneous.keypad_lock.x": "×",
 	"ui.bubblellaneous.keypad_lock.error": "∅∅∅",

@@ -1,5 +1,6 @@
 scoreboard players reset @s bbln.block.id
 tag @s remove --bbln.camera.spectating
+tag @s remove --bbln.camera.just_entered_camera
 tag @s add --bbln.camera.leaving
 
 function bubblellaneous:utils/get_player_entry with entity @s

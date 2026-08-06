@@ -1,0 +1,36 @@
+{
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:tick",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"minecraft:type_specific/player": {
+								"input": {
+									"left": true
+								}
+							}
+						}
+					},
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"minecraft:entity_tags": {
+								"any_of": [
+									"--bbln.camera.spectating"
+								]
+							}
+						}
+					}
+				]
+			}
+		}
+	},
+	"rewards": {
+		"function": "bubblellaneous:player/event/use_block/surveillance_camera/turn_left"
+	}
+}

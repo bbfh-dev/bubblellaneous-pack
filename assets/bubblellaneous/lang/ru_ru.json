@@ -575,6 +575,7 @@
 	"ui.bubblellaneous.camera.not_found": "Камера, которую вы пытаетесь просмотреть, была сломана",
 	"ui.bubblellaneous.camera.offline": "Этот монитор ещё не был подключен",
 	"ui.bubblellaneous.camera.registered": "Камера была успешно подключена",
+	"ui.bubblellaneous.camera.manual_mode": "Камера в ручном режиме! Используйте [%s] и [%s] для вращения, нажмите [%s] чтобы вернуть в обычный режим",
 	"ui.bubblellaneous.keypad_lock.x": "_",
 	"ui.bubblellaneous.keypad_lock.error": "!!!",
 	"ui.bubblellaneous.keypad_lock.open": "ОТКР",

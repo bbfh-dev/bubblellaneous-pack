@@ -23,3 +23,6 @@ execute if entity @s[tag=--bbln.camera.spectating] run function bubblellaneous:b
 execute if entity @s[tag=--bbln.camera.leaving] at @s if loaded ~ ~ ~ run function bubblellaneous:block/surveillance_camera/player/finish_leaving
 execute if entity @s[tag=--bbln.umbrella.using] unless items entity @s weapon.mainhand *[minecraft:custom_data~{bubblellaneous: {item_data: {id: "umbrella"}}}] run function bubblellaneous:item/umbrella/stop_flying
 tag @s remove --bbln.player
+
+execute if score @s bbln.player.interaction_cooldown matches -2147483648..2147483647 run function bubblellaneous:player/update_interaction_cooldown
+execute if score @s bbln.player.notification_cooldown matches 1.. run scoreboard players remove @s bbln.player.notification_cooldown 1

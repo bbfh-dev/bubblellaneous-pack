@@ -19,6 +19,8 @@ scoreboard objectives add bbln.player.right_click used:carrot_on_a_stick
 scoreboard objectives add bbln.player.drop custom:drop
 scoreboard objectives add bbln.player.death_count deathCount
 scoreboard objectives add bbln.player.gamemode dummy
+scoreboard objectives add bbln.player.interaction_cooldown dummy
+scoreboard objectives add bbln.player.notification_cooldown dummy
 
 #region Settings
 scoreboard objectives add bbln.settings dummy
