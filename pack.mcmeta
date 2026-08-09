@@ -16,27 +16,12 @@
 			]
 		}
 	},
-	"overlays": {
-		"entries": [
-			{
-				"directory": "before_26-2",
-				"min_format": [
-					94,
-					1
-				],
-				"max_format": [
-					101,
-					1
-				]
-			}
-		]
-	},
 	"meta": {
 		"name": "bubblellaneous",
 		"minecraft": {
 			"min": "1.21.11",
 			"max": "26.2"
 		},
-		"version": "3.0.5"
+		"version": "3.0.6"
 	}
 }

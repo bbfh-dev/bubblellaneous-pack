@@ -1,0 +1,6 @@
+@@ -27,2 +27,5 @@
+ execute if score @s bbln.player.interaction_cooldown matches -2147483648..2147483647 run function bubblellaneous:player/update_interaction_cooldown
+ execute if score @s bbln.player.notification_cooldown matches 1.. run scoreboard players remove @s bbln.player.notification_cooldown 1
++
++execute as @s[tag=--bbln.papermc.wants_to_open_ui] run function bubblellaneous:player/papermc/wants_to_open_ui
++execute as @s[tag=--bbln.papermc.wants_to_open_ui.event] run function bubblellaneous:player/papermc/wants_to_open_ui.event
