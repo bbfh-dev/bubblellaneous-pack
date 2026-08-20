@@ -3,7 +3,7 @@
 	"name": "radiator",
 	"display_id": "radiator",
 	"model": "bubblellaneous:block/radiator/off",
-	"base": "barrel[facing=up]",
+	"base": "petrified_oak_slab[type=double]",
 	"sound": "industrial",
 	"facing": "player",
 	"recipe": [
@@ -21,6 +21,8 @@
 	"tags": [
 		"+bubblellaneous",
 		"bbln.place",
+		"--bbln.uses.place",
+		"--bbln.uses.custom_base",
 		"--bbln.uses.gui",
 		"--bbln.uses.brightness_fix",
 		"--bbln.uses.timer",
