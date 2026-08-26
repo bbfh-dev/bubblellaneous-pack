@@ -1,0 +1,56 @@
+{
+	"category": "technology",
+	"name": "radiator",
+	"display_id": "radiator",
+	"model": "bubblellaneous:block/radiator/off",
+	"base": "petrified_oak_slab[type=double]",
+	"sound": "industrial",
+	"facing": "player",
+	"recipe": [
+		{
+			"unit": "block",
+			"id": "copper_block",
+			"count": 1
+		},
+		{
+			"unit": "block",
+			"id": "iron_block",
+			"count": 3
+		},
+		{
+			"unit": "block",
+			"id": "smooth_stone_block",
+			"count": 1
+		},
+		{
+			"unit": "item",
+			"id": "lava_bucket",
+			"count": 1
+		}
+	],
+	"tags": [
+		"+bubblellaneous",
+		"bbln.place",
+		"--bbln.uses.place",
+		"--bbln.uses.custom_base",
+		"--bbln.uses.gui",
+		"--bbln.uses.brightness_fix",
+		"--bbln.uses.timer",
+		"--bbln.ignore.break_block_properties.category",
+		"--bbln.ignore.break_block_properties.rotation"
+	],
+	"block_type": {
+		"name": "default",
+		"parameters": {}
+	},
+	"material_count": 0,
+	"material": {
+		"index": 0,
+		"name": "default"
+	},
+	"block_states": [
+		"default",
+		"on"
+	],
+	"i": 0
+}

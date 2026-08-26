@@ -1,0 +1,50 @@
+{
+	"category": "technology",
+	"name": "safe_block",
+	"display_id": "safe_block",
+	"model": "bubblellaneous:block/safe_block/default",
+	"base": "redstone_lamp",
+	"sound": "industrial",
+	"facing": "player",
+	"recipe": [
+		{
+			"unit": "block",
+			"id": "obsidian",
+			"count": 5
+		},
+		{
+			"unit": "block",
+			"id": "iron_block",
+			"count": 3
+		},
+		{
+			"unit": "block",
+			"id": "waxed_copper_chest",
+			"count": 1
+		}
+	],
+	"tags": [
+		"+bubblellaneous",
+		"bbln.place",
+		"--bbln.uses.tick",
+		"--bbln.uses.brightness_fix",
+		"--bbln.uses.timer",
+		"--bbln.ignore.break_block_properties.category",
+		"--bbln.ignore.break_block_properties.rotation",
+		"--bbln.ignore.break_dropped_container"
+	],
+	"block_type": {
+		"name": "default",
+		"parameters": {}
+	},
+	"material_count": 0,
+	"material": {
+		"index": 0,
+		"name": "default"
+	},
+	"block_states": [
+		"default",
+		"open"
+	],
+	"i": 0
+}

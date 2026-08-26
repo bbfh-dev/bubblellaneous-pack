@@ -1,0 +1,54 @@
+{
+	"category": "miscellaneous",
+	"name": "computer",
+	"display_id": "computer",
+	"model": "bubblellaneous:block/computer/default",
+	"base": "structure_void",
+	"sound": "industrial",
+	"facing": "player_precise",
+	"recipe": [
+		{
+			"unit": "block",
+			"id": "copper_trapdoor",
+			"count": 1
+		},
+		{
+			"unit": "block",
+			"id": "gold_block",
+			"count": 1
+		},
+		{
+			"unit": "item",
+			"id": "lapis",
+			"count": 1
+		},
+		{
+			"unit": "block",
+			"id": "tinted_glass",
+			"count": 1
+		}
+	],
+	"tags": [
+		"+bubblellaneous",
+		"bbln.place",
+		"--bbln.uses.no_base",
+		"--bbln.uses.timer",
+		"--bbln.ignore.break_block_properties.category",
+		"--bbln.ignore.break_block_properties.rotation"
+	],
+	"block_type": {
+		"name": "default",
+		"parameters": {}
+	},
+	"material_count": 0,
+	"material": {
+		"index": 0,
+		"name": "default"
+	},
+	"block_states": [
+		"default",
+		"boot",
+		"login"
+	],
+	"i": 0
+}

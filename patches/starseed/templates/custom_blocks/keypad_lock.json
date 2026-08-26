@@ -1,0 +1,60 @@
+{
+	"category": "technology",
+	"name": "keypad_lock",
+	"display_id": "keypad_lock",
+	"model": "bubblellaneous:block/keypad_lock",
+	"base": "petrified_oak_slab[type=double]",
+	"sound": "industrial",
+	"facing": "player",
+	"recipe": [
+		{
+			"unit": "item",
+			"id": "iron_ingot",
+			"count": 4
+		},
+		{
+			"unit": "block",
+			"id": "iron_block",
+			"count": 1
+		},
+		{
+			"texture_atlas": "minecraft:blocks",
+			"texture": "block/stone",
+			"unit": "block",
+			"id": "stone_button",
+			"count": 10
+		},
+		{
+			"unit": "block",
+			"id": "tripwire_hook",
+			"count": 1
+		},
+		{
+			"unit": "block",
+			"id": "lever",
+			"count": 1
+		}
+	],
+	"tags": [
+		"+bubblellaneous",
+		"bbln.place",
+		"--bbln.uses.place",
+		"--bbln.uses.brightness_fix",
+		"--bbln.uses.timer",
+		"--bbln.ignore.break_block_properties.block_state",
+		"--bbln.ignore.break_block_properties.rotation",
+		"--bbln.ignore.break_block_properties.lock",
+		"--bbln.ignore.break_block_properties.pincode"
+	],
+	"block_type": {
+		"name": "default",
+		"parameters": {}
+	},
+	"material_count": 0,
+	"material": {
+		"index": 0,
+		"name": "default"
+	},
+	"block_states": [],
+	"i": 0
+}

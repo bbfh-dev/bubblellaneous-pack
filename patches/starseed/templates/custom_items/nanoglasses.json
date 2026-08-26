@@ -1,0 +1,42 @@
+{
+	"category": "technology",
+	"name": "nanoglasses",
+	"base": "minecraft:carrot_on_a_stick",
+	"model": "bubblellaneous:item/nanoglasses",
+	"material": {
+		"index": 0,
+		"name": "default"
+	},
+	"recipe": [
+		{
+			"unit": "item",
+			"id": "diamond_helmet",
+			"count": 1
+		},
+		{
+			"texture_atlas": "minecraft:blocks",
+			"texture": "block/glass",
+			"unit": "block",
+			"id": "glass_pane",
+			"count": 2
+		},
+		{
+			"unit": "item",
+			"id": "copper_nugget",
+			"count": 2
+		},
+		{
+			"unit": "item",
+			"id": "gold_nugget",
+			"count": 2
+		}
+	],
+	"consumable_prefix": "!",
+	"consumable_value": {},
+	"equippable": {
+		"slot": "head",
+		"equip_sound": "minecraft:item.armor.equip_iron"
+	},
+	"max_stack_size": 1,
+	"i": 0
+}

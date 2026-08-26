@@ -1,0 +1,58 @@
+{
+	"category": "technology",
+	"name": "laser_block",
+	"display_id": "laser_block",
+	"model": "bubblellaneous:block/laser_block",
+	"base": "petrified_oak_slab[type=double]",
+	"sound": "industrial",
+	"facing": "normal",
+	"recipe": [
+		{
+			"unit": "block",
+			"id": "smooth_quartz_stair",
+			"count": 1
+		},
+		{
+			"unit": "block",
+			"id": "redstone_torch",
+			"count": 1
+		},
+		{
+			"unit": "item",
+			"id": "copper_ingot",
+			"count": 2
+		},
+		{
+			"unit": "block",
+			"id": "iron_block",
+			"count": 1
+		},
+		{
+			"texture_atlas": "minecraft:blocks",
+			"texture": "block/red_stained_glass",
+			"unit": "block",
+			"id": "red_stained_glass_pane",
+			"count": 1
+		}
+	],
+	"tags": [
+		"+bubblellaneous",
+		"bbln.place",
+		"--bbln.uses.tick",
+		"--bbln.uses.brightness_fix",
+		"--bbln.uses.timer",
+		"--bbln.ignore.break_block_properties.category",
+		"--bbln.ignore.break_block_properties.rotation"
+	],
+	"block_type": {
+		"name": "default",
+		"parameters": {}
+	},
+	"material_count": 0,
+	"material": {
+		"index": 0,
+		"name": "default"
+	},
+	"block_states": [],
+	"i": 0
+}
