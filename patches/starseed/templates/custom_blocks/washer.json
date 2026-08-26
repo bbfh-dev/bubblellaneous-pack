@@ -20,6 +20,8 @@
 			"count": 1
 		},
 		{
+			"texture_atlas": "minecraft:blocks",
+			"texture": "block/copper_block",
 			"unit": "block",
 			"id": "waxed_copper_trapdoor",
 			"count": 1

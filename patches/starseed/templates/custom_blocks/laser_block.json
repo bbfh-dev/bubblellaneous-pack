@@ -8,8 +8,10 @@
 	"facing": "normal",
 	"recipe": [
 		{
+			"texture_atlas": "minecraft:blocks",
+			"texture": "block/quartz_block_bottom",
 			"unit": "block",
-			"id": "smooth_quartz_stair",
+			"id": "smooth_quartz_stairs",
 			"count": 1
 		},
 		{

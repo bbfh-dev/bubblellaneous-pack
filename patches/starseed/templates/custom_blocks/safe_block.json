@@ -18,6 +18,8 @@
 			"count": 3
 		},
 		{
+			"texture_atlas": "minecraft:blocks",
+			"texture": "block/copper_block",
 			"unit": "block",
 			"id": "waxed_copper_chest",
 			"count": 1

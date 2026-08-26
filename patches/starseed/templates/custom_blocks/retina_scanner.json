@@ -8,6 +8,8 @@
 	"facing": "player",
 	"recipe": [
 		{
+			"texture_atlas": "minecraft:blocks",
+			"texture": "block/quartz_block_bottom",
 			"unit": "block",
 			"id": "smooth_quartz_slab",
 			"count": 1
