@@ -1,0 +1,74 @@
+{
+	"type": "minecraft:command",
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:item_frame",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:item_model": "bubblellaneous:safe_block",
+								"minecraft:item_name": {
+									"translate": "block.bubblellaneous.safe_block"
+								},
+								"minecraft:entity_data": {
+									"id": "minecraft:item_frame",
+									"Invisible": true,
+									"Tags": [
+										"+bubblellaneous",
+										"bbln.place",
+										"--bbln.uses.tick",
+										"--bbln.uses.brightness_fix",
+										"--bbln.uses.timer",
+										"--bbln.ignore.break_block_properties.category",
+										"--bbln.ignore.break_block_properties.rotation",
+										"--bbln.ignore.break_dropped_container"
+									],
+									"Fixed": true,
+									"Invulnerable": true,
+									"Silent": true,
+									"Item": {
+										"id": "minecraft:stone_button",
+										"count": 1,
+										"components": {
+											"minecraft:custom_data": {
+												"bubblellaneous": {
+													"block_properties": {},
+													"block_data": {
+														"base": "redstone_lamp",
+														"sound": "industrial",
+														"facing": "player",
+														"unit": "block",
+														"id": "safe_block",
+														"item_model": "safe_block",
+														"display_name": "{\"translate\":\"block.bubblellaneous.safe_block\"}",
+														"material_count": 0,
+														"material": {
+															"index": 0,
+															"name": "default"
+														},
+														"block_type": {
+															"name": "default",
+															"parameters": {}
+														},
+														"name": "safe_block",
+														"base_item": "minecraft:item_frame",
+														"block_states": ["default", "open"]
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

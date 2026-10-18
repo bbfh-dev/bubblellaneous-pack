@@ -1,0 +1,75 @@
+{
+	"type": "minecraft:command",
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:item_frame",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:item_model": "bubblellaneous:pink_cherry_upholstery_couch",
+								"minecraft:item_name": {
+									"translate": "block.bubblellaneous.cherry_upholstery_couch"
+								},
+								"minecraft:entity_data": {
+									"id": "minecraft:item_frame",
+									"Invisible": true,
+									"Tags": [
+										"+bubblellaneous",
+										"bbln.place",
+										"--bbln.uses.place",
+										"--bbln.uses.blockstates",
+										"--bbln.ignore.break_block_properties.block_state",
+										"--bbln.ignore.break_block_properties.rotation"
+									],
+									"Fixed": true,
+									"Invulnerable": true,
+									"Silent": true,
+									"Item": {
+										"id": "minecraft:stone_button",
+										"count": 1,
+										"components": {
+											"minecraft:custom_data": {
+												"bubblellaneous": {
+													"block_properties": {},
+													"block_data": {
+														"base": "tripwire",
+														"sound": "wood",
+														"facing": "player",
+														"unit": "block",
+														"id": "pink_cherry_upholstery_couch",
+														"item_model": "pink_cherry_upholstery_couch",
+														"display_name": "{\"translate\":\"block.bubblellaneous.cherry_upholstery_couch\"}",
+														"material_count": 176,
+														"material": {
+															"index": 185,
+															"name": "pink_cherry"
+														},
+														"block_type": {
+															"name": "seat",
+															"parameters": {
+																"height": 0.5,
+																"width": 0.9
+															}
+														},
+														"name": "upholstery_couch",
+														"base_item": "minecraft:item_frame",
+														"block_states": ["default", "left", "right", "middle"]
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

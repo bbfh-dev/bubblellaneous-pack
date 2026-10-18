@@ -1,0 +1,72 @@
+{
+	"type": "minecraft:command",
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:item_frame",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:item_model": "bubblellaneous:cyan_padlock_block",
+								"minecraft:item_name": {
+									"translate": "block.bubblellaneous.cyan_padlock_block"
+								},
+								"minecraft:entity_data": {
+									"id": "minecraft:item_frame",
+									"Invisible": true,
+									"Tags": [
+										"+bubblellaneous",
+										"bbln.place",
+										"--bbln.uses.place",
+										"--bbln.uses.no_base",
+										"--bbln.uses.custom_base",
+										"--bbln.ignore.break_dropped_items"
+									],
+									"Fixed": true,
+									"Invulnerable": true,
+									"Silent": true,
+									"Item": {
+										"id": "minecraft:stone_button",
+										"count": 1,
+										"components": {
+											"minecraft:custom_data": {
+												"bubblellaneous": {
+													"block_properties": {},
+													"block_data": {
+														"base": "air",
+														"sound": "industrial",
+														"facing": "door",
+														"unit": "block",
+														"id": "cyan_padlock_block",
+														"item_model": "cyan_padlock_block",
+														"display_name": "{\"translate\":\"block.bubblellaneous.cyan_padlock_block\"}",
+														"material_count": 16,
+														"material": {
+															"index": 10,
+															"name": "cyan"
+														},
+														"block_type": {
+															"name": "default",
+															"parameters": {}
+														},
+														"name": "padlock_block",
+														"base_item": "minecraft:item_frame",
+														"block_states": ["default", "left"]
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

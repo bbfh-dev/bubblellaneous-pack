@@ -1,0 +1,74 @@
+{
+	"type": "minecraft:command",
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:item_frame",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:item_model": "bubblellaneous:bamboo_stool",
+								"minecraft:item_name": {
+									"translate": "block.bubblellaneous.bamboo_stool"
+								},
+								"minecraft:entity_data": {
+									"id": "minecraft:item_frame",
+									"Invisible": true,
+									"Tags": [
+										"+bubblellaneous",
+										"bbln.place",
+										"--bbln.uses.place",
+										"--bbln.ignore.break_block_properties.block_state",
+										"--bbln.ignore.break_block_properties.rotation"
+									],
+									"Fixed": true,
+									"Invulnerable": true,
+									"Silent": true,
+									"Item": {
+										"id": "minecraft:stone_button",
+										"count": 1,
+										"components": {
+											"minecraft:custom_data": {
+												"bubblellaneous": {
+													"block_properties": {},
+													"block_data": {
+														"base": "structure_void",
+														"sound": "wood",
+														"facing": "none",
+														"unit": "block",
+														"id": "bamboo_stool",
+														"item_model": "bamboo_stool",
+														"display_name": "{\"translate\":\"block.bubblellaneous.bamboo_stool\"}",
+														"material_count": 11,
+														"material": {
+															"index": 3,
+															"name": "bamboo"
+														},
+														"block_type": {
+															"name": "seat",
+															"parameters": {
+																"height": 0.6,
+																"width": 0.8
+															}
+														},
+														"name": "stool",
+														"base_item": "minecraft:item_frame",
+														"block_states": []
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"type": "minecraft:command",
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:carrot_on_a_stick",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"bubblellaneous": {
+										"item_properties": {},
+										"item_data": {
+											"unit": "item",
+											"id": "nanoglasses",
+											"name": "nanoglasses",
+											"material": {
+												"index": 0,
+												"name": "default"
+											}
+										}
+									}
+								},
+								"minecraft:item_model": "bubblellaneous:nanoglasses",
+								"minecraft:item_name": {
+									"translate": "item.bubblellaneous.nanoglasses"
+								},
+								"minecraft:max_stack_size": 1,
+								"minecraft:equippable": {
+									"equip_sound": "minecraft:item.armor.equip_iron",
+									"slot": "head"
+								},
+								"!minecraft:consumable": {}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,41 @@
+{
+	"type": "minecraft:command",
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:carrot_on_a_stick",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"bubblellaneous": {
+										"item_properties": {},
+										"item_data": {
+											"unit": "item",
+											"id": "padlock",
+											"name": "padlock",
+											"material": {
+												"index": 0,
+												"name": "default"
+											}
+										}
+									}
+								},
+								"minecraft:item_model": "bubblellaneous:padlock",
+								"minecraft:item_name": {
+									"translate": "item.bubblellaneous.padlock"
+								},
+								"minecraft:max_stack_size": 1,
+								"!minecraft:consumable": {}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

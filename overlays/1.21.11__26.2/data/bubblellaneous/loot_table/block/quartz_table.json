@@ -1,0 +1,72 @@
+{
+	"type": "minecraft:command",
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:item_frame",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:item_model": "bubblellaneous:quartz_table",
+								"minecraft:item_name": {
+									"translate": "block.bubblellaneous.quartz_table"
+								},
+								"minecraft:entity_data": {
+									"id": "minecraft:item_frame",
+									"Invisible": true,
+									"Tags": [
+										"+bubblellaneous",
+										"bbln.place",
+										"--bbln.uses.place",
+										"--bbln.uses.blockstates",
+										"--bbln.ignore.break_block_properties.block_state",
+										"--bbln.ignore.break_block_properties.rotation"
+									],
+									"Fixed": true,
+									"Invulnerable": true,
+									"Silent": true,
+									"Item": {
+										"id": "minecraft:stone_button",
+										"count": 1,
+										"components": {
+											"minecraft:custom_data": {
+												"bubblellaneous": {
+													"block_properties": {},
+													"block_data": {
+														"base": "petrified_oak_slab[type=top]",
+														"sound": "wood",
+														"facing": "none",
+														"unit": "block",
+														"id": "quartz_table",
+														"item_model": "quartz_table",
+														"display_name": "{\"translate\":\"block.bubblellaneous.quartz_table\"}",
+														"material_count": 20,
+														"material": {
+															"index": 13,
+															"name": "quartz"
+														},
+														"block_type": {
+															"name": "default",
+															"parameters": {}
+														},
+														"name": "table",
+														"base_item": "minecraft:item_frame",
+														"block_states": ["default", "side", "corner", "middle"]
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

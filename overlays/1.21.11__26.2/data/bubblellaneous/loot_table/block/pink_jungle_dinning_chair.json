@@ -1,0 +1,68 @@
+{
+	"type": "minecraft:command",
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:item_frame",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:item_model": "bubblellaneous:pink_jungle_dinning_chair",
+								"minecraft:item_name": {
+									"translate": "block.bubblellaneous.jungle_dinning_chair"
+								},
+								"minecraft:entity_data": {
+									"id": "minecraft:item_frame",
+									"Invisible": true,
+									"Tags": ["+bubblellaneous", "bbln.place", "--bbln.uses.place"],
+									"Fixed": true,
+									"Invulnerable": true,
+									"Silent": true,
+									"Item": {
+										"id": "minecraft:stone_button",
+										"count": 1,
+										"components": {
+											"minecraft:custom_data": {
+												"bubblellaneous": {
+													"block_properties": {},
+													"block_data": {
+														"base": "structure_void",
+														"sound": "wood",
+														"facing": "player",
+														"unit": "block",
+														"id": "pink_jungle_dinning_chair",
+														"item_model": "pink_jungle_dinning_chair",
+														"display_name": "{\"translate\":\"block.bubblellaneous.jungle_dinning_chair\"}",
+														"material_count": 176,
+														"material": {
+															"index": 188,
+															"name": "pink_jungle"
+														},
+														"block_type": {
+															"name": "seat",
+															"parameters": {
+																"height": 0.46,
+																"width": 0.8
+															}
+														},
+														"name": "dinning_chair",
+														"base_item": "minecraft:item_frame",
+														"block_states": []
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

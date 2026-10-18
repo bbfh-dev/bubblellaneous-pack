@@ -1,0 +1,74 @@
+{
+	"type": "minecraft:command",
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:item_frame",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:item_model": "bubblellaneous:birch_toilet",
+								"minecraft:item_name": {
+									"translate": "block.bubblellaneous.birch_toilet"
+								},
+								"minecraft:entity_data": {
+									"id": "minecraft:item_frame",
+									"Invisible": true,
+									"Tags": [
+										"+bubblellaneous",
+										"bbln.place",
+										"--bbln.uses.place",
+										"--bbln.ignore.break_block_properties.block_state",
+										"--bbln.ignore.break_block_properties.rotation"
+									],
+									"Fixed": true,
+									"Invulnerable": true,
+									"Silent": true,
+									"Item": {
+										"id": "minecraft:stone_button",
+										"count": 1,
+										"components": {
+											"minecraft:custom_data": {
+												"bubblellaneous": {
+													"block_properties": {},
+													"block_data": {
+														"base": "tripwire",
+														"sound": "wood",
+														"facing": "player",
+														"unit": "block",
+														"id": "birch_toilet",
+														"item_model": "birch_toilet",
+														"display_name": "{\"translate\":\"block.bubblellaneous.birch_toilet\"}",
+														"material_count": 20,
+														"material": {
+															"index": 3,
+															"name": "birch"
+														},
+														"block_type": {
+															"name": "seat",
+															"parameters": {
+																"height": 0.51,
+																"width": 0.6
+															}
+														},
+														"name": "toilet",
+														"base_item": "minecraft:item_frame",
+														"block_states": []
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

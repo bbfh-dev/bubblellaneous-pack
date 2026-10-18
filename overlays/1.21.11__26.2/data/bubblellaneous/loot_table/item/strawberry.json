@@ -1,0 +1,50 @@
+{
+	"type": "minecraft:command",
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:poisonous_potato",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"bubblellaneous": {
+										"item_properties": {},
+										"item_data": {
+											"unit": "item",
+											"id": "strawberry",
+											"name": "strawberry",
+											"material": {
+												"index": 0,
+												"name": "default"
+											}
+										}
+									}
+								},
+								"minecraft:item_model": "bubblellaneous:strawberry",
+								"minecraft:item_name": {
+									"translate": "item.bubblellaneous.strawberry"
+								},
+								"minecraft:food": {
+									"can_always_eat": false,
+									"nutrition": 1,
+									"saturation": 1
+								},
+								"minecraft:max_stack_size": 64,
+								"minecraft:consumable": {
+									"animation": "eat",
+									"consume_seconds": 0.5,
+									"has_consume_particles": true
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

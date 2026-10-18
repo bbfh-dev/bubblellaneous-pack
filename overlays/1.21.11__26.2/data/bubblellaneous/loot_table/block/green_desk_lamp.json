@@ -1,0 +1,74 @@
+{
+	"type": "minecraft:command",
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:item_frame",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:item_model": "bubblellaneous:green_desk_lamp",
+								"minecraft:item_name": {
+									"translate": "block.bubblellaneous.green_desk_lamp"
+								},
+								"minecraft:entity_data": {
+									"id": "minecraft:item_frame",
+									"Invisible": true,
+									"Tags": [
+										"+bubblellaneous",
+										"bbln.place",
+										"--bbln.uses.place",
+										"--bbln.uses.no_base",
+										"--bbln.ignore.break_block_properties.block_state",
+										"--bbln.ignore.break_block_properties.rotation"
+									],
+									"Fixed": true,
+									"Invulnerable": true,
+									"Silent": true,
+									"Item": {
+										"id": "minecraft:stone_button",
+										"count": 1,
+										"components": {
+											"minecraft:custom_data": {
+												"bubblellaneous": {
+													"block_properties": {},
+													"block_data": {
+														"base": "air",
+														"sound": "wood",
+														"facing": "player",
+														"unit": "block",
+														"id": "green_desk_lamp",
+														"item_model": "green_desk_lamp",
+														"display_name": "{\"translate\":\"block.bubblellaneous.green_desk_lamp\"}",
+														"material_count": 16,
+														"material": {
+															"index": 9,
+															"name": "green"
+														},
+														"block_type": {
+															"name": "light",
+															"parameters": {
+																"light_level": 12
+															}
+														},
+														"name": "desk_lamp",
+														"base_item": "minecraft:item_frame",
+														"block_states": []
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

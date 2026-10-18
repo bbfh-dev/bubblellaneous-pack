@@ -1,0 +1,41 @@
+{
+	"type": "minecraft:command",
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:poisonous_potato",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"bubblellaneous": {
+										"item_properties": {},
+										"item_data": {
+											"unit": "item",
+											"id": "magenta_key",
+											"name": "key",
+											"material": {
+												"index": 14,
+												"name": "magenta"
+											}
+										}
+									}
+								},
+								"minecraft:item_model": "bubblellaneous:magenta_key",
+								"minecraft:item_name": {
+									"translate": "item.bubblellaneous.magenta_key"
+								},
+								"minecraft:max_stack_size": 16,
+								"minecraft:consumable": {}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

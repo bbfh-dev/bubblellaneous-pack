@@ -1,0 +1,68 @@
+{
+	"type": "minecraft:command",
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:item_frame",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:item_model": "bubblellaneous:iron_shelf",
+								"minecraft:item_name": {
+									"translate": "block.bubblellaneous.iron_shelf"
+								},
+								"minecraft:entity_data": {
+									"id": "minecraft:item_frame",
+									"Invisible": true,
+									"Tags": ["+bubblellaneous", "bbln.place", "--bbln.uses.place"],
+									"Fixed": true,
+									"Invulnerable": true,
+									"Silent": true,
+									"Item": {
+										"id": "minecraft:stone_button",
+										"count": 1,
+										"components": {
+											"minecraft:custom_data": {
+												"bubblellaneous": {
+													"block_properties": {},
+													"block_data": {
+														"base": "structure_void",
+														"sound": "wood",
+														"facing": "wall_normal",
+														"unit": "block",
+														"id": "iron_shelf",
+														"item_model": "iron_shelf",
+														"display_name": "{\"translate\":\"block.bubblellaneous.iron_shelf\"}",
+														"material_count": 20,
+														"material": {
+															"index": 14,
+															"name": "iron"
+														},
+														"block_type": {
+															"name": "shelf",
+															"parameters": {
+																"amount": 1,
+																"offset": 0
+															}
+														},
+														"name": "shelf",
+														"base_item": "minecraft:item_frame",
+														"block_states": []
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

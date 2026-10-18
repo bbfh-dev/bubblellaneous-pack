@@ -1,0 +1,64 @@
+{
+	"type": "minecraft:command",
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:poisonous_potato",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"bubblellaneous": {
+										"item_properties": {},
+										"item_data": {
+											"unit": "item",
+											"id": "green_beer_bottle",
+											"name": "beer_bottle",
+											"material": {
+												"index": 9,
+												"name": "green"
+											}
+										}
+									}
+								},
+								"minecraft:item_model": "bubblellaneous:green_beer_bottle",
+								"minecraft:item_name": {
+									"translate": "item.bubblellaneous.green_beer_bottle"
+								},
+								"minecraft:food": {
+									"can_always_eat": true,
+									"nutrition": 4,
+									"saturation": 5
+								},
+								"minecraft:max_stack_size": 8,
+								"minecraft:consumable": {
+									"animation": "drink",
+									"consume_seconds": 6,
+									"has_consume_particles": false,
+									"on_consume_effects": [
+										{
+											"effects": [
+												{
+													"amplifier": 0,
+													"duration": 1200,
+													"id": "nausea"
+												}
+											],
+											"probability": 0.2,
+											"type": "apply_effects"
+										}
+									],
+									"sound": "minecraft:entity.generic.drink"
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

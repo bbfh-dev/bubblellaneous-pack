@@ -1,0 +1,75 @@
+{
+	"type": "minecraft:command",
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:item_frame",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:item_model": "bubblellaneous:acacia_rising_door",
+								"minecraft:item_name": {
+									"translate": "block.bubblellaneous.acacia_rising_door"
+								},
+								"minecraft:entity_data": {
+									"id": "minecraft:item_frame",
+									"Invisible": true,
+									"Tags": [
+										"+bubblellaneous",
+										"bbln.place",
+										"--bbln.uses.place",
+										"--bbln.uses.blockstates",
+										"--bbln.uses.no_base",
+										"--bbln.uses.timer",
+										"--bbln.ignore.break_block_properties.block_state",
+										"--bbln.ignore.break_block_properties.rotation",
+										"--bbln.ignore.blockstates_after_break"
+									],
+									"Fixed": true,
+									"Invulnerable": true,
+									"Silent": true,
+									"Item": {
+										"id": "minecraft:stone_button",
+										"count": 1,
+										"components": {
+											"minecraft:custom_data": {
+												"bubblellaneous": {
+													"block_properties": {},
+													"block_data": {
+														"base": "air",
+														"sound": "industrial",
+														"facing": "player",
+														"unit": "block",
+														"id": "acacia_rising_door",
+														"item_model": "acacia_rising_door",
+														"display_name": "{\"translate\":\"block.bubblellaneous.acacia_rising_door\"}",
+														"material_count": 20,
+														"material": {
+															"index": 1,
+															"name": "acacia"
+														},
+														"block_type": {
+															"name": "default",
+															"parameters": {}
+														},
+														"name": "rising_door",
+														"base_item": "minecraft:item_frame",
+														"block_states": ["default", "bottom"]
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

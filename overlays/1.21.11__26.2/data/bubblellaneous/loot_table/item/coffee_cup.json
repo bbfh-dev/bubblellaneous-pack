@@ -1,0 +1,51 @@
+{
+	"type": "minecraft:command",
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:poisonous_potato",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"bubblellaneous": {
+										"item_properties": {},
+										"item_data": {
+											"unit": "item",
+											"id": "coffee_cup",
+											"name": "coffee_cup",
+											"material": {
+												"index": 0,
+												"name": "default"
+											}
+										}
+									}
+								},
+								"minecraft:item_model": "bubblellaneous:coffee_cup",
+								"minecraft:item_name": {
+									"translate": "item.bubblellaneous.coffee_cup"
+								},
+								"minecraft:food": {
+									"can_always_eat": true,
+									"nutrition": 3,
+									"saturation": 10
+								},
+								"minecraft:max_stack_size": 4,
+								"minecraft:consumable": {
+									"animation": "drink",
+									"consume_seconds": 3,
+									"has_consume_particles": false,
+									"sound": "minecraft:entity.generic.drink"
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

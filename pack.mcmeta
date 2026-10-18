@@ -18,7 +18,10 @@
 	},
 	"meta": {
 		"name": "bubblellaneous",
-		"minecraft": "26.3",
+		"minecraft": {
+			"min": "1.21.11",
+			"max": "26.3"
+		},
 		"version": "3.0.8"
 	}
 }
