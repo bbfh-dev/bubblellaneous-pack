@@ -1,24 +1,22 @@
 {
-  "criteria": {
-    "requirement": {
-      "trigger": "minecraft:tick",
-      "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:inverted",
-            "term": {
-              "condition": "minecraft:entity_scores",
-              "entity": "this",
-              "scores": {
-                "bbln.player.id": {}
-              }
-            }
-          }
-        ]
-      }
-    }
-  },
-  "rewards": {
-    "function": "bubblellaneous:player/event/world/join"
-  }
+	"criteria": {
+		"main": {
+			"trigger": "minecraft:tick",
+			"conditions": {
+				"player": {
+					"type": "minecraft:inverted",
+					"term": {
+						"type": "minecraft:entity_scores",
+						"entity": "this",
+						"scores": {
+							"bbln.player.id": {}
+						}
+					}
+				}
+			}
+		}
+	},
+	"rewards": {
+		"function": "bubblellaneous:player/event/world/join"
+	}
 }

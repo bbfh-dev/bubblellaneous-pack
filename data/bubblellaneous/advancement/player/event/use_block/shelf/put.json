@@ -1,6 +1,6 @@
 {
 	"criteria": {
-		"requirement": {
+		"main": {
 			"trigger": "minecraft:player_interacted_with_entity",
 			"conditions": {
 				"item": {
@@ -9,8 +9,16 @@
 					}
 				},
 				"entity": {
-					"minecraft:entity_type": "minecraft:interaction",
-					"nbt": "{Tags:[\"bbln.shelf\"]}"
+					"type": "minecraft:entity_properties",
+					"entity": "this",
+					"predicate": {
+						"minecraft:entity_type": "minecraft:interaction",
+						"minecraft:entity_tags": {
+							"any_of": [
+								"bbln.shelf"
+							]
+						}
+					}
 				}
 			}
 		}

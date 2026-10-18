@@ -1,42 +1,52 @@
 {
 	"criteria": {
-		"requirement": {
+		"main": {
 			"trigger": "minecraft:player_interacted_with_entity",
 			"conditions": {
-				"player": [
-					{
-						"condition": "minecraft:inverted",
-						"term": {
-							"condition": "minecraft:entity_properties",
-							"entity": "this",
-							"predicate": {
-								"nbt": "{Tags:[\"--bbln.bear_trap.trapped\"]}"
-							}
+				"player": {
+					"type": "minecraft:entity_properties",
+					"entity": "this",
+					"predicate": {
+						"minecraft:entity_tags": {
+							"none_of": [
+								"--bbln.bear_trap.trapped"
+							]
 						}
 					}
-				],
-				"entity": [
-					{
-						"condition": "minecraft:inverted",
-						"term": {
-							"condition": "minecraft:entity_properties",
+				},
+				"entity": {
+					"type": "minecraft:all_of",
+					"terms": [
+						{
+							"type": "minecraft:entity_properties",
 							"entity": "this",
 							"predicate": {
-								"passenger": {
-									"minecraft:entity_type": "minecraft:interaction"
+								"minecraft:entity_type": "minecraft:interaction",
+								"minecraft:entity_tags": {
+									"any_of": [
+										"bbln.seat"
+									]
+								}
+							}
+						},
+						{
+							"type": "minecraft:inverted",
+							"term": {
+								"type": "minecraft:entity_properties",
+								"entity": "this",
+								"predicate": {
+									"minecraft:passenger": {
+										"minecraft:entity_type": [
+											"minecraft:interaction",
+											"minecraft:interaction",
+											"minecraft:mannequin"
+										]
+									}
 								}
 							}
 						}
-					},
-					{
-						"condition": "minecraft:entity_properties",
-						"entity": "this",
-						"predicate": {
-							"minecraft:entity_type": "minecraft:interaction",
-							"nbt": "{Tags:[\"bbln.seat\"]}"
-						}
-					}
-				]
+					]
+				}
 			}
 		}
 	},

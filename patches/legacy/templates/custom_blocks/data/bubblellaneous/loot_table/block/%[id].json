@@ -1,0 +1,59 @@
+{
+	"type": "minecraft:command",
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:item_frame",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:item_model": "bubblellaneous:%[id]",
+								"minecraft:item_name": {
+									"translate": "block.bubblellaneous.%[display_id]"
+								},
+								"minecraft:entity_data": {
+									"id": "minecraft:item_frame",
+									"Invisible": true,
+									"Tags": "%[tags]",
+									"Fixed": true,
+									"Invulnerable": true,
+									"Silent": true,
+									"Item": {
+										"id": "minecraft:stone_button",
+										"count": 1,
+										"components": {
+											"minecraft:custom_data": {
+												"bubblellaneous": {
+													"block_properties": {},
+													"block_data": {
+														"base": "%[base]",
+														"sound": "%[sound]",
+														"facing": "%[facing]",
+														"unit": "block",
+														"id": "%[id]",
+														"item_model": "%[id]",
+														"display_name": "{\"translate\":\"block.bubblellaneous.%[display_id]\"}",
+														"material_count": "%[material_count]",
+														"material": "%[material]",
+														"block_type": "%[block_type]",
+														"name": "%[name]",
+														"base_item": "minecraft:item_frame",
+														"block_states": "%[block_states]"
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,28 +1,22 @@
 {
 	"criteria": {
-		"requirement": {
+		"main": {
 			"trigger": "minecraft:player_interacted_with_entity",
 			"conditions": {
 				"item": {
-					"predicates": {
-						"minecraft:entity_data": {
-							"Item": {
-								"components": {
-									"minecraft:custom_data": {
-										"bubblellaneous": {
-											"block_data": {
-												"id": "security_monitor"
-											}
-										}
-									}
-								}
-							}
-						}
-					}
+					"items": "minecraft:item_frame"
 				},
 				"entity": {
-					"minecraft:entity_type": "minecraft:interaction",
-					"nbt": "{Tags:[\"bbln.base.surveillance_camera\"]}"
+					"type": "minecraft:entity_properties",
+					"entity": "this",
+					"predicate": {
+						"minecraft:entity_type": "minecraft:interaction",
+						"minecraft:entity_tags": {
+							"any_of": [
+								"bbln.base.surveillance_camera"
+							]
+						}
+					}
 				}
 			}
 		}

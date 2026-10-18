@@ -1,16 +1,30 @@
 {
 	"criteria": {
-		"requirement": {
+		"main": {
 			"trigger": "minecraft:player_interacted_with_entity",
 			"conditions": {
 				"player": {
-					"flags": {
-						"is_sneaking": true
+					"type": "minecraft:entity_properties",
+					"entity": "this",
+					"predicate": {
+						"minecraft:type_specific/player": {
+							"input": {
+								"sneak": true
+							}
+						}
 					}
 				},
 				"entity": {
-					"minecraft:entity_type": "minecraft:interaction",
-					"nbt": "{Tags:[\"bbln.base.computer\"]}"
+					"type": "minecraft:entity_properties",
+					"entity": "this",
+					"predicate": {
+						"minecraft:entity_type": "minecraft:interaction",
+						"minecraft:entity_tags": {
+							"any_of": [
+								"bbln.call_bell"
+							]
+						}
+					}
 				}
 			}
 		}

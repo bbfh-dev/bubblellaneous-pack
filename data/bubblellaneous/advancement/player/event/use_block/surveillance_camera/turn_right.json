@@ -1,32 +1,24 @@
 {
 	"criteria": {
-		"requirement": {
+		"main": {
 			"trigger": "minecraft:tick",
 			"conditions": {
-				"player": [
-					{
-						"condition": "minecraft:entity_properties",
-						"entity": "this",
-						"predicate": {
-							"minecraft:type_specific/player": {
-								"input": {
-									"right": true
-								}
+				"player": {
+					"type": "minecraft:entity_properties",
+					"entity": "this",
+					"predicate": {
+						"minecraft:type_specific/player": {
+							"input": {
+								"right": true
 							}
-						}
-					},
-					{
-						"condition": "minecraft:entity_properties",
-						"entity": "this",
-						"predicate": {
-							"minecraft:entity_tags": {
-								"any_of": [
-									"--bbln.camera.spectating"
-								]
-							}
+						},
+						"minecraft:entity_tags": {
+							"any_of": [
+								"--bbln.camera.spectating"
+							]
 						}
 					}
-				]
+				}
 			}
 		}
 	},

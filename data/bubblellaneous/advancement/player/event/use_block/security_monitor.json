@@ -1,23 +1,30 @@
 {
 	"criteria": {
-		"requirement": {
+		"main": {
 			"trigger": "minecraft:player_interacted_with_entity",
 			"conditions": {
-				"player": [
-					{
-						"condition": "minecraft:inverted",
-						"term": {
-							"condition": "minecraft:entity_properties",
-							"entity": "this",
-							"predicate": {
-								"nbt": "{Tags:[\"--bbln.bear_trap.trapped\"]}"
-							}
+				"player": {
+					"type": "minecraft:entity_properties",
+					"entity": "this",
+					"predicate": {
+						"minecraft:entity_tags": {
+							"none_of": [
+								"--bbln.bear_trap.trapped"
+							]
 						}
 					}
-				],
+				},
 				"entity": {
-					"minecraft:entity_type": "minecraft:interaction",
-					"nbt": "{Tags:[\"bbln.security_monitor\"]}"
+					"type": "minecraft:entity_properties",
+					"entity": "this",
+					"predicate": {
+						"minecraft:entity_type": "minecraft:interaction",
+						"minecraft:entity_tags": {
+							"any_of": [
+								"bbln.security_monitor"
+							]
+						}
+					}
 				}
 			}
 		}

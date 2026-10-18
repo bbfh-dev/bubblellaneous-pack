@@ -1,11 +1,19 @@
 {
 	"criteria": {
-		"requirement": {
+		"main": {
 			"trigger": "minecraft:player_hurt_entity",
 			"conditions": {
 				"entity": {
-					"minecraft:entity_type": "minecraft:mannequin",
-					"nbt": "{Tags:[\"bbln.dummy_player\"]}"
+					"type": "minecraft:entity_properties",
+					"entity": "this",
+					"predicate": {
+						"minecraft:entity_type": "minecraft:mannequin",
+						"minecraft:entity_tags": {
+							"any_of": [
+								"bbln.dummy_player"
+							]
+						}
+					}
 				}
 			}
 		}

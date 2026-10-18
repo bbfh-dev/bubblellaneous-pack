@@ -1,4 +1,8 @@
 advancement revoke @s only bubblellaneous:player/event/use_block/surveillance_camera
+
+# For some reason this cannot be part of the advancement predicate in 26.3
+execute unless data entity @s SelectedItem.components.minecraft:entity_data.Item.components.minecraft:custom_data.bubblellaneous.block_data{id: "security_monitor"} run return fail
+
 function bubblellaneous:player/event/get_interacted/main {type: "interaction", tag: "base.surveillance_camera"}
 
 scoreboard players operation #id_test bbln.tmp = @e[type=interaction,tag=--bbln.target_entity,limit=1,x=0] bbln.block.id

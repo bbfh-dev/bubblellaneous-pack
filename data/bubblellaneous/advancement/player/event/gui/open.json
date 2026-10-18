@@ -1,6 +1,6 @@
 {
 	"criteria": {
-		"requirement": {
+		"main": {
 			"trigger": "minecraft:any_block_use"
 		}
 	},

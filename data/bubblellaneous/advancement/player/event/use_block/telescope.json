@@ -1,39 +1,45 @@
 {
 	"criteria": {
-		"requirement": {
+		"main": {
 			"trigger": "minecraft:player_interacted_with_entity",
 			"conditions": {
-				"player": [
-					{
-						"condition": "minecraft:inverted",
-						"term": {
-							"condition": "minecraft:entity_properties",
+				"player": {
+					"type": "minecraft:entity_properties",
+					"entity": "this",
+					"predicate": {
+						"minecraft:entity_tags": {
+							"none_of": [
+								"--bbln.bear_trap.trapped"
+							]
+						}
+					}
+				},
+				"entity": {
+					"type": "minecraft:all_of",
+					"terms": [
+						{
+							"type": "minecraft:entity_properties",
 							"entity": "this",
 							"predicate": {
-								"nbt": "{Tags:[\"--bbln.bear_trap.trapped\"]}"
+								"minecraft:entity_type": "minecraft:interaction",
+								"minecraft:entity_tags": {
+									"any_of": [
+										"bbln.base.telescope"
+									]
+								}
 							}
-						}
-					}
-				],
-				"entity": [
-					{
-						"condition": "minecraft:value_check",
-						"value": {
-							"type": "minecraft:score",
-							"target": "this",
-							"score": "bbln.block_state"
 						},
-						"range": 0
-					},
-					{
-						"condition": "minecraft:entity_properties",
-						"entity": "this",
-						"predicate": {
-							"minecraft:entity_type": "minecraft:interaction",
-							"nbt": "{Tags:[\"bbln.base.telescope\"]}"
+						{
+							"type": "minecraft:int_value_check",
+							"value": {
+								"type": "minecraft:score",
+								"target": "this",
+								"score": "bbln.block_state"
+							},
+							"test": 0
 						}
-					}
-				]
+					]
+				}
 			}
 		}
 	},
